@@ -216,9 +216,80 @@
                     Book a Consultation
                 </a>
 </div>
-<!-- Mobile Menu Toggle -->
-<button aria-label="Menu" class="md:hidden text-on-surface p-2 interactive">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+<!-- Mobile Menu Toggle --><!-- Mobile Menu Button -->
+<!-- Mobile Menu -->
+<div id="mobile-menu"
+class="fixed top-0 right-[-100%] w-80 max-w-full h-screen bg-[#111111]/95 backdrop-blur-xl border-l border-yellow-500/20 transition-all duration-500 z-[999]">
+
+    <!-- Header -->
+    <div class="flex items-center justify-between px-6 py-5 border-b border-gray-800">
+
+        <h2 class="text-2xl font-bold text-yellow-400">
+            SL Creative
+        </h2>
+
+        <button id="close-menu">
+            <span class="material-symbols-outlined text-white text-3xl">
+                close
+            </span>
+        </button>
+
+    </div>
+
+    <!-- Links -->
+
+    <nav class="flex flex-col p-6 space-y-5">
+
+        <a href="index.html" class="mobile-link">Home</a>
+
+        <a href="about.html" class="mobile-link">About</a>
+
+        <a href="services.html" class="mobile-link">Services</a>
+
+        <a href="portfolio.html" class="mobile-link">Portfolio</a>
+
+        <a href="pricing.html" class="mobile-link">Pricing</a>
+
+        <a href="blog.html" class="mobile-link">Blog</a>
+
+        <a href="faq.html" class="mobile-link">FAQ</a>
+
+        <a href="contact.html" class="mobile-link">Contact</a>
+
+        <a href="privacy-policy.html" class="mobile-link">
+            Privacy Policy
+        </a>
+
+        <a href="terms.html" class="mobile-link">
+            Terms & Conditions
+        </a>
+
+        <a href="login.html"
+        class="mt-4 bg-yellow-400 text-black text-center py-3 rounded-full font-semibold hover:bg-yellow-300 transition">
+
+            Client Login
+
+        </a>
+
+    </nav>
+
+</div>
+
+<!-- Overlay -->
+
+<div
+id="overlay"
+class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden z-[998]">
+</div>
+<button
+    id="menu-btn"
+    class="md:hidden text-white p-2 transition-all duration-300"
+    aria-label="Toggle Menu">
+
+    <span id="menu-icon" class="material-symbols-outlined text-3xl">
+        menu
+    </span>
+
 </button>
 </div>
 </nav>
@@ -314,7 +385,7 @@
 <div class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="flex items-center justify-between mb-16">
 <h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-on-surface">Selected <br/><span class="text-primary">Works</span></h2>
-<a class="hidden md:inline-flex items-center gap-2 text-label-caps font-label-caps text-on-surface hover:text-primary transition-colors interactive" href="#">
+<a class="hidden md:inline-flex items-center gap-2 text-label-caps font-label-caps text-on-surface hover:text-primary transition-colors interactive" href="project-details.html">
                     View Full Archive <span class="material-symbols-outlined text-sm">arrow_outward</span>
 </a>
 </div>
