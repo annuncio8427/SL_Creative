@@ -217,61 +217,28 @@
                 </a>
 </div>
 <!-- Mobile Menu Toggle --><!-- Mobile Menu Button -->
-<!-- Mobile Menu -->
+<!-- Mobile Menu --><button id="menu-btn">
+    <span id="menu-icon" class="material-symbols-outlined">
+        menu
+    </span>
+</button>
+
+<div id="overlay" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40"></div>
+
 <div id="mobile-menu"
-class="fixed top-0 right-[-100%] w-80 max-w-full h-screen bg-[#111111]/95 backdrop-blur-xl border-l border-yellow-500/20 transition-all duration-500 z-[999]">
+class="fixed top-0 right-0 w-80 h-screen bg-[#111111]
+translate-x-full transition-transform duration-500 z-50">
 
-    <!-- Header -->
-    <div class="flex items-center justify-between px-6 py-5 border-b border-gray-800">
+    <button id="close-menu">
+        <span class="material-symbols-outlined">close</span>
+    </button>
 
-        <h2 class="text-2xl font-bold text-yellow-400">
-            SL Creative
-        </h2>
-
-        <button id="close-menu">
-            <span class="material-symbols-outlined text-white text-3xl">
-                close
-            </span>
-        </button>
-
-    </div>
-
-    <!-- Links -->
-
-    <nav class="flex flex-col p-6 space-y-5">
-
-        <a href="index.html" class="mobile-link">Home</a>
-
-        <a href="about.html" class="mobile-link">About</a>
-
-        <a href="services.html" class="mobile-link">Services</a>
-
-        <a href="portfolio.html" class="mobile-link">Portfolio</a>
-
-        <a href="pricing.html" class="mobile-link">Pricing</a>
-
-        <a href="blog.html" class="mobile-link">Blog</a>
-
-        <a href="faq.html" class="mobile-link">FAQ</a>
-
-        <a href="contact.html" class="mobile-link">Contact</a>
-
-        <a href="privacy-policy.html" class="mobile-link">
-            Privacy Policy
-        </a>
-
-        <a href="terms.html" class="mobile-link">
-            Terms & Conditions
-        </a>
-
-        <a href="login.html"
-        class="mt-4 bg-yellow-400 text-black text-center py-3 rounded-full font-semibold hover:bg-yellow-300 transition">
-
-            Client Login
-
-        </a>
-
-    </nav>
+    <a href="index.html" class="mobile-link">Home</a>
+    <a href="about.html" class="mobile-link">About</a>
+    <a href="services.html" class="mobile-link">Services</a>
+    <a href="portfolio.html" class="mobile-link">Portfolio</a>
+    <a href="pricing.html" class="mobile-link">Pricing</a>
+    <a href="contact.html" class="mobile-link">Contact</a>
 
 </div>
 
