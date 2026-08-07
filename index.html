@@ -435,5 +435,76 @@ class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden z-[998]">
                 }
             });
         });
+        /* ================================
+   MOBILE MENU
+================================ */
+
+initMobileMenu();
+
+function initMobileMenu() {
+
+    const menuBtn = document.getElementById("menu-btn");
+    const closeBtn = document.getElementById("close-menu");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const overlay = document.getElementById("overlay");
+    const menuIcon = document.getElementById("menu-icon");
+
+    if (!menuBtn || !mobileMenu) return;
+
+    function openMenu() {
+        mobileMenu.classList.remove("translate-x-full");
+        mobileMenu.classList.add("translate-x-0");
+
+        overlay.classList.remove("hidden");
+
+        document.body.style.overflow = "hidden";
+
+        if (menuIcon) {
+            menuIcon.textContent = "close";
+        }
+    }
+
+    function closeMenu() {
+        mobileMenu.classList.remove("translate-x-0");
+        mobileMenu.classList.add("translate-x-full");
+
+        overlay.classList.add("hidden");
+
+        document.body.style.overflow = "";
+
+        if (menuIcon) {
+            menuIcon.textContent = "menu";
+        }
+    }
+
+    menuBtn.addEventListener("click", () => {
+
+        if (mobileMenu.classList.contains("translate-x-full")) {
+            openMenu();
+        } else {
+            closeMenu();
+        }
+
+    });
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", closeMenu);
+    }
+
+    if (overlay) {
+        overlay.addEventListener("click", closeMenu);
+    }
+
+    document.querySelectorAll(".mobile-link").forEach(link => {
+        link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            closeMenu();
+        }
+    });
+
+}
     </script>
 </body></html>
