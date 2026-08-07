@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FAQ | SL Creative</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Outfit:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#b2b3b3",
+                    "surface-bright": "#393939",
+                    "tertiary-fixed": "#e2e2e2",
+                    "secondary-fixed": "#e5e2e1",
+                    "on-error-container": "#ffdad6",
+                    "inverse-on-surface": "#313030",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "on-primary-fixed-variant": "#574500",
+                    "outline": "#99907c",
+                    "on-error": "#690005",
+                    "secondary": "#c9c6c5",
+                    "surface-container": "#20201f",
+                    "on-secondary-container": "#bab8b7",
+                    "primary-fixed": "#ffe088",
+                    "on-surface": "#e5e2e1",
+                    "on-secondary": "#313030",
+                    "secondary-fixed-dim": "#c9c6c5",
+                    "secondary-container": "#4a4949",
+                    "primary": "#f2ca50",
+                    "surface-dim": "#131313",
+                    "background": "#131313",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-surface-variant": "#d0c5af",
+                    "inverse-surface": "#e5e2e1",
+                    "error": "#ffb4ab",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-container-high": "#2a2a2a",
+                    "surface": "#131313",
+                    "on-background": "#e5e2e1",
+                    "on-primary-container": "#554300",
+                    "on-primary": "#3c2f00",
+                    "surface-container-highest": "#353535",
+                    "on-primary-fixed": "#241a00",
+                    "surface-variant": "#353535",
+                    "surface-tint": "#e9c349",
+                    "on-tertiary": "#2f3131",
+                    "outline-variant": "#4d4635",
+                    "on-secondary-fixed-variant": "#474646",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "surface-container-lowest": "#0e0e0e",
+                    "primary-container": "#d4af37",
+                    "tertiary": "#cecece",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "error-container": "#93000a",
+                    "on-tertiary-container": "#434546",
+                    "inverse-primary": "#735c00",
+                    "on-secondary-fixed": "#1c1b1b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "24px",
+                    "unit": "8px",
+                    "margin-desktop": "80px",
+                    "container-max": "1440px",
+                    "gutter": "24px",
+                    "section-gap": "160px"
+            },
+            "fontFamily": {
+                    "body-lg": [
+                            "Be Vietnam Pro"
+                    ],
+                    "body-md": [
+                            "Be Vietnam Pro"
+                    ],
+                    "headline-md": [
+                            "Outfit"
+                    ],
+                    "headline-lg": [
+                            "Outfit"
+                    ],
+                    "headline-lg-mobile": [
+                            "Outfit"
+                    ],
+                    "label-caps": [
+                            "Outfit"
+                    ],
+                    "display-lg": [
+                            "Outfit"
+                    ]
+            },
+            "fontSize": {
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.15em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "display-lg": [
+                            "72px",
+                            {
+                                    "lineHeight": "80px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+        }
+        
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(153, 144, 124, 0.3);
+            box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.05);
+        }
+
+        .gold-gradient-border {
+            border: 1px solid transparent;
+            background: linear-gradient(#131313, #131313) padding-box,
+                        linear-gradient(135deg, rgba(242, 202, 80, 0.8), rgba(242, 202, 80, 0.1)) border-box;
+        }
+
+        .ambient-glow {
+            box-shadow: 0 0 60px 15px rgba(242, 202, 80, 0.05);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131313; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #353535; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f2ca50; 
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md">
+<!-- TopNavBar -->
+<header class="bg-background/80 backdrop-blur-xl font-body-md text-body-md uppercase tracking-widest fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto shadow-2xl shadow-primary/5 transition-all duration-300">
+<a class="font-headline-md text-headline-md text-primary tracking-tighter flex items-center gap-2" href="#">
+            SL Creative
+        </a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 transition-all duration-300 px-4 py-2 rounded-lg" href="#">Case Studies</a>
+<a class="text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 transition-all duration-300 px-4 py-2 rounded-lg" href="#">Process</a>
+<a class="text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 transition-all duration-300 px-4 py-2 rounded-lg" href="#">Careers</a>
+<a class="text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 transition-all duration-300 px-4 py-2 rounded-lg" href="#">Blog</a>
+<a class="text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 transition-all duration-300 px-4 py-2 rounded-lg" href="#">Booking</a>
+</nav>
+<button class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-DEFAULT font-label-caps text-label-caps hover:bg-primary-fixed transition-colors scale-95 active:scale-90 transition-transform">
+            Inquire Now
+        </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full relative">
+<!-- Hero Section -->
+<section class="text-center mb-24 relative z-10">
+<h1 class="font-display-lg text-display-lg text-primary mb-6">Frequently Asked Questions</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
+                Find answers to common inquiries about our luxury post-production services, processes, and policies.
+            </p>
+<div class="max-w-xl mx-auto relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full bg-surface-container-low/60 backdrop-blur-xl border border-outline-variant/30 rounded-full py-4 pl-12 pr-6 text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all shadow-lg shadow-black/50" placeholder="Search questions..." type="text"/>
+</div>
+</section>
+<div class="flex flex-col lg:flex-row gap-16 relative">
+<!-- Side Navigation (Categories) -->
+<aside class="w-full lg:w-64 flex-shrink-0">
+<div class="sticky top-32 glass-panel rounded-xl p-6 ambient-glow">
+<h3 class="font-label-caps text-label-caps text-primary mb-6">Categories</h3>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 p-3 rounded-lg bg-primary/10 text-primary font-bold border-l-2 border-primary transition-all" href="#general">
+<span class="material-symbols-outlined text-sm">info</span>
+                            General
+                        </a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-bright/20 transition-all border-l-2 border-transparent hover:border-primary/50" href="#services">
+<span class="material-symbols-outlined text-sm">movie</span>
+                            Services
+                        </a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-bright/20 transition-all border-l-2 border-transparent hover:border-primary/50" href="#pricing">
+<span class="material-symbols-outlined text-sm">payments</span>
+                            Pricing
+                        </a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-bright/20 transition-all border-l-2 border-transparent hover:border-primary/50" href="#delivery">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                            Delivery
+                        </a>
+</nav>
+</div>
+</aside>
+<!-- FAQ Accordions -->
+<div class="flex-grow space-y-12">
+<section class="space-y-6" id="general">
+<h2 class="font-headline-md text-headline-md text-on-surface border-b border-outline-variant/20 pb-4">General</h2>
+<div class="space-y-4">
+<details class="group glass-panel rounded-lg overflow-hidden [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer font-headline-md text-xl text-on-surface hover:text-primary transition-colors">
+                                What is SL Creative's primary focus?
+                                <span class="material-symbols-outlined transform group-open:rotate-180 transition-transform duration-300 text-primary">expand_more</span>
+</summary>
+<div class="p-6 pt-0 text-on-surface-variant font-body-md">
+                                SL Creative specializes in high-end post-production services, including advanced color grading, premium video editing, and visual effects tailored for luxury brands and cinematic projects.
+                            </div>
+</details>
+<details class="group glass-panel rounded-lg overflow-hidden [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer font-headline-md text-xl text-on-surface hover:text-primary transition-colors">
+                                Do you work with international clients?
+                                <span class="material-symbols-outlined transform group-open:rotate-180 transition-transform duration-300 text-primary">expand_more</span>
+</summary>
+<div class="p-6 pt-0 text-on-surface-variant font-body-md">
+                                Yes, we operate globally, providing secure remote workflows and dedicated project management to ensure seamless collaboration regardless of your location.
+                            </div>
+</details>
+</div>
+</section>
+<section class="space-y-6" id="services">
+<h2 class="font-headline-md text-headline-md text-on-surface border-b border-outline-variant/20 pb-4">Services</h2>
+<div class="space-y-4">
+<details class="group glass-panel rounded-lg overflow-hidden [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer font-headline-md text-xl text-on-surface hover:text-primary transition-colors">
+                                What software do you use for color grading?
+                                <span class="material-symbols-outlined transform group-open:rotate-180 transition-transform duration-300 text-primary">expand_more</span>
+</summary>
+<div class="p-6 pt-0 text-on-surface-variant font-body-md">
+                                We utilize industry-standard tools, primarily DaVinci Resolve Studio, paired with high-end calibrated reference monitors to ensure absolute color accuracy and cinematic depth.
+                            </div>
+</details>
+</div>
+</section>
+</div>
+<!-- Sticky Contact Card -->
+<aside class="w-full lg:w-80 flex-shrink-0">
+<div class="sticky top-32 gold-gradient-border rounded-xl p-8 bg-surface-container-low text-center shadow-2xl shadow-black/80">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-3xl text-primary">support_agent</span>
+</div>
+<h3 class="font-headline-md text-2xl text-on-surface mb-2">Still have questions?</h3>
+<p class="font-body-md text-on-surface-variant mb-8">Our dedicated team is ready to assist you with your specific needs.</p>
+<div class="space-y-4">
+<button class="w-full bg-primary text-on-primary py-3 px-6 rounded-DEFAULT font-label-caps text-label-caps hover:bg-primary-fixed transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+                            Book Consultation
+                        </button>
+<button class="w-full bg-transparent border border-outline text-on-surface py-3 px-6 rounded-DEFAULT font-label-caps text-label-caps hover:border-primary hover:text-primary transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">mail</span>
+                            Email Us
+                        </button>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-background text-primary font-body-md text-body-md text-on-surface-variant w-full py-section-gap border-t border-outline-variant/20 flex flex-col items-center gap-unit px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-lg text-primary mb-8">SL Creative</div>
+<nav class="flex flex-wrap justify-center gap-8 mb-8">
+<a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">Case Studies</a>
+<a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">Careers</a>
+<a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">FAQ</a>
+<a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">Terms &amp; Conditions</a>
+<a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="contact.html">Contact</a>
+</nav>
+<p class="text-sm opacity-60">© 2024 SL Creative. Uncompromising Excellence in Post-Production.</p>
+</footer>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

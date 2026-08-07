@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SL Creative - Premium Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&amp;family=Outfit:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-high": "#2a2a2a",
+                      "surface-container": "#20201f",
+                      "surface-tint": "#e9c349",
+                      "outline-variant": "#4d4635",
+                      "inverse-surface": "#e5e2e1",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "on-error-container": "#ffdad6",
+                      "tertiary-container": "#b2b3b3",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "secondary-fixed": "#e5e2e1",
+                      "on-tertiary-container": "#434546",
+                      "surface": "#131313",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "surface-container-lowest": "#0e0e0e",
+                      "inverse-on-surface": "#313030",
+                      "on-secondary-fixed-variant": "#474646",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "secondary": "#c9c6c5",
+                      "secondary-container": "#4a4949",
+                      "on-primary-container": "#554300",
+                      "on-background": "#e5e2e1",
+                      "error-container": "#93000a",
+                      "on-primary-fixed": "#241a00",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "on-primary-fixed-variant": "#574500",
+                      "surface-dim": "#131313",
+                      "on-tertiary": "#2f3131",
+                      "surface-variant": "#353535",
+                      "on-primary": "#3c2f00",
+                      "primary-container": "#d4af37",
+                      "primary-fixed-dim": "#e9c349",
+                      "on-secondary": "#313030",
+                      "on-secondary-container": "#bab8b7",
+                      "surface-container-highest": "#353535",
+                      "on-surface-variant": "#d0c5af",
+                      "inverse-primary": "#735c00",
+                      "outline": "#99907c",
+                      "primary-fixed": "#ffe088",
+                      "surface-container-low": "#1c1b1b",
+                      "error": "#ffb4ab",
+                      "background": "#131313",
+                      "tertiary": "#cecece",
+                      "tertiary-fixed": "#e2e2e2",
+                      "on-error": "#690005",
+                      "surface-bright": "#393939",
+                      "primary": "#f2ca50",
+                      "on-surface": "#e5e2e1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "margin-desktop": "80px",
+                      "section-gap": "160px",
+                      "container-max": "1440px",
+                      "margin-mobile": "24px"
+              },
+              "fontFamily": {
+                      "body-md": ["Be Vietnam Pro"],
+                      "label-caps": ["Outfit"],
+                      "headline-md": ["Outfit"],
+                      "headline-lg-mobile": ["Outfit"],
+                      "body-lg": ["Be Vietnam Pro"],
+                      "headline-lg": ["Outfit"],
+                      "display-lg": ["Outfit"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        body {
+            background-color: #090909; /* Deep Noir */
+            color: #e5e2e1;
+        }
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(212, 175, 55, 0.15); /* Subtle Gold */
+            box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.05);
+        }
+        .glass-panel:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: 0 10px 40px -10px rgba(212, 175, 55, 0.1), inset 1px 1px 0px rgba(255, 255, 255, 0.1);
+        }
+        .text-gold-gradient {
+            background: linear-gradient(to right, #f2ca50, #d4af37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-gold-gradient {
+            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Custom Cursor */
+        .custom-cursor {
+            width: 32px;
+            height: 32px;
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.2s ease;
+            mix-blend-mode: difference;
+        }
+        a:hover ~ .custom-cursor, button:hover ~ .custom-cursor {
+            transform: scale(1.5);
+            background: rgba(212, 175, 55, 0.1);
+        }
+    </style>
+</head>
+<body class="font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<div class="custom-cursor hidden md:block" id="cursor"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm transition-all duration-300" id="navbar">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 w-full max-w-container-max mx-auto">
+<!-- Brand -->
+<a class="flex items-center gap-3" href="#">
+<img alt="SL Creative Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBki3ROi5khftySlGUl_JChGgV3Q1ZubpCg0QFTHW7I5DeOfXzICCzvQOcUuB5xCIYXbrEWlRe_5iUh4sE-ZZWGRatxcaOsW7yKuoQYJU_zC3Zah0SIaNhTcXPd_W8LO3CsTohmLMJYuPiujAWXxW3NR0caNk4gdbo_ts-5crFZ99XH-QGSKroEBiLSfm1Pe5-LMKfDlqyBVxypcsHquCC4tA-ysWc4moAkWvWN6TxD9T7pEdaGdE7-AvMCNWHAJAJ2Uv4"/>
+<span class="font-display-lg text-headline-md tracking-tighter text-primary">SL Creative</span>
+</a>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300 cursor-pointer active:scale-95" href="#">Portfolio</a>
+<a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 hover:text-primary transition-colors duration-300 cursor-pointer active:scale-95" href="services.html">Services</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300 cursor-pointer active:scale-95" href="#">Philosophy</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300 cursor-pointer active:scale-95" href="#">Studio</a>
+</div>
+<!-- CTA -->
+<div class="hidden md:block">
+<button class="font-label-caps text-label-caps bg-gold-gradient text-on-primary-container px-6 py-3 rounded-full hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all duration-300">
+                    Book a Consultation
+                </button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center justify-center pt-32 pb-20 overflow-hidden">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black z-10 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-tr from-[#d4af37]/20 to-transparent z-10 mix-blend-overlay"></div>
+<img alt="Cinematic studio setup with high-end camera equipment and editing bay" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE4_geFGfgVSIUUp9IBziw1GNBK3eJwg29AJ7UfFG499Bufb9FaQ1ckGgJRs0LCbVnD3So0owgqN5djo8gfB0xczMz0HRWTEP8SAQ05-bk4sYeyd-fZnTlQ1KVBS7HBTR4Vfw-gvHHED2GVClBr4iJ24sF2HekGFtxCeSHzExKMM5T0LmUmW6ciIwBhmEGO5QMuaNRLwrDjK2KIM8xxoHV4Q943yBBP5k2tqjDnNAcH8QHKVCh5WUJRA"/>
+</div>
+<div class="relative z-20 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface mb-6 reveal">
+                Professional Creative Services <br class="hidden md:block"/> That <span class="text-gold-gradient">Elevate Your Brand</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10 reveal" style="transition-delay: 100ms;">
+                Uncompromising excellence in visual storytelling. We transform concepts into cinematic realities for high-end clientele.
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6 reveal" style="transition-delay: 200ms;">
+<button class="w-full sm:w-auto font-label-caps text-label-caps bg-gold-gradient text-on-primary-container px-8 py-4 rounded-full hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] transition-all duration-300 tracking-widest">
+                    EXPLORE SERVICES
+                </button>
+<button class="w-full sm:w-auto font-label-caps text-label-caps border border-primary/50 text-primary px-8 py-4 rounded-full hover:bg-primary/10 transition-all duration-300 tracking-widest flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+                    VIEW SHOWREEL
+                </button>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="py-section-gap relative">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-20 reveal">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.2em] uppercase mb-4 block">Our Expertise</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Mastery in Every Frame</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Service 1 -->
+<div class="glass-panel rounded-xl p-8 flex flex-col h-full reveal transition-transform duration-500 hover:-translate-y-2">
+<div class="w-12 h-12 rounded-full bg-surface-container-high border border-outline-variant/30 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-2xl">smartphone</span>
+</div>
+<h3 class="font-headline-md text-[24px] text-on-surface mb-3">Instagram Reels</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-grow">High-impact, vertical storytelling designed for maximum engagement and brand presence.</p>
+<button class="self-start font-label-caps text-label-caps text-primary hover:text-white transition-colors flex items-center gap-2 group">
+                        LEARN MORE <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+<!-- Service 2 -->
+<div class="glass-panel rounded-xl p-8 flex flex-col h-full reveal transition-transform duration-500 hover:-translate-y-2" style="transition-delay: 100ms;">
+<div class="w-12 h-12 rounded-full bg-surface-container-high border border-outline-variant/30 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-2xl">auto_awesome</span>
+</div>
+<h3 class="font-headline-md text-[24px] text-on-surface mb-3">Motion Graphics</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-grow">Dynamic visual elements that bring complex ideas to life with fluid precision.</p>
+<button class="self-start font-label-caps text-label-caps text-primary hover:text-white transition-colors flex items-center gap-2 group">
+                        LEARN MORE <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+<!-- Service 3 -->
+<div class="glass-panel rounded-xl p-8 flex flex-col h-full reveal transition-transform duration-500 hover:-translate-y-2" style="transition-delay: 200ms;">
+<div class="w-12 h-12 rounded-full bg-surface-container-high border border-outline-variant/30 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-2xl">favorite</span>
+</div>
+<h3 class="font-headline-md text-[24px] text-on-surface mb-3">Wedding Video</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-grow">Cinematic capture of intimate moments, elegantly graded for timeless viewing.</p>
+<button class="self-start font-label-caps text-label-caps text-primary hover:text-white transition-colors flex items-center gap-2 group">
+                        LEARN MORE <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+<!-- Service 4 -->
+<div class="glass-panel rounded-xl p-8 flex flex-col h-full reveal transition-transform duration-500 hover:-translate-y-2" style="transition-delay: 300ms;">
+<div class="w-12 h-12 rounded-full bg-surface-container-high border border-outline-variant/30 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-2xl">campaign</span>
+</div>
+<h3 class="font-headline-md text-[24px] text-on-surface mb-3">Advertisement</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-grow">Commercial-grade productions that compel action and define brand authority.</p>
+<button class="self-start font-label-caps text-label-caps text-primary hover:text-white transition-colors flex items-center gap-2 group">
+                        LEARN MORE <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Workflow Timeline -->
+<section class="py-section-gap bg-surface-container-lowest relative border-t border-b border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-20 reveal">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.2em] uppercase mb-4 block">The Process</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Creative Workflow</h2>
+</div>
+<div class="relative">
+<!-- Line -->
+<div class="hidden lg:block absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent -translate-y-1/2 z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
+<!-- Step 1 -->
+<div class="text-center reveal">
+<div class="w-16 h-16 mx-auto rounded-full bg-black border border-primary/50 flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+<span class="font-label-caps text-primary">01</span>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-surface mb-2">Consultation</h4>
+<p class="font-body-md text-on-surface-variant text-sm">Aligning vision and establishing scope.</p>
+</div>
+<!-- Step 2 -->
+<div class="text-center reveal" style="transition-delay: 100ms;">
+<div class="w-16 h-16 mx-auto rounded-full bg-black border border-primary/50 flex items-center justify-center mb-6">
+<span class="font-label-caps text-primary">02</span>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-surface mb-2">Production</h4>
+<p class="font-body-md text-on-surface-variant text-sm">Executing the creative capture.</p>
+</div>
+<!-- Step 3 -->
+<div class="text-center reveal" style="transition-delay: 200ms;">
+<div class="w-16 h-16 mx-auto rounded-full bg-black border border-primary/50 flex items-center justify-center mb-6">
+<span class="font-label-caps text-primary">03</span>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-surface mb-2">Refinement</h4>
+<p class="font-body-md text-on-surface-variant text-sm">Meticulous editing and grading.</p>
+</div>
+<!-- Step 4 -->
+<div class="text-center reveal" style="transition-delay: 300ms;">
+<div class="w-16 h-16 mx-auto rounded-full bg-black border border-primary/50 flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+<span class="font-label-caps text-primary">04</span>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-surface mb-2">Delivery</h4>
+<p class="font-body-md text-on-surface-variant text-sm">Final handoff of premium assets.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full pt-section-gap pb-gutter border-t border-outline-variant/20">
+<div class="flex flex-col md:flex-row justify-between items-start px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-10">
+<div>
+<a class="font-display-lg text-headline-lg text-primary block mb-4" href="#">SL Creative</a>
+<p class="font-body-md text-on-surface-variant max-w-xs">Uncompromising Excellence in visual media and cinematic storytelling.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-10 md:gap-20">
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-on-surface tracking-widest">SOCIAL</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Vimeo</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-on-surface tracking-widest">LEGAL</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="privacy-policy.html">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mt-20 pt-8 border-t border-outline-variant/10 text-center md:text-left">
+<p class="font-body-md text-sm text-on-surface-variant/50">© 2024 SL Creative. Uncompromising Excellence.</p>
+</div>
+</footer>
+<script>
+        // Scroll Reveal Logic
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Trigger on load
+
+        // Custom Cursor Logic
+        const cursor = document.getElementById('cursor');
+        if (window.matchMedia("(pointer: fine)").matches) {
+            document.addEventListener('mousemove', e => {
+                cursor.style.left = e.clientX - 16 + 'px';
+                cursor.style.top = e.clientY - 16 + 'px';
+            });
+        }
+    </script>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

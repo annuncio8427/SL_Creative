@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking & Consultation | SL Creative Agency</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="brand-logo">
+      <div class="brand-symbol">SL</div>
+      <div class="brand-text">SL <span>CREATIVE</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="portal.html" class="nav-link">Client Portal</a></li>
+      <li><a href="booking.html" class="nav-link active">Booking & Quote</a></li>
+      <li><a href="payments.html" class="nav-link">Payments</a></li>
+      <li><a href="company.html" class="nav-link">Company</a></li>
+    </ul>
+    <a href="index.html" class="btn btn-secondary btn-sm">← Back to Hub</a>
+  </nav>
+
+  <main style="padding: 120px 24px 80px 24px;" class="container tabs-container">
+    
+    <div style="text-align: center; margin-bottom: 40px;">
+      <div class="badge" style="margin-bottom: 12px;">Executive Consultation</div>
+      <h1 style="font-size: 40px; margin-bottom: 12px;">Schedule Consultation & Project Quote</h1>
+      <p class="text-muted" style="max-width: 600px; margin: 0 auto;">Reserve private strategy session time with our Senior Creative Directors or calculate an initial studio estimate.</p>
+    </div>
+
+    <!-- Tabs Header -->
+    <div class="tabs-header" style="justify-content: center;">
+      <button class="tab-btn active" data-tab="tab-consultation">Consultation Booking</button>
+      <button class="tab-btn" data-tab="tab-scheduler">Meeting Scheduler</button>
+      <button class="tab-btn" data-tab="tab-quote">Instant Project Quote</button>
+      <button class="tab-btn" data-tab="tab-success">Booking Success View</button>
+      <button class="tab-btn" data-tab="tab-cancelled">Booking Cancelled View</button>
+    </div>
+
+    <!-- 1. Consultation Booking Tab -->
+    <div id="tab-consultation" class="tab-content active">
+      <div class="glass-card" style="max-width: 680px; margin: 0 auto;">
+        <h2 style="font-size: 24px; margin-bottom: 20px;">Book Studio Consultation</h2>
+        <form>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label class="form-label">First Name</label>
+              <input type="text" class="form-input" placeholder="Sarah" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last Name</label>
+              <input type="text" class="form-input" placeholder="Jenkins" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Corporate Email</label>
+            <input type="email" class="form-input" placeholder="sarah@luxurybrand.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Project Scope</label>
+            <select class="form-select">
+              <option>8K Brand Film & Cinema Commercial</option>
+              <option>Full Digital Brand Identity & UI/UX</option>
+              <option>3D Product Rendering & VFX Pass</option>
+              <option>Annual Creative Retainer</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 12px;">Confirm Consultation Booking</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- 2. Meeting Scheduler Tab -->
+    <div id="tab-scheduler" class="tab-content">
+      <div class="glass-card" style="max-width: 680px; margin: 0 auto;">
+        <h2 style="font-size: 24px; margin-bottom: 20px;">Select Available Executive Slot</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div>
+            <label class="form-label">Select Date</label>
+            <input type="date" class="form-input" value="2026-08-15">
+          </div>
+          <div>
+            <label class="form-label">Select Time (EST)</label>
+            <select class="form-select">
+              <option>10:00 AM EST - Marcus Vance (Director)</option>
+              <option>02:00 PM EST - Elena Rostova (VFX Lead)</option>
+              <option>04:30 PM EST - Executive Studio Desk</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn btn-primary" style="width: 100%; margin-top: 24px;" onclick="document.querySelector('[data-tab=\'tab-success\']').click()">Schedule Meeting Slot</button>
+      </div>
+    </div>
+
+    <!-- 3. Project Quote Tab -->
+    <div id="tab-quote" class="tab-content">
+      <div class="glass-card" style="max-width: 680px; margin: 0 auto;">
+        <h2 style="font-size: 24px; margin-bottom: 12px;">Interactive Estimate Calculator</h2>
+        <p class="text-dim" style="font-size: 14px; margin-bottom: 24px;">Configure baseline options to view an instant estimate breakdown.</p>
+        <div class="form-group">
+          <label class="form-label">Production Tier</label>
+          <select class="form-select">
+            <option>Cinematic Standard ($25,000 baseline)</option>
+            <option>Global Flagship Commercial ($50,000 baseline)</option>
+            <option>Custom Enterprise Retainer ($100,000+)</option>
+          </select>
+        </div>
+        <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 8px; border: 1px solid var(--border-color); margin-bottom: 20px;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+            <span>Estimated Timeline:</span>
+            <strong class="text-gold">4 - 6 Weeks</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span>Estimated Budget:</span>
+            <strong style="font-size: 20px;" class="text-gold">$45,000 - $55,000 USD</strong>
+          </div>
+        </div>
+        <button class="btn btn-primary" style="width: 100%;" onclick="showToast('Official Quote generated and sent to email!', 'success')">Generate Formal Estimate PDF</button>
+      </div>
+    </div>
+
+    <!-- 4. Booking Success View -->
+    <div id="tab-success" class="tab-content">
+      <div class="glass-card" style="max-width: 540px; margin: 0 auto; text-align: center;">
+        <div style="width: 64px; height: 64px; border-radius: 50%; background: rgba(74, 222, 128, 0.15); border: 2px solid var(--status-success); color: var(--status-success); display: flex; align-items: center; justify-content: center; font-size: 32px; margin: 0 auto 20px auto;">✓</div>
+        <h2 style="font-size: 28px; margin-bottom: 12px;">Booking Confirmed!</h2>
+        <p class="text-muted" style="margin-bottom: 24px;">Your consultation has been scheduled with Creative Director Marcus Vance on <strong>August 15, 2026 at 10:00 AM EST</strong>.</p>
+        <div class="badge badge-success" style="margin-bottom: 24px;">Calendar Invite Sent to Email</div>
+        <br>
+        <a href="portal.html" class="btn btn-primary">Go to Client Portal</a>
+      </div>
+    </div>
+
+    <!-- 5. Booking Cancelled View -->
+    <div id="tab-cancelled" class="tab-content">
+      <div class="glass-card" style="max-width: 540px; margin: 0 auto; text-align: center;">
+        <div style="width: 64px; height: 64px; border-radius: 50%; background: rgba(248, 113, 113, 0.15); border: 2px solid var(--status-error); color: var(--status-error); display: flex; align-items: center; justify-content: center; font-size: 32px; margin: 0 auto 20px auto;">✕</div>
+        <h2 style="font-size: 28px; margin-bottom: 12px;">Booking Cancelled</h2>
+        <p class="text-muted" style="margin-bottom: 24px;">Your consultation session was cancelled. No charges were made to your account.</p>
+        <a href="booking.html" class="btn btn-secondary" onclick="document.querySelector('[data-tab=\'tab-consultation\']').click()">Reschedule Meeting</a>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="js/app.js"></script>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body>
+</html>

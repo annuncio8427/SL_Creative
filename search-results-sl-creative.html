@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SL Creative - Search Results</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "primary-fixed": "#ffe088",
+                      "on-primary-fixed": "#241a00",
+                      "on-error": "#690005",
+                      "on-primary-container": "#554300",
+                      "surface-tint": "#e9c349",
+                      "surface-container": "#20201f",
+                      "primary": "#f2ca50",
+                      "surface-container-lowest": "#0e0e0e",
+                      "inverse-surface": "#e5e2e1",
+                      "on-secondary": "#313030",
+                      "on-primary-fixed-variant": "#574500",
+                      "secondary": "#c9c6c5",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "on-background": "#e5e2e1",
+                      "on-surface-variant": "#d0c5af",
+                      "secondary-fixed": "#e5e2e1",
+                      "outline-variant": "#4d4635",
+                      "on-secondary-container": "#bab8b7",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "primary-container": "#d4af37",
+                      "on-error-container": "#ffdad6",
+                      "inverse-primary": "#735c00",
+                      "surface": "#131313",
+                      "on-primary": "#3c2f00",
+                      "surface-container-high": "#2a2a2a",
+                      "on-tertiary-container": "#434546",
+                      "surface-dim": "#131313",
+                      "tertiary-container": "#b2b3b3",
+                      "secondary-container": "#4a4949",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "inverse-on-surface": "#313030",
+                      "outline": "#99907c",
+                      "surface-variant": "#353535",
+                      "on-tertiary": "#2f3131",
+                      "tertiary-fixed": "#e2e2e2",
+                      "tertiary": "#cecece",
+                      "surface-container-highest": "#353535",
+                      "on-surface": "#e5e2e1",
+                      "error-container": "#93000a",
+                      "error": "#ffb4ab",
+                      "background": "#131313",
+                      "surface-bright": "#393939",
+                      "primary-fixed-dim": "#e9c349",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "surface-container-low": "#1c1b1b",
+                      "on-secondary-fixed-variant": "#474646"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "section-gap": "160px",
+                      "margin-mobile": "24px",
+                      "gutter": "24px",
+                      "margin-desktop": "80px",
+                      "container-max": "1440px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": [
+                              "Outfit"
+                      ],
+                      "display-lg": [
+                              "Outfit"
+                      ],
+                      "headline-lg": [
+                              "Outfit"
+                      ],
+                      "body-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "label-caps": [
+                              "Outfit"
+                      ],
+                      "body-md": [
+                              "Be Vietnam Pro"
+                      ],
+                      "headline-md": [
+                              "Outfit"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "72px",
+                              {
+                                      "lineHeight": "80px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.15em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: #0B0B0B; /* Override for pure black as requested */
+            color: #e5e2e1;
+        }
+        
+        .glass-card {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.3); /* Muted gold border */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.8), transparent);
+            opacity: 0.5;
+        }
+        
+        .glass-input {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-input:focus-within {
+            border-color: #D4AF37;
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+        }
+
+        /* Custom Cursor */
+        .custom-cursor {
+            width: 32px;
+            height: 32px;
+            border: 1px solid #D4AF37;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s, background-color 0.2s;
+            mix-blend-mode: difference;
+        }
+        
+        .custom-cursor.hovering {
+            width: 64px;
+            height: 64px;
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-up {
+            animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+        
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        .delay-500 { animation-delay: 500ms; }
+    </style>
+</head>
+<body class="font-body-md antialiased min-h-screen flex flex-col selection:bg-primary selection:text-on-primary">
+<div class="custom-cursor hidden md:block" id="cursor"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto bg-background/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-2xl shadow-primary/5 transition-transform scale-95 active:scale-90 duration-300">
+<div class="font-headline-md text-headline-md text-primary tracking-tighter">
+            SL Creative
+        </div>
+<div class="hidden md:flex items-center gap-8 font-body-md text-body-md uppercase tracking-widest">
+<a class="text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 px-3 py-2 rounded-md transition-all duration-300 cursor-interactive" href="#">Case Studies</a>
+<a class="text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 px-3 py-2 rounded-md transition-all duration-300 cursor-interactive" href="#">Process</a>
+<a class="text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 px-3 py-2 rounded-md transition-all duration-300 cursor-interactive" href="#">Careers</a>
+<a class="text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 px-3 py-2 rounded-md transition-all duration-300 cursor-interactive" href="#">Blog</a>
+<a class="text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 px-3 py-2 rounded-md transition-all duration-300 cursor-interactive" href="#">Booking</a>
+</div>
+<div class="flex items-center gap-6">
+<!-- Active Search State in Nav -->
+<div class="hidden md:flex items-center glass-input rounded-full px-4 py-2 w-64 cursor-interactive">
+<span class="material-symbols-outlined text-primary text-xl mr-2">search</span>
+<input class="bg-transparent border-none outline-none text-on-surface text-sm w-full placeholder-on-surface-variant focus:ring-0" placeholder="Search..." type="text" value="Cinematic Editing"/>
+<button class="text-on-surface-variant hover:text-primary ml-2"><span class="material-symbols-outlined text-sm">close</span></button>
+</div>
+<button class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-full font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary-container transition-colors cursor-interactive">
+                Inquire Now
+            </button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary cursor-interactive">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Hero & Search Summary -->
+<header class="text-center mb-16 animate-fade-up">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">
+                Showing results for <span class="text-primary italic">"Cinematic Editing"</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                12 results found across portfolios, insights, and resources.
+            </p>
+</header>
+<!-- Prominent Search Bar Refinement -->
+<div class="max-w-2xl mx-auto mb-16 animate-fade-up delay-100">
+<div class="glass-input rounded-full p-2 flex items-center shadow-lg shadow-black/50 cursor-interactive">
+<span class="material-symbols-outlined text-primary text-2xl ml-4">search</span>
+<input class="w-full bg-transparent border-none text-on-surface font-body-lg text-lg px-4 py-3 focus:ring-0 outline-none placeholder-on-surface-variant/50" type="text" value="Cinematic Editing"/>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-caps text-label-caps hover:bg-primary-container transition-colors">
+                    Search
+                </button>
+</div>
+</div>
+<!-- Filter Bar -->
+<div class="flex flex-wrap justify-center gap-4 mb-16 animate-fade-up delay-200">
+<button class="px-6 py-2 rounded-full border border-primary text-primary bg-primary/10 font-label-caps text-label-caps uppercase tracking-widest transition-all cursor-interactive">All (12)</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant/50 text-on-surface-variant hover:border-primary/50 hover:text-on-surface font-label-caps text-label-caps uppercase tracking-widest transition-all cursor-interactive">Portfolio (4)</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant/50 text-on-surface-variant hover:border-primary/50 hover:text-on-surface font-label-caps text-label-caps uppercase tracking-widest transition-all cursor-interactive">Case Studies (2)</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant/50 text-on-surface-variant hover:border-primary/50 hover:text-on-surface font-label-caps text-label-caps uppercase tracking-widest transition-all cursor-interactive">Blog (3)</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant/50 text-on-surface-variant hover:border-primary/50 hover:text-on-surface font-label-caps text-label-caps uppercase tracking-widest transition-all cursor-interactive">Resources (2)</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant/50 text-on-surface-variant hover:border-primary/50 hover:text-on-surface font-label-caps text-label-caps uppercase tracking-widest transition-all cursor-interactive">Team (1)</button>
+</div>
+<!-- Results Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-section-gap">
+<!-- Result Card 1: Portfolio -->
+<article class="glass-card rounded-xl group cursor-interactive animate-fade-up delay-300 flex flex-col h-full hover:scale-[1.02] transition-transform duration-500">
+<div class="relative h-64 overflow-hidden rounded-t-xl">
+<img alt="Vanguard Motors" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A sleek, dark, high-end sports car in a dimly lit, cinematic warehouse setting. Dramatic, moody lighting emphasizes the car's curves and metallic finish. The scene uses a deep black background with a cool blue ambient light and warm gold highlights reflecting off the vehicle. The overall aesthetic is ultra-premium, mysterious, and highly polished, suitable for a luxury automotive commercial." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyVvCGTbG1PEEo5gkg6Jeh6VPCmZPC9fFJpU6Wzpmkdn6yyv7VO9K16v5iX8zA4BnmDgAYcE4UjCwQFX_atAbNrE3wk4xFakPj_RYgNzFAtIIKz37g9hXI85Vxnhxsk1wciWJDp10s_rwt73-TsMPiz1C3Oph8rqMRU9-ts42uFMo7Y1C7zxDAzHnfQ3AfqD0yPHhJMEI8cPO7_JklpMM4NiuSJQ7ZOoFiDb5tZ3Jql1JmLSqiDc-do83AXFkUr2vexKQzzh3pZmmG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<span class="absolute top-4 left-4 bg-black/60 backdrop-blur-md border border-primary/50 text-primary px-3 py-1 rounded-full font-label-caps text-[10px] uppercase tracking-widest">
+                        Portfolio
+                    </span>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-2xl text-on-surface mb-3 group-hover:text-primary transition-colors">Vanguard Motors Campaign</h3>
+<p class="font-body-md text-on-surface-variant mb-6 line-clamp-3">
+                        A masterclass in automotive cinematography and dynamic editing. This piece showcases high-speed tracking shots seamlessly woven with meticulous detail work, set to an original aggressive score.
+                    </p>
+<div class="mt-auto flex items-center text-primary font-label-caps uppercase tracking-widest text-xs">
+                        View Details <span class="material-symbols-outlined text-sm ml-2 group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Result Card 2: Blog -->
+<article class="glass-card rounded-xl group cursor-interactive animate-fade-up delay-400 flex flex-col h-full hover:scale-[1.02] transition-transform duration-500">
+<div class="relative h-64 overflow-hidden rounded-t-xl">
+<img alt="Color Grading" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A close-up abstract view of professional color grading software on a dark monitor screen. The image focuses on vibrant color wheels (shadows, midtones, highlights) glowing against a pure black background. A subtle gold tint illuminates the edge of the screen, creating a premium, tech-focused, and cinematic mood. The depth of field is shallow, emphasizing precision and artistic control." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOQVrevjkWROSt8qJ7z50IvkWrUy86hsoRxUx8GNWistWsDnVF5t-jn3MnD8_8jmlGyo6YrzplBesso51MrD4ps7qTyMA9TZ8gLBoTTIZprjBb1dyGDodKb2iJco2kuzB08Tu9v8QUvZPOnx6cYPJK6BTbQEBfhoXcNvh4D4j1J6fRoU5hGK5Ib7DgzGqIzhahjqJDHKDgfPFgoa4mrJV1YeF-ho_h1T8w2-XVW8VM44fFZ5xk95H8BJU3BToTrRXuPpyTgxpsn6fk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<span class="absolute top-4 left-4 bg-black/60 backdrop-blur-md border border-outline-variant text-on-surface px-3 py-1 rounded-full font-label-caps text-[10px] uppercase tracking-widest">
+                        Blog Insight
+                    </span>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-2xl text-on-surface mb-3 group-hover:text-primary transition-colors">The Art of Grading: Psychology of Color</h3>
+<p class="font-body-md text-on-surface-variant mb-6 line-clamp-3">
+                        Exploring how subtle shifts in the color palette can subconsciously manipulate audience emotion. We break down our grade approach for psychological thrillers versus romantic sweeping epics.
+                    </p>
+<div class="mt-auto flex items-center text-primary font-label-caps uppercase tracking-widest text-xs">
+                        Read Article <span class="material-symbols-outlined text-sm ml-2 group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Result Card 3: Resource -->
+<article class="glass-card rounded-xl group cursor-interactive animate-fade-up delay-500 flex flex-col h-full hover:scale-[1.02] transition-transform duration-500">
+<div class="relative h-64 overflow-hidden rounded-t-xl bg-surface-container-high flex items-center justify-center">
+<div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNkNGFmMzciIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djIwaDJWMzRoLTJ6bS00IDB2MjBoLTJWMzRoMnpmbS00IDBWMGgtMnYzNGgyeiIvPjwvZz48L2c+PC9zdmc+')] opacity-20"></div>
+<span class="material-symbols-outlined text-6xl text-primary" style="font-variation-settings: 'FILL' 0, 'wght' 200;">
+                        palette
+                    </span>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
+<span class="absolute top-4 left-4 bg-black/60 backdrop-blur-md border border-outline-variant text-on-surface px-3 py-1 rounded-full font-label-caps text-[10px] uppercase tracking-widest">
+                        Resource
+                    </span>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-2xl text-on-surface mb-3 group-hover:text-primary transition-colors">Cinematic Neon LUT Collection</h3>
+<p class="font-body-md text-on-surface-variant mb-6 line-clamp-3">
+                        A premium pack of 15 handcrafted Look Up Tables designed to emulate the gritty, high-contrast aesthetic of modern neo-noir cinema. Perfect for night shoots.
+                    </p>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex items-center text-primary font-label-caps uppercase tracking-widest text-xs">
+                            Download <span class="material-symbols-outlined text-sm ml-2 group-hover:translate-x-2 transition-transform">download</span>
+</div>
+<span class="text-on-surface-variant text-sm font-label-caps">$49</span>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-background text-on-surface-variant border-t border-outline-variant/20">
+<div class="w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-center gap-unit">
+<div class="font-headline-lg text-headline-lg text-primary mb-8">
+                SL Creative
+            </div>
+<div class="flex flex-wrap justify-center gap-6 mb-12 font-body-md text-body-md">
+<a class="hover:text-primary underline-offset-4 hover:underline transition-all cursor-interactive" href="#">Case Studies</a>
+<a class="hover:text-primary underline-offset-4 hover:underline transition-all cursor-interactive" href="#">Careers</a>
+<a class="hover:text-primary underline-offset-4 hover:underline transition-all cursor-interactive" href="#">FAQ</a>
+<a class="hover:text-primary underline-offset-4 hover:underline transition-all cursor-interactive" href="#">Terms &amp; Conditions</a>
+<a class="hover:text-primary underline-offset-4 hover:underline transition-all cursor-interactive" href="contact.html">Contact</a>
+</div>
+<div class="text-center opacity-80 hover:opacity-100 transition-opacity font-body-sm text-sm">
+                © 2024 SL Creative. Uncompromising Excellence in Post-Production.
+            </div>
+</div>
+</footer>
+<script>
+        // Custom Cursor Logic
+        const cursor = document.getElementById('cursor');
+        const interactives = document.querySelectorAll('.cursor-interactive');
+
+        if(window.matchMedia("(min-width: 768px)").matches) {
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+
+            interactives.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.classList.add('hovering');
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursor.classList.remove('hovering');
+                });
+            });
+        }
+    </script>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SL Creative - Services &amp; Pricing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#353535",
+                      "on-error-container": "#ffdad6",
+                      "surface-bright": "#393939",
+                      "tertiary": "#cecece",
+                      "error": "#ffb4ab",
+                      "on-primary-container": "#554300",
+                      "tertiary-container": "#b2b3b3",
+                      "outline": "#99907c",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "on-secondary-container": "#bab8b7",
+                      "outline-variant": "#4d4635",
+                      "surface-container-high": "#2a2a2a",
+                      "inverse-surface": "#e5e2e1",
+                      "surface": "#131313",
+                      "on-tertiary-container": "#434546",
+                      "on-error": "#690005",
+                      "primary-container": "#d4af37",
+                      "on-surface": "#e5e2e1",
+                      "on-primary-fixed-variant": "#574500",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "surface-container-low": "#1c1b1b",
+                      "on-primary": "#3c2f00",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "secondary-fixed": "#e5e2e1",
+                      "primary-fixed": "#ffe088",
+                      "background": "#131313",
+                      "surface-dim": "#131313",
+                      "on-background": "#e5e2e1",
+                      "on-surface-variant": "#d0c5af",
+                      "inverse-on-surface": "#313030",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "primary-fixed-dim": "#e9c349",
+                      "primary": "#f2ca50",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "secondary-container": "#4a4949",
+                      "surface-tint": "#e9c349",
+                      "surface-container-highest": "#353535",
+                      "tertiary-fixed": "#e2e2e2",
+                      "secondary": "#c9c6c5",
+                      "on-primary-fixed": "#241a00",
+                      "on-tertiary": "#2f3131",
+                      "surface-container": "#20201f",
+                      "on-secondary-fixed-variant": "#474646",
+                      "inverse-primary": "#735c00",
+                      "error-container": "#93000a",
+                      "on-secondary": "#313030"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-desktop": "80px",
+                      "section-gap": "160px",
+                      "container-max": "1440px",
+                      "unit": "8px",
+                      "margin-mobile": "24px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Outfit"],
+                      "label-caps": ["Outfit"],
+                      "body-lg": ["Be Vietnam Pro"],
+                      "headline-lg-mobile": ["Outfit"],
+                      "body-md": ["Be Vietnam Pro"],
+                      "display-lg": ["Outfit"],
+                      "headline-lg": ["Outfit"]
+              },
+              "fontSize": {
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid theme('colors.outline-variant');
+            position: relative;
+            overflow: hidden;
+        }
+        .glass-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(242, 202, 80, 0) 0%, rgba(242, 202, 80, 0.5) 50%, rgba(242, 202, 80, 0) 100%);
+            opacity: 0.5;
+        }
+        .gold-glow:hover {
+            box-shadow: 0 0 40px rgba(242, 202, 80, 0.15);
+        }
+        .custom-cursor {
+            width: 32px;
+            height: 32px;
+            border: 1px solid theme('colors.primary');
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s;
+        }
+        .hover-active .custom-cursor {
+            width: 48px;
+            height: 48px;
+            background: rgba(242, 202, 80, 0.1);
+        }
+        .bg-pattern {
+            background-image: radial-gradient(theme('colors.surface-variant') 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background min-h-screen flex flex-col antialiased selection:bg-primary selection:text-on-primary">
+<div class="custom-cursor hidden md:block"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30 transition-all duration-300">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 mx-auto max-w-container-max">
+<a class="text-headline-md font-headline-md tracking-tighter text-on-surface dark:text-on-surface cursor-interactive flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">camera</span>
+                SL Creative
+            </a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors cursor-interactive py-2" href="portfolio.html">Work</a>
+<a class="text-label-caps font-label-caps text-primary dark:text-primary border-b-2 border-primary pb-1 cursor-interactive py-2" href="services.html">Services</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors cursor-interactive py-2" href="pricing-calculator.html">Pricing</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors cursor-interactive py-2" href="about.html">About</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors cursor-interactive py-2" href="contact.html">Contact</a>
+</div>
+<button class="hidden md:block bg-primary text-on-primary text-label-caps font-label-caps px-6 py-3 rounded hover:bg-primary-fixed-dim transition-colors cursor-interactive">
+                Book a Consultation
+            </button>
+<button class="md:hidden text-on-surface cursor-interactive">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="flex-grow pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full relative">
+<!-- Ambient Background -->
+<div class="absolute inset-0 bg-pattern opacity-10 pointer-events-none -z-10"></div>
+<div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+<!-- Header Section -->
+<header class="mb-24 text-center md:text-left max-w-3xl">
+<h1 class="text-display-lg font-display-lg mb-6 leading-tight">Elevate Your <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-fixed-dim">Visual Narrative</span></h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl">
+                Uncompromising post-production for high-end clientele. We transform raw footage into cinematic masterpieces that command attention.
+            </p>
+</header>
+<!-- Services Grid -->
+<section class="mb-section-gap">
+<div class="flex items-center gap-4 mb-12">
+<div class="h-[1px] flex-grow bg-gradient-to-r from-transparent to-outline-variant/50"></div>
+<h2 class="text-label-caps font-label-caps text-primary tracking-widest">OUR SERVICES</h2>
+<div class="h-[1px] flex-grow bg-gradient-to-l from-transparent to-outline-variant/50"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Service Card 1 -->
+<div class="glass-panel p-8 rounded-xl gold-glow transition-all duration-500 group cursor-interactive">
+<div class="w-12 h-12 rounded-full bg-surface-variant border border-outline-variant flex items-center justify-center mb-6 group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">movie</span>
+</div>
+<h3 class="text-headline-md-mobile font-headline-md-mobile mb-4">Cinematic Video Editing</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">Narrative-driven post-production for short films, commercials, and brand anthems. Color grading included.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 border border-outline-variant rounded-full text-[10px] uppercase tracking-wider text-on-surface-variant">Premiere Pro</span>
+<span class="px-3 py-1 border border-outline-variant rounded-full text-[10px] uppercase tracking-wider text-on-surface-variant">DaVinci Resolve</span>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="glass-panel p-8 rounded-xl gold-glow transition-all duration-500 group cursor-interactive">
+<div class="w-12 h-12 rounded-full bg-surface-variant border border-outline-variant flex items-center justify-center mb-6 group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">play_circle</span>
+</div>
+<h3 class="text-headline-md-mobile font-headline-md-mobile mb-4">YouTube Optimization</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">High-retention editing strategies, engaging motion graphics, and professional sound design for creators.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 border border-outline-variant rounded-full text-[10px] uppercase tracking-wider text-on-surface-variant">Motion Graphics</span>
+<span class="px-3 py-1 border border-outline-variant rounded-full text-[10px] uppercase tracking-wider text-on-surface-variant">Sound Design</span>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="glass-panel p-8 rounded-xl gold-glow transition-all duration-500 group cursor-interactive">
+<div class="w-12 h-12 rounded-full bg-surface-variant border border-outline-variant flex items-center justify-center mb-6 group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">favorite</span>
+</div>
+<h3 class="text-headline-md-mobile font-headline-md-mobile mb-4">Luxury Weddings</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">Elegant storytelling of your special day. Premium color grading and emotional pacing to preserve memories.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 border border-outline-variant rounded-full text-[10px] uppercase tracking-wider text-on-surface-variant">Storytelling</span>
+<span class="px-3 py-1 border border-outline-variant rounded-full text-[10px] uppercase tracking-wider text-on-surface-variant">Color Grading</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section>
+<div class="flex items-center gap-4 mb-16">
+<div class="h-[1px] flex-grow bg-gradient-to-r from-transparent to-outline-variant/50"></div>
+<h2 class="text-label-caps font-label-caps text-primary tracking-widest">INVESTMENT</h2>
+<div class="h-[1px] flex-grow bg-gradient-to-l from-transparent to-outline-variant/50"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+<!-- Starter Tier -->
+<div class="glass-panel p-8 rounded-xl border-outline-variant/50 flex flex-col h-full cursor-interactive">
+<div class="mb-8">
+<h3 class="text-headline-md font-headline-md mb-2">Essential</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Perfect for growing creators.</p>
+<div class="mt-6 flex items-baseline gap-1">
+<span class="text-headline-lg font-headline-lg">$499</span>
+<span class="text-body-md font-body-md text-on-surface-variant">/project</span>
+</div>
+</div>
+<ul class="flex-grow space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check</span>
+<span class="text-body-md font-body-md">Up to 5 minutes final runtime</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check</span>
+<span class="text-body-md font-body-md">Basic Color Correction</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check</span>
+<span class="text-body-md font-body-md">2 Revisions</span>
+</li>
+</ul>
+<button class="w-full py-4 border border-outline-variant hover:border-primary text-label-caps font-label-caps uppercase tracking-wider transition-colors">Select Essential</button>
+</div>
+<!-- Professional Tier (Highlighted) -->
+<div class="glass-panel p-10 rounded-xl border-primary/50 relative transform lg:scale-105 shadow-[0_0_60px_rgba(242,202,80,0.1)] flex flex-col h-full cursor-interactive z-10">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-surface border border-primary px-4 py-1 text-[10px] font-bold uppercase tracking-widest text-primary">
+                        Most Popular
+                    </div>
+<div class="mb-8 text-center">
+<h3 class="text-headline-lg-mobile font-headline-lg-mobile mb-2 text-primary">Professional</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">For serious brands and campaigns.</p>
+<div class="mt-6 flex items-baseline justify-center gap-1">
+<span class="text-display-lg font-display-lg text-white">$999</span>
+<span class="text-body-md font-body-md text-on-surface-variant">/project</span>
+</div>
+</div>
+<ul class="flex-grow space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check</span>
+<span class="text-body-md font-body-md">Up to 15 minutes final runtime</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check</span>
+<span class="text-body-md font-body-md">Advanced Cinematic Color Grading</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check</span>
+<span class="text-body-md font-body-md">Custom Motion Graphics</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check</span>
+<span class="text-body-md font-body-md">Unlimited Revisions</span>
+</li>
+</ul>
+<button class="w-full py-4 bg-primary text-on-primary text-label-caps font-label-caps uppercase tracking-wider hover:bg-primary-fixed-dim transition-colors">Select Professional</button>
+</div>
+<!-- Premium Tier -->
+<div class="glass-panel p-8 rounded-xl border-outline-variant/50 flex flex-col h-full cursor-interactive">
+<div class="mb-8">
+<h3 class="text-headline-md font-headline-md mb-2">Cinematic</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Full-scale production value.</p>
+<div class="mt-6 flex items-baseline gap-1">
+<span class="text-headline-lg font-headline-lg">Custom</span>
+</div>
+</div>
+<ul class="flex-grow space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check</span>
+<span class="text-body-md font-body-md">Feature-length or series editing</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check</span>
+<span class="text-body-md font-body-md">Full Sound Design &amp; Mixing</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check</span>
+<span class="text-body-md font-body-md">Dedicated Project Manager</span>
+</li>
+</ul>
+<button class="w-full py-4 border border-outline-variant hover:border-primary text-label-caps font-label-caps uppercase tracking-wider transition-colors">Inquire Now</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap border-t border-outline-variant/20 bg-surface dark:bg-surface">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-8">
+<div class="text-headline-lg font-headline-lg text-primary dark:text-primary">
+                SL Creative
+            </div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80 cursor-interactive" href="#">Instagram</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80 cursor-interactive" href="#">Vimeo</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80 cursor-interactive" href="#">LinkedIn</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80 cursor-interactive" href="privacy-policy.html">Privacy Policy</a>
+</div>
+<div class="text-body-md font-body-md text-on-surface-variant">
+                © 2024 SL Creative. All Rights Reserved.
+            </div>
+</div>
+</footer>
+<script>
+        // Custom Cursor Logic
+        const cursor = document.querySelector('.custom-cursor');
+        const interactables = document.querySelectorAll('.cursor-interactive, a, button');
+
+        if(cursor) {
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+
+            interactables.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    document.body.classList.add('hover-active');
+                });
+                el.addEventListener('mouseleave', () => {
+                    document.body.classList.remove('hover-active');
+                });
+            });
+        }
+    </script>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

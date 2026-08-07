@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SL Creative - Resources &amp; Downloads</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "primary": "#f2ca50",
+                            "inverse-surface": "#e5e2e1",
+                            "background": "#131313",
+                            "on-primary-fixed": "#241a00",
+                            "surface": "#131313",
+                            "secondary-fixed-dim": "#c9c6c5",
+                            "on-tertiary-container": "#434546",
+                            "primary-container": "#d4af37",
+                            "inverse-primary": "#735c00",
+                            "on-error-container": "#ffdad6",
+                            "tertiary-container": "#b2b3b3",
+                            "secondary": "#c9c6c5",
+                            "on-primary": "#3c2f00",
+                            "error-container": "#93000a",
+                            "on-primary-container": "#554300",
+                            "surface-container-high": "#2a2a2a",
+                            "primary-fixed": "#ffe088",
+                            "on-tertiary": "#2f3131",
+                            "surface-container": "#20201f",
+                            "on-surface": "#e5e2e1",
+                            "on-error": "#690005",
+                            "outline-variant": "#4d4635",
+                            "on-background": "#e5e2e1",
+                            "tertiary-fixed-dim": "#c6c6c7",
+                            "primary-fixed-dim": "#e9c349",
+                            "on-secondary": "#313030",
+                            "on-surface-variant": "#d0c5af",
+                            "on-tertiary-fixed": "#1a1c1c",
+                            "secondary-container": "#4a4949",
+                            "on-secondary-container": "#bab8b7",
+                            "inverse-on-surface": "#313030",
+                            "on-secondary-fixed-variant": "#474646",
+                            "secondary-fixed": "#e5e2e1",
+                            "surface-variant": "#353535",
+                            "on-secondary-fixed": "#1c1b1b",
+                            "on-tertiary-fixed-variant": "#454747",
+                            "surface-container-lowest": "#0e0e0e",
+                            "outline": "#99907c",
+                            "surface-bright": "#393939",
+                            "tertiary": "#cecece",
+                            "on-primary-fixed-variant": "#574500",
+                            "surface-container-highest": "#353535",
+                            "error": "#ffb4ab",
+                            "surface-dim": "#131313",
+                            "surface-tint": "#e9c349",
+                            "surface-container-low": "#1c1b1b",
+                            "tertiary-fixed": "#e2e2e2"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.125rem",
+                            "lg": "0.25rem",
+                            "xl": "0.5rem",
+                            "full": "0.75rem"
+                    },
+                    "spacing": {
+                            "margin-desktop": "80px",
+                            "margin-mobile": "24px",
+                            "container-max": "1440px",
+                            "section-gap": "160px",
+                            "unit": "8px",
+                            "gutter": "24px"
+                    },
+                    "fontFamily": {
+                            "body-md": ["Be Vietnam Pro"],
+                            "body-lg": ["Be Vietnam Pro"],
+                            "display-lg": ["Outfit"],
+                            "headline-lg-mobile": ["Outfit"],
+                            "headline-lg": ["Outfit"],
+                            "headline-md": ["Outfit"],
+                            "label-caps": ["Outfit"]
+                    },
+                    "fontSize": {
+                            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                            "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                            "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                            "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                            "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                            "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700"}]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .glass-card {
+            background-color: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid theme('colors.outline-variant');
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+        .gold-gradient-border {
+            border: 1px solid transparent;
+            background: linear-gradient(theme('colors.surface-container-high'), theme('colors.surface-container-high')) padding-box,
+                        linear-gradient(135deg, theme('colors.primary') 0%, rgba(212,175,55,0) 100%) border-box;
+        }
+        
+        /* Custom Cursor */
+        .custom-cursor {
+            width: 32px;
+            height: 32px;
+            border: 1px solid theme('colors.primary');
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s, background-color 0.2s;
+            mix-blend-mode: difference;
+        }
+        .custom-cursor.hovering {
+            width: 48px;
+            height: 48px;
+            background-color: rgba(242, 202, 80, 0.2);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md">
+<!-- Custom Cursor Element -->
+<div class="custom-cursor hidden md:block" id="cursor"></div>
+<!-- TopNavBar -->
+<header class="bg-surface/60 backdrop-blur-xl border-b border-primary/20 shadow-[0_20px_40px_rgba(212,175,55,0.05)] fixed top-0 w-full z-50 transition-transform duration-300">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20 w-full flex justify-between items-center">
+<!-- Brand -->
+<a class="font-display-lg text-headline-md text-primary tracking-tight" href="#" style="font-size: 1.5rem; line-height: 2rem;">SL Creative</a>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#">Dashboard</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#">Projects</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="#">Media Kit</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#">Support</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center justify-center text-primary hover:text-primary-fixed transition-colors">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="bg-primary text-on-primary font-label-caps uppercase px-6 py-2 rounded scale-95 duration-200 hover:scale-100 hover:bg-primary-fixed transition-all">Portal</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Header Section -->
+<section class="mb-24 text-center md:text-left">
+<h1 class="font-display-lg text-display-lg text-primary mb-6">Creative Arsenal.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Elevate your production value with our curated collection of premium assets, LUTs, and overlays. Engineered for uncompromising quality.</p>
+<!-- Filters -->
+<div class="mt-12 flex flex-wrap gap-4 justify-center md:justify-start">
+<button class="px-6 py-2 rounded-full border border-primary text-primary font-label-caps uppercase tracking-widest bg-primary/10 hover:bg-primary/20 transition-colors">All Resources</button>
+<button class="px-6 py-2 rounded-full border border-outline text-on-surface-variant font-label-caps uppercase tracking-widest hover:border-primary hover:text-primary transition-colors">LUTs &amp; Grading</button>
+<button class="px-6 py-2 rounded-full border border-outline text-on-surface-variant font-label-caps uppercase tracking-widest hover:border-primary hover:text-primary transition-colors">SFX Packs</button>
+<button class="px-6 py-2 rounded-full border border-outline text-on-surface-variant font-label-caps uppercase tracking-widest hover:border-primary hover:text-primary transition-colors">Overlays</button>
+</div>
+</section>
+<!-- Bento Grid Layout for Resources -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Featured Premium Item (Spans 8 cols) -->
+<article class="glass-card gold-gradient-border md:col-span-8 rounded-xl overflow-hidden group relative flex flex-col md:flex-row h-full min-h-[400px]">
+<div class="md:w-1/2 h-64 md:h-auto relative overflow-hidden">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A moody, high-contrast cinematic still of a futuristic cityscape at night. Neon signs reflect in wet puddles. The image showcases a distinct, professional color grade with deep teal shadows and vibrant orange highlights, exemplifying a premium LUT pack in a dark minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6ebXuEzxPh8dKIKK_-1YYDsGiyF2SBwLa6BdCWGzY6C3Y5JT1qFUBtfexZjw3fXfFX7phtE4wDXGmnNADx8IGUnz76lwGCX_ynmAfyue55j8B6YRnGsgt74RRkWRM9aGRi1BLYkclVI98RZIvQdzmCQiFjAcgP-RIw0Jrczzp7XpcLjQLH0-v_N-6klyOLuyCKYyn-HBMvCIrUc0r-Boxrf-MAd8Ulmej_lq_pF1BHf_ue_G6kLJc4g"/>
+<div class="absolute top-4 left-4 bg-background/80 backdrop-blur px-3 py-1 rounded text-primary font-label-caps">Premium</div>
+</div>
+<div class="p-8 flex flex-col justify-between md:w-1/2 bg-surface/40">
+<div>
+<div class="flex items-center gap-2 mb-4 text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="movie">movie</span>
+<span class="font-label-caps">LUT Pack</span>
+</div>
+<h2 class="font-headline-lg-mobile md:font-headline-md text-headline-md text-on-surface mb-4">Cinematic Neon Collection</h2>
+<p class="text-on-surface-variant font-body-md mb-6">A suite of 24 meticulously crafted Look-Up Tables designed to impart an authentic, moody neo-noir aesthetic to your footage. Built for LOG profiles.</p>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<span class="font-headline-md text-primary">$49</span>
+<button class="bg-primary text-on-primary font-label-caps px-6 py-3 rounded flex items-center gap-2 hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="shopping_cart">shopping_cart</span>
+                            Add to Cart
+                        </button>
+</div>
+</div>
+</article>
+<!-- Free Asset 1 (Spans 4 cols) -->
+<article class="glass-card md:col-span-4 rounded-xl overflow-hidden group flex flex-col">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A stylized, macro photograph of analog film grain and dust particles suspended in light, shot against a stark black background. High contrast, sharp details on the dust, evoking a vintage, gritty texture typical of premium film overlays, adhering to a dark minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC_LinWB6Nm_RH4MJRo0axSxoLHowHcL6Oci87fWtVK8nh2ARHuGPyGPyCF_lrhg0yqGuLAwVePOLLMrnrueJ8zUjAm_CWFzJdGOUf1rwwhL33WRKMN7vaCshdkC2gkXNg_L7ejH07HKA0sgRMgunawh5W0XEJ1KJpvD4edSJzrakqznR-DKbI2phsSC1Z9mS1rgJ_zU0J7aYDHCysf6Nlnt8Vc0eQW6n5OGSyDryUpHZf1WnFwLQ7kQ"/>
+<div class="absolute top-4 left-4 bg-background/80 backdrop-blur px-3 py-1 rounded text-on-surface font-label-caps">Free</div>
+</div>
+<div class="p-6 flex flex-col flex-grow bg-surface/20">
+<div class="flex items-center gap-2 mb-3 text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="layers">layers</span>
+<span class="font-label-caps">Overlays</span>
+</div>
+<h3 class="font-headline-md text-[24px] leading-[32px] font-semibold text-on-surface mb-3">Vintage Film Grain 4K</h3>
+<p class="text-on-surface-variant font-body-md mb-6 flex-grow text-sm">Authentic 35mm dirt, dust, and grain scans. Drag and drop onto your timeline in screen mode.</p>
+<button class="border border-primary text-primary font-label-caps px-6 py-3 rounded flex items-center justify-center gap-2 hover:bg-primary/10 transition-colors w-full">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+                        Download
+                    </button>
+</div>
+</article>
+<!-- SFX Asset (Spans 4 cols) -->
+<article class="glass-card md:col-span-4 rounded-xl overflow-hidden group flex flex-col">
+<div class="h-48 relative overflow-hidden bg-surface-container-high flex items-center justify-center">
+<div class="w-16 h-16 rounded-full border border-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="graphic_eq">graphic_eq</span>
+</div>
+<div class="absolute top-4 left-4 bg-background/80 backdrop-blur px-3 py-1 rounded text-primary font-label-caps">Premium</div>
+</div>
+<div class="p-6 flex flex-col flex-grow bg-surface/20">
+<div class="flex items-center gap-2 mb-3 text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="audio_file">audio_file</span>
+<span class="font-label-caps">Sound Effects</span>
+</div>
+<h3 class="font-headline-md text-[24px] leading-[32px] font-semibold text-on-surface mb-3">Impacts &amp; Risers Vol. 1</h3>
+<p class="text-on-surface-variant font-body-md mb-6 flex-grow text-sm">150+ high-fidelity, cinematic transition sound effects perfect for trailer sound design.</p>
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-[20px] text-primary">$29</span>
+<button class="text-primary hover:text-primary-fixed transition-colors p-2">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Free LUT Asset (Spans 4 cols) -->
+<article class="glass-card md:col-span-4 rounded-xl overflow-hidden group flex flex-col">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A striking portrait of a model in studio lighting, half the image showing a flat LOG profile and the other half showing a rich, contrasted color grade with soft skin tones and deep shadows. The aesthetic is clean, professional, and dark-themed, demonstrating a high-end color grading LUT." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPqY6gcEscvUSWwADuAbLoLp7IgLvBOJMGcNMXcQ_r-RMSLt8T44d5S9JyuztTtcNz2J4rAha9-3R47NbywHcCJthUBpHEJzw6h1rK9fGu9XAcbdqwdVTO8i9BKa3EMLKzxZRcz9fHPxOiwMjRoAwVmum1SJxY6suXRppWJ3o7ubMErgoPKSmw8M_mLZClX_5Z4OXxlg3wX6wd5mN6R8zVT1-rB8eeMJB0yDVOH8GbtuCnG6eGnRtHXg"/>
+<div class="absolute top-4 left-4 bg-background/80 backdrop-blur px-3 py-1 rounded text-on-surface font-label-caps">Free</div>
+</div>
+<div class="p-6 flex flex-col flex-grow bg-surface/20">
+<div class="flex items-center gap-2 mb-3 text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="movie">movie</span>
+<span class="font-label-caps">LUT Pack</span>
+</div>
+<h3 class="font-headline-md text-[24px] leading-[32px] font-semibold text-on-surface mb-3">Essential Rec.709 Conversions</h3>
+<p class="text-on-surface-variant font-body-md mb-6 flex-grow text-sm">Accurate base conversions for Sony S-Log3, Canon C-Log2, and Panasonic V-Log.</p>
+<button class="border border-primary text-primary font-label-caps px-6 py-3 rounded flex items-center justify-center gap-2 hover:bg-primary/10 transition-colors w-full">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+                        Download
+                    </button>
+</div>
+</article>
+<!-- Textures Asset (Spans 4 cols) -->
+<article class="glass-card md:col-span-4 rounded-xl overflow-hidden group flex flex-col">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A close-up abstract shot of crinkled, black metallic foil reflecting subtle gold light. The texture is extremely detailed, sharp, and luxurious. It conveys a premium, tactile quality suitable for high-end graphic design assets, fitting perfectly within a dark minimalist, high-contrast visual style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt5csljpNmoeJEQ4gEgYszqTbECt0sqOr2CL1iQrqL2IapC2GlUkfhFMifTGtp16zd8gZZ2GLKLkNGPrr6A16ccC0bHJSzbtLHBPX_TbMu3jH4KgarqlvpJtkW-k5dwB3EibTaF5_wzLG28GcSdluA9jZbwtdp8b-edNHm_KGeD7qHtO_RVCHrOdhegbOekKsT2HJAhFcV5ttCHchiobdOFJA2xLsUMUlOpuBLDTyY_rn8B9y_8opuDA"/>
+<div class="absolute top-4 left-4 bg-background/80 backdrop-blur px-3 py-1 rounded text-primary font-label-caps">Premium</div>
+</div>
+<div class="p-6 flex flex-col flex-grow bg-surface/20">
+<div class="flex items-center gap-2 mb-3 text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="texture">texture</span>
+<span class="font-label-caps">Textures</span>
+</div>
+<h3 class="font-headline-md text-[24px] leading-[32px] font-semibold text-on-surface mb-3">Dark Matte Paper Textures</h3>
+<p class="text-on-surface-variant font-body-md mb-6 flex-grow text-sm">20 ultra-high-resolution scans of premium matte and textured black papers.</p>
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-[20px] text-primary">$19</span>
+<button class="text-primary hover:text-primary-fixed transition-colors p-2">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+</section>
+<!-- Load More -->
+<div class="mt-16 text-center">
+<button class="text-on-surface-variant font-label-caps tracking-widest hover:text-primary transition-colors flex flex-col items-center gap-2 mx-auto">
+                Explore All
+                <span class="material-symbols-outlined text-lg" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-section-gap border-t border-primary/10">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4 mb-12 md:mb-0">
+<span class="font-display-lg text-headline-md text-primary block mb-6" style="font-size: 1.5rem; line-height: 2rem;">SL Creative</span>
+<p class="text-on-tertiary-container font-body-md text-sm max-w-xs">Uncompromising digital assets for the modern creator. Elevate your visual narrative.</p>
+</div>
+<div class="md:col-span-8 flex flex-wrap gap-x-12 gap-y-6 md:justify-end">
+<a class="text-on-tertiary-container font-body-md text-sm hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Cookie Policy</a>
+<a class="text-on-tertiary-container font-body-md text-sm hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Refund Policy</a>
+<a class="text-on-tertiary-container font-body-md text-sm hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Licensing</a>
+<a class="text-on-tertiary-container font-body-md text-sm hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">NDA</a>
+<a class="text-on-tertiary-container font-body-md text-sm hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Awards</a>
+<a class="text-on-tertiary-container font-body-md text-sm hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Partners</a>
+</div>
+<div class="md:col-span-12 mt-12 pt-8 border-t border-surface-container-high text-center md:text-left">
+<p class="text-on-tertiary-container font-body-md text-xs">© 2024 SL Creative. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<!-- Scripts -->
+<script>
+        // Custom Cursor Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const cursor = document.getElementById('cursor');
+            const interactables = document.querySelectorAll('a, button, .glass-card');
+
+            if (cursor && window.matchMedia("(min-width: 768px)").matches) {
+                document.addEventListener('mousemove', (e) => {
+                    cursor.style.left = e.clientX + 'px';
+                    cursor.style.top = e.clientY + 'px';
+                });
+
+                interactables.forEach(el => {
+                    el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+                    el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+                });
+            }
+        });
+    </script>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

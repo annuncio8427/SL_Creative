@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Invoice | SL Creative</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&amp;family=Outfit:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#f2ca50",
+                      "inverse-surface": "#e5e2e1",
+                      "background": "#131313",
+                      "on-primary-fixed": "#241a00",
+                      "surface": "#131313",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "on-tertiary-container": "#434546",
+                      "primary-container": "#d4af37",
+                      "inverse-primary": "#735c00",
+                      "on-error-container": "#ffdad6",
+                      "tertiary-container": "#b2b3b3",
+                      "secondary": "#c9c6c5",
+                      "on-primary": "#3c2f00",
+                      "error-container": "#93000a",
+                      "on-primary-container": "#554300",
+                      "surface-container-high": "#2a2a2a",
+                      "primary-fixed": "#ffe088",
+                      "on-tertiary": "#2f3131",
+                      "surface-container": "#20201f",
+                      "on-surface": "#e5e2e1",
+                      "on-error": "#690005",
+                      "outline-variant": "#4d4635",
+                      "on-background": "#e5e2e1",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "primary-fixed-dim": "#e9c349",
+                      "on-secondary": "#313030",
+                      "on-surface-variant": "#d0c5af",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "secondary-container": "#4a4949",
+                      "on-secondary-container": "#bab8b7",
+                      "inverse-on-surface": "#313030",
+                      "on-secondary-fixed-variant": "#474646",
+                      "secondary-fixed": "#e5e2e1",
+                      "surface-variant": "#353535",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "surface-container-lowest": "#0e0e0e",
+                      "outline": "#99907c",
+                      "surface-bright": "#393939",
+                      "tertiary": "#cecece",
+                      "on-primary-fixed-variant": "#574500",
+                      "surface-container-highest": "#353535",
+                      "error": "#ffb4ab",
+                      "surface-dim": "#131313",
+                      "surface-tint": "#e9c349",
+                      "surface-container-low": "#1c1b1b",
+                      "tertiary-fixed": "#e2e2e2"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-desktop": "80px",
+                      "margin-mobile": "24px",
+                      "container-max": "1440px",
+                      "section-gap": "160px",
+                      "unit": "8px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Be Vietnam Pro"
+                      ],
+                      "body-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "display-lg": [
+                              "Outfit"
+                      ],
+                      "headline-lg-mobile": [
+                              "Outfit"
+                      ],
+                      "headline-lg": [
+                              "Outfit"
+                      ],
+                      "headline-md": [
+                              "Outfit"
+                      ],
+                      "label-caps": [
+                              "Outfit"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "72px",
+                              {
+                                      "lineHeight": "80px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.15em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+        }
+        .glass-panel::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -1;
+            margin: -1px;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(242, 202, 80, 0.4), rgba(242, 202, 80, 0.05));
+        }
+        .btn-primary {
+            background-color: #f2ca50;
+            color: #131313;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #ffe088;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(242, 202, 80, 0.3);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: #e5e2e1;
+            border: 1px solid rgba(242, 202, 80, 0.5);
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            border-color: #f2ca50;
+            background-color: rgba(242, 202, 80, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased selection:bg-primary selection:text-background min-h-screen flex flex-col">
+<!-- Top Navigation (Hidden as this is a transactional page, keeping only brand anchor) -->
+<header class="w-full px-margin-desktop py-8 flex justify-between items-center border-b border-surface-container-high">
+<div class="font-display-lg text-headline-md text-primary tracking-tight">SL Creative</div>
+<div class="flex gap-4">
+<button class="btn-secondary px-6 py-3 rounded flex items-center gap-2 font-body-md text-body-md">
+<span class="material-symbols-outlined">download</span> Download PDF
+            </button>
+<button class="btn-secondary px-6 py-3 rounded flex items-center gap-2 font-body-md text-body-md">
+<span class="material-symbols-outlined">print</span> Print
+            </button>
+</div>
+</header>
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-desktop py-section-gap">
+<div class="glass-panel rounded-xl p-12 lg:p-16 shadow-[0_40px_60px_rgba(242,202,80,0.05)]">
+<!-- Invoice Header -->
+<div class="flex flex-col md:flex-row justify-between items-start border-b border-surface-container-high pb-12 mb-12">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-2">INVOICE</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">#INV-2024-0042</p>
+<div class="mt-8">
+<p class="font-label-caps text-label-caps text-primary mb-2">BILLED TO</p>
+<p class="font-headline-md text-body-lg text-on-surface">Atlas Luxury Group</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">1284 Prestige Avenue<br/>New York, NY 10012</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">billing@atlasluxury.com</p>
+</div>
+</div>
+<div class="mt-8 md:mt-0 text-left md:text-right">
+<p class="font-label-caps text-label-caps text-primary mb-2">ISSUED BY</p>
+<p class="font-headline-md text-body-lg text-on-surface">SL Creative Studio</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">400 Cinematic Way<br/>Los Angeles, CA 90028</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">hello@slcreative.studio</p>
+<div class="mt-8 grid grid-cols-2 gap-x-8 gap-y-4 text-left">
+<div>
+<p class="font-label-caps text-label-caps text-primary">ISSUE DATE</p>
+<p class="font-body-md text-body-md text-on-surface">Oct 24, 2024</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-primary">DUE DATE</p>
+<p class="font-body-md text-body-md text-on-surface">Nov 23, 2024</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Line Items -->
+<div class="w-full mb-12 overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-surface-container-high text-on-surface-variant font-label-caps text-label-caps">
+<th class="py-4 font-normal">DESCRIPTION</th>
+<th class="py-4 px-4 font-normal text-right">RATE</th>
+<th class="py-4 px-4 font-normal text-right">HOURS/QTY</th>
+<th class="py-4 pl-4 font-normal text-right">LINE TOTAL</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md">
+<tr class="border-b border-surface-container/50">
+<td class="py-6">
+<p class="text-on-surface font-semibold">Cinematic Campaign Edit</p>
+<p class="text-on-surface-variant text-sm mt-1">Offline editing for 60s hero spot and 3x 15s social cutdowns.</p>
+</td>
+<td class="py-6 px-4 text-right text-on-surface">$150.00</td>
+<td class="py-6 px-4 text-right text-on-surface">40</td>
+<td class="py-6 pl-4 text-right text-on-surface">$6,000.00</td>
+</tr>
+<tr class="border-b border-surface-container/50">
+<td class="py-6">
+<p class="text-on-surface font-semibold">Motion Graphics Package</p>
+<p class="text-on-surface-variant text-sm mt-1">Custom typography animation and end cards design.</p>
+</td>
+<td class="py-6 px-4 text-right text-on-surface">$120.00</td>
+<td class="py-6 px-4 text-right text-on-surface">15</td>
+<td class="py-6 pl-4 text-right text-on-surface">$1,800.00</td>
+</tr>
+<tr class="border-b border-surface-container/50">
+<td class="py-6">
+<p class="text-on-surface font-semibold">Color Grading</p>
+<p class="text-on-surface-variant text-sm mt-1">Film emulation node tree and master grade delivery in Rec.709.</p>
+</td>
+<td class="py-6 px-4 text-right text-on-surface">$200.00</td>
+<td class="py-6 px-4 text-right text-on-surface">8</td>
+<td class="py-6 pl-4 text-right text-on-surface">$1,600.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Totals & Actions -->
+<div class="flex flex-col md:flex-row justify-between items-end gap-8">
+<div class="w-full md:w-1/2 p-6 bg-surface-container rounded-lg">
+<p class="font-label-caps text-label-caps text-primary mb-2">PAYMENT INSTRUCTIONS</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-1">Bank: Chase Business</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-1">Routing: 122000248</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Account: •••• 5678</p>
+</div>
+<div class="w-full md:w-1/3">
+<div class="flex justify-between py-2 border-b border-surface-container-high font-body-md text-body-md text-on-surface-variant">
+<span>Subtotal</span>
+<span>$9,400.00</span>
+</div>
+<div class="flex justify-between py-2 border-b border-surface-container-high font-body-md text-body-md text-on-surface-variant">
+<span>Tax (8.5%)</span>
+<span>$799.00</span>
+</div>
+<div class="flex justify-between py-6 font-headline-md text-headline-md text-primary">
+<span>Total Due</span>
+<span>$10,199.00</span>
+</div>
+<button class="btn-primary w-full py-4 rounded font-body-md text-body-md font-semibold flex items-center justify-center gap-2 mt-4">
+<span class="material-symbols-outlined">payments</span> Pay Now
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<footer class="w-full py-section-gap bg-surface-container-lowest border-t border-primary/10">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-4">
+<div class="font-display-lg text-headline-md text-primary mb-4">SL Creative</div>
+<p class="text-on-tertiary-container font-body-md text-body-md">© 2024 SL Creative. All rights reserved.</p>
+</div>
+<div class="col-span-12 md:col-span-8 flex flex-wrap gap-x-8 gap-y-4 md:justify-end items-center">
+<a class="text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Cookie Policy</a>
+<a class="text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Refund Policy</a>
+<a class="text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Licensing</a>
+<a class="text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">NDA</a>
+<a class="text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Awards</a>
+<a class="text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Partners</a>
+</div>
+</div>
+</footer>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

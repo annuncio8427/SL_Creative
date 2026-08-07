@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SL Creative - Client Reviews</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-dim": "#131313",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "on-secondary-container": "#bab8b7",
+                      "surface-container-low": "#1c1b1b",
+                      "secondary-container": "#4a4949",
+                      "on-primary-container": "#554300",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "background": "#131313",
+                      "inverse-on-surface": "#313030",
+                      "surface-container-high": "#2a2a2a",
+                      "primary-fixed": "#ffe088",
+                      "surface-tint": "#e9c349",
+                      "primary-fixed-dim": "#e9c349",
+                      "tertiary": "#cecece",
+                      "outline": "#99907c",
+                      "primary-container": "#d4af37",
+                      "on-error": "#690005",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "inverse-surface": "#e5e2e1",
+                      "surface": "#131313",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "on-primary": "#3c2f00",
+                      "surface-container-highest": "#353535",
+                      "outline-variant": "#4d4635",
+                      "primary": "#f2ca50",
+                      "secondary": "#c9c6c5",
+                      "surface-bright": "#393939",
+                      "on-tertiary": "#2f3131",
+                      "surface-container": "#20201f",
+                      "on-surface": "#e5e2e1",
+                      "on-tertiary-container": "#434546",
+                      "on-primary-fixed-variant": "#574500",
+                      "on-secondary-fixed-variant": "#474646",
+                      "surface-container-lowest": "#0e0e0e",
+                      "inverse-primary": "#735c00",
+                      "surface-variant": "#353535",
+                      "secondary-fixed": "#e5e2e1",
+                      "tertiary-fixed": "#e2e2e2",
+                      "error-container": "#93000a",
+                      "on-primary-fixed": "#241a00",
+                      "tertiary-container": "#b2b3b3",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "on-background": "#e5e2e1",
+                      "on-error-container": "#ffdad6",
+                      "on-secondary": "#313030",
+                      "error": "#ffb4ab",
+                      "on-surface-variant": "#d0c5af"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "container-max": "1440px",
+                      "section-gap": "160px",
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "margin-mobile": "24px",
+                      "margin-desktop": "80px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": [
+                              "Outfit"
+                      ],
+                      "body-md": [
+                              "Be Vietnam Pro"
+                      ],
+                      "headline-lg": [
+                              "Outfit"
+                      ],
+                      "label-caps": [
+                              "Outfit"
+                      ],
+                      "headline-md": [
+                              "Outfit"
+                      ],
+                      "body-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "display-lg": [
+                              "Outfit"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.15em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "72px",
+                              {
+                                      "lineHeight": "80px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+
+        .glass-card {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.1);
+        }
+
+        .gold-border-gradient {
+            border: 1px solid transparent;
+            background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)) padding-box,
+                        linear-gradient(135deg, theme('colors.primary') 0%, rgba(212, 175, 55, 0) 100%) border-box;
+        }
+
+        /* Ambient Glow */
+        .ambient-glow::before {
+            content: '';
+            position: absolute;
+            inset: -40px;
+            background: radial-gradient(circle at center, rgba(242, 202, 80, 0.15) 0%, transparent 60%);
+            filter: blur(40px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Carousel Animation */
+        @keyframes scrollX {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .carousel-track {
+            display: flex;
+            width: max-content;
+            animation: scrollX 40s linear infinite;
+        }
+
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+
+        /* Masonry Grid Setup */
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .masonry-grid { column-count: 2; }
+        }
+
+        @media (min-width: 1024px) {
+            .masonry-grid { column-count: 3; }
+        }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+        }
+        
+        .line-clamp-4 {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col relative overflow-x-hidden selection:bg-primary/30 selection:text-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30 flex justify-between items-center px-margin-desktop py-4 mx-auto hidden md:flex">
+<a class="text-headline-md font-headline-md tracking-tighter text-on-surface dark:text-on-surface" href="#">SL Creative</a>
+<div class="flex gap-8 items-center text-label-caps font-label-caps">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-4 py-2 rounded" href="portfolio.html">Work</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-4 py-2 rounded" href="services.html">Services</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-4 py-2 rounded" href="#">Pricing</a>
+<a class="text-primary dark:text-primary border-b-2 border-primary pb-1" href="#">Reviews</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-4 py-2 rounded" href="about.html">About</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-4 py-2 rounded" href="contact.html">Contact</a>
+</div>
+<button class="bg-primary text-on-primary text-label-caps font-label-caps px-6 py-3 rounded hover:bg-primary/90 transition-colors">Book a Consultation</button>
+</nav>
+<!-- Mobile Nav (Simplified) -->
+<nav class="md:hidden fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 px-margin-mobile py-4 flex justify-between items-center">
+<a class="text-headline-lg-mobile font-headline-lg-mobile tracking-tighter text-on-surface" href="#">SL</a>
+<button class="text-on-surface p-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Header Section -->
+<header class="text-center mb-24 max-w-3xl mx-auto relative ambient-glow">
+<h1 class="text-display-lg font-display-lg text-on-surface mb-6 mt-16 md:mt-0">Voices of Vision</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant">Hear from the creative partners, visionary brands, and discerning clients who have trusted SL Creative to bring their aesthetic to life.</p>
+</header>
+<!-- Featured Carousel (Auto-scrolling) -->
+<section class="mb-section-gap -mx-margin-mobile md:-mx-margin-desktop overflow-hidden relative">
+<div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent z-10"></div>
+<div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent z-10"></div>
+<div class="carousel-track gap-6 py-4 px-6">
+<!-- Carousel Item 1 -->
+<div class="glass-card rounded-xl p-8 w-[400px] shrink-0 flex flex-col gap-6 gold-border-gradient">
+<div class="flex items-center gap-4">
+<img class="w-16 h-16 rounded-full object-cover" data-alt="A cinematic portrait of a creative director in a moody, softly lit studio environment. High contrast, dark minimalism style, premium fashion photography aesthetic. Black background with gold rim lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9HdhHoJstjfbgu8maFse23PIKu0wR3gP6XvvWl0NVu5pTiUyone6TVD6yXtWhbbsG3KfnecGJSDOrT59a6cL5OOPeVEarDM_RFYJaNxLhT7FgpgS3uYTGC_5E7HMMbJQON13bzlXMjFpiMq8jL4di6nU-HB2DCy6HL0pHnZq8yyjASDBOoaXfzyDywVue-AF5yD3bo4ZgnwEL4NCsmTpqJOiIM1-pFE_SAZ0evIgC5lwc8d46duqa3w"/>
+<div>
+<h3 class="text-body-lg font-body-lg text-on-surface font-semibold">Elena Rostova</h3>
+<p class="text-label-caps font-label-caps text-primary">Creative Director, Vogue</p>
+</div>
+</div>
+<div class="flex text-primary">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant italic">"SL Creative didn't just understand the brief; they elevated it. The cinematic quality they brought to our campaign was unparalleled. True masters of light and shadow."</p>
+</div>
+<!-- Carousel Item 2 -->
+<div class="glass-card rounded-xl p-8 w-[400px] shrink-0 flex flex-col gap-6">
+<div class="flex items-center gap-4">
+<img class="w-16 h-16 rounded-full object-cover" data-alt="A portrait of an architect looking confident in a dimly lit, brutalist concrete room. Cinematic lighting, deep shadows, gold accents. Premium editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc5OKQHQcfOSIFMSu7ppvzBKZw4V3404LwD9pi9WBy8dcDYEWT2JG75LSaWAOJ7MnJLWpzGKfyH0dvdHrkbVhcCOljvZgD8gDMU5GtP_1KOTnYlPrJBM01TmaiAY1Ph7x3VkmZNhnma1Ghxn0WTDLvwumuRoBRS4GZdB_LRcLLGtEEFLSQC0H5WvKAwNy-W8o1R6GWvBDv9E37h8lF4esfgonsFCly6e2HIQUzvCTKizMyeyhg-PReXw"/>
+<div>
+<h3 class="text-body-lg font-body-lg text-on-surface font-semibold">Marcus Vance</h3>
+<p class="text-label-caps font-label-caps text-on-surface-variant">Principal Architect</p>
+</div>
+</div>
+<div class="flex text-primary">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant italic">"The precision and stark elegance of their work perfectly matched our vision. Working with them is a masterclass in professional design."</p>
+</div>
+<!-- Carousel Item 3 (Duplicate for smooth scroll) -->
+<div class="glass-card rounded-xl p-8 w-[400px] shrink-0 flex flex-col gap-6 gold-border-gradient">
+<div class="flex items-center gap-4">
+<img class="w-16 h-16 rounded-full object-cover" data-alt="A cinematic portrait of a creative director in a moody, softly lit studio environment. High contrast, dark minimalism style, premium fashion photography aesthetic. Black background with gold rim lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3Jgb0vuJCUCWrkPI7tnfSumXL5_C5fuzWlOJan4aJF4YF-7QhbcCqM7I7vMsqDSsImCAm9PBv0jdjp1GCkyHkr1_6r1RAX-y0KDI0MNNlr_OMyi2VvN4BqYTtXHeiSdxLvVJVks6ItA4aTAPYMJCbUDDm7UPn92hogz8OWxnaKg1Mu3X7DyTA9yxYZcD-gtMBIwdSn1zrqjT5icGJaOn1L_AonOxfmOvZ2y-6eBUJHCEDJHAZl9988g"/>
+<div>
+<h3 class="text-body-lg font-body-lg text-on-surface font-semibold">Elena Rostova</h3>
+<p class="text-label-caps font-label-caps text-primary">Creative Director, Vogue</p>
+</div>
+</div>
+<div class="flex text-primary">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant italic">"SL Creative didn't just understand the brief; they elevated it. The cinematic quality they brought to our campaign was unparalleled. True masters of light and shadow."</p>
+</div>
+</div>
+</section>
+<!-- Masonry Grid -->
+<div class="masonry-grid w-full">
+<!-- Standard Text Review -->
+<div class="masonry-item glass-card rounded-lg p-6 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="format_quote">format_quote</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">"Incredible attention to detail. The branding package they delivered completely transformed our market positioning. Worth every penny for the sheer luxury feel."</p>
+<div class="mt-4 pt-4 border-t border-outline-variant/30">
+<p class="text-body-md font-body-md text-on-surface font-semibold">David Chen</p>
+<p class="text-label-caps font-label-caps text-outline mt-1">CEO, Aurum Tech</p>
+</div>
+</div>
+<!-- Image/Visual Review -->
+<div class="masonry-item glass-card rounded-lg overflow-hidden flex flex-col">
+<img class="w-full h-48 object-cover" data-alt="A moody, high-end editorial shot of a luxury watch resting on dark basalt stone. Cinematic lighting, deep shadows, gold reflections. Dark minimalism aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7wejRD9GeLJVsYnfuoemPRjivF8SGWbUahhbzSNfy5B2dA3-PegUE0yiM3JBLo3EQJrE9pV9tsdlqqashHOuXmzQwBpt0UNOjhpjvdH73iHr8B1CJcWw_8ONeoWMvbSYKEMnBVpghQL0FL0bndKzC7DCYGACNn5X-y3CQqCEOXLSNYyhN31fwl_TutQt22j3XhMhs3I--k6ENpSev973b8oEq9by1zxHs7__xwocgSpNPzlpwZX5HpQ"/>
+<div class="p-6 flex flex-col gap-4">
+<p class="text-body-md font-body-md text-on-surface-variant line-clamp-4">"The product photography exceeded all expectations. They captured the essence of our new collection perfectly, highlighting the craftsmanship in a way we hadn't seen before."</p>
+<div class="mt-2 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface text-label-caps font-label-caps">SJ</div>
+<div>
+<p class="text-body-md font-body-md text-on-surface text-sm font-semibold">Sarah Jenkins</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Instagram Style Review -->
+<div class="masonry-item glass-card rounded-lg p-6 flex flex-col gap-4 border-l-2 border-l-primary">
+<div class="flex items-center gap-2 text-on-surface-variant mb-2">
+<span class="material-symbols-outlined text-sm" data-icon="favorite">favorite</span>
+<span class="text-label-caps font-label-caps text-xs">Instagram Mention</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">Absolutely obsessed with the new brand identity by @SLCreative. Dark, moody, and perfectly us. 🖤✨ #Design #LuxuryBranding</p>
+<p class="text-label-caps font-label-caps text-primary mt-2">@LuminaStudios</p>
+</div>
+<!-- Google Style Review -->
+<div class="masonry-item glass-card rounded-lg p-6 flex flex-col gap-4">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-body-md font-body-md text-on-surface font-semibold">5.0</span>
+<span class="text-label-caps font-label-caps text-outline ml-auto">Google Review</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">"A truly premium agency experience from start to finish. Communication was seamless, and the final deliverables were flawless."</p>
+<p class="text-label-caps font-label-caps text-outline mt-2">James T.</p>
+</div>
+<!-- Short Text Review -->
+<div class="masonry-item glass-card rounded-lg p-6 flex flex-col gap-4">
+<p class="text-headline-md font-headline-md text-on-surface italic leading-tight">"Uncompromising vision."</p>
+<div class="mt-2">
+<p class="text-body-md font-body-md text-on-surface text-sm">Alexandra M.</p>
+</div>
+</div>
+<!-- Image Review 2 -->
+<div class="masonry-item glass-card rounded-lg overflow-hidden flex flex-col">
+<div class="p-6 flex flex-col gap-4">
+<div class="flex gap-1 text-primary mb-2">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">"They designed our entire gallery space interior graphics. The dark minimalism aesthetic aligned perfectly with our contemporary art focus."</p>
+<p class="text-label-caps font-label-caps text-primary mt-2">Curator, Node Gallery</p>
+</div>
+<img class="w-full h-32 object-cover" data-alt="A wide shot of a modern, minimalist art gallery interior. Dark walls, polished concrete floor, spotlighting on abstract art pieces. Sophisticated, high-end atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGoRw4S6AeZtgF_Sy13AObFzwRbknwSPL-D7F9UbrGWvIeimWPCGo_E1N9rxeUPS9MDAjX2MOcVsVmVIy2RcIcPBn_R4y3r-aWnlwKyp934y1gDn0Bh45WfZCc4Vfdan3jPV8YVTHyrynhw7hUr37fqmyw0UwSfyUfVSu0Wdkopn8ZkGcoubjA45l-b43WcuB1NoDVn_1cfEP-v2YdnZHPLthZA16FBI_Y7rE8ZeAIqESDV1jb7bVuoQ"/>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap border-t border-outline-variant/20 bg-surface dark:bg-surface">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto gap-8">
+<div class="text-headline-lg font-headline-lg text-primary dark:text-primary">SL Creative</div>
+<div class="flex gap-6 text-label-caps font-label-caps">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80" href="#">Instagram</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80" href="#">Vimeo</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80" href="#">LinkedIn</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80" href="privacy-policy.html">Privacy Policy</a>
+</div>
+<div class="text-body-md font-body-md text-on-surface-variant">© 2024 SL Creative. All Rights Reserved.</div>
+</div>
+</footer>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

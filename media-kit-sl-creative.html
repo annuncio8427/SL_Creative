@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SL Creative - Media Kit</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2ca50",
+                        "inverse-surface": "#e5e2e1",
+                        "background": "#131313",
+                        "on-primary-fixed": "#241a00",
+                        "surface": "#131313",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "on-tertiary-container": "#434546",
+                        "primary-container": "#d4af37",
+                        "inverse-primary": "#735c00",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-container": "#b2b3b3",
+                        "secondary": "#c9c6c5",
+                        "on-primary": "#3c2f00",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#554300",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-fixed": "#ffe088",
+                        "on-tertiary": "#2f3131",
+                        "surface-container": "#20201f",
+                        "on-surface": "#e5e2e1",
+                        "on-error": "#690005",
+                        "outline-variant": "#4d4635",
+                        "on-background": "#e5e2e1",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-secondary": "#313030",
+                        "on-surface-variant": "#d0c5af",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "secondary-container": "#4a4949",
+                        "on-secondary-container": "#bab8b7",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary-fixed-variant": "#474646",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-variant": "#353535",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-lowest": "#0e0e0e",
+                        "outline": "#99907c",
+                        "surface-bright": "#393939",
+                        "tertiary": "#cecece",
+                        "on-primary-fixed-variant": "#574500",
+                        "surface-container-highest": "#353535",
+                        "error": "#ffb4ab",
+                        "surface-dim": "#131313",
+                        "surface-tint": "#e9c349",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-fixed": "#e2e2e2"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "margin-desktop": "80px",
+                        "margin-mobile": "24px",
+                        "container-max": "1440px",
+                        "section-gap": "160px",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    fontFamily: {
+                        "body-md": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "display-lg": ["Outfit"],
+                        "headline-lg-mobile": ["Outfit"],
+                        "headline-lg": ["Outfit"],
+                        "headline-md": ["Outfit"],
+                        "label-caps": ["Outfit"]
+                    },
+                    fontSize: {
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "display-lg": ["72px", { lineHeight: "80px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "headline-lg-mobile": ["32px", { lineHeight: "40px", fontWeight: "600" }],
+                        "headline-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.01em", fontWeight: "600" }],
+                        "headline-md": ["32px", { lineHeight: "40px", fontWeight: "600" }],
+                        "label-caps": ["12px", { lineHeight: "16px", letterSpacing: "0.15em", fontWeight: "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            cursor: none;
+        }
+
+        /* Custom Cursor */
+        .cursor-dot,
+        .cursor-outline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 9999;
+            pointer-events: none;
+        }
+
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: theme('colors.primary');
+        }
+
+        .cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 1px solid theme('colors.primary');
+            transition: width 0.2s, height 0.2s;
+        }
+        
+        a:hover ~ .cursor-outline, button:hover ~ .cursor-outline {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(242, 202, 80, 0.1);
+        }
+
+        /* Glassmorphism Utilities */
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border: 1px solid transparent;
+            border-image: linear-gradient(135deg, rgba(242, 202, 80, 0.5) 0%, rgba(242, 202, 80, 0) 100%);
+            border-image-slice: 1;
+            box-shadow: 0 40px 60px -15px rgba(242, 202, 80, 0.05);
+            position: relative;
+        }
+
+        .glass-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(242, 202, 80, 0.8) 0%, transparent 100%);
+            opacity: 0.5;
+        }
+
+        .glow-text {
+            text-shadow: 0 0 20px rgba(242, 202, 80, 0.3);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- Custom Cursor -->
+<div class="cursor-dot hidden md:block"></div>
+<div class="cursor-outline hidden md:block"></div>
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-primary/20 shadow-[0_20px_40px_rgba(212,175,55,0.05)]">
+<div class="max-w-container-max mx-auto flex justify-between items-center px-margin-desktop h-20 w-full">
+<div class="font-display-lg text-headline-md text-primary tracking-tight">SL Creative</div>
+<nav class="hidden md:flex space-x-8 items-center font-headline-md text-headline-md">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300 scale-95 duration-200" href="#">Dashboard</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300 scale-95 duration-200" href="#">Projects</a>
+<a aria-current="page" class="text-primary font-bold border-b-2 border-primary pb-1 scale-95 duration-200" href="#">Media Kit</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300 scale-95 duration-200" href="#">Support</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="bg-primary text-black font-body-md px-6 py-2 rounded hover:bg-primary-fixed transition-colors">Portal</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-[160px] pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Hero Section -->
+<section class="mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-6 glow-text">Brand Assets</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        Official logos, brand colors, typography, and high-resolution imagery for SL Creative. Ensure all usage complies with our brand guidelines.
+                    </p>
+</div>
+<div class="md:col-span-4 flex items-end justify-start md:justify-end mt-8 md:mt-0">
+<button class="glass-panel text-on-surface font-body-md px-8 py-4 flex items-center gap-2 hover:bg-surface-variant transition-colors group">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">download</span>
+                        Download Full Media Kit (ZIP, 45MB)
+                    </button>
+</div>
+</div>
+</section>
+<!-- Logos Section -->
+<section class="mb-section-gap relative">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12 border-b border-primary/20 pb-4 inline-block">Logos</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Logo Card 1 -->
+<div class="glass-panel p-8 rounded-lg flex flex-col items-center justify-center min-h-[300px] group cursor-pointer">
+<div class="font-display-lg text-display-lg text-primary mb-8 tracking-tight group-hover:scale-105 transition-transform">SL</div>
+<div class="absolute bottom-4 left-4 right-4 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Primary Mark</span>
+<div class="flex gap-2">
+<span class="font-label-caps text-label-caps text-primary border border-primary/30 px-2 py-1 rounded hover:bg-primary/10">SVG</span>
+<span class="font-label-caps text-label-caps text-primary border border-primary/30 px-2 py-1 rounded hover:bg-primary/10">PNG</span>
+</div>
+</div>
+</div>
+<!-- Logo Card 2 -->
+<div class="glass-panel p-8 rounded-lg flex flex-col items-center justify-center min-h-[300px] group cursor-pointer bg-on-surface">
+<div class="font-display-lg text-display-lg text-surface mb-8 tracking-tight group-hover:scale-105 transition-transform">SL</div>
+<div class="absolute bottom-4 left-4 right-4 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="font-label-caps text-label-caps text-surface-variant">Light Mark</span>
+<div class="flex gap-2">
+<span class="font-label-caps text-label-caps text-surface border border-surface/30 px-2 py-1 rounded hover:bg-surface/10">SVG</span>
+<span class="font-label-caps text-label-caps text-surface border border-surface/30 px-2 py-1 rounded hover:bg-surface/10">PNG</span>
+</div>
+</div>
+</div>
+<!-- Logo Card 3 -->
+<div class="glass-panel p-8 rounded-lg flex flex-col items-center justify-center min-h-[300px] group cursor-pointer">
+<div class="font-display-lg text-headline-lg text-on-surface mb-8 tracking-tight group-hover:scale-105 transition-transform flex items-center gap-4">
+<span class="text-primary">SL</span> Creative
+                    </div>
+<div class="absolute bottom-4 left-4 right-4 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Full Lockup</span>
+<div class="flex gap-2">
+<span class="font-label-caps text-label-caps text-primary border border-primary/30 px-2 py-1 rounded hover:bg-primary/10">SVG</span>
+<span class="font-label-caps text-label-caps text-primary border border-primary/30 px-2 py-1 rounded hover:bg-primary/10">PNG</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-surface-container-lowest border-t border-primary/10">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-4 mb-8 md:mb-0">
+<div class="font-display-lg text-headline-md text-primary mb-4">SL Creative</div>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 SL Creative. All rights reserved.</p>
+</div>
+<div class="col-span-12 md:col-span-8 flex flex-wrap gap-6 justify-start md:justify-end items-start font-body-md text-body-md text-on-tertiary-container">
+<a class="hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Cookie Policy</a>
+<a class="hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Refund Policy</a>
+<a class="hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Licensing</a>
+<a class="hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">NDA</a>
+<a class="hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Awards</a>
+<a class="hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Partners</a>
+</div>
+</div>
+</footer>
+<script>
+        // Custom Cursor Logic
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 150, fill: "forwards" });
+        });
+    </script>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

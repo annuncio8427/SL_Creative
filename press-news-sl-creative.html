@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SL Creative - Press &amp; News</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#f2ca50",
+                      "inverse-surface": "#e5e2e1",
+                      "background": "#131313",
+                      "on-primary-fixed": "#241a00",
+                      "surface": "#131313",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "on-tertiary-container": "#434546",
+                      "primary-container": "#d4af37",
+                      "inverse-primary": "#735c00",
+                      "on-error-container": "#ffdad6",
+                      "tertiary-container": "#b2b3b3",
+                      "secondary": "#c9c6c5",
+                      "on-primary": "#3c2f00",
+                      "error-container": "#93000a",
+                      "on-primary-container": "#554300",
+                      "surface-container-high": "#2a2a2a",
+                      "primary-fixed": "#ffe088",
+                      "on-tertiary": "#2f3131",
+                      "surface-container": "#20201f",
+                      "on-surface": "#e5e2e1",
+                      "on-error": "#690005",
+                      "outline-variant": "#4d4635",
+                      "on-background": "#e5e2e1",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "primary-fixed-dim": "#e9c349",
+                      "on-secondary": "#313030",
+                      "on-surface-variant": "#d0c5af",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "secondary-container": "#4a4949",
+                      "on-secondary-container": "#bab8b7",
+                      "inverse-on-surface": "#313030",
+                      "on-secondary-fixed-variant": "#474646",
+                      "secondary-fixed": "#e5e2e1",
+                      "surface-variant": "#353535",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "surface-container-lowest": "#0e0e0e",
+                      "outline": "#99907c",
+                      "surface-bright": "#393939",
+                      "tertiary": "#cecece",
+                      "on-primary-fixed-variant": "#574500",
+                      "surface-container-highest": "#353535",
+                      "error": "#ffb4ab",
+                      "surface-dim": "#131313",
+                      "surface-tint": "#e9c349",
+                      "surface-container-low": "#1c1b1b",
+                      "tertiary-fixed": "#e2e2e2"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-desktop": "80px",
+                      "margin-mobile": "24px",
+                      "container-max": "1440px",
+                      "section-gap": "160px",
+                      "unit": "8px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Be Vietnam Pro"
+                      ],
+                      "body-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "display-lg": [
+                              "Outfit"
+                      ],
+                      "headline-lg-mobile": [
+                              "Outfit"
+                      ],
+                      "headline-lg": [
+                              "Outfit"
+                      ],
+                      "headline-md": [
+                              "Outfit"
+                      ],
+                      "label-caps": [
+                              "Outfit"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "72px",
+                              {
+                                      "lineHeight": "80px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.15em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        
+        .glass-card {
+            background-color: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid theme('colors.outline-variant');
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.5) 0%, rgba(212, 175, 55, 0) 100%);
+            opacity: 0.5;
+        }
+
+        .gold-border-gradient {
+            border: 1px solid;
+            border-image-source: linear-gradient(to bottom right, theme('colors.primary'), theme('colors.outline-variant'));
+            border-image-slice: 1;
+        }
+        
+        .ambient-shadow {
+            box-shadow: 0 20px 60px rgba(212,175,55,0.05);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface/60 backdrop-blur-xl border-b border-primary/20 shadow-[0_20px_40px_rgba(212,175,55,0.05)] fixed top-0 w-full z-50">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 w-full max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md text-primary tracking-tight">SL Creative</div>
+<nav class="hidden md:flex space-x-8">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#">Dashboard</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#">Projects</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary transition-colors duration-300" href="#">Media Kit</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#">Support</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="text-primary hover:scale-95 duration-200">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="bg-primary text-on-primary font-body-md py-2 px-6 rounded-DEFAULT hover:scale-95 duration-200">
+                    Portal
+                </button>
+</div>
+</div>
+</header>
+<main class="flex-grow pt-[120px] pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<header class="mb-gutter md:mb-section-gap text-center max-w-3xl mx-auto">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary mb-4">Press &amp; News</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">The latest announcements, industry features, and insights from SL Creative.</p>
+</header>
+<section class="mb-section-gap">
+<div class="glass-card ambient-shadow rounded-xl flex flex-col md:flex-row group cursor-pointer hover:border-primary/50 transition-colors duration-500">
+<div class="md:w-1/2 h-64 md:h-auto relative overflow-hidden">
+<div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-700" data-alt="A cinematic, high-contrast shot of a sleek, modern gallery space in a dark mode aesthetic. Soft, diffuse lighting highlights geometric architectural elements. The color palette consists of deep blacks, charcoal greys, and subtle, glowing gold accents. The mood is sophisticated and authoritative, perfectly aligning with a premium creative agency's visual identity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDjtxsWqbHUfniuyFF70EUM3_cb6_GEnJP0NVwDyR7J5LxG__ESYIAgiCSYAumMPFB_TR0HDZYjPq7gt1zAYnpVhO-6tUVLYVQjns0AcYKFsOs2vOjAzpx-bcuZ9wtHAyJyDKSG5t_RzwPf-J4esDkfWSwWt73dcjtZQ1nINQI2rGHemuGqro9OjF7ctqPgleQyNfKn7TQBfQcnk7B7tuNEu5QmytScB0a-w4-DRZr5sHiA6iOY9o_bjQ')"></div>
+</div>
+<div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+<div class="flex items-center space-x-4 mb-4">
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase border border-primary/30 rounded-full px-3 py-1">Featured Press</span>
+<span class="font-body-md text-body-md text-on-surface-variant">October 24, 2024</span>
+</div>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface mb-6 group-hover:text-primary transition-colors duration-300">SL Creative Wins Agency of the Year at Global Design Awards</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 line-clamp-3">Recognized for unparalleled innovation in digital experiences and uncompromising commitment to high-end aesthetic execution, SL Creative took top honors at last night's prestigious ceremony.</p>
+<a class="inline-flex items-center font-body-md text-body-md text-primary group/link" href="#">
+                        Read Full Release 
+                        <span class="material-symbols-outlined ml-2 transform group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<section>
+<div class="flex justify-between items-end mb-gutter border-b border-outline-variant/30 pb-4">
+<h3 class="font-headline-md text-headline-md text-on-surface">Latest News</h3>
+<div class="hidden md:flex space-x-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">grid_view</span></button>
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">view_list</span></button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<article class="glass-card rounded-lg flex flex-col group cursor-pointer hover:-translate-y-1 transition-transform duration-300">
+<div class="h-48 relative overflow-hidden">
+<div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-500" data-alt="A minimalist, abstract digital rendering of intersecting gold lines on a pure black background. The lines create a sense of forward momentum and technical precision. The lighting is dramatic, casting deep shadows that emphasize the gold texture. The overall aesthetic conveys luxury, innovation, and high-end design suitable for a premium creative agency." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCfY09lBVK6U9FCp_yQrBgjKfcrazEW7wXJ3yBM6YuMnSYF4VVU55KGvpzMf-XCclAgMcHCZyWCAAPDD7nfnqToiOZ43wC8D4Xr_Q9Q3LsclvpYUPq3jhMTIZ4sVBj41VJ7_n3eekP00nyQiVZ3QXty0-qqxT2Dh7iEOF06pZ7_DpWv4D9oySx8pd742EpkAYh5lJZhsV5Zf7UdyZHXVKGkq3y2QKWOTNRKUgB2Mxke7dTQxWlKTfbhkA')"></div>
+</div>
+<div class="p-6 flex-grow flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-2">October 15, 2024</span>
+<h4 class="font-headline-md text-body-lg font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">Strategic Partnership Announced with Horizon Tech</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Forging a new path in immersive digital experiences through integrated technology.</p>
+<div class="mt-auto pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+<span class="font-body-md text-body-md text-primary text-sm">Corporate News</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_outward</span>
+</div>
+</div>
+</article>
+<article class="glass-card rounded-lg flex flex-col group cursor-pointer hover:-translate-y-1 transition-transform duration-300">
+<div class="h-48 relative overflow-hidden">
+<div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-500" data-alt="A detailed close-up of a high-end typography layout on a dark screen. The text is crisp and modern, featuring gold accents against a charcoal background. The composition is asymmetrical but perfectly balanced, reflecting editorial design principles. The lighting is soft and focused, creating a sense of quiet authority and premium craftsmanship." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGzuIeOTJWFtgEGcl4pgwYAL5kbm9OiCBh0CxsaThmYQGv6k-Xhl3cnfsQ86jYKjcHzqVDX41RYlq5hP_WK3g0T3sVUVEzHnIzvP13JazKkBmNC6_6_lQBiCVi8u7R5sav1E85ijK7hgKrt6WrcAk2vGjBUZFXgPk2sYnDtKTrqPaV18xjj9He7VdTVcB_O02qrW-n_whidzb47CBwJJz8_DrdhVWcuHLNH79iELXwk-V0P1q-SwK0sA')"></div>
+</div>
+<div class="p-6 flex-grow flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-2">September 28, 2024</span>
+<h4 class="font-headline-md text-body-lg font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">The New Standard in Glassmorphism UI Design</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Our Lead Designer discusses the evolution of depth and transparency in modern web interfaces.</p>
+<div class="mt-auto pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+<span class="font-body-md text-body-md text-primary text-sm">Industry Insight</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_outward</span>
+</div>
+</div>
+</article>
+<article class="glass-card rounded-lg flex flex-col group cursor-pointer hover:-translate-y-1 transition-transform duration-300">
+<div class="h-48 relative overflow-hidden">
+<div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-500" data-alt="A wide architectural shot of a sleek, contemporary office space at night. The interior is dimly lit with strategic warm gold spotlights illuminating clean lines and minimalist furniture. Large glass windows reflect the city lights. The image conveys a sense of exclusivity, modern luxury, and uncompromising professional environments." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1qVJeMgdlJ7fdIeTkiQvrvk4AWCoH4o9oke4qCDYHfQv0FxGPzRmyDnb6UJAtaDCatbwu55vya6Re17QcOwh95BkH_-GedTn1SE_WOEYnRD0Oe_uWWJ63W8wEsI_UmrFv3VhtGZdUA7AST3zfLNrlhQZ7BHwknnEldT7zZU5qjKiZszlk1bGZSuysbEA535C1n11ABoDBETAE4QI6C3fbGpYBHVo9B_6aXj-yDBLHxWz7VSQfh8u6jw')"></div>
+</div>
+<div class="p-6 flex-grow flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-2">September 10, 2024</span>
+<h4 class="font-headline-md text-body-lg font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">Expanding Footprint: New London Studio Opens</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Bringing our signature dark minimalist aesthetic to the European market with our new flagship location.</p>
+<div class="mt-auto pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+<span class="font-body-md text-body-md text-primary text-sm">Expansion</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_outward</span>
+</div>
+</div>
+</article>
+</div>
+<div class="mt-12 text-center">
+<button class="bg-transparent border border-primary text-on-surface font-body-md py-3 px-8 rounded-DEFAULT hover:bg-primary/10 transition-colors duration-300">
+                    Load More Articles
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-primary/10 w-full py-section-gap mt-auto">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-4 mb-8 md:mb-0">
+<div class="font-display-lg text-headline-md text-primary mb-4">SL Creative</div>
+<p class="font-body-md text-body-md text-on-tertiary-container">© 2024 SL Creative. All rights reserved.</p>
+</div>
+<div class="col-span-12 md:col-span-8 flex flex-wrap gap-4 md:justify-end">
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Cookie Policy</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Refund Policy</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Licensing</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">NDA</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Awards</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Partners</a>
+</div>
+</div>
+</footer>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SL Creative - Payment Failed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#f2ca50",
+                    "inverse-surface": "#e5e2e1",
+                    "background": "#131313",
+                    "on-primary-fixed": "#241a00",
+                    "surface": "#131313",
+                    "secondary-fixed-dim": "#c9c6c5",
+                    "on-tertiary-container": "#434546",
+                    "primary-container": "#d4af37",
+                    "inverse-primary": "#735c00",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-container": "#b2b3b3",
+                    "secondary": "#c9c6c5",
+                    "on-primary": "#3c2f00",
+                    "error-container": "#93000a",
+                    "on-primary-container": "#554300",
+                    "surface-container-high": "#2a2a2a",
+                    "primary-fixed": "#ffe088",
+                    "on-tertiary": "#2f3131",
+                    "surface-container": "#20201f",
+                    "on-surface": "#e5e2e1",
+                    "on-error": "#690005",
+                    "outline-variant": "#4d4635",
+                    "on-background": "#e5e2e1",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-secondary": "#313030",
+                    "on-surface-variant": "#d0c5af",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "secondary-container": "#4a4949",
+                    "on-secondary-container": "#bab8b7",
+                    "inverse-on-surface": "#313030",
+                    "on-secondary-fixed-variant": "#474646",
+                    "secondary-fixed": "#e5e2e1",
+                    "surface-variant": "#353535",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "surface-container-lowest": "#0e0e0e",
+                    "outline": "#99907c",
+                    "surface-bright": "#393939",
+                    "tertiary": "#cecece",
+                    "on-primary-fixed-variant": "#574500",
+                    "surface-container-highest": "#353535",
+                    "error": "#ffb4ab",
+                    "surface-dim": "#131313",
+                    "surface-tint": "#e9c349",
+                    "surface-container-low": "#1c1b1b",
+                    "tertiary-fixed": "#e2e2e2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-desktop": "80px",
+                    "margin-mobile": "24px",
+                    "container-max": "1440px",
+                    "section-gap": "160px",
+                    "unit": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-md": [
+                            "Be Vietnam Pro"
+                    ],
+                    "body-lg": [
+                            "Be Vietnam Pro"
+                    ],
+                    "display-lg": [
+                            "Outfit"
+                    ],
+                    "headline-lg-mobile": [
+                            "Outfit"
+                    ],
+                    "headline-lg": [
+                            "Outfit"
+                    ],
+                    "headline-md": [
+                            "Outfit"
+                    ],
+                    "label-caps": [
+                            "Outfit"
+                    ]
+            },
+            "fontSize": {
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg": [
+                            "72px",
+                            {
+                                    "lineHeight": "80px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.15em",
+                                    "fontWeight": "700"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        
+        .glass-card {
+            background-color: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid theme('colors.outline-variant');
+            box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.05), 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .gold-glow {
+            box-shadow: 0 0 60px 15px rgba(242, 202, 80, 0.05);
+        }
+        
+        .error-accent {
+            background: linear-gradient(135deg, theme('colors.error') 0%, theme('colors.primary') 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-primary selection:text-on-primary">
+<!-- Suppressed TopNavBar for Transactional/Error Page -->
+<main class="flex-grow flex items-center justify-center p-margin-mobile md:p-margin-desktop relative overflow-hidden">
+<!-- Ambient Background Effect -->
+<div class="absolute inset-0 z-0 pointer-events-none flex items-center justify-center">
+<div class="w-[800px] h-[800px] rounded-full gold-glow blur-[100px] opacity-20"></div>
+</div>
+<div class="w-full max-w-[600px] z-10">
+<div class="glass-card rounded-xl p-8 md:p-12 relative overflow-hidden group">
+<!-- Subtle decorative border catchlight -->
+<div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none rounded-xl"></div>
+<div class="flex flex-col items-center text-center space-y-8 relative z-10">
+<!-- Icon -->
+<div class="w-24 h-24 rounded-full border border-error-container/50 bg-error-container/10 flex items-center justify-center shadow-[0_0_30px_rgba(255,180,171,0.1)] relative">
+<span class="material-symbols-outlined text-[48px] text-error" style="font-variation-settings: 'FILL' 0, 'wght' 200;">
+                            warning
+                        </span>
+<!-- Subtle pulse ring -->
+<div class="absolute inset-0 rounded-full border border-error/30 animate-ping opacity-20"></div>
+</div>
+<!-- Content -->
+<div class="space-y-4">
+<h1 class="font-headline-md text-headline-md text-on-surface">
+                            Payment <span class="error-accent">Declined</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto">
+                            We were unable to process your transaction. Please ensure your payment details are correct or try an alternative payment method.
+                        </p>
+</div>
+<!-- Error Details -->
+<div class="w-full bg-surface-container-high/50 border border-outline-variant rounded-lg p-4 flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Error Code</span>
+<span class="font-body-md text-body-md text-primary font-mono bg-surface-container py-1 px-3 rounded">ERR-CC-402</span>
+</div>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row gap-4 w-full pt-4">
+<button class="flex-1 bg-primary text-on-primary font-body-md text-body-md py-4 px-6 rounded-lg font-medium hover:bg-primary-fixed transition-colors duration-300 flex items-center justify-center gap-2 group">
+                            Retry Payment
+                            <span class="material-symbols-outlined text-on-primary group-hover:translate-x-1 transition-transform" style="font-variation-settings: 'FILL' 0, 'wght' 300;">
+                                refresh
+                            </span>
+</button>
+<button class="flex-1 bg-transparent text-on-surface border border-primary/50 font-body-md text-body-md py-4 px-6 rounded-lg font-medium hover:bg-primary/10 transition-colors duration-300 flex items-center justify-center gap-2">
+                            Contact Support
+                        </button>
+</div>
+</div>
+</div>
+<div class="mt-8 text-center">
+<button class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center gap-2 mx-auto group">
+<span class="material-symbols-outlined group-hover:-translate-x-1 transition-transform" style="font-variation-settings: 'FILL' 0, 'wght' 300;">
+                        arrow_back
+                    </span>
+                    Return to Dashboard
+                </button>
+</div>
+</div>
+</main>
+<!-- Suppressed Footer for Transactional/Error Page -->
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

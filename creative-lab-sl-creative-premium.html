@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SL Creative - Creative Lab</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&amp;family=Outfit:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-dim": "#131313",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-secondary-container": "#bab8b7",
+                        "surface-container-low": "#1c1b1b",
+                        "secondary-container": "#4a4949",
+                        "on-primary-container": "#554300",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "background": "#131313",
+                        "inverse-on-surface": "#313030",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-fixed": "#ffe088",
+                        "surface-tint": "#e9c349",
+                        "primary-fixed-dim": "#e9c349",
+                        "tertiary": "#cecece",
+                        "outline": "#99907c",
+                        "primary-container": "#d4af37",
+                        "on-error": "#690005",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "inverse-surface": "#e5e2e1",
+                        "surface": "#131313",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-primary": "#3c2f00",
+                        "surface-container-highest": "#353535",
+                        "outline-variant": "#4d4635",
+                        "primary": "#f2ca50",
+                        "secondary": "#c9c6c5",
+                        "surface-bright": "#393939",
+                        "on-tertiary": "#2f3131",
+                        "surface-container": "#20201f",
+                        "on-surface": "#e5e2e1",
+                        "on-tertiary-container": "#434546",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-secondary-fixed-variant": "#474646",
+                        "surface-container-lowest": "#0e0e0e",
+                        "inverse-primary": "#735c00",
+                        "surface-variant": "#353535",
+                        "secondary-fixed": "#e5e2e1",
+                        "tertiary-fixed": "#e2e2e2",
+                        "error-container": "#93000a",
+                        "on-primary-fixed": "#241a00",
+                        "tertiary-container": "#b2b3b3",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-background": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary": "#313030",
+                        "error": "#ffb4ab",
+                        "on-surface-variant": "#d0c5af"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "container-max": "1440px",
+                        "section-gap": "160px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-mobile": "24px",
+                        "margin-desktop": "80px"
+                    },
+                    fontFamily: {
+                        "headline-lg-mobile": ["Outfit"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-lg": ["Outfit"],
+                        "label-caps": ["Outfit"],
+                        "headline-md": ["Outfit"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "display-lg": ["Outfit"]
+                    },
+                    fontSize: {
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid theme('colors.outline-variant');
+            box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.05);
+        }
+
+        .gold-glow {
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.15);
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 20px rgba(242, 202, 80, 0.3);
+        }
+
+        /* Custom Scrollbar for premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: theme('colors.background');
+        }
+        ::-webkit-scrollbar-thumb {
+            background: theme('colors.outline-variant');
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: theme('colors.primary');
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col relative overflow-x-hidden selection:bg-primary selection:text-on-primary">
+<!-- Interactive Background -->
+<div class="fixed inset-0 w-full h-full z-[-1] pointer-events-none">
+<!-- STITCH_SHADER_START:ANIMATION_26 class="absolute inset-0 w-full h-full opacity-60 mix-blend-screen" -->
+<div class="absolute inset-0 w-full h-full opacity-60 mix-blend-screen" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_26" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_26');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+uniform float u_time;
+uniform vec2 u_resolution;
+varying vec2 v_texCoord;
+
+// Simplex noise function
+vec3 permute(vec3 x) { return mod(((x*34.0)+1.0)*x, 289.0); }
+float snoise(vec2 v){
+  const vec4 C = vec4(0.211324865405187, 0.366025403784439,
+           -0.577350269189626, 0.024390243902439);
+  vec2 i  = floor(v + dot(v, C.yy) );
+  vec2 x0 = v -   i + dot(i, C.xx);
+  vec2 i1;
+  i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+  vec4 x12 = x0.xyxy + C.xxzz;
+  x12.xy -= i1;
+  i = mod(i, 289.0);
+  vec3 p = permute( permute( i.y + vec3(0.0, i1.y, 1.0 ))
+  + i.x + vec3(0.0, i1.x, 1.0 ));
+  vec3 m = max(0.5 - vec3(dot(x0,x0), dot(x12.xy,x12.xy),
+    dot(x12.zw,x12.zw)), 0.0);
+  m = m*m ;
+  m = m*m ;
+  vec3 x = 2.0 * fract(p * C.wwww) - 1.0;
+  vec3 h = abs(x) - 0.5;
+  vec3 a0 = x - floor(x + 0.5);
+  m *= 1.79284291400159 - 0.85373472095314 * ( a0*a0 + h*h );
+  vec3 g;
+  g.x  = a0.x  * x0.x  + h.x  * x0.y;
+  g.yz = a0.yz * x12.xz + h.yz * x12.yw;
+  return 130.0 * dot(m, g);
+}
+
+void main() {
+    vec2 uv = v_texCoord;
+    float noise = snoise(uv * 3.0 + u_time * 0.05);
+    
+    vec3 black = vec3(0.043, 0.043, 0.043); // #0B0B0B
+    vec3 gold = vec3(0.831, 0.686, 0.216);  // #D4AF37
+    
+    float mask = smoothstep(-0.2, 0.8, noise);
+    vec3 finalColor = mix(black, gold * 0.1, mask);
+    
+    // Add subtle glints
+    float glint = pow(smoothstep(0.4, 0.5, noise) * (1.0 - smoothstep(0.5, 0.6, noise)), 5.0);
+    finalColor += gold * glint * 0.3;
+    
+    gl_FragColor = vec4(finalColor, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_26 -->
+<div class="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background pointer-events-none"></div>
+</div>
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30 flex justify-between items-center px-margin-desktop py-4 mx-auto transition-all duration-300">
+<div class="text-headline-md font-headline-md tracking-tighter text-on-surface dark:text-on-surface hover:text-primary transition-colors cursor-pointer">
+            SL Creative
+        </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors" href="portfolio.html">Work</a>
+<a class="text-label-caps font-label-caps text-primary dark:text-primary border-b-2 border-primary pb-1 scale-98 transition-all duration-300" href="services.html">Services</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors" href="#">Pricing</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors" href="about.html">About</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors" href="contact.html">Contact</a>
+</div>
+<button class="hidden md:block bg-primary text-on-primary text-label-caps font-label-caps px-6 py-3 rounded hover:bg-surface-tint transition-colors uppercase tracking-widest">
+            Book a Consultation
+        </button>
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full relative z-10">
+<!-- Hero Section -->
+<section class="min-h-[716px] flex flex-col justify-center items-start mb-section-gap relative">
+<div class="inline-block px-4 py-1 rounded-full border border-primary/30 bg-primary/10 mb-6 backdrop-blur-md">
+<span class="text-label-caps font-label-caps text-primary tracking-widest uppercase">The Experimental Wing</span>
+</div>
+<h1 class="text-display-lg font-display-lg text-on-surface mb-6 max-w-4xl text-glow leading-tight">
+                Creative <span class="text-primary italic font-serif font-light tracking-normal">Lab.</span>
+</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mb-12">
+                Where technical precision meets unbridled imagination. This is our proving ground for next-generation visual storytelling, 3D explorations, and cinematic concept art.
+            </p>
+<div class="flex gap-4">
+<button class="bg-transparent border border-primary text-primary hover:bg-primary hover:text-on-primary transition-all duration-300 text-label-caps font-label-caps px-8 py-4 rounded uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+                    View Showreel
+                </button>
+</div>
+</section>
+<!-- Bento Grid: Experiments -->
+<section class="mb-section-gap">
+<div class="flex justify-between items-end mb-12">
+<h2 class="text-headline-lg font-headline-lg text-on-surface">Recent <span class="text-primary">Experiments</span></h2>
+<div class="hidden md:flex gap-2">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors p-2 rounded-full border border-outline-variant/30 hover:border-primary/50">arrow_back</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors p-2 rounded-full border border-outline-variant/30 hover:border-primary/50">arrow_forward</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-[300px]">
+<!-- Large Feature -->
+<div class="md:col-span-8 md:row-span-2 glass-panel rounded-xl overflow-hidden relative group cursor-pointer gold-glow hover:border-primary/50 transition-colors duration-500">
+<div class="absolute inset-0 bg-cover bg-center w-full h-full opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700" data-alt="A highly detailed 3D render of an abstract, futuristic machine made of dark brushed metal and glowing gold filaments. The lighting is cinematic noir, with sharp shadows and intense volumetric spotlights cutting through smoke. The style is hyper-realistic, conveying a sense of advanced technology in a premium, minimalist setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBEZPVlURKcgWyaxEomWQssrw8iLlGfJAbn4AK_wRIbQ9_xPs4kAhmtIAlEfLNbONe5cLwoiwn2WNFeLNLJutbecLqldecQWbNKDRdbDwZLhKVD5sDcmq2NtXlD5SgnBRu7U_l0BTcIUYsgk--49CMRIUGlUS4W44zGbD87ag2QxnBlED3KD-Qe9a2RTggTuwJcikarRcmeHqRxHr2Gm2nq9edvymqLkrHbgwgqiksvKyUhp0LYo_A-6g')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="flex items-center gap-3 mb-3">
+<span class="px-3 py-1 text-[10px] font-label-caps text-on-surface border border-outline-variant rounded-full uppercase tracking-widest bg-surface/50 backdrop-blur-sm">3D Animation</span>
+<span class="px-3 py-1 text-[10px] font-label-caps text-on-surface border border-outline-variant rounded-full uppercase tracking-widest bg-surface/50 backdrop-blur-sm">C4D + Octane</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2 group-hover:text-primary transition-colors">Neural Architecture v.04</h3>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-lg hidden md:block">Exploring volumetric lighting and metallic textures in abstract generative structures.</p>
+</div>
+</div>
+<!-- Tall Card -->
+<div class="md:col-span-4 md:row-span-2 glass-panel rounded-xl overflow-hidden relative group cursor-pointer hover:border-primary/50 transition-colors duration-500">
+<div class="absolute inset-0 bg-cover bg-center w-full h-full opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700" data-alt="A vertical cinematic portrait of a surreal figure wrapped in flowing, liquid-like fabric that reflects a neon gold and deep black environment. The lighting is dramatic, inspired by high-end fashion photography and dark minimalism. The overall mood is mysterious, elegant, and uncompromisingly premium." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAztV6MmTUdT-6NwAC3edSihP9EPj4DxgmcbAskQi5FR_6un1OUbuVyIfJ13UycGkZ1HDLnrPg1nrZTbJAkYTrNUvDXxPjUz7t_a0btlPVeldKUyJEXOUJ_oW7lGAakFrqxo18mHcr1OD3KCBUoJFNRy4xDWCjm_L6l3PUI7teUZO3wf0ptxzAiCH0IpMUrlii5-zA0JgOJosS3TKyLqxzaLGgbsC66Y0eKCMUIGDFsr5jHPz8TOumnrg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim via-surface-dim/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<span class="px-3 py-1 text-[10px] font-label-caps text-on-surface border border-outline-variant rounded-full uppercase tracking-widest mb-3 inline-block bg-surface/50 backdrop-blur-sm">Concept Art</span>
+<h3 class="text-[24px] font-headline-md text-on-surface group-hover:text-primary transition-colors">Fluid Dynamics</h3>
+</div>
+</div>
+<!-- Small Card 1 -->
+<div class="md:col-span-4 md:row-span-1 glass-panel rounded-xl overflow-hidden relative group cursor-pointer hover:border-primary/50 transition-colors duration-500">
+<div class="absolute inset-0 bg-cover bg-center w-full h-full opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700" data-alt="A macro shot of a sleek, dark glass surface with glowing gold circuitry patterns etched into it. Shallow depth of field creates a beautiful bokeh effect in the background. The lighting is moody and precise, highlighting the premium, technical nature of the material." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCNT5_BWdc_5Wls7ydoLtuPXZWQ93VnXbn84tNCU9GFZgQY8nyLhcRnlIXpOjXd2TBz04mc1REaphVivDoPnGyN1V8DfFexJqMgVAY1_l8DZlZf300RruHnNFfV9Cz-j3Sn_qq1lePlYlOctstDvtHqgHfZmY-wHykkdYBz344gyg78IEHn26a-fqbZap8oOkzeZsMBvCVo1bCKU97buBsxq0mmvdT6_HHtkUnQ0EXiVq-zJgrA6nhQA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<span class="text-label-caps font-label-caps text-primary tracking-widest uppercase mb-1 block">Motion Graphics</span>
+<h3 class="text-[20px] font-headline-md text-on-surface">Kinetic Typography</h3>
+</div>
+</div>
+<!-- Small Card 2 -->
+<div class="md:col-span-4 md:row-span-1 glass-panel rounded-xl overflow-hidden relative group cursor-pointer hover:border-primary/50 transition-colors duration-500">
+<div class="absolute inset-0 bg-cover bg-center w-full h-full opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700 grayscale group-hover:grayscale-0" data-alt="Behind the scenes studio setup showing a high-end camera rig bathed in dark, moody studio lighting. A monitor displays a glowing golden abstract visual. The scene emphasizes professional filmmaking equipment in a sleek, minimalist environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBqO0n_nq6AxOBKG8L0IquuI97zgiTM_VAs5H3pHwVwZpwhY-NJe4SJUR620N7Lk9bPnl0eF9PsQKkCiPiZx1FoLC15IH0hLAR4ZHIbdsEysUcoWCWtCl7_oWy_nn-DivPXvVhxNkuUu9jsDp_zy1OBUQKY-dBUD6YmVRBQnbu__-jNqVnPcODCgcBKgB_kVTh63EPuCDKhQ9n5wRtjrbcZOZ1pDk7qe9V_my7Ur_BKJeF8QgY2NZuZcA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<span class="text-label-caps font-label-caps text-on-surface-variant tracking-widest uppercase mb-1 block">Behind The Scenes</span>
+<h3 class="text-[20px] font-headline-md text-on-surface">Studio Process</h3>
+</div>
+</div>
+<!-- Text/Stats Card -->
+<div class="md:col-span-4 md:row-span-1 glass-panel rounded-xl p-8 flex flex-col justify-center items-center text-center border-t-2 border-t-primary/50">
+<span class="text-display-lg font-display-lg text-primary mb-2">24</span>
+<h3 class="text-label-caps font-label-caps text-on-surface uppercase tracking-widest">Active R&amp;D Projects</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mt-4 text-sm">Continuously pushing the boundaries of visual fidelity and interactive experiences.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-section-gap bg-surface dark:bg-surface border-t border-outline-variant/20 z-10 relative">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto gap-8">
+<div class="text-headline-lg font-headline-lg text-primary dark:text-primary tracking-tighter">
+                SL Creative
+            </div>
+<div class="flex gap-6 items-center">
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80 uppercase tracking-widest" href="#">Instagram</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80 uppercase tracking-widest" href="#">Vimeo</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80 uppercase tracking-widest" href="#">LinkedIn</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80 uppercase tracking-widest" href="privacy-policy.html">Privacy Policy</a>
+</div>
+<div class="text-body-md font-body-md text-on-surface-variant">
+                © 2024 SL Creative. All Rights Reserved.
+            </div>
+</div>
+</footer>
+<!-- Custom Cursor Script (Atmospheric effect) -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navbar scroll effect
+            const navbar = document.querySelector('nav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('shadow-lg', 'shadow-black/20');
+                    navbar.style.backgroundColor = 'rgba(19, 19, 19, 0.85)';
+                } else {
+                    navbar.classList.remove('shadow-lg', 'shadow-black/20');
+                    navbar.style.backgroundColor = 'rgba(19, 19, 19, 0.6)';
+                }
+            });
+        });
+    </script>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

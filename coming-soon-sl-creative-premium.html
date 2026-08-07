@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Coming Soon | SL Creative</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid transparent;
+            border-image: linear-gradient(135deg, rgba(212, 175, 55, 0.4) 0%, rgba(212, 175, 55, 0.05) 100%);
+            border-image-slice: 1;
+            box-shadow: 0 4px 60px rgba(212, 175, 55, 0.05);
+        }
+        
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #FFE088 0%, #D4AF37 50%, #99907C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .gold-border-gradient {
+             position: relative;
+        }
+        
+        .gold-border-gradient::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.8), rgba(212, 175, 55, 0.2));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        body {
+            background-color: #0e0e0e; /* surface-container-lowest */
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "on-secondary": "#313030",
+                      "on-tertiary": "#2f3131",
+                      "surface-tint": "#e9c349",
+                      "on-secondary-container": "#bab8b7",
+                      "secondary-container": "#4a4949",
+                      "on-primary-fixed-variant": "#574500",
+                      "tertiary-fixed": "#e2e2e2",
+                      "surface-container-lowest": "#0e0e0e",
+                      "surface-container": "#20201f",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "inverse-on-surface": "#313030",
+                      "on-surface": "#e5e2e1",
+                      "on-secondary-fixed-variant": "#474646",
+                      "on-background": "#e5e2e1",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "on-tertiary-container": "#434546",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "inverse-surface": "#e5e2e1",
+                      "secondary": "#c9c6c5",
+                      "secondary-fixed": "#e5e2e1",
+                      "tertiary-container": "#b2b3b3",
+                      "surface-container-highest": "#353535",
+                      "primary": "#f2ca50",
+                      "surface-dim": "#131313",
+                      "error": "#ffb4ab",
+                      "on-error-container": "#ffdad6",
+                      "outline": "#99907c",
+                      "inverse-primary": "#735c00",
+                      "on-error": "#690005",
+                      "primary-fixed-dim": "#e9c349",
+                      "background": "#131313",
+                      "surface-container-high": "#2a2a2a",
+                      "surface-container-low": "#1c1b1b",
+                      "error-container": "#93000a",
+                      "tertiary": "#cecece",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "surface": "#131313",
+                      "primary-container": "#d4af37",
+                      "primary-fixed": "#ffe088",
+                      "outline-variant": "#4d4635",
+                      "surface-variant": "#353535",
+                      "on-surface-variant": "#d0c5af",
+                      "on-primary-container": "#554300",
+                      "surface-bright": "#393939",
+                      "on-primary-fixed": "#241a00",
+                      "on-primary": "#3c2f00"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "container-max": "1440px",
+                      "margin-mobile": "24px",
+                      "margin-desktop": "80px",
+                      "section-gap": "160px",
+                      "unit": "8px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": [
+                              "Outfit"
+                      ],
+                      "headline-md": [
+                              "Outfit"
+                      ],
+                      "body-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "body-md": [
+                              "Be Vietnam Pro"
+                      ],
+                      "headline-lg": [
+                              "Outfit"
+                      ],
+                      "label-caps": [
+                              "Outfit"
+                      ],
+                      "display-lg": [
+                              "Outfit"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.15em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "72px",
+                              {
+                                      "lineHeight": "80px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="text-on-background min-h-screen flex flex-col overflow-x-hidden relative selection:bg-primary-container selection:text-on-primary-container">
+<!-- Shader Background Placeholder -->
+<div class="fixed inset-0 z-0 pointer-events-none opacity-60">
+
+</div>
+<!-- Top Navigation (Shell structure from JSON) -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm transition-all duration-300" id="top-nav">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 w-full max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md tracking-tighter text-primary">SL Creative</div>
+<div class="hidden md:flex gap-8 items-center font-label-caps text-label-caps">
+<!-- Navigation suppressed as this is a transitional/coming soon page, keeping structure empty for aesthetic consistency or simple anchor links if needed -->
+</div>
+<div class="hidden md:block">
+<button class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded-full hover:bg-primary-fixed transition-colors duration-300 active:scale-95 shadow-[0_0_20px_rgba(212,175,55,0.2)]">Notify Me</button>
+</div>
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col justify-center items-center relative z-10 px-margin-mobile md:px-margin-desktop pt-[120px] pb-gutter min-h-screen max-w-container-max mx-auto w-full">
+<div class="max-w-4xl w-full text-center space-y-12">
+<!-- Heading -->
+<div class="space-y-6">
+<h1 class="font-display-lg text-display-lg md:text-[96px] md:leading-[100px] gold-text-gradient tracking-tighter drop-shadow-2xl">
+                    Something Masterful<br/>is Brewing
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Our new premium experience is currently in post-production. Join the inner circle to be the first to witness the unveiling.
+                </p>
+</div>
+<!-- Countdown Timer -->
+<div class="flex flex-wrap justify-center gap-4 md:gap-8 my-16">
+<div class="glass-panel p-6 rounded-2xl min-w-[120px] flex flex-col items-center justify-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<span class="font-display-lg text-headline-lg text-on-surface z-10">14</span>
+<span class="font-label-caps text-label-caps text-primary/80 mt-2 z-10">Days</span>
+</div>
+<div class="glass-panel p-6 rounded-2xl min-w-[120px] flex flex-col items-center justify-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<span class="font-display-lg text-headline-lg text-on-surface z-10">08</span>
+<span class="font-label-caps text-label-caps text-primary/80 mt-2 z-10">Hours</span>
+</div>
+<div class="glass-panel p-6 rounded-2xl min-w-[120px] flex flex-col items-center justify-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<span class="font-display-lg text-headline-lg text-on-surface z-10">45</span>
+<span class="font-label-caps text-label-caps text-primary/80 mt-2 z-10">Minutes</span>
+</div>
+<div class="glass-panel p-6 rounded-2xl min-w-[120px] flex flex-col items-center justify-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<span class="font-display-lg text-headline-lg text-on-surface z-10">22</span>
+<span class="font-label-caps text-label-caps text-primary/80 mt-2 z-10">Seconds</span>
+</div>
+</div>
+<!-- Email Capture -->
+<div class="max-w-md mx-auto w-full mt-12">
+<form class="relative flex items-center w-full" onsubmit="event.preventDefault();">
+<input class="w-full bg-surface-container/50 border border-outline-variant/50 text-on-surface font-body-md text-body-md rounded-full py-4 pl-6 pr-[140px] focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all duration-300 backdrop-blur-sm placeholder:text-on-surface-variant/50" placeholder="Enter your email address" type="email"/>
+<button class="absolute right-1 top-1 bottom-1 bg-primary text-on-primary font-label-caps text-label-caps px-6 rounded-full hover:bg-primary-fixed transition-colors duration-300 shadow-[0_0_15px_rgba(212,175,55,0.15)] flex items-center gap-2 group" type="submit">
+                        Subscribe
+                        <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-section-gap pb-gutter border-t border-outline-variant/20 bg-surface-container-lowest relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-8">
+<div class="font-display-lg text-headline-md text-primary opacity-50">
+                SL Creative
+            </div>
+<div class="flex gap-6 items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 flex items-center justify-center w-10 h-10 rounded-full border border-outline-variant/30 hover:border-primary/50" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="photo_camera">photo_camera</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 flex items-center justify-center w-10 h-10 rounded-full border border-outline-variant/30 hover:border-primary/50" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="work">work</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 flex items-center justify-center w-10 h-10 rounded-full border border-outline-variant/30 hover:border-primary/50" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail">mail</span>
+</a>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant opacity-60 text-center md:text-right">
+                © 2024 SL Creative. Uncompromising Excellence.
+            </div>
+</div>
+</footer>
+<!-- Custom Cursor Effect Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const nav = document.getElementById('top-nav');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    nav.classList.add('shadow-md', 'bg-surface/80');
+                    nav.classList.remove('bg-surface/60');
+                } else {
+                    nav.classList.remove('shadow-md', 'bg-surface/80');
+                    nav.classList.add('bg-surface/60');
+                }
+            });
+        });
+    </script>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

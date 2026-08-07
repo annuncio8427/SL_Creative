@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payments & Billing Suite | SL Creative Agency</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="brand-logo">
+      <div class="brand-symbol">SL</div>
+      <div class="brand-text">SL <span>CREATIVE</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="portal.html" class="nav-link">Client Portal</a></li>
+      <li><a href="booking.html" class="nav-link">Booking</a></li>
+      <li><a href="payments.html" class="nav-link active">Payments</a></li>
+      <li><a href="company.html" class="nav-link">Company</a></li>
+    </ul>
+    <a href="portal.html" class="btn btn-secondary btn-sm">Client Portal</a>
+  </nav>
+
+  <main style="padding: 120px 24px 80px 24px;" class="container tabs-container">
+    
+    <div style="text-align: center; margin-bottom: 40px;">
+      <div class="badge" style="margin-bottom: 12px;">Financial Transactions</div>
+      <h1 style="font-size: 40px; margin-bottom: 12px;">Payment Gateway & Invoice Center</h1>
+      <p class="text-muted" style="max-width: 600px; margin: 0 auto;">Secure Stripe/Wire payment processing for agency invoices, retainers, and digital asset licensing.</p>
+    </div>
+
+    <!-- Tabs Header -->
+    <div class="tabs-header" style="justify-content: center;">
+      <button class="tab-btn active" data-tab="tab-checkout">Payment Checkout</button>
+      <button class="tab-btn" data-tab="tab-ordersummary">Order Summary</button>
+      <button class="tab-btn" data-tab="tab-paysuccess">Payment Success</button>
+      <button class="tab-btn" data-tab="tab-payfailed">Payment Failed</button>
+      <button class="tab-btn" data-tab="tab-invoice">Official Invoice</button>
+      <button class="tab-btn" data-tab="tab-receipt">Official Receipt</button>
+    </div>
+
+    <!-- 1. Payment Checkout -->
+    <div id="tab-checkout" class="tab-content active">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 900px; margin: 0 auto;">
+        
+        <!-- Order Box -->
+        <div class="glass-card">
+          <h3 style="font-size: 20px; margin-bottom: 16px;">Invoice Summary</h3>
+          <div style="border-bottom: 1px solid var(--border-glass); padding-bottom: 12px; margin-bottom: 12px; display: flex; justify-content: space-between;">
+            <div>
+              <strong style="color: #fff;">AURA Film Retainer (Milestone 2)</strong>
+              <div class="text-dim" style="font-size: 12px;">Invoice #INV-8842</div>
+            </div>
+            <span class="text-gold" style="font-weight: 700;">$14,500.00</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px;">
+            <span class="text-muted">Subtotal:</span>
+            <span>$14,500.00</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 16px; font-size: 14px;">
+            <span class="text-muted">Processing Fee:</span>
+            <span>$0.00</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 18px; font-weight: 800; border-top: 1px solid var(--border-color); padding-top: 12px;">
+            <span>Total Due:</span>
+            <span class="text-gold">$14,500.00 USD</span>
+          </div>
+        </div>
+
+        <!-- Payment Form -->
+        <div class="glass-card">
+          <h3 style="font-size: 20px; margin-bottom: 16px;">Payment Method</h3>
+          <form>
+            <div class="form-group">
+              <label class="form-label">Cardholder Name</label>
+              <input type="text" class="form-input" value="Alex Morgan" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Card Number</label>
+              <input type="text" class="form-input" placeholder="•••• •••• •••• 4242" value="4000 1234 5678 4242" required>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label class="form-label">Expires</label>
+                <input type="text" class="form-input" placeholder="MM/YY" value="12/28" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">CVC / CVC2</label>
+                <input type="password" class="form-input" placeholder="•••" value="888" required>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary" style="width: 100%; margin-top: 12px;" onclick="document.querySelector('[data-tab=\'tab-paysuccess\']').click()">Pay $14,500.00 Securely</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 2. Order Summary -->
+    <div id="tab-ordersummary" class="tab-content">
+      <div class="glass-card" style="max-width: 600px; margin: 0 auto;">
+        <h2 style="font-size: 24px; margin-bottom: 16px;">Order Summary Details</h2>
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px;">
+          <tr style="border-bottom: 1px solid var(--border-color);">
+            <td style="padding: 10px 0;" class="text-muted">Item</td>
+            <td style="padding: 10px 0; text-align: right; color: #fff;">Cinematic Noir Production Package</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border-color);">
+            <td style="padding: 10px 0;" class="text-muted">Client Agency</td>
+            <td style="padding: 10px 0; text-align: right; color: #fff;">BrandCo International</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border-color);">
+            <td style="padding: 10px 0;" class="text-muted">Status</td>
+            <td style="padding: 10px 0; text-align: right;"><span class="badge badge-warning">Awaiting Settlement</span></td>
+          </tr>
+        </table>
+        <button class="btn btn-primary" style="width: 100%;" onclick="document.querySelector('[data-tab=\'tab-checkout\']').click()">Proceed to Checkout</button>
+      </div>
+    </div>
+
+    <!-- 3. Payment Success -->
+    <div id="tab-paysuccess" class="tab-content">
+      <div class="glass-card" style="max-width: 540px; margin: 0 auto; text-align: center;">
+        <div style="width: 64px; height: 64px; border-radius: 50%; background: rgba(74, 222, 128, 0.15); border: 2px solid var(--status-success); color: var(--status-success); display: flex; align-items: center; justify-content: center; font-size: 32px; margin: 0 auto 20px auto;">✓</div>
+        <h2 style="font-size: 28px; margin-bottom: 12px;">Payment Successful!</h2>
+        <p class="text-muted" style="margin-bottom: 20px;">Transferred <strong>$14,500.00 USD</strong> for Invoice #INV-8842. Confirmation reference: <code>TXN_994820194</code>.</p>
+        <button class="btn btn-secondary" onclick="document.querySelector('[data-tab=\'tab-receipt\']').click()">View Official Receipt</button>
+      </div>
+    </div>
+
+    <!-- 4. Payment Failed -->
+    <div id="tab-payfailed" class="tab-content">
+      <div class="glass-card" style="max-width: 540px; margin: 0 auto; text-align: center;">
+        <div style="width: 64px; height: 64px; border-radius: 50%; background: rgba(248, 113, 113, 0.15); border: 2px solid var(--status-error); color: var(--status-error); display: flex; align-items: center; justify-content: center; font-size: 32px; margin: 0 auto 20px auto;">✕</div>
+        <h2 style="font-size: 28px; margin-bottom: 12px;">Payment Declined</h2>
+        <p class="text-muted" style="margin-bottom: 20px;">Your card bank responded with: <code>ERR_INSUFFICIENT_FUNDS_OR_LIMIT</code>. Please retry or contact your account manager.</p>
+        <button class="btn btn-primary" onclick="document.querySelector('[data-tab=\'tab-checkout\']').click()">Retry Payment Method</button>
+      </div>
+    </div>
+
+    <!-- 5. Invoice Viewer -->
+    <div id="tab-invoice" class="tab-content">
+      <div class="glass-card" style="max-width: 700px; margin: 0 auto;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 24px; border-bottom: 1px solid var(--border-color); padding-bottom: 16px;">
+          <div>
+            <div class="brand-text">SL <span>CREATIVE</span></div>
+            <p class="text-dim" style="font-size: 12px;">SL Creative Agency LLC<br>5th Ave Luxury Tower, New York NY</p>
+          </div>
+          <div style="text-align: right;">
+            <h3 style="font-size: 20px;" class="text-gold">INVOICE</h3>
+            <p style="font-size: 13px;" class="text-muted">#INV-8842</p>
+          </div>
+        </div>
+        <button class="btn btn-secondary btn-sm" onclick="window.print()">🖨️ Print Invoice</button>
+      </div>
+    </div>
+
+    <!-- 6. Receipt Viewer -->
+    <div id="tab-receipt" class="tab-content">
+      <div class="glass-card" style="max-width: 700px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 24px;">
+          <div class="badge badge-success">Official Receipt</div>
+          <h2 style="font-size: 24px; margin-top: 8px;">Payment Received with Thanks</h2>
+          <p class="text-dim" style="font-size: 13px;">Transaction ID: TXN_994820194</p>
+        </div>
+        <button class="btn btn-primary btn-sm" style="width: 100%;" onclick="showToast('Downloading Official PDF Receipt...', 'info')">Download PDF Receipt</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="js/app.js"></script>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body>
+</html>

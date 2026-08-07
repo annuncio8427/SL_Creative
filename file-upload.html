@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SL Creative - File Upload</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&amp;family=Outfit:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#f2ca50",
+                        "inverse-surface": "#e5e2e1",
+                        "background": "#131313",
+                        "on-primary-fixed": "#241a00",
+                        "surface": "#131313",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "on-tertiary-container": "#434546",
+                        "primary-container": "#d4af37",
+                        "inverse-primary": "#735c00",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-container": "#b2b3b3",
+                        "secondary": "#c9c6c5",
+                        "on-primary": "#3c2f00",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#554300",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-fixed": "#ffe088",
+                        "on-tertiary": "#2f3131",
+                        "surface-container": "#20201f",
+                        "on-surface": "#e5e2e1",
+                        "on-error": "#690005",
+                        "outline-variant": "#4d4635",
+                        "on-background": "#e5e2e1",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-secondary": "#313030",
+                        "on-surface-variant": "#d0c5af",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "secondary-container": "#4a4949",
+                        "on-secondary-container": "#bab8b7",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary-fixed-variant": "#474646",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-variant": "#353535",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-lowest": "#0e0e0e",
+                        "outline": "#99907c",
+                        "surface-bright": "#393939",
+                        "tertiary": "#cecece",
+                        "on-primary-fixed-variant": "#574500",
+                        "surface-container-highest": "#353535",
+                        "error": "#ffb4ab",
+                        "surface-dim": "#131313",
+                        "surface-tint": "#e9c349",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-fixed": "#e2e2e2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "margin-mobile": "24px",
+                        "container-max": "1440px",
+                        "section-gap": "160px",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "display-lg": ["Outfit"],
+                        "headline-lg-mobile": ["Outfit"],
+                        "headline-lg": ["Outfit"],
+                        "headline-md": ["Outfit"],
+                        "label-caps": ["Outfit"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .drag-active {
+            border-color: #f2ca50;
+            background-color: rgba(242, 202, 80, 0.05);
+            box-shadow: inset 0 0 40px rgba(242, 202, 80, 0.1);
+        }
+        .progress-bar-anim {
+            animation: load 2s infinite linear;
+        }
+        @keyframes load {
+            0% { width: 0%; }
+            50% { width: 70%; }
+            100% { width: 100%; }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col antialiased selection:bg-primary/30 selection:text-primary">
+<!-- TopNav - Active: Dashboard (closest fit) -->
+<nav class="bg-surface/60 backdrop-blur-xl border-b border-primary/20 shadow-[0_20px_40px_rgba(212,175,55,0.05)] fixed top-0 w-full z-50">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-8">
+<a class="font-display-lg text-headline-md text-primary tracking-tight" href="#">SL Creative</a>
+<div class="hidden md:flex gap-6 items-center pt-2">
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="#">Dashboard</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#">Projects</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#">Media Kit</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#">Support</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-variant transition-colors group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">search</span>
+</button>
+<button class="bg-primary text-on-primary-fixed px-6 py-2 rounded font-label-caps hover:bg-primary-fixed transition-colors scale-95 duration-200 hover:scale-100">
+                    Portal
+                </button>
+<button class="w-10 h-10 rounded-full overflow-hidden border border-primary/20 hover:border-primary transition-colors scale-95 duration-200">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a creative professional in a cinematic studio setting, dark atmospheric lighting with subtle gold rim light, high-end commercial aesthetic, extremely detailed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHLX98USVg_V4Fhv3qNhX_UwsF3o_yO6KD3lZzGlEubJBrR1il18-U91Ne5IoidfoUf7pW4vsTFE5AGcw21fOjeUI7Ui-QMcH4iQMxoiJwJFYGyJjWNem5E_A3KZz5uWr5cqopSrSx4tPokbSBJybErEgE2vUZiBzQJhww0ydNyRF3W60CZLBe8Zv2ebgADo832U_B7jr1p5Wts-5LesAB7RFOU5ebgK1INEQcDFYvyO_K3Djvf9opsw"/>
+</button>
+</div>
+</div>
+</nav>
+<main class="flex-grow pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full relative z-10 flex flex-col items-center justify-center">
+<div class="w-full max-w-3xl text-center mb-12">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Secure Transfer</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto">Upload your raw footage, high-res assets, and project files directly to our secure, high-speed vault.</p>
+</div>
+<!-- Glassmorphic Upload Zone -->
+<div class="w-full max-w-4xl bg-[#1A1A1A]/70 backdrop-blur-xl border border-primary/30 rounded-xl shadow-[0_40px_60px_-15px_rgba(212,175,55,0.05)] p-1 relative overflow-hidden group transition-all duration-300">
+<!-- Inner Glow highlight -->
+<div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-primary/50 to-transparent"></div>
+<!-- Drag Area -->
+<div class="border-2 border-dashed border-outline-variant rounded-lg p-12 md:p-24 flex flex-col items-center justify-center text-center transition-all duration-300 group-hover:border-primary/50 cursor-pointer relative overflow-hidden" id="drop-zone">
+<div class="w-20 h-20 rounded-full bg-surface-variant flex items-center justify-center mb-6 border border-primary/20 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_30px_rgba(242,202,80,0.1)]">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 0, 'wght' 200;">cloud_upload</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Drag &amp; Drop Assets</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">or click to browse your files</p>
+<button class="bg-transparent border border-primary text-on-surface px-8 py-3 rounded hover:bg-primary/10 transition-colors font-label-caps tracking-widest relative overflow-hidden">
+<span class="relative z-10">BROWSE FILES</span>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+</button>
+<div class="mt-8 flex gap-3 flex-wrap justify-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant border border-outline-variant px-3 py-1 rounded-full bg-surface-container/50">RAW</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant border border-outline-variant px-3 py-1 rounded-full bg-surface-container/50">MP4</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant border border-outline-variant px-3 py-1 rounded-full bg-surface-container/50">MOV</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant border border-outline-variant px-3 py-1 rounded-full bg-surface-container/50">WAV</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant border border-outline-variant px-3 py-1 rounded-full bg-surface-container/50">ZIP</span>
+</div>
+</div>
+</div>
+<!-- Upload Queue (Initially Hidden, shown for design purposes) -->
+<div class="w-full max-w-4xl mt-8 flex flex-col gap-4">
+<!-- File Item 1 (Uploading) -->
+<div class="bg-surface-container/80 backdrop-blur-md border border-outline-variant rounded p-4 flex items-center justify-between gap-4">
+<div class="flex items-center gap-4 flex-grow">
+<div class="w-12 h-12 bg-surface-variant rounded flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary">movie</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-end mb-1">
+<span class="font-body-md text-body-md text-on-surface truncate max-w-[200px] md:max-w-md">VFX_Sequence_04_FINAL.mov</span>
+<span class="font-label-caps text-label-caps text-primary">70%</span>
+</div>
+<div class="w-full bg-surface-variant h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full progress-bar-anim rounded-full"></div>
+</div>
+<div class="flex justify-between items-center mt-1">
+<span class="font-label-caps text-label-caps text-on-surface-variant">4.2 GB / 6.0 GB</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">12 MB/s</span>
+</div>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors p-2">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- File Item 2 (Complete) -->
+<div class="bg-surface-container/40 backdrop-blur-md border border-primary/30 rounded p-4 flex items-center justify-between gap-4">
+<div class="flex items-center gap-4 flex-grow">
+<div class="w-12 h-12 bg-primary/10 rounded flex items-center justify-center flex-shrink-0 border border-primary/20">
+<span class="material-symbols-outlined text-primary">image</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-center">
+<span class="font-body-md text-body-md text-on-surface truncate max-w-[200px] md:max-w-md">Campaign_Stills_RAW.zip</span>
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">1.8 GB</span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors p-2">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+<div class="mt-12">
+<button class="bg-primary text-background font-label-caps text-label-caps px-12 py-4 rounded hover:bg-primary-fixed transition-colors shadow-[0_0_20px_rgba(242,202,80,0.3)] hover:shadow-[0_0_30px_rgba(242,202,80,0.5)]">
+                FINALIZE UPLOAD
+            </button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-section-gap border-t border-primary/10 mt-auto">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4 mb-8 md:mb-0">
+<div class="font-display-lg text-headline-md text-primary mb-4">SL Creative</div>
+<p class="font-body-md text-body-md text-on-tertiary-container">© 2024 SL Creative. All rights reserved.</p>
+</div>
+<div class="md:col-span-8 flex flex-wrap gap-6 md:justify-end items-end">
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Cookie Policy</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Refund Policy</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Licensing</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">NDA</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Awards</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Partners</a>
+</div>
+</div>
+</footer>
+<!-- Background Atmospheric Elements -->
+<div class="fixed inset-0 z-[-1] pointer-events-none overflow-hidden">
+<div class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-primary/5 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] bg-primary/5 blur-[150px] rounded-full"></div>
+<div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjMTMxMzEzIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMyMjIyMjIiPjwvcmVjdD4KPC9zdmc+')] opacity-20 mix-blend-overlay"></div>
+</div>
+<script>
+        // Simple drag and drop visual interaction
+        const dropZone = document.getElementById('drop-zone');
+        
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, highlight, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, unhighlight, false);
+        });
+
+        function highlight(e) {
+            dropZone.classList.add('drag-active');
+        }
+
+        function unhighlight(e) {
+            dropZone.classList.remove('drag-active');
+        }
+    </script>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

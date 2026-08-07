@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Team | SL Creative</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-dim": "#131313",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "on-secondary-container": "#bab8b7",
+                      "surface-container-low": "#1c1b1b",
+                      "secondary-container": "#4a4949",
+                      "on-primary-container": "#554300",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "background": "#131313",
+                      "inverse-on-surface": "#313030",
+                      "surface-container-high": "#2a2a2a",
+                      "primary-fixed": "#ffe088",
+                      "surface-tint": "#e9c349",
+                      "primary-fixed-dim": "#e9c349",
+                      "tertiary": "#cecece",
+                      "outline": "#99907c",
+                      "primary-container": "#d4af37",
+                      "on-error": "#690005",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "inverse-surface": "#e5e2e1",
+                      "surface": "#131313",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "on-primary": "#3c2f00",
+                      "surface-container-highest": "#353535",
+                      "outline-variant": "#4d4635",
+                      "primary": "#f2ca50",
+                      "secondary": "#c9c6c5",
+                      "surface-bright": "#393939",
+                      "on-tertiary": "#2f3131",
+                      "surface-container": "#20201f",
+                      "on-surface": "#e5e2e1",
+                      "on-tertiary-container": "#434546",
+                      "on-primary-fixed-variant": "#574500",
+                      "on-secondary-fixed-variant": "#474646",
+                      "surface-container-lowest": "#0e0e0e",
+                      "inverse-primary": "#735c00",
+                      "surface-variant": "#353535",
+                      "secondary-fixed": "#e5e2e1",
+                      "tertiary-fixed": "#e2e2e2",
+                      "error-container": "#93000a",
+                      "on-primary-fixed": "#241a00",
+                      "tertiary-container": "#b2b3b3",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "on-background": "#e5e2e1",
+                      "on-error-container": "#ffdad6",
+                      "on-secondary": "#313030",
+                      "error": "#ffb4ab",
+                      "on-surface-variant": "#d0c5af"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "container-max": "1440px",
+                      "section-gap": "160px",
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "margin-mobile": "24px",
+                      "margin-desktop": "80px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": ["Outfit"],
+                      "body-md": ["Be Vietnam Pro"],
+                      "headline-lg": ["Outfit"],
+                      "label-caps": ["Outfit"],
+                      "headline-md": ["Outfit"],
+                      "body-lg": ["Be Vietnam Pro"],
+                      "display-lg": ["Outfit"]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.15); /* primary-container approx */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-panel::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, rgba(212,175,55,0) 0%, rgba(212,175,55,0.8) 20%, rgba(212,175,55,0.8) 80%, rgba(212,175,55,0) 100%);
+            opacity: 0.5;
+        }
+
+        .gold-border-gradient {
+            border: 1px solid transparent;
+            background-image: linear-gradient(theme('colors.surface-dim'), theme('colors.surface-dim')), 
+                              linear-gradient(135deg, theme('colors.primary'), transparent, transparent);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+        }
+
+        .team-card-hover {
+            transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        
+        .team-card-hover:hover {
+            transform: translateY(-8px);
+            border-color: theme('colors.primary');
+            box-shadow: 0 20px 40px -10px rgba(242, 202, 80, 0.15);
+        }
+
+        .team-card-hover .team-image {
+            transition: transform 0.7s ease;
+        }
+
+        .team-card-hover:hover .team-image {
+            transform: scale(1.05);
+        }
+        
+        .progress-bar-bg {
+            background-color: theme('colors.surface-container-high');
+        }
+        
+        .progress-bar-fill {
+            background: linear-gradient(90deg, theme('colors.primary-container'), theme('colors.primary'));
+        }
+
+        .btn-primary {
+            background-color: theme('colors.primary');
+            color: theme('colors.on-primary');
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: theme('colors.primary-fixed');
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col selection:bg-primary selection:text-on-primary">
+<!-- Navigation -->
+<nav class="bg-surface/60 dark:bg-surface/60 backdrop-blur-xl text-primary dark:text-primary font-headline-md text-headline-md fixed top-0 w-full z-50 border-b border-outline-variant/30 flat no shadows flex justify-between items-center px-margin-desktop py-4 mx-auto">
+<div class="text-headline-md font-headline-md tracking-tighter text-on-surface dark:text-on-surface">SL Creative</div>
+<!-- Desktop Links -->
+<ul class="hidden md:flex gap-8 items-center">
+<li>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-4 py-2 rounded-lg" href="portfolio.html">Work</a>
+</li>
+<li>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-4 py-2 rounded-lg" href="services.html">Services</a>
+</li>
+<li>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-4 py-2 rounded-lg" href="#">Pricing</a>
+</li>
+<li>
+<a class="font-label-caps text-label-caps text-primary dark:text-primary border-b-2 border-primary pb-1 hover:bg-surface-variant/20 px-4 pt-2 rounded-t-lg" href="about.html">About</a>
+</li>
+<li>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-4 py-2 rounded-lg" href="contact.html">Contact</a>
+</li>
+</ul>
+<button class="hidden md:block btn-primary font-label-caps text-label-caps px-6 py-3 rounded-full uppercase tracking-wider">Book a Consultation</button>
+<!-- Mobile Menu Icon (Visual Only) -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu" style="font-size: 32px;">menu</span>
+</button>
+</nav>
+<main class="flex-grow pt-32">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap relative">
+<div class="max-w-4xl">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-6">Meet The Creative Minds</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                    A collective of visionaries, strategists, and artists dedicated to crafting uncompromising premium digital experiences for the world's most exclusive brands.
+                </p>
+</div>
+</section>
+<!-- Team Roster - Bento Grid Layout -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Lead Profile (Spans full or 8 cols on desktop) -->
+<article class="col-span-1 md:col-span-12 lg:col-span-8 glass-panel rounded-xl team-card-hover p-0 flex flex-col md:flex-row overflow-hidden">
+<div class="w-full md:w-1/2 h-96 md:h-auto relative overflow-hidden">
+<img alt="Creative Director" class="team-image absolute inset-0 w-full h-full object-cover" data-alt="Cinematic high-contrast portrait of a sophisticated creative director in a dark studio setting. Dramatic, moody lighting with gold catchlights. Luxury, minimalist aesthetic. Professional yet avant-garde styling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABZsZVV1VqOapUZRObtksbh6PRp6c27Fmftt6TW8cWpwJxo8rdEPWt-2TkYqdf_R94T3ZzVcOEbCJ-gOEykyfdIW-MeAUfrtGrD8pDmLZ-mr0OMKXlBZ4k9IOBdmA9U8KtwWMVqsJ8IkFBUhGQrQHBpqyeMvqaBqOszEA7ClNiUAY7UMH-ykkTyWYLovknmWoXEjSgldvSyjQXIsQQtwxfA_RdhE9RLw2yHtlNPS_UGaGQ5-MCW0u_ZA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent md:bg-gradient-to-l opacity-80"></div>
+</div>
+<div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+<div class="mb-6">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.2em] uppercase block mb-2">Founder &amp; Creative Director</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Silas Vance</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 line-clamp-4">
+                            With over 15 years leading high-end campaigns for luxury automotive and fashion houses, Silas brings a meticulous eye for detail and a relentless pursuit of visual perfection to every project.
+                        </p>
+<div class="space-y-4 mb-8">
+<div>
+<div class="flex justify-between mb-1">
+<span class="font-label-caps text-label-caps text-on-surface">Art Direction</span>
+<span class="font-label-caps text-label-caps text-primary">98%</span>
+</div>
+<div class="h-1 w-full progress-bar-bg rounded-full overflow-hidden">
+<div class="h-full progress-bar-fill w-[98%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="font-label-caps text-label-caps text-on-surface">Brand Strategy</span>
+<span class="font-label-caps text-label-caps text-primary">90%</span>
+</div>
+<div class="h-1 w-full progress-bar-bg rounded-full overflow-hidden">
+<div class="h-full progress-bar-fill w-[90%]"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 mt-auto">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Secondary Profiles -->
+<article class="col-span-1 md:col-span-6 lg:col-span-4 glass-panel rounded-xl team-card-hover p-6 flex flex-col">
+<div class="h-64 rounded-lg overflow-hidden mb-6 relative">
+<img alt="Lead Designer" class="team-image absolute inset-0 w-full h-full object-cover" data-alt="Cinematic noir portrait of a female lead designer. High-contrast lighting with deep shadows. Sleek, minimalist environment. Luxury creative aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6jsWJz5Ydx6vt8cvZaoogqgYyZWdT3NTrbyi7dcS5fsqIfKHHeynSiEK5Pjpp4XGOFDVghh_WIGYd3a0FUsgp2xRPRcHhh0bnNfgISpxckN67oUejE7oYmCR7sHu6giOP5eTNvoGw7g4zQg-L2trj4eeAaNBHgkNw7zPNnGqvKzR6GdIWV8ZiaMZFQt2Zh4_UrzaQk1JVuYotzhj7dUVK3MM_nLMy75PUOx0d6sRmH-dY8BHtMqQuvw"/>
+</div>
+<span class="font-label-caps text-label-caps text-primary tracking-[0.2em] uppercase block mb-1">Lead Interactive Designer</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Elena Rostova</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                        Specializing in immersive WebGL experiences and micro-interactions that elevate brand storytelling.
+                    </p>
+<div class="flex gap-2 flex-wrap mb-4">
+<span class="px-3 py-1 rounded-full border border-outline-variant text-label-caps font-label-caps text-on-surface-variant">Three.js</span>
+<span class="px-3 py-1 rounded-full border border-outline-variant text-label-caps font-label-caps text-on-surface-variant">Figma</span>
+</div>
+</article>
+<article class="col-span-1 md:col-span-6 lg:col-span-4 glass-panel rounded-xl team-card-hover p-6 flex flex-col">
+<div class="h-64 rounded-lg overflow-hidden mb-6 relative">
+<img alt="Technical Director" class="team-image absolute inset-0 w-full h-full object-cover" data-alt="Cinematic portrait of a male technical director. Dark, moody aesthetic with subtle blue/gold ambient lighting. Premium, focused expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA5kQUW0wSNrTMarvypSriMzSQ8We94aSRlVXYL1j5K2fhmRxYb32hc674Elvv7kn4kAiP6qGMyrIKrB6tsQxBCIRw0OCT-6kv2gRCF96MI1K2TooenBajGRngpUl_YvyaS680uClXJFr2065VNCZeQQl9AmaZwNw2I1iBG8GUD8WsrErjVJCIX6k4NaVo0C-wtIaMgDQCXPiY1lqEv6H4rOJqzf3NfFiQeM-EmeoaiuD98VMtaoUpLQ"/>
+</div>
+<span class="font-label-caps text-label-caps text-primary tracking-[0.2em] uppercase block mb-1">Technical Director</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Marcus Chen</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                        Architecting robust, scalable, and performant digital infrastructures for high-traffic luxury platforms.
+                    </p>
+<div class="flex gap-2 flex-wrap mb-4">
+<span class="px-3 py-1 rounded-full border border-outline-variant text-label-caps font-label-caps text-on-surface-variant">React</span>
+<span class="px-3 py-1 rounded-full border border-outline-variant text-label-caps font-label-caps text-on-surface-variant">System Arch</span>
+</div>
+</article>
+<article class="col-span-1 md:col-span-12 lg:col-span-8 glass-panel rounded-xl team-card-hover p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center">
+<div class="w-full md:w-1/3">
+<div class="aspect-square rounded-full overflow-hidden border-2 border-primary/20 p-2">
+<div class="w-full h-full rounded-full overflow-hidden relative">
+<img alt="Head of Strategy" class="team-image absolute inset-0 w-full h-full object-cover" data-alt="Cinematic close-up portrait of a female strategist. Soft yet dramatic lighting highlighting distinct features. Dark luxury aesthetic, confident gaze." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGkfP6CPcT_ITnWycQxTkI0B-hfkuBrdH7_UDire7WpYZ_InJQPYfVfXkeB6CCNf-w168yYW3gJdYocnK_bZh0HOowXDdLc13LvOa1Hdaott5g4Fed2xY719KUyIgZNfCgbup7NyWfVRr6mfO055svLqM_IPZnL-9uCjqim4tMezYnefFMDl0cRW08uB1a5TZdiS9Lf39sMB-VLsOv_sOaHB1WKvpVGIU0HAsy22pPtBCzbUXLTjnHZw"/>
+</div>
+</div>
+</div>
+<div class="w-full md:w-2/3">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.2em] uppercase block mb-2">Head of Strategy</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">Sarah Jenkins</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Bridging the gap between conceptual art direction and measurable business impact. Sarah ensures every stunning visual serves a precise strategic objective.
+                        </p>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<span class="block font-label-caps text-label-caps text-on-surface-variant mb-1">Experience</span>
+<span class="block font-headline-md text-headline-md text-primary">10+ Yrs</span>
+</div>
+<div>
+<span class="block font-label-caps text-label-caps text-on-surface-variant mb-1">Specialization</span>
+<span class="block font-body-md text-body-md text-on-surface">Luxury Markets</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Behind the Scenes - Masonry -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap border-t border-outline-variant/20">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-display-lg text-display-lg text-on-surface mb-2">Behind the Scenes</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">The process behind the polish.</p>
+</div>
+</div>
+<div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+<!-- Gallery Item 1 -->
+<div class="break-inside-avoid rounded-xl overflow-hidden glass-panel group relative">
+<img alt="BTS 1" class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" data-alt="Behind the scenes shot of a luxury photoshoot. Camera rig in foreground, dark studio environment, dramatic spotlighting. High-end production aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBneo9_xbepE54mqE4vKiHaz2n0Aszlcdqf1X6NHdio4TgX6kM5R_KwAlYodze5JCUeq_hOAd8vdNDaunK47YfFeEzu-5CVhLTY-fnBaLe7riu4uxBAkL2RR6fDFfWC-AUKN0mQ1smhvnhgwvxuYK4CcKtwlQHP61PJpEqcq_MuFjoRzOSmJjRSrr6X_rmFkmaC5acmbd5wBBTa_P4V7aEEP4t4_JnyUVPy_B2RO_VzAS2vk5m0I-sZBA"/>
+<div class="absolute inset-0 bg-surface-dim/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+<span class="font-label-caps text-label-caps text-primary border border-primary px-4 py-2 rounded-full">View Details</span>
+</div>
+</div>
+<!-- Gallery Item 2 -->
+<div class="break-inside-avoid rounded-xl overflow-hidden glass-panel group relative">
+<img alt="BTS 2" class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" data-alt="Close up of hands working on a Wacom tablet in a dark, minimalist office. Glowing screen reflecting on the desk. Premium digital agency vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW7TmSa3dFxAMTCptb3kpFrpGJTWPtHXysQY1x5rZHLGGCItUq5HYq-qttm3FuJBTmY5zbuvhMGnnxMUFvHJG0CEVKR5yCPY2TEyFQaLbxrKygDE7CtsDqsJ0z_oCWipGYdTJ9z6EJxPcrbUCeMihVTYuZ-SIekKlSz5A5kehu6ejTkj4OtYKcCC7p7fmtNKHV18tZeNFE2KtKPGR7gSWvUTDayIPo1QsKuNcZMAbMKrNrdbkFvnWBUA"/>
+<div class="absolute inset-0 bg-surface-dim/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+<span class="font-label-caps text-label-caps text-primary border border-primary px-4 py-2 rounded-full">View Details</span>
+</div>
+</div>
+<!-- Gallery Item 3 -->
+<div class="break-inside-avoid rounded-xl overflow-hidden glass-panel group relative p-8 gold-border-gradient flex items-center justify-center min-h-[300px]">
+<blockquote class="text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" data-icon="format_quote">format_quote</span>
+<p class="font-headline-md text-headline-md text-on-surface italic">"Design is not just what it looks like and feels like. Design is how it works."</p>
+</blockquote>
+</div>
+<!-- Gallery Item 4 -->
+<div class="break-inside-avoid rounded-xl overflow-hidden glass-panel group relative">
+<img alt="BTS 4" class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" data-alt="A collaborative session in a dark, moody conference room. Wireframes projected on a screen, silhouetted creative team discussing. Luxury agency setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUAfM3pO3TT1fqcVUJzXNuwdN_mX3GHA4a4htH-qXQin5KyZbK79sYEePYB-0fzFDP9XCwCJTud3m5ENmexbZK56RBdOL88YpYV2agiALiOUJfbwEU6MjGJaE5esbmrpphIgyeL61CsM5zlMaiybKLj9tybIG7SszgNm7XkuIYzuAYBYztFf68d-Spx9EjmHs4VfJPhLo4VJ6py0qfJuyY5fh_BvNeZvJCgojbpw8vDN0l2YESLxr5lg"/>
+<div class="absolute inset-0 bg-surface-dim/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+<span class="font-label-caps text-label-caps text-primary border border-primary px-4 py-2 rounded-full">View Details</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface dark:bg-surface text-primary dark:text-primary w-full py-section-gap border-t border-outline-variant/20 flat no shadows flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto gap-8">
+<div class="text-headline-lg font-headline-lg text-primary dark:text-primary">SL Creative</div>
+<ul class="flex gap-6 items-center font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant">
+<li>
+<a class="hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80 transition-opacity" href="#">Instagram</a>
+</li>
+<li>
+<a class="hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80 transition-opacity" href="#">Vimeo</a>
+</li>
+<li>
+<a class="hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80 transition-opacity" href="#">LinkedIn</a>
+</li>
+<li>
+<a class="hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80 transition-opacity" href="privacy-policy.html">Privacy Policy</a>
+</li>
+</ul>
+<div class="font-body-md text-body-md text-on-surface-variant">
+            © 2024 SL Creative. All Rights Reserved.
+        </div>
+</footer>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

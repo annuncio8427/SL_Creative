@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SL Creative - Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error": "#ffb4ab",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "outline-variant": "#4d4635",
+                      "on-primary-fixed-variant": "#574500",
+                      "on-secondary-container": "#bab8b7",
+                      "on-error-container": "#ffdad6",
+                      "secondary-container": "#4a4949",
+                      "secondary": "#c9c6c5",
+                      "surface-container-high": "#2a2a2a",
+                      "on-primary": "#3c2f00",
+                      "tertiary-fixed": "#e2e2e2",
+                      "inverse-primary": "#735c00",
+                      "surface-container": "#20201f",
+                      "tertiary": "#cecece",
+                      "on-primary-fixed": "#241a00",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "secondary-fixed": "#e5e2e1",
+                      "on-background": "#e5e2e1",
+                      "surface-variant": "#353535",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "primary": "#f2ca50",
+                      "outline": "#99907c",
+                      "on-tertiary-container": "#434546",
+                      "error-container": "#93000a",
+                      "surface-dim": "#131313",
+                      "surface-container-lowest": "#0e0e0e",
+                      "primary-container": "#d4af37",
+                      "on-primary-container": "#554300",
+                      "on-surface": "#e5e2e1",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "on-tertiary": "#2f3131",
+                      "surface-container-low": "#1c1b1b",
+                      "surface-container-highest": "#353535",
+                      "on-secondary-fixed-variant": "#474646",
+                      "background": "#131313",
+                      "inverse-on-surface": "#313030",
+                      "on-surface-variant": "#d0c5af",
+                      "surface": "#131313",
+                      "tertiary-container": "#b2b3b3",
+                      "inverse-surface": "#e5e2e1",
+                      "on-error": "#690005",
+                      "surface-tint": "#e9c349",
+                      "on-secondary": "#313030",
+                      "primary-fixed-dim": "#e9c349",
+                      "primary-fixed": "#ffe088",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "surface-bright": "#393939"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "container-max": "1440px",
+                      "margin-desktop": "80px",
+                      "section-gap": "160px",
+                      "gutter": "24px",
+                      "margin-mobile": "24px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Outfit"
+                      ],
+                      "body-md": [
+                              "Be Vietnam Pro"
+                      ],
+                      "label-caps": [
+                              "Outfit"
+                      ],
+                      "body-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "headline-lg-mobile": [
+                              "Outfit"
+                      ],
+                      "headline-md": [
+                              "Outfit"
+                      ],
+                      "headline-lg": [
+                              "Outfit"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "72px",
+                              {
+                                      "lineHeight": "80px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.15em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid;
+            border-image-source: linear-gradient(135deg, rgba(212, 175, 55, 0.4) 0%, rgba(212, 175, 55, 0) 100%);
+            border-image-slice: 1;
+            box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.05);
+        }
+
+        .ambient-shadow {
+            box-shadow: 0 40px 60px -15px rgba(242, 202, 80, 0.15);
+        }
+        
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus, 
+        input:-webkit-autofill:active{
+            -webkit-box-shadow: 0 0 0 30px #1A1A1A inset !important;
+            -webkit-text-fill-color: theme('colors.on-surface') !important;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+      </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-primary/30 selection:text-primary">
+<!-- Global TopNavBar Suppressed for Transactional Intent -->
+<!-- The prompt mentions Login page, which is transactional. Navigation is suppressed as per instructions. -->
+<main class="flex-grow flex flex-col md:flex-row h-screen">
+<!-- Side A (Visual) -->
+<div class="hidden md:block md:w-1/2 relative bg-surface-dim overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-background to-transparent z-10"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10"></div>
+<img alt="Cinematic Studio Setup" class="w-full h-full object-cover object-center opacity-80" src="https://lh3.googleusercontent.com/aida/AP1WRLud7OFNRtUb70cGN1_TpEJkF3YAmLKUA0dQ1Y9g5c1xe7T_UUmmaEZzhmCZx5vFdnExXZv0moyBL0m5F6zQTfe5BHBoNp8XQ4ELqyI6e424Su3Du-Mz7Ql5aJsPQXqhHfFnYo5TghWrT-82csFtrpztJMYqmY8QcWF4l-c8nftw1G27ZEQk-s6gYCJWITiESIDF7XrM2QfON3FO4XX4XZFnG7LSFGNW200rCmQwYmMDUxrgazMa2F3WfznR"/>
+<!-- Optional atmospheric branding over image -->
+<div class="absolute bottom-margin-desktop left-margin-desktop z-20">
+<h2 class="font-display-lg text-headline-lg tracking-tighter text-on-surface opacity-90">
+                    Precision.<br/>
+                    Vision.<br/>
+                    Exclusivity.
+                </h2>
+</div>
+</div>
+<!-- Side B (Form) -->
+<div class="w-full md:w-1/2 flex items-center justify-center p-margin-mobile md:p-margin-desktop relative">
+<!-- Subtle ambient glow behind form -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
+<div class="glass-panel w-full max-w-md p-unit-8 rounded-lg ambient-shadow relative z-10 flex flex-col">
+<div class="text-center mb-unit-8">
+<h1 class="font-display-lg text-headline-md text-primary tracking-tighter mb-unit-2">SL Creative</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Sign in to your client portal.</p>
+</div>
+<form class="flex flex-col gap-unit-6">
+<!-- Email Field -->
+<div class="flex flex-col gap-unit-2">
+<label class="font-body-md text-label-caps text-on-surface-variant" for="email">Email Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-0 top-1/2 -translate-y-1/2 text-on-surface-variant ml-unit-2" style="font-variation-settings: 'FILL' 0;">mail</span>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 text-on-surface font-body-md text-body-md py-unit-2 pl-unit-10 pr-unit-2 focus:ring-0 focus:border-primary transition-colors placeholder:text-on-surface-variant/50" id="email" name="email" placeholder="name@domain.com" required="" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-unit-2">
+<label class="font-body-md text-label-caps text-on-surface-variant" for="password">Password</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-0 top-1/2 -translate-y-1/2 text-on-surface-variant ml-unit-2" style="font-variation-settings: 'FILL' 0;">lock</span>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 text-on-surface font-body-md text-body-md py-unit-2 pl-unit-10 pr-unit-2 focus:ring-0 focus:border-primary transition-colors placeholder:text-on-surface-variant/50" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+</div>
+</div>
+<!-- Actions Row -->
+<div class="flex items-center justify-between mt-unit-2">
+<label class="flex items-center gap-unit-2 cursor-pointer group">
+<input class="form-checkbox bg-transparent border-outline-variant text-primary focus:ring-primary focus:ring-offset-background rounded-sm" type="checkbox"/>
+<span class="font-body-md text-label-caps text-on-surface-variant group-hover:text-on-surface transition-colors">Remember Me</span>
+</label>
+<a class="font-body-md text-label-caps text-primary hover:text-primary-container transition-colors" href="#">Forgot Password?</a>
+</div>
+<!-- Submit Button -->
+<button class="mt-unit-4 bg-primary text-on-primary font-display-lg text-body-md uppercase tracking-widest py-unit-3 rounded hover:bg-primary-container transition-all active:scale-[0.98]" type="submit">
+                        Sign In
+                    </button>
+</form>
+<div class="mt-unit-8 text-center">
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Don't have an account? 
+                        <a class="text-primary hover:text-primary-container transition-colors font-semibold ml-unit-1" href="#">Sign up</a>
+</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Global Footer Suppressed for Transactional Intent -->
+<!-- The prompt asks for Footer, but conflict resolution protocol overrides: "Automatic Suppression: You MUST exclude the navigation shell if the page intent is: Linear/Transactional: Login..." -->
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

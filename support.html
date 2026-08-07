@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SL Creative - Support Center</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#f2ca50",
+                    "inverse-surface": "#e5e2e1",
+                    "background": "#131313",
+                    "on-primary-fixed": "#241a00",
+                    "surface": "#131313",
+                    "secondary-fixed-dim": "#c9c6c5",
+                    "on-tertiary-container": "#434546",
+                    "primary-container": "#d4af37",
+                    "inverse-primary": "#735c00",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-container": "#b2b3b3",
+                    "secondary": "#c9c6c5",
+                    "on-primary": "#3c2f00",
+                    "error-container": "#93000a",
+                    "on-primary-container": "#554300",
+                    "surface-container-high": "#2a2a2a",
+                    "primary-fixed": "#ffe088",
+                    "on-tertiary": "#2f3131",
+                    "surface-container": "#20201f",
+                    "on-surface": "#e5e2e1",
+                    "on-error": "#690005",
+                    "outline-variant": "#4d4635",
+                    "on-background": "#e5e2e1",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-secondary": "#313030",
+                    "on-surface-variant": "#d0c5af",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "secondary-container": "#4a4949",
+                    "on-secondary-container": "#bab8b7",
+                    "inverse-on-surface": "#313030",
+                    "on-secondary-fixed-variant": "#474646",
+                    "secondary-fixed": "#e5e2e1",
+                    "surface-variant": "#353535",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "surface-container-lowest": "#0e0e0e",
+                    "outline": "#99907c",
+                    "surface-bright": "#393939",
+                    "tertiary": "#cecece",
+                    "on-primary-fixed-variant": "#574500",
+                    "surface-container-highest": "#353535",
+                    "error": "#ffb4ab",
+                    "surface-dim": "#131313",
+                    "surface-tint": "#e9c349",
+                    "surface-container-low": "#1c1b1b",
+                    "tertiary-fixed": "#e2e2e2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-desktop": "80px",
+                    "margin-mobile": "24px",
+                    "container-max": "1440px",
+                    "section-gap": "160px",
+                    "unit": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-md": [
+                            "Be Vietnam Pro"
+                    ],
+                    "body-lg": [
+                            "Be Vietnam Pro"
+                    ],
+                    "display-lg": [
+                            "Outfit"
+                    ],
+                    "headline-lg-mobile": [
+                            "Outfit"
+                    ],
+                    "headline-lg": [
+                            "Outfit"
+                    ],
+                    "headline-md": [
+                            "Outfit"
+                    ],
+                    "label-caps": [
+                            "Outfit"
+                    ]
+            },
+            "fontSize": {
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg": [
+                            "72px",
+                            {
+                                    "lineHeight": "80px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.15em",
+                                    "fontWeight": "700"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: theme('colors.background');
+        }
+        ::-webkit-scrollbar-thumb {
+            background: theme('colors.surface-variant');
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: theme('colors.primary');
+        }
+
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid theme('colors.surface-variant');
+            box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-input {
+            background: rgba(26, 26, 26, 0.4);
+            border: 1px solid theme('colors.surface-variant');
+            transition: all 0.3s ease;
+        }
+        .glass-input:focus {
+            border-color: theme('colors.primary');
+            outline: none;
+            box-shadow: 0 0 0 1px theme('colors.primary');
+        }
+
+        .ambient-glow {
+            box-shadow: 0 0 60px 15px rgba(212, 175, 55, 0.05);
+        }
+        
+        .gold-gradient-text {
+            background: linear-gradient(to right, theme('colors.primary'), theme('colors.primary-fixed-dim'));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col relative overflow-x-hidden">
+<!-- TopNavBar (From Shared Components JSON) -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-primary/20 shadow-[0_20px_40px_rgba(212,175,55,0.05)] transition-all duration-300">
+<div class="max-w-container-max mx-auto flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 w-full">
+<!-- Brand -->
+<div class="font-display-lg text-headline-md text-primary tracking-tight">
+                SL Creative
+            </div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300 scale-95 duration-200" href="#">Dashboard</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300 scale-95 duration-200" href="#">Projects</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300 scale-95 duration-200" href="#">Media Kit</a>
+<a aria-current="page" class="text-primary font-bold border-b-2 border-primary pb-1 scale-95 duration-200" href="#">Support</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-6">
+<!-- Search Bar (on_right) -->
+<button aria-label="Search" class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</button>
+<a class="hidden md:inline-flex items-center justify-center bg-primary text-on-primary font-body-md px-6 py-2 rounded-DEFAULT hover:bg-primary-fixed-dim transition-colors" href="#">
+                    Portal
+                </a>
+<button aria-label="User Profile" class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center overflow-hidden border border-surface-variant hover:border-primary transition-colors">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A striking minimalist portrait of a modern creative professional set against a deep black background, dramatic cinematic rim lighting catching the edge of their silhouette, high-end gallery aesthetic, stark contrasts." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo0rVu-GYxV3MHFDmI6unFypiYbvehD_6hA0qPvwJOMLHr6KE3t2Cg2CpztWWWhZdJh2P2b3ZiWLH5olZKPtotL1D5VIDj_zbgmfJM4HuiRbO537-qTk3L616ZEeMSWNWQXV5dixjLr-S-pQMHIthxcPfMr9yIgfsyjX_rQ4Mpuyr2QO2mx5GOnZAX3t1g8z9ESdSMofFpFV5uPdBXRGW2N0xNK2CZkdulRFqj9IgaVQeImGQI0LZ3Ew"/>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-[120px] pb-section-gap">
+<!-- Hero Search Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-24 relative">
+<!-- Ambient Background Glow -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/5 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+<div class="text-center max-w-3xl mx-auto space-y-8 mt-12 md:mt-24">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface">
+                    How can we <span class="gold-gradient-text">help?</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Search our knowledge base or navigate categories below for specialized assistance.
+                </p>
+<!-- Search Input -->
+<div class="relative w-full max-w-2xl mx-auto mt-8 group">
+<div class="absolute inset-y-0 left-0 pl-6 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant group-focus-within:text-primary transition-colors">search</span>
+</div>
+<input class="glass-input w-full rounded-full py-4 pl-14 pr-6 font-body-md text-on-surface placeholder:text-on-surface-variant/50 focus:ring-0" placeholder="Search for answers, billing issues, or workflow help..." type="text"/>
+</div>
+</div>
+</section>
+<!-- Categories Grid (Bento Style) -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Billing & Invoices (Large Card) -->
+<a class="glass-panel rounded-xl p-8 md:col-span-8 group hover:border-primary/50 transition-all duration-300 flex flex-col justify-between h-[300px] relative overflow-hidden" href="#">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10 group-hover:bg-primary/10 transition-colors"></div>
+<div>
+<span class="material-symbols-outlined text-[32px] text-primary mb-4" data-weight="fill">credit_card</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2 group-hover:text-primary transition-colors">Billing &amp; Invoices</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Manage your subscriptions, view past invoices, and update payment methods securely.</p>
+</div>
+<div class="flex items-center text-primary font-body-md mt-4 opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0">
+                        Explore Category <span class="material-symbols-outlined ml-2 text-[20px]">arrow_forward</span>
+</div>
+</a>
+<!-- Technical Support (Small Card) -->
+<a class="glass-panel rounded-xl p-8 md:col-span-4 group hover:border-primary/50 transition-all duration-300 flex flex-col justify-between h-[300px]" href="#">
+<div>
+<span class="material-symbols-outlined text-[32px] text-on-surface mb-4 group-hover:text-primary transition-colors">settings_suggest</span>
+<h2 class="font-headline-md text-[24px] font-semibold text-on-surface mb-2">Technical Support</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Resolve access issues, bug reports, and system integrations.</p>
+</div>
+</a>
+<!-- Project Workflow (Small Card) -->
+<a class="glass-panel rounded-xl p-8 md:col-span-5 group hover:border-primary/50 transition-all duration-300 flex flex-col justify-between h-[250px]" href="#">
+<div>
+<span class="material-symbols-outlined text-[32px] text-on-surface mb-4 group-hover:text-primary transition-colors">account_tree</span>
+<h2 class="font-headline-md text-[24px] font-semibold text-on-surface mb-2">Project Workflow</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Guidelines on submission, revisions, and approval processes.</p>
+</div>
+</a>
+<!-- Account Management (Medium Card) -->
+<a class="glass-panel rounded-xl p-8 md:col-span-7 group hover:border-primary/50 transition-all duration-300 flex flex-col justify-between h-[250px]" href="#">
+<div>
+<span class="material-symbols-outlined text-[32px] text-on-surface mb-4 group-hover:text-primary transition-colors">manage_accounts</span>
+<h2 class="font-headline-md text-[24px] font-semibold text-on-surface mb-2">Account Management</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Update profile details, security settings, and team access controls.</p>
+</div>
+</a>
+</div>
+</section>
+<!-- FAQ Integration & Support Ticket -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Quick FAQs -->
+<div class="lg:col-span-7 space-y-6">
+<div class="flex items-center gap-4 mb-8">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest border border-primary/30 px-3 py-1 rounded-full">Common Queries</span>
+<h3 class="font-headline-lg text-[32px] font-semibold text-on-surface">Frequently Asked</h3>
+</div>
+<!-- FAQ Item 1 -->
+<div class="glass-panel rounded-xl p-6 hover:bg-surface-variant/30 transition-colors cursor-pointer group border border-surface-variant/50">
+<div class="flex justify-between items-center">
+<h4 class="font-body-lg text-body-lg font-medium text-on-surface">How do I upgrade my service tier?</h4>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">expand_more</span>
+</div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="glass-panel rounded-xl p-6 hover:bg-surface-variant/30 transition-colors cursor-pointer group border border-surface-variant/50">
+<div class="flex justify-between items-center">
+<h4 class="font-body-lg text-body-lg font-medium text-on-surface">What is the standard turnaround time for revisions?</h4>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">expand_more</span>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="glass-panel rounded-xl p-6 hover:bg-surface-variant/30 transition-colors cursor-pointer group border border-surface-variant/50">
+<div class="flex justify-between items-center">
+<h4 class="font-body-lg text-body-lg font-medium text-on-surface">Where can I find my NDA agreements?</h4>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Open Ticket CTA -->
+<div class="lg:col-span-5">
+<div class="glass-panel rounded-xl p-10 ambient-glow relative overflow-hidden h-full flex flex-col justify-center">
+<!-- Subtle background texture/image -->
+<div class="absolute inset-0 opacity-10 mix-blend-overlay pointer-events-none" data-alt="Abstract macro photography of brushed gold metal texture, dark minimalist aesthetic, high contrast, subtle metallic highlights, premium feel." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCeEZcQHPXbZNDl1YX2peAKXCQT3YzaQcBcWIsMBeYoXLK8gsAw4ugACfRs5KUTYwCSPD2P3AeFdI2RIkzvLpkFrONI7CodQXYD-y_k4IjBr75KiCG8VteRd47SHXwxiuSd5GpNAdZtywnzOAfW8elsgtIg0QV_5vqLwV4wVo2USBG7WVoICV-Pzmsaiv1VZ6DWPHTPpTZrtVbf0wHf6isMWT6q--Q3Saf4Se2-Id2LHXFdJzCg7eiT_w')"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-[48px] text-primary mb-6">support_agent</span>
+<h3 class="font-headline-lg text-[32px] font-semibold text-on-surface mb-4">Still need assistance?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                            If you couldn't find what you were looking for, our dedicated support team is ready to help resolve your issue promptly.
+                        </p>
+<a class="inline-flex items-center justify-center bg-primary text-on-primary font-body-md font-medium px-8 py-4 rounded-DEFAULT hover:bg-primary-fixed-dim transition-colors w-full sm:w-auto" href="#">
+                            Open a Support Ticket
+                            <span class="material-symbols-outlined ml-2 text-[20px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (From Shared Components JSON) -->
+<footer class="w-full py-section-gap bg-surface-container-lowest border-t border-primary/10">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<!-- Brand & Copyright -->
+<div class="md:col-span-4 flex flex-col gap-4">
+<div class="font-display-lg text-headline-md text-primary">
+                    SL Creative
+                </div>
+<p class="font-body-md text-body-md text-on-tertiary-container">
+                    © 2024 SL Creative. All rights reserved.
+                </p>
+</div>
+<!-- Links -->
+<div class="md:col-span-8 flex flex-wrap gap-x-8 gap-y-4 justify-start md:justify-end">
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Cookie Policy</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Refund Policy</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Licensing</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">NDA</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Awards</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Partners</a>
+</div>
+</div>
+</footer>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

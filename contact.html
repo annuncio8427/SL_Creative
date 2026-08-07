@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact SL Creative | Luxury Visual Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;family=Be+Vietnam+Pro:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#d4af37",
+                        "on-primary": "#3c2f00",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-primary-fixed-variant": "#574500",
+                        "surface-variant": "#353535",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "on-tertiary-container": "#434546",
+                        "secondary-container": "#4a4949",
+                        "on-tertiary": "#2f3131",
+                        "tertiary": "#cecece",
+                        "surface-container": "#20201f",
+                        "surface-container-highest": "#353535",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#0e0e0e",
+                        "inverse-primary": "#735c00",
+                        "surface-container-high": "#2a2a2a",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "primary": "#f2ca50",
+                        "on-secondary-fixed-variant": "#474646",
+                        "inverse-surface": "#e5e2e1",
+                        "outline-variant": "#4d4635",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-dim": "#131313",
+                        "surface-bright": "#393939",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "inverse-on-surface": "#313030",
+                        "background": "#131313",
+                        "surface-tint": "#e9c349",
+                        "surface-container-low": "#1c1b1b",
+                        "on-secondary-container": "#bab8b7",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#c9c6c5",
+                        "primary-fixed-dim": "#e9c349",
+                        "tertiary-container": "#b2b3b3",
+                        "secondary-fixed": "#e5e2e1",
+                        "error-container": "#93000a",
+                        "on-surface-variant": "#d0c5af",
+                        "on-surface": "#e5e2e1",
+                        "primary-fixed": "#ffe088",
+                        "on-primary-fixed": "#241a00",
+                        "on-error": "#690005",
+                        "outline": "#99907c",
+                        "on-primary-container": "#554300",
+                        "on-background": "#e5e2e1",
+                        "surface": "#131313",
+                        "on-secondary": "#313030"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "container-max": "1440px",
+                        "unit": "8px",
+                        "section-gap": "160px",
+                        "margin-mobile": "24px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Be Vietnam Pro"],
+                        "label-caps": ["Outfit"],
+                        "headline-md": ["Outfit"],
+                        "display-lg": ["Outfit"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-lg-mobile": ["Outfit"],
+                        "headline-lg": ["Outfit"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.05);
+        }
+        .glass:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+        }
+        .metallic-border {
+            border: 1px solid;
+            border-image-source: linear-gradient(135deg, #d4af37 0%, #735c00 100%);
+            border-image-slice: 1;
+        }
+        .gold-glow {
+            filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.3));
+        }
+        body {
+            background-color: #0e0e0e;
+            cursor: default;
+        }
+        .custom-cursor {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #d4af37;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.2s ease, width 0.3s ease, height 0.3s ease;
+            transform: translate(-50%, -50%);
+        }
+        .active-link {
+            border-bottom: 2px solid #f2ca50;
+            padding-bottom: 4px;
+            color: #f2ca50;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d4af37;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<div class="custom-cursor hidden md:block" id="cursor"></div>
+<!-- Navigation Shell -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-4 mx-auto max-w-container-max">
+<div class="flex items-center gap-4">
+<img alt="SL Creative Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg9aqvyNUYc303aOt4MoA9kKHTZFRo9a2po-IVAaZdsdnxoDjz4nAc9zAP6m-2ZQPHQjf3vPyS_q34Cd5mqEsGl7t9AJoCawjy8QIzoraCwlFvDnchA8F8zqtYkdhTuDF5YpOQZY037zlPd8R5C97yknTKg6eHGFaM7NKU9qbIek9CqB_BWI9XjlBQqQwy4aKKhzFGUfzM9vAaMCjMHaI4Y3REso8T7wxpxz1opbR1dtr8cp5NLibHUon6Sr3ed8yBzUE"/>
+<span class="text-headline-md font-headline-md tracking-tighter text-on-surface">SL Creative</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors" href="portfolio.html">Work</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors" href="services.html">Services</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors" href="#">Pricing</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors" href="about.html">About</a>
+<a class="active-link font-label-caps text-label-caps" href="contact.html">Contact</a>
+</div>
+<button class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded-none uppercase tracking-widest hover:scale-[0.98] transition-all duration-300">
+                Book a Consultation
+            </button>
+</nav>
+</header>
+<main class="pt-24 overflow-x-hidden">
+<!-- Section 1: Hero -->
+<section class="relative min-h-[70vh] flex items-center justify-center text-center px-margin-mobile md:px-margin-desktop bg-surface-container-lowest overflow-hidden">
+<!-- Cinematic Golden Smoke shader -->
+<!-- STITCH_SHADER_START:ANIMATION_40 class="absolute inset-0 w-full h-full pointer-events-none opacity-40" -->
+<div class="absolute inset-0 w-full h-full pointer-events-none opacity-40" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_40" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_40');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+uniform float u_time;
+uniform vec2 u_resolution;
+varying vec2 v_texCoord;
+
+// Simplex noise function
+vec3 permute(vec3 x) { return mod(((x*34.0)+1.0)*x, 289.0); }
+float snoise(vec2 v){
+  const vec4 C = vec4(0.211324865405187, 0.366025403784439,
+           -0.577350269189626, 0.024390243902439);
+  vec2 i  = floor(v + dot(v, C.yy) );
+  vec2 x0 = v -   i + dot(i, C.xx);
+  vec2 i1;
+  i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+  vec4 x12 = x0.xyxy + C.xxzz;
+  x12.xy -= i1;
+  i = mod(i, 289.0);
+  vec3 p = permute( permute( i.y + vec3(0.0, i1.y, 1.0 ))
+  + i.x + vec3(0.0, i1.x, 1.0 ));
+  vec3 m = max(0.5 - vec3(dot(x0,x0), dot(x12.xy,x12.xy),
+    dot(x12.zw,x12.zw)), 0.0);
+  m = m*m ;
+  m = m*m ;
+  vec3 x = 2.0 * fract(p * C.wwww) - 1.0;
+  vec3 h = abs(x) - 0.5;
+  vec3 a0 = x - floor(x + 0.5);
+  m *= 1.79284291400159 - 0.85373472095314 * ( a0*a0 + h*h );
+  vec3 g;
+  g.x  = a0.x  * x0.x  + h.x  * x0.y;
+  g.yz = a0.yz * x12.xz + h.yz * x12.yw;
+  return 130.0 * dot(m, g);
+}
+
+void main() {
+    vec2 uv = v_texCoord;
+    
+    // Create a dark, flowing golden smoke effect
+    float noise1 = snoise(uv * 2.0 + u_time * 0.1);
+    float noise2 = snoise(uv * 4.0 - u_time * 0.15);
+    float combinedNoise = (noise1 + noise2 * 0.5);
+    
+    // Colors from the design system
+    vec3 black = vec3(0.035, 0.035, 0.035); // #090909 equivalent
+    vec3 gold = vec3(0.831, 0.686, 0.216);  // #D4AF37 equivalent
+    
+    // Mix colors based on noise
+    float colorStrength = smoothstep(-0.5, 1.5, combinedNoise);
+    vec3 finalColor = mix(black, gold * 0.15, colorStrength);
+    
+    // Add subtle bright highlights
+    float highlight = smoothstep(0.8, 1.0, combinedNoise);
+    finalColor += gold * highlight * 0.2;
+    
+    gl_FragColor = vec4(finalColor, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_40 -->
+<div class="relative z-10 max-w-4xl mx-auto space-y-8">
+<span class="text-label-caps font-label-caps text-primary tracking-[0.3em] uppercase block" data-aos="fade-up">Get In Touch</span>
+<h1 class="text-headline-lg-mobile md:text-display-lg font-display-lg text-on-surface leading-tight">
+                    Let's Create Something <span class="text-primary italic">Amazing</span> Together
+                </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Have a project in mind? We'd love to hear about it. Contact SL Creative today.
+                </p>
+<div class="pt-8">
+<span class="material-symbols-outlined text-primary text-5xl animate-bounce">expand_more</span>
+</div>
+</div>
+</section>
+<!-- Section 2: Contact Info Cards -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Phone -->
+<div class="glass p-8 group transition-all duration-500">
+<div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">call</span>
+</div>
+<h3 class="text-label-caps font-label-caps text-on-surface mb-2 uppercase">Call Us</h3>
+<p class="text-body-lg font-body-lg text-on-surface mb-6">+91 8438584582</p>
+<a class="text-label-caps font-label-caps text-primary border-b border-primary/30 pb-1 hover:border-primary transition-all" href="tel:+918438584582">Direct Call</a>
+</div>
+<!-- Email -->
+<div class="glass p-8 group transition-all duration-500">
+<div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">mail</span>
+</div>
+<h3 class="text-label-caps font-label-caps text-on-surface mb-2 uppercase">Email</h3>
+<p class="text-body-lg font-body-lg text-on-surface mb-6">contact@slcreative.com</p>
+<a class="text-label-caps font-label-caps text-primary border-b border-primary/30 pb-1 hover:border-primary transition-all" href="mailto:contact@slcreative.com">Send Email</a>
+</div>
+<!-- WhatsApp -->
+<div class="glass p-8 group transition-all duration-500">
+<div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+</div>
+<h3 class="text-label-caps font-label-caps text-on-surface mb-2 uppercase">WhatsApp</h3>
+<p class="text-body-lg font-body-lg text-on-surface mb-6">Message Instantly</p>
+<a class="text-label-caps font-label-caps text-primary border-b border-primary/30 pb-1 hover:border-primary transition-all" href="#">Start Chat</a>
+</div>
+<!-- Office -->
+<div class="glass p-8 group transition-all duration-500">
+<div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+</div>
+<h3 class="text-label-caps font-label-caps text-on-surface mb-2 uppercase">Office</h3>
+<p class="text-body-lg font-body-lg text-on-surface mb-6">Chennai, Tamil Nadu</p>
+<a class="text-label-caps font-label-caps text-primary border-b border-primary/30 pb-1 hover:border-primary transition-all" href="https://www.google.com/maps/place/Chennai,+Tamil+Nadu/@13.0475255,80.2086732,11z/data=!3m1!4b1!4m6!3m5!1s0x3a5265ea4f7d3361:0x6e61a70b6863d433!8m2!3d13.0843007!4d80.2704622!16zL20vMGM4dGs?entry=ttu&g_ep=EgoyMDI2MDgwNC4wIKXMDSoASAFQAw%3D%3D">View Location</a>
+</div>
+</div>
+</section>
+<!-- Section 3: Premium Contact Form -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<div class="lg:col-span-5 space-y-8">
+<h2 class="text-headline-lg font-headline-lg text-on-surface">Tell us about <br/><span class="text-primary italic">Your Project</span></h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant">We don't just create visuals; we craft experiences. Fill out the form, and our creative directors will review your inquiry within 24 hours.</p>
+<!-- Business Hours & Socials Integrated here -->
+<div class="glass p-8 space-y-6">
+<div>
+<h4 class="text-label-caps font-label-caps text-primary mb-4 uppercase">Studio Hours</h4>
+<div class="flex justify-between text-body-md font-body-md text-on-surface-variant">
+<span>Monday - Friday</span>
+<span>9:00 AM - 7:00 PM</span>
+</div>
+<div class="flex justify-between text-body-md font-body-md text-on-surface-variant mt-2">
+<span>Saturday</span>
+<span>10:00 AM - 5:00 PM</span>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<h4 class="text-label-caps font-label-caps text-primary mb-4 uppercase">Follow the Journey</h4>
+<div class="flex gap-6">
+<a class="w-10 h-10 glass flex items-center justify-center hover:scale-110 hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all" href="#">
+<span class="material-symbols-outlined text-primary">play_circle</span>
+</a>
+<a class="w-10 h-10 glass flex items-center justify-center hover:scale-110 hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all" href="#">
+<span class="material-symbols-outlined text-primary">camera</span>
+</a>
+<a class="w-10 h-10 glass flex items-center justify-center hover:scale-110 hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all" href="#">
+<span class="material-symbols-outlined text-primary">brush</span>
+</a>
+<a class="w-10 h-10 glass flex items-center justify-center hover:scale-110 hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all" href="#">
+<span class="material-symbols-outlined text-primary">diversity_3</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7">
+<form class="glass p-8 md:p-12 space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="text-label-caps font-label-caps text-on-surface-variant uppercase text-xs">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-primary text-on-surface py-3 transition-colors" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-label-caps font-label-caps text-on-surface-variant uppercase text-xs">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-primary text-on-surface py-3 transition-colors" placeholder="john@example.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-label-caps font-label-caps text-on-surface-variant uppercase text-xs">Phone Number</label>
+<input class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-primary text-on-surface py-3 transition-colors" placeholder="+91 ..." type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="text-label-caps font-label-caps text-on-surface-variant uppercase text-xs">Company Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-primary text-on-surface py-3 transition-colors" placeholder="Company Inc." type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-label-caps font-label-caps text-on-surface-variant uppercase text-xs">Project Type</label>
+<select class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-primary text-on-surface py-3 transition-colors appearance-none">
+<option class="bg-surface-container-high">Select Service</option>
+<option class="bg-surface-container-high">Cinematic Production</option>
+<option class="bg-surface-container-high">Brand Visuals</option>
+<option class="bg-surface-container-high">Commercial Photography</option>
+<option class="bg-surface-container-high">Social Media Content</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-label-caps font-label-caps text-on-surface-variant uppercase text-xs">Budget Range</label>
+<select class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-primary text-on-surface py-3 transition-colors appearance-none">
+<option class="bg-surface-container-high">Select Budget</option>
+<option class="bg-surface-container-high">₹5k - ₹10k</option>
+<option class="bg-surface-container-high">₹10k - ₹25k</option>
+<option class="bg-surface-container-high">₹25k - ₹50k</option>
+<option class="bg-surface-container-high">₹50k+</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-label-caps font-label-caps text-on-surface-variant uppercase text-xs">Message</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-primary text-on-surface py-3 transition-colors resize-none" placeholder="Tell us about your vision..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary font-label-caps text-label-caps py-6 rounded-none uppercase tracking-widest hover:bg-primary-fixed transition-colors shadow-lg shadow-primary/10" type="submit">
+                            Send Message
+                        </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Section 4: Google Map -->
+<section class="py-section-gap" id="map">
+<div class="w-full h-[500px] grayscale invert filter brightness-75 contrast-125">
+<div class="w-full h-full bg-surface-container" data-location="Kanyakumari, Tamil Nadu">
+<div class="w-full h-full flex flex-col items-center justify-center text-on-surface-variant space-y-4">
+<span class="material-symbols-outlined text-primary text-6xl">map</span>
+<p class="font-label-caps text-label-caps tracking-widest">MAP LOADING: CHENNAI, TAMIL NADU</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: FAQ -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto">
+<div class="text-center mb-16">
+<span class="text-label-caps font-label-caps text-primary tracking-[0.3em] uppercase block mb-4">Questions</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface">Common Inquiries</h2>
+</div>
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<div class="glass overflow-hidden group">
+<button class="w-full px-8 py-6 flex justify-between items-center text-left" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+<span class="text-body-lg font-body-lg text-on-surface">What is the typical turnaround time?</span>
+<span class="material-symbols-outlined text-primary arrow transition-transform">expand_more</span>
+</button>
+<div class="px-8 pb-6 text-on-surface-variant font-body-md hidden">
+                        Depending on the project scope, standard cinematic edits take 2-4 weeks. Photography sets are typically delivered within 7-10 business days.
+                    </div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="glass overflow-hidden group">
+<button class="w-full px-8 py-6 flex justify-between items-center text-left" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+<span class="text-body-lg font-body-lg text-on-surface">How do I send my raw footage?</span>
+<span class="material-symbols-outlined text-primary arrow transition-transform">expand_more</span>
+</button>
+<div class="px-8 pb-6 text-on-surface-variant font-body-md hidden">
+                        We use high-speed Frame.io or MASV links for secure, uncompressed file transfers. Physical drives can also be shipped to our studio.
+                    </div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="glass overflow-hidden group">
+<button class="w-full px-8 py-6 flex justify-between items-center text-left" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+<span class="text-body-lg font-body-lg text-on-surface">What deliverable formats do you provide?</span>
+<span class="material-symbols-outlined text-primary arrow transition-transform">expand_more</span>
+</button>
+<div class="px-8 pb-6 text-on-surface-variant font-body-md hidden">
+                        We deliver in ProRES 422 for master files, and H.264/H.265 optimized for all social platforms and broadcast requirements.
+                    </div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="glass overflow-hidden group">
+<button class="w-full px-8 py-6 flex justify-between items-center text-left" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+<span class="text-body-lg font-body-lg text-on-surface">What is your revision policy?</span>
+<span class="material-symbols-outlined text-primary arrow transition-transform">expand_more</span>
+</button>
+<div class="px-8 pb-6 text-on-surface-variant font-body-md hidden">
+                        All projects include two rounds of creative revisions to ensure the final output perfectly aligns with your initial brief.
+                    </div>
+</div>
+</div>
+</section>
+<!-- Section 7: CTA -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-high relative overflow-hidden">
+<div class="relative z-10 max-w-4xl mx-auto text-center space-y-10">
+<h2 class="text-headline-lg font-headline-lg text-on-surface">Ready to Transform Your Vision?</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant">Secure your slot in our production calendar for the upcoming season.</p>
+<button class="metallic-border bg-transparent text-primary font-label-caps text-label-caps px-12 py-5 uppercase tracking-[0.2em] hover:bg-primary hover:text-on-primary transition-all duration-500 shadow-2xl">
+                    Start Your Project
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap border-t border-outline-variant/20 bg-surface">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="flex items-center gap-2">
+<img alt="SL Creative Logo" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz8bUSR_23aLrb-Rqp34QCj6ASFHh3ibDGSpD2U5X2-xRkc7jIDqiNXfsP1WnOsC8mX69z_5ZUMAsVKsHIFBOGUeETvccchancH7rvI4Jh_mGgXUeCLraoS1F4JuIO9qdayreFqE5laca9fPhGx9Uv-puUewEkqxP0jPAtzidAkP7IhPSBkISKaEiHBdzrhAc0ZmgDNtLNcbkFe2No10iqKciFqtaspY5NmdTdXrt7eAVhubxzBuYmQWoPJ07ZxunzJ_E"/>
+<span class="text-headline-lg font-headline-lg text-primary">SL Creative</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">© 2026 SL Creative. All Rights Reserved.</p>
+</div>
+<div class="flex gap-12">
+<div class="flex flex-col gap-3">
+<span class="text-label-caps font-label-caps text-on-surface mb-2">Connect</span>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="https://www.instagram.com/sl_creative__?igsh=MW1jNnNrdW9vdmZ1dQ==">Instagram</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Vimeo</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">LinkedIn</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-label-caps font-label-caps text-on-surface mb-2">Legal</span>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="privacy-policy.html">Privacy Policy</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="terms-conditions.html">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Custom Cursor Movement
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // Cursor scaling on interactive elements
+        const interactives = document.querySelectorAll('button, a, input, select, textarea, .glass');
+        interactives.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.width = '80px';
+                cursor.style.height = '80px';
+                cursor.style.borderColor = 'rgba(212, 175, 55, 0.5)';
+                cursor.style.backgroundColor = 'rgba(212, 175, 55, 0.05)';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.width = '40px';
+                cursor.style.height = '40px';
+                cursor.style.borderColor = '#d4af37';
+                cursor.style.backgroundColor = 'transparent';
+            });
+        });
+
+        // Smooth reveal on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(div => {
+            div.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(div);
+        });
+    </script>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

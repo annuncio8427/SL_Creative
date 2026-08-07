@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SL Creative - About &amp; Contact</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&amp;family=Outfit:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined', sans-serif;
+            font-size: 24px;
+            font-weight: 300;
+        }
+        
+        .glass-card {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(242, 202, 80, 0.2);
+            box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.1);
+        }
+        
+        .gold-border-focus:focus-within {
+            border-color: #f2ca50;
+            box-shadow: 0 0 0 1px #f2ca50;
+        }
+
+        .ambient-glow {
+            box-shadow: 0 0 40px rgba(242, 202, 80, 0.15);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#353535",
+                        "on-error-container": "#ffdad6",
+                        "surface-bright": "#393939",
+                        "tertiary": "#cecece",
+                        "error": "#ffb4ab",
+                        "on-primary-container": "#554300",
+                        "tertiary-container": "#b2b3b3",
+                        "outline": "#99907c",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-secondary-container": "#bab8b7",
+                        "outline-variant": "#4d4635",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-surface": "#e5e2e1",
+                        "surface": "#131313",
+                        "on-tertiary-container": "#434546",
+                        "on-error": "#690005",
+                        "primary-container": "#d4af37",
+                        "on-surface": "#e5e2e1",
+                        "on-primary-fixed-variant": "#574500",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary": "#3c2f00",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "secondary-fixed": "#e5e2e1",
+                        "primary-fixed": "#ffe088",
+                        "background": "#131313",
+                        "surface-dim": "#131313",
+                        "on-background": "#e5e2e1",
+                        "on-surface-variant": "#d0c5af",
+                        "inverse-on-surface": "#313030",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "primary-fixed-dim": "#e9c349",
+                        "primary": "#f2ca50",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "secondary-container": "#4a4949",
+                        "surface-tint": "#e9c349",
+                        "surface-container-highest": "#353535",
+                        "tertiary-fixed": "#e2e2e2",
+                        "secondary": "#c9c6c5",
+                        "on-primary-fixed": "#241a00",
+                        "on-tertiary": "#2f3131",
+                        "surface-container": "#20201f",
+                        "on-secondary-fixed-variant": "#474646",
+                        "inverse-primary": "#735c00",
+                        "error-container": "#93000a",
+                        "on-secondary": "#313030"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "section-gap": "160px",
+                        "container-max": "1440px",
+                        "unit": "8px",
+                        "margin-mobile": "24px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Outfit"],
+                        "label-caps": ["Outfit"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-lg-mobile": ["Outfit"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "display-lg": ["Outfit"],
+                        "headline-lg": ["Outfit"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30 transition-all duration-300">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 mx-auto max-w-container-max">
+<a class="text-headline-md font-headline-md tracking-tighter text-on-surface dark:text-on-surface" href="#">SL Creative</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-2 py-1 rounded" href="portfolio.html">Work</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-2 py-1 rounded" href="services.html">Services</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-2 py-1 rounded" href="#">Pricing</a>
+<a class="text-label-caps font-label-caps text-primary dark:text-primary border-b-2 border-primary pb-1 hover:bg-surface-variant/20 px-2 rounded" href="about.html">About</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-2 py-1 rounded" href="#contact">Contact</a>
+</div>
+<button class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-full text-label-caps font-label-caps hover:scale-95 transition-all duration-300">Book a Consultation</button>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<main class="flex-grow pt-[100px]">
+<!-- About Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<h1 class="text-headline-lg-mobile md:text-display-lg font-headline-lg-mobile md:font-display-lg text-primary">The Vision Behind the Lens</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant">We don't just capture images; we sculpt light and shadow to tell stories of unparalleled prestige. SL Creative was founded on the principle that true luxury lies in the details.</p>
+<div class="space-y-6 pt-8">
+<div class="glass-card p-8 rounded-xl ambient-glow">
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2">Mission</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">To elevate brands through cinematic visual narratives that command attention and define industry standards.</p>
+</div>
+<div class="glass-card p-8 rounded-xl">
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2">Why Choose Us</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Uncompromising quality, an eye for the extraordinary, and a collaborative process that transforms your vision into a masterpiece.</p>
+</div>
+</div>
+</div>
+<div class="relative h-[600px] w-full rounded-xl overflow-hidden glass-card">
+<img class="object-cover w-full h-full opacity-80 mix-blend-luminosity" data-alt="A sophisticated, high-end photography studio setting bathed in dramatic, moody cinematic lighting. Deep shadows contrast with sharp, precise spotlights highlighting premium camera equipment. The aesthetic is dark minimalism, exuding luxury and professional authority." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCifczDMqzGrZHRKsPg195tg-XJPIT-NsuK9AB-3NfxvjiTR01bWOTGTfwXcVJ0khWMh7GrssfmuET6W0ral5TvOwtL_Wax00D34zwL2XOnxvTzZmhh-htxzXk-428DSH-LRLRdezDQM_8zNNpQxc2IPmPd3ol5zht3bo-XJINKDUcGzdNjX4gYmK_bx9aubdTv93JCsBianBR2hIJTGwQP9ZlH6yrBvDhuzkKVaL4xK14NvVzxcfWWEA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="px-margin-mobile md:px-margin-desktop pb-section-gap max-w-container-max mx-auto" id="contact">
+<div class="text-center mb-16">
+<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg-mobile md:font-headline-lg text-on-surface">Initiate Collaboration</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mt-4">Let's craft your next visual legacy.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<!-- Contact Form -->
+<div class="glass-card p-8 md:p-12 rounded-xl">
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="text-label-caps font-label-caps text-on-surface-variant block">Name</label>
+<input class="w-full bg-surface-container/50 border-b border-outline-variant/50 focus:border-primary text-on-surface py-3 px-4 rounded-t-DEFAULT transition-colors outline-none gold-border-focus" placeholder="Your Name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-label-caps font-label-caps text-on-surface-variant block">Email</label>
+<input class="w-full bg-surface-container/50 border-b border-outline-variant/50 focus:border-primary text-on-surface py-3 px-4 rounded-t-DEFAULT transition-colors outline-none gold-border-focus" placeholder="your@email.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-label-caps font-label-caps text-on-surface-variant block">Inquiry Type</label>
+<select class="w-full bg-surface-container/50 border-b border-outline-variant/50 focus:border-primary text-on-surface py-3 px-4 rounded-t-DEFAULT transition-colors outline-none gold-border-focus appearance-none">
+<option class="bg-surface text-on-surface">Commercial Campaign</option>
+<option class="bg-surface text-on-surface">Editorial Portraiture</option>
+<option class="bg-surface text-on-surface">Brand Consultation</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-label-caps font-label-caps text-on-surface-variant block">Message</label>
+<textarea class="w-full bg-surface-container/50 border-b border-outline-variant/50 focus:border-primary text-on-surface py-3 px-4 rounded-t-DEFAULT transition-colors outline-none gold-border-focus resize-none" placeholder="Describe your vision..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg text-label-caps font-label-caps hover:bg-primary-fixed transition-colors mt-8" type="submit">Send Message</button>
+</form>
+</div>
+<!-- Info & Map -->
+<div class="space-y-8 flex flex-col justify-between">
+<div class="glass-card h-[400px] rounded-xl overflow-hidden relative">
+<div class="bg-cover bg-center w-full h-full opacity-60" data-alt="A stylized, dark-mode minimalist map of Los Angeles, California. The map features deep charcoal grey landmasses with subtle metallic gold lines representing major roads and arteries. The overall aesthetic matches the premium, cinematic noir theme of the brand." data-location="Los Angeles" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDEB7LeYiZmRgP4q-RFamSkZ8wPE63gy6C9BbVqTEM1i-I0u6kSlrzBA8N2NMkOXlqLkf04T1SG717p7wd533SfKG-VTBH99PXOkFWPETuUNd3_MASQr9MQUcpzXt_CFKZ7ccgdtptqrhh81KBqhJGu9ky0U-g2dEzcDfmDXhJwOmOpfSU-1TNENHJ3pF7LXrUhPIgMPOFROGNkOqDaxnJAKSyHI9-XMQBl2yWTkp3r5Hl1kS3g_UH7pg')"></div>
+<div class="absolute inset-0 border border-outline-variant/30 rounded-xl pointer-events-none"></div>
+</div>
+<div class="glass-card p-8 rounded-xl flex justify-between items-center">
+<div>
+<p class="text-label-caps font-label-caps text-on-surface-variant">Studio Location</p>
+<p class="text-body-md font-body-md text-on-surface mt-1">Los Angeles, CA</p>
+</div>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap border-t border-outline-variant/20 bg-surface dark:bg-surface">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-8">
+<span class="text-headline-lg font-headline-lg text-primary dark:text-primary tracking-tighter">SL Creative</span>
+<div class="flex gap-6 items-center">
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80" href="#">Instagram</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80" href="#">Vimeo</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80" href="#">LinkedIn</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80" href="privacy-policy.html">Privacy Policy</a>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant dark:text-on-surface-variant">© 2024 SL Creative. All Rights Reserved.</p>
+</div>
+</footer>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

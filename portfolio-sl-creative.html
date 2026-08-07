@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Work - SL Creative</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#353535",
+                        "on-error-container": "#ffdad6",
+                        "surface-bright": "#393939",
+                        "tertiary": "#cecece",
+                        "error": "#ffb4ab",
+                        "on-primary-container": "#554300",
+                        "tertiary-container": "#b2b3b3",
+                        "outline": "#99907c",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-secondary-container": "#bab8b7",
+                        "outline-variant": "#4d4635",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-surface": "#e5e2e1",
+                        "surface": "#131313",
+                        "on-tertiary-container": "#434546",
+                        "on-error": "#690005",
+                        "primary-container": "#d4af37",
+                        "on-surface": "#e5e2e1",
+                        "on-primary-fixed-variant": "#574500",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary": "#3c2f00",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "secondary-fixed": "#e5e2e1",
+                        "primary-fixed": "#ffe088",
+                        "background": "#131313",
+                        "surface-dim": "#131313",
+                        "on-background": "#e5e2e1",
+                        "on-surface-variant": "#d0c5af",
+                        "inverse-on-surface": "#313030",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "primary-fixed-dim": "#e9c349",
+                        "primary": "#f2ca50",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "secondary-container": "#4a4949",
+                        "surface-tint": "#e9c349",
+                        "surface-container-highest": "#353535",
+                        "tertiary-fixed": "#e2e2e2",
+                        "secondary": "#c9c6c5",
+                        "on-primary-fixed": "#241a00",
+                        "on-tertiary": "#2f3131",
+                        "surface-container": "#20201f",
+                        "on-secondary-fixed-variant": "#474646",
+                        "inverse-primary": "#735c00",
+                        "error-container": "#93000a",
+                        "on-secondary": "#313030"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "section-gap": "160px",
+                        "container-max": "1440px",
+                        "unit": "8px",
+                        "margin-mobile": "24px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Outfit"],
+                        "label-caps": ["Outfit"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-lg-mobile": ["Outfit"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "display-lg": ["Outfit"],
+                        "headline-lg": ["Outfit"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #090909; /* Deep cinematic dark */
+        }
+        .glass-card {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(153, 144, 124, 0.2);
+            box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.05);
+        }
+        .gold-border-gradient {
+            border-image: linear-gradient(to right, #99907c, #f2ca50) 1;
+        }
+        /* Masonry Grid CSS approximation */
+        .masonry-grid {
+            columns: 1;
+            column-gap: 24px;
+        }
+        @media (min-width: 768px) {
+            .masonry-grid {
+                columns: 2;
+            }
+        }
+        @media (min-width: 1024px) {
+            .masonry-grid {
+                columns: 3;
+            }
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+        }
+        
+        .cursor-custom {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #f2ca50;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s, background-color 0.3s;
+            mix-blend-mode: difference;
+        }
+        .cursor-hover {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(242, 202, 80, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased font-body-md min-h-screen flex flex-col">
+<div class="cursor-custom hidden md:block" id="custom-cursor"></div>
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30 flat no shadows flex justify-between items-center px-margin-desktop py-4 mx-auto max-w-container-max">
+<a class="text-headline-md font-headline-md tracking-tighter text-on-surface dark:text-on-surface" href="#">SL Creative</a>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-primary dark:text-primary border-b-2 border-primary pb-1 text-label-caps font-label-caps hover:bg-surface-variant/20 scale 0.98x transition-all duration-300" href="portfolio.html">Work</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors text-label-caps font-label-caps hover:bg-surface-variant/20" href="services.html">Services</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors text-label-caps font-label-caps hover:bg-surface-variant/20" href="#">Pricing</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors text-label-caps font-label-caps hover:bg-surface-variant/20" href="about.html">About</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors text-label-caps font-label-caps hover:bg-surface-variant/20" href="contact.html">Contact</a>
+</nav>
+<button class="hidden md:inline-flex items-center justify-center bg-primary text-on-primary px-6 py-3 text-label-caps font-label-caps hover:bg-primary-fixed-dim transition-colors rounded-sm">
+            Book a Consultation
+        </button>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="flex-grow pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Header Section -->
+<section class="mb-16 md:mb-24 text-center md:text-left">
+<h1 class="text-display-lg font-display-lg text-on-surface mb-6">Our Work</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl">
+                A curated selection of our finest visual narratives. Explore our diverse portfolio spanning cinematic weddings, high-end commercial projects, and breathtaking travel documentaries.
+            </p>
+</section>
+<!-- Filters -->
+<section class="mb-12 flex flex-wrap gap-4 justify-center md:justify-start">
+<button class="px-6 py-2 rounded-full border border-primary text-primary bg-primary/10 text-label-caps font-label-caps uppercase tracking-[0.15em] interactive-element">All</button>
+<button class="px-6 py-2 rounded-full border border-outline text-on-surface-variant hover:border-primary hover:text-primary transition-colors text-label-caps font-label-caps uppercase tracking-[0.15em] interactive-element">Wedding</button>
+<button class="px-6 py-2 rounded-full border border-outline text-on-surface-variant hover:border-primary hover:text-primary transition-colors text-label-caps font-label-caps uppercase tracking-[0.15em] interactive-element">Travel</button>
+<button class="px-6 py-2 rounded-full border border-outline text-on-surface-variant hover:border-primary hover:text-primary transition-colors text-label-caps font-label-caps uppercase tracking-[0.15em] interactive-element">Cinematic</button>
+<button class="px-6 py-2 rounded-full border border-outline text-on-surface-variant hover:border-primary hover:text-primary transition-colors text-label-caps font-label-caps uppercase tracking-[0.15em] interactive-element">Commercial</button>
+<button class="px-6 py-2 rounded-full border border-outline text-on-surface-variant hover:border-primary hover:text-primary transition-colors text-label-caps font-label-caps uppercase tracking-[0.15em] interactive-element">Social Media</button>
+</section>
+<!-- Masonry Grid -->
+<section class="masonry-grid">
+<!-- Project Card 1 -->
+<article class="masonry-item glass-card rounded-lg overflow-hidden group relative interactive-element cursor-pointer">
+<div class="relative w-full pb-[120%] overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter group-hover:brightness-75" data-alt="A cinematic still of a couple exchanging vows on a dramatic cliffside overlooking a dark, stormy ocean. The lighting is moody and dramatic with subtle golden hour highlights catching the edge of the bride's veil. Shot on high-end cinema glass with a deep depth of field. Professional color grading with a dark, premium aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApRqp8TcydDf1JxGmk_aJqc4FAOuwvfnGE3RA9y0Kx2jtb5kdQN2eIickutN-bGRxm6GP-SzU6AfbbCzLxQiFgUzIa1u58zpVw2OMY877y98kGYA73E_exLggvWKNKdxK3GAhhttdKIMVfQ8C8tharP2MBjkIhNalyxDZ_A9KBy_lVu7uAnM6SfgiV2k886R1QKghqytBFW_QHSgrUBhxBxcwAgB_6yJpYI0jcNFnLqHCV3SLRlyQEQg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-label-caps font-label-caps mb-2 tracking-[0.15em] uppercase">Wedding</span>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2">Eternal Horizons</h3>
+<div class="flex items-center text-primary gap-2 mt-4 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-100">
+<span class="text-label-caps font-label-caps uppercase tracking-[0.15em]">View Project</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Project Card 2 -->
+<article class="masonry-item glass-card rounded-lg overflow-hidden group relative interactive-element cursor-pointer">
+<div class="relative w-full pb-[80%] overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter group-hover:brightness-75" data-alt="A high-contrast, edgy commercial product shot of a luxury watch resting on textured dark slate. A single, focused beam of golden light illuminates the watch face, highlighting the intricate metallic details. The aesthetic is ultra-premium, dark minimalism with razor-sharp focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4J5KXgwh2vqZYbVTuRsEXa8su-6hFlT7ns_7T5G1ovjio9_q6fpKl_yNb6yuRyZzJkATrvuj_LXFcMlQR-OwLUsm87S8iPJIwYjQ6-4DoSrrjwX8vyIYD1YbyvBzplaQUpN9WYnKHdARoeSOlnMz0bcrKSVy1yK4y8om7fvL6FKaJVmGlkGmg-NtNMdqwveM61l3qgTrcRh6kTBHVKx3tR-eXW65epUjq6a6BgN8HZBd9JGZbQdW3ig"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-label-caps font-label-caps mb-2 tracking-[0.15em] uppercase">Commercial</span>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2">Precision Timing</h3>
+<div class="flex items-center text-primary gap-2 mt-4 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-100">
+<span class="text-label-caps font-label-caps uppercase tracking-[0.15em]">View Project</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Project Card 3 -->
+<article class="masonry-item glass-card rounded-lg overflow-hidden group relative interactive-element cursor-pointer">
+<div class="relative w-full pb-[150%] overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter group-hover:brightness-75" data-alt="A breathtaking drone shot looking straight down at a winding mountain road cutting through a dense, dark pine forest. A single classic sports car drives along the curve. The color palette is cool, desaturated greens with a warm golden highlight on the car itself. Cinematic and vast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkzbKa_5A4zpNan3-7HqZqDNCAzglYt94tnp7eT7AXIwpRegKvfBjrB5TlPOInA7XDUC3z7kpcRNDyNmHCdUR3taLy0SEuKH5e__YKAtf1EKltmKrS6CEVTqgLjaSzMzed43U0WZkmuOrM4lqj25JLj4DUF_QV7bxVoSOXAZn-I39dUUJ9Af_C5BCDdJFCoW6bPtRJpTEXUvMGY19jGcA0k2rxNe2gLNziRCgY2SugQzw2QbpTToeGHw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-label-caps font-label-caps mb-2 tracking-[0.15em] uppercase">Travel</span>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2">Alpine Pursuit</h3>
+<div class="flex items-center text-primary gap-2 mt-4 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-100">
+<span class="text-label-caps font-label-caps uppercase tracking-[0.15em]">View Project</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Project Card 4 -->
+<article class="masonry-item glass-card rounded-lg overflow-hidden group relative interactive-element cursor-pointer">
+<div class="relative w-full pb-[100%] overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter group-hover:brightness-75" data-alt="An atmospheric, moody portrait of a musician holding a guitar in a dimly lit studio. Smoke lingers in the air, catching the backlight. The main light source is a warm, golden practical light off-camera. The image has a rich, film-like grain and deep shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuxATSB74yQga0PaJwIGreJwItWAdd-ecsajxrMB6K6a735j1ZFX2rIT5tC4D-JzRYnKs81Pxyc95DunYmk2IRBpHlSo2aZDcaWJ7cDNXRbGpJ6ojha3KvoSfUIokMVfMG2bDEX8sutKsEL4mFkoD-HAWdtdLRl4MdEsZTCZtqxNpaVE-1Z0b-OS5XeDG8hgwGo0gOlF4mZpf_ma02RfSffNjhwk3LZIARK1Sb1HYUMeloItDVvAlT8Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-label-caps font-label-caps mb-2 tracking-[0.15em] uppercase">Cinematic</span>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2">Echoes in Gold</h3>
+<div class="flex items-center text-primary gap-2 mt-4 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-100">
+<span class="text-label-caps font-label-caps uppercase tracking-[0.15em]">View Project</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Project Card 5 -->
+<article class="masonry-item glass-card rounded-lg overflow-hidden group relative interactive-element cursor-pointer">
+<div class="relative w-full pb-[130%] overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter group-hover:brightness-75" data-alt="A dynamic, fast-paced action shot of a bartender mixing a cocktail, capturing the motion blur of the shaker and splashing liquid. Shot in a high-end, dark speakeasy environment. Strong directional lighting highlights the gold rim of the glass and the amber liquid. Optimized for vertical social media format." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhNGj6-cd9vR7qEWY1uF6ufqPHyLv07Y1w5pDSFQJMngvGKPQsuH4lVP5RwvXXBExdDMQnu5MTeMM22zseej8phiGdSyks3AwlrF0yP9_zsfXm9z4nd0Ij0ESPwAhJzlMECDBlOuUjXYd8E8HiNcKfr7-R92IvVp2LVDpPHFj-85_pkKkpcM0bmzWga4y_AAhkiPHlbZ_qpPyOk8jf8lK6c3SfafiTSLEw5NmO8QOZZipPVTs4Or-wkg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-label-caps font-label-caps mb-2 tracking-[0.15em] uppercase">Social Media</span>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2">The Alchemist</h3>
+<div class="flex items-center text-primary gap-2 mt-4 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-100">
+<span class="text-label-caps font-label-caps uppercase tracking-[0.15em]">View Project</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Project Card 6 -->
+<article class="masonry-item glass-card rounded-lg overflow-hidden group relative interactive-element cursor-pointer">
+<div class="relative w-full pb-[70%] overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter group-hover:brightness-75" data-alt="A minimalist architectural interior shot of a modern luxury living room at dusk. Floor to ceiling windows reveal a twilight cityscape. Inside, subtle ambient lighting highlights sleek, dark furniture and a subtle gold accent piece. Masterful composition emphasizing straight lines and negative space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXLDqACBS14gQyJcljrXFtAS--nrOEGFRXCbcfWzjonw1_lwqDURUrI58sUtFYlYhusa0xvY9mKV4CIHaX9nUBB0xOj6u9YJfJwYfXTudQTF6qvIHZD80lJUQsXA7loimKxGR0VnOzuJOk7PI_focYATBM3sXD0yIo391kq3kPL2hYNFV_QeUY3jD2DldHENdbmkvKH8L7p43ayPapP_nfJLhaUvvqT9KkWk_Dvi-N4w98QCHfg90wtg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-label-caps font-label-caps mb-2 tracking-[0.15em] uppercase">Commercial</span>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2">Urban Sanctuary</h3>
+<div class="flex items-center text-primary gap-2 mt-4 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-100">
+<span class="text-label-caps font-label-caps uppercase tracking-[0.15em]">View Project</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</article>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap border-t border-outline-variant/20 flat no shadows bg-surface dark:bg-surface text-primary dark:text-primary">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto gap-8">
+<div class="text-headline-lg font-headline-lg text-primary dark:text-primary">SL Creative</div>
+<nav class="flex flex-wrap gap-6 justify-center">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 text-label-caps font-label-caps hover:opacity-80 transition-opacity" href="#">Instagram</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 text-label-caps font-label-caps hover:opacity-80 transition-opacity" href="#">Vimeo</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 text-label-caps font-label-caps hover:opacity-80 transition-opacity" href="#">LinkedIn</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 text-label-caps font-label-caps hover:opacity-80 transition-opacity" href="privacy-policy.html">Privacy Policy</a>
+</nav>
+<div class="text-body-md font-body-md text-on-surface-variant">© 2024 SL Creative. All Rights Reserved.</div>
+</div>
+</footer>
+<script>
+        // Custom Cursor Logic
+        const cursor = document.getElementById('custom-cursor');
+        const interactiveElements = document.querySelectorAll('.interactive-element, a, button');
+
+        if(cursor) {
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+
+            interactiveElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.classList.add('cursor-hover');
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursor.classList.remove('cursor-hover');
+                });
+            });
+        }
+    </script>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

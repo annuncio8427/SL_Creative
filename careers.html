@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Careers - SL Creative</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-container": "#b2b3b3",
+                      "surface-bright": "#393939",
+                      "tertiary-fixed": "#e2e2e2",
+                      "secondary-fixed": "#e5e2e1",
+                      "on-error-container": "#ffdad6",
+                      "inverse-on-surface": "#313030",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "on-primary-fixed-variant": "#574500",
+                      "outline": "#99907c",
+                      "on-error": "#690005",
+                      "secondary": "#c9c6c5",
+                      "surface-container": "#20201f",
+                      "on-secondary-container": "#bab8b7",
+                      "primary-fixed": "#ffe088",
+                      "on-surface": "#e5e2e1",
+                      "on-secondary": "#313030",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "secondary-container": "#4a4949",
+                      "primary": "#f2ca50",
+                      "surface-dim": "#131313",
+                      "background": "#131313",
+                      "primary-fixed-dim": "#e9c349",
+                      "on-surface-variant": "#d0c5af",
+                      "inverse-surface": "#e5e2e1",
+                      "error": "#ffb4ab",
+                      "surface-container-low": "#1c1b1b",
+                      "surface-container-high": "#2a2a2a",
+                      "surface": "#131313",
+                      "on-background": "#e5e2e1",
+                      "on-primary-container": "#554300",
+                      "on-primary": "#3c2f00",
+                      "surface-container-highest": "#353535",
+                      "on-primary-fixed": "#241a00",
+                      "surface-variant": "#353535",
+                      "surface-tint": "#e9c349",
+                      "on-tertiary": "#2f3131",
+                      "outline-variant": "#4d4635",
+                      "on-secondary-fixed-variant": "#474646",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "surface-container-lowest": "#0e0e0e",
+                      "primary-container": "#d4af37",
+                      "tertiary": "#cecece",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "error-container": "#93000a",
+                      "on-tertiary-container": "#434546",
+                      "inverse-primary": "#735c00",
+                      "on-secondary-fixed": "#1c1b1b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "24px",
+                      "unit": "8px",
+                      "margin-desktop": "80px",
+                      "container-max": "1440px",
+                      "gutter": "24px",
+                      "section-gap": "160px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "body-md": [
+                              "Be Vietnam Pro"
+                      ],
+                      "headline-md": [
+                              "Outfit"
+                      ],
+                      "headline-lg": [
+                              "Outfit"
+                      ],
+                      "headline-lg-mobile": [
+                              "Outfit"
+                      ],
+                      "label-caps": [
+                              "Outfit"
+                      ],
+                      "display-lg": [
+                              "Outfit"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.15em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "72px",
+                              {
+                                      "lineHeight": "80px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .glass-card {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid theme('colors.outline-variant');
+            box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.05);
+        }
+        .glass-input {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid theme('colors.outline-variant');
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        .glass-input:focus {
+            border-color: theme('colors.primary');
+            outline: none;
+            box-shadow: 0 0 15px rgba(242, 202, 80, 0.1);
+        }
+        .gold-gradient-border {
+            position: relative;
+            background: transparent;
+        }
+        .gold-gradient-border::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(135deg, theme('colors.primary'), theme('colors.primary-container'), transparent 60%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto bg-background/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-2xl shadow-primary/5">
+<div class="font-headline-md text-headline-md text-primary tracking-tighter">SL Creative</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="#">Case Studies</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="#">Process</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-primary border-b-2 border-primary pb-1" href="#">Careers</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="#">Blog</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="#">Booking</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded font-label-caps text-label-caps hover:bg-primary-container transition-colors hidden md:block uppercase tracking-widest">Inquire Now</button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+</button>
+</nav>
+<main class="flex-grow pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[716px] flex items-center justify-center px-margin-mobile md:px-margin-desktop py-section-gap overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="bg-cover bg-center w-full h-full opacity-30 mix-blend-luminosity" data-alt="A high-end, cinematic wide shot of a modern creative studio. Dark walls, warm gold accent lighting illuminating editing bays and high-end camera equipment. The mood is focused, professional, and luxurious, matching the dark minimalist aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBDxfWVK2pBp0Bi4BzsYV3PmJMi6iMU658IiWIIFEurxo4SfZbOC2U8-sVutg6M8B_gSTV_CMU6ZBVSoUkUGzTjmb0BahND-aLtQPEeAGXfX_tjF-45TI9yTLj5d6-1kY_b9PFgkqnbmGctHZfOP5KeJQWr9omFgVq1gyyCmPq3pl_ZMMgCASZxOpt_NubqsXDbYmjinlBLd9OYwTEylX7ISQIBIs8OMUiYD-gqno0DdkV3KhyZNthHGQ');"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl mx-auto flex flex-col items-center gap-6">
+<span class="font-label-caps text-label-caps text-primary border border-primary/30 px-4 py-2 rounded-full uppercase tracking-[0.2em]">Careers</span>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-background">Join Our Creative Team</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Work with passionate designers, editors, and storytellers to craft uncompromising visual experiences for world-class clientele.</p>
+<div class="mt-8">
+<a class="bg-primary text-on-primary px-8 py-4 rounded font-label-caps text-label-caps hover:bg-primary-container transition-all hover:scale-105 inline-block uppercase tracking-widest" href="#openings">View Openings</a>
+</div>
+</div>
+</section>
+<!-- Why Work With Us -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="mb-16 md:mb-24 flex flex-col md:flex-row justify-between items-end gap-8">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">The Studio Experience</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">We believe that exceptional work requires an exceptional environment. We foster a culture of creative excellence, precision, and continuous growth.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Culture -->
+<div class="glass-card p-8 rounded-xl hover:bg-surface-container-high transition-colors group">
+<div class="w-16 h-16 rounded-full bg-surface-bright flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">palette</span>
+</div>
+<h3 class="font-headline-md text-[24px] leading-[32px] text-on-background mb-3">Creative Culture</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Immerse yourself in an environment where artistic vision is paramount. Collaborate with peers who push the boundaries of visual storytelling.</p>
+</div>
+<!-- Flexibility -->
+<div class="glass-card p-8 rounded-xl hover:bg-surface-container-high transition-colors group">
+<div class="w-16 h-16 rounded-full bg-surface-bright flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">schedule</span>
+</div>
+<h3 class="font-headline-md text-[24px] leading-[32px] text-on-background mb-3">Flexible Work</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We value output over hours. Enjoy flexible scheduling and remote options designed to support your creative flow and work-life balance.</p>
+</div>
+<!-- Learning -->
+<div class="glass-card p-8 rounded-xl hover:bg-surface-container-high transition-colors group">
+<div class="w-16 h-16 rounded-full bg-surface-bright flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">trending_up</span>
+</div>
+<h3 class="font-headline-md text-[24px] leading-[32px] text-on-background mb-3">Learning Opportunities</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Access top-tier equipment, attend industry workshops, and participate in peer-led masterclasses to continuously refine your craft.</p>
+</div>
+</div>
+</section>
+<!-- Current Openings -->
+<section class="bg-surface-container-low px-margin-mobile md:px-margin-desktop py-section-gap" id="openings">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Current Openings</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Find your place in our creative ecosystem.</p>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Opening 1 -->
+<div class="glass-card p-6 md:p-8 rounded-lg flex flex-col md:flex-row justify-between items-start md:items-center gap-6 group hover:border-primary/50 transition-colors cursor-pointer">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<h3 class="font-headline-md text-[24px] leading-[32px] text-on-background">Video Editor</h3>
+<span class="font-label-caps text-label-caps px-2 py-1 rounded bg-surface-bright text-on-surface-variant">Full-time</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Post-Production • Los Angeles, CA / Remote</p>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all">arrow_forward</span>
+</div>
+<!-- Opening 2 -->
+<div class="glass-card p-6 md:p-8 rounded-lg flex flex-col md:flex-row justify-between items-start md:items-center gap-6 group hover:border-primary/50 transition-colors cursor-pointer">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<h3 class="font-headline-md text-[24px] leading-[32px] text-on-background">Motion Graphics Artist</h3>
+<span class="font-label-caps text-label-caps px-2 py-1 rounded bg-surface-bright text-on-surface-variant">Contract</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Design • Remote</p>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all">arrow_forward</span>
+</div>
+<!-- Opening 3 -->
+<div class="glass-card p-6 md:p-8 rounded-lg flex flex-col md:flex-row justify-between items-start md:items-center gap-6 group hover:border-primary/50 transition-colors cursor-pointer">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<h3 class="font-headline-md text-[24px] leading-[32px] text-on-background">Graphic Designer</h3>
+<span class="font-label-caps text-label-caps px-2 py-1 rounded bg-surface-bright text-on-surface-variant">Full-time</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Design • New York, NY / Hybrid</p>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all">arrow_forward</span>
+</div>
+<!-- Opening 4 -->
+<div class="glass-card p-6 md:p-8 rounded-lg flex flex-col md:flex-row justify-between items-start md:items-center gap-6 group hover:border-primary/50 transition-colors cursor-pointer">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<h3 class="font-headline-md text-[24px] leading-[32px] text-on-background">Social Media Manager</h3>
+<span class="font-label-caps text-label-caps px-2 py-1 rounded bg-surface-bright text-on-surface-variant">Full-time</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Marketing • Remote</p>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Application Form Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">Submit Your Portfolio</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Don't see a role that fits? We are always looking for exceptional talent. Submit your portfolio for future consideration.</p>
+<div class="glass-card p-8 rounded-xl">
+<img class="w-full h-64 object-cover rounded-lg mb-6 mix-blend-luminosity opacity-80" data-alt="Close up of hands working on a high-end grading console in a dark studio setting. A glowing monitor displaying cinematic color grading software is in the background. The lighting highlights the tactile buttons and the metallic finish of the console, reinforcing the premium aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6qOYIzAALY-MMBxSy3Zg8peuz1JjJVn9mO-YTMNdIattXFkzhvEKChMpGkma33ll-ytbksjZlVuiDkDIdYjkP5NahYVTRNPK6wkR5Ojm9HyUtpQB_0IzVCHSN0ma-vZqd_LtY7b3bRlCf1i4AMN29VrBDnU3tvRFu2LJMwP7vWLQFyKnkA2YUYCW_LRcwGvyv_B43wZ9As8bohQbhsvSlhWxhfJ0ZV0X0o4b6Ak4yMFdkKLrO83gt_g"/>
+<blockquote class="font-body-lg text-body-lg italic text-on-background border-l-2 border-primary pl-4">
+                        "SL Creative is a place where vision is realized without compromise. The caliber of work and the dedication of the team is unmatched."
+                        <footer class="mt-4 font-label-caps text-label-caps text-primary not-italic tracking-widest">— Lead Colorist</footer>
+</blockquote>
+</div>
+</div>
+<div class="gold-gradient-border rounded-xl p-8 bg-surface-container-highest/50 backdrop-blur-md">
+<form class="flex flex-col gap-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant tracking-widest">Full Name</label>
+<input class="glass-input w-full p-4 rounded text-on-background font-body-md" placeholder="Enter your name" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant tracking-widest">Email Address</label>
+<input class="glass-input w-full p-4 rounded text-on-background font-body-md" placeholder="Enter your email" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant tracking-widest">Portfolio URL</label>
+<input class="glass-input w-full p-4 rounded text-on-background font-body-md" placeholder="Link to your work" type="url"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant tracking-widest">Years of Experience</label>
+<select class="glass-input w-full p-4 rounded text-on-background font-body-md appearance-none">
+<option class="text-on-surface-variant" disabled="" selected="" value="">Select experience</option>
+<option class="bg-surface-container-high text-on-background" value="0-2">0-2 years</option>
+<option class="bg-surface-container-high text-on-background" value="3-5">3-5 years</option>
+<option class="bg-surface-container-high text-on-background" value="5+">5+ years</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant tracking-widest">Cover Letter / Note</label>
+<textarea class="glass-input w-full p-4 rounded text-on-background font-body-md h-32 resize-none" placeholder="Tell us why you'd be a great fit..."></textarea>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant tracking-widest">Resume (Optional)</label>
+<div class="glass-input w-full p-8 rounded flex flex-col items-center justify-center border-dashed cursor-pointer hover:border-primary/50">
+<span class="material-symbols-outlined text-on-surface-variant mb-2">upload_file</span>
+<span class="font-body-md text-on-surface-variant">Click to upload or drag and drop</span>
+</div>
+</div>
+<button class="mt-4 bg-primary text-on-primary w-full py-4 rounded font-label-caps text-label-caps hover:bg-primary-container transition-all hover:scale-[1.02] uppercase tracking-widest" type="submit">Submit Application</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-center gap-unit bg-background border-t border-outline-variant/20">
+<div class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">SL Creative</div>
+<div class="flex flex-wrap justify-center gap-8 mb-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">Case Studies</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">Careers</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">FAQ</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">Terms &amp; Conditions</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="contact.html">Contact</a>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant/50 text-center">
+            © 2024 SL Creative. Uncompromising Excellence in Post-Production.
+        </div>
+</footer>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

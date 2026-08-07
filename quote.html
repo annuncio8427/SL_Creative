@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SL Creative - Project Quote</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#f2ca50",
+                        "inverse-surface": "#e5e2e1",
+                        "background": "#131313",
+                        "on-primary-fixed": "#241a00",
+                        "surface": "#131313",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "on-tertiary-container": "#434546",
+                        "primary-container": "#d4af37",
+                        "inverse-primary": "#735c00",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-container": "#b2b3b3",
+                        "secondary": "#c9c6c5",
+                        "on-primary": "#3c2f00",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#554300",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-fixed": "#ffe088",
+                        "on-tertiary": "#2f3131",
+                        "surface-container": "#20201f",
+                        "on-surface": "#e5e2e1",
+                        "on-error": "#690005",
+                        "outline-variant": "#4d4635",
+                        "on-background": "#e5e2e1",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-secondary": "#313030",
+                        "on-surface-variant": "#d0c5af",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "secondary-container": "#4a4949",
+                        "on-secondary-container": "#bab8b7",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary-fixed-variant": "#474646",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-variant": "#353535",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-lowest": "#0e0e0e",
+                        "outline": "#99907c",
+                        "surface-bright": "#393939",
+                        "tertiary": "#cecece",
+                        "on-primary-fixed-variant": "#574500",
+                        "surface-container-highest": "#353535",
+                        "error": "#ffb4ab",
+                        "surface-dim": "#131313",
+                        "surface-tint": "#e9c349",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-fixed": "#e2e2e2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "margin-mobile": "24px",
+                        "container-max": "1440px",
+                        "section-gap": "160px",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "display-lg": ["Outfit"],
+                        "headline-lg-mobile": ["Outfit"],
+                        "headline-lg": ["Outfit"],
+                        "headline-md": ["Outfit"],
+                        "label-caps": ["Outfit"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+        }
+        .glass-card {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(242, 202, 80, 0.2);
+            box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.05);
+        }
+        .glass-header {
+            background: rgba(19, 19, 19, 0.6);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border-bottom: 1px solid rgba(242, 202, 80, 0.2);
+        }
+        .gold-gradient-border {
+            border: 1px solid transparent;
+            background: linear-gradient(#131313, #131313) padding-box,
+                        linear-gradient(to right, #f2ca50, #735c00) border-box;
+        }
+        .ambient-shadow {
+            box-shadow: 0 20px 60px rgba(242, 202, 80, 0.05);
+        }
+    </style>
+</head>
+<body class="font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-header shadow-[0_20px_40px_rgba(212,175,55,0.05)]">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20 w-full flex justify-between items-center">
+<!-- Brand -->
+<a class="font-display-lg text-headline-md text-primary tracking-tight" href="#">SL Creative</a>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#">Dashboard</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="#">Projects</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#">Media Kit</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#">Support</a>
+</div>
+<!-- Actions -->
+<div class="flex items-center space-x-6">
+<button class="hidden md:block gold-gradient-border px-6 py-2 rounded-full text-on-surface font-body-md hover:bg-primary hover:text-on-primary transition-all duration-300">
+                    Portal
+                </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<header class="mb-16">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-primary mb-4">Project Quote</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl">Detailed estimate for your custom creative project based on your selected parameters.</p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Service Breakdown -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Breakdown Card -->
+<div class="glass-card rounded-xl p-8 ambient-shadow">
+<h2 class="font-headline-md text-on-surface mb-8 border-b border-outline-variant pb-4">Service Breakdown</h2>
+<div class="space-y-6">
+<!-- Item 1 -->
+<div class="flex justify-between items-start border-b border-outline-variant/30 pb-6">
+<div>
+<h3 class="font-body-lg font-semibold text-primary mb-2">Brand Identity Design</h3>
+<p class="font-body-md text-on-surface-variant mb-2">Comprehensive visual identity system including logo suite, typography, and color palette.</p>
+<span class="inline-block px-3 py-1 rounded-full border border-primary/50 text-primary font-label-caps uppercase text-[10px]">Core Service</span>
+</div>
+<div class="text-right">
+<span class="font-body-lg text-on-surface">$4,500</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex justify-between items-start border-b border-outline-variant/30 pb-6">
+<div>
+<h3 class="font-body-lg font-semibold text-primary mb-2">Custom Web Development</h3>
+<p class="font-body-md text-on-surface-variant mb-2">Responsive, high-performance website tailored to the new brand identity. Up to 10 unique templates.</p>
+<span class="inline-block px-3 py-1 rounded-full border border-primary/50 text-primary font-label-caps uppercase text-[10px]">Add-on</span>
+</div>
+<div class="text-right">
+<span class="font-body-lg text-on-surface">$8,200</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-body-lg font-semibold text-primary mb-2">Motion Graphics Package</h3>
+<p class="font-body-md text-on-surface-variant mb-2">Animated logo sting and 3 social media promotional video templates.</p>
+<span class="inline-block px-3 py-1 rounded-full border border-primary/50 text-primary font-label-caps uppercase text-[10px]">Add-on</span>
+</div>
+<div class="text-right">
+<span class="font-body-lg text-on-surface">$2,100</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Terms Card -->
+<div class="glass-card rounded-xl p-8">
+<h3 class="font-headline-md text-on-surface mb-6">Terms &amp; Next Steps</h3>
+<div class="space-y-4 text-on-surface-variant font-body-md">
+<p class="flex items-start">
+<span class="material-symbols-outlined text-primary mr-3 mt-1 text-xl">schedule</span>
+<span>This quote is valid for <strong>14 days</strong> from the date of issue (until Oct 24, 2024).</span>
+</p>
+<p class="flex items-start">
+<span class="material-symbols-outlined text-primary mr-3 mt-1 text-xl">payments</span>
+<span>A 50% non-refundable deposit is required to commence work. The remaining balance is due upon project completion prior to final asset handover.</span>
+</p>
+<p class="flex items-start">
+<span class="material-symbols-outlined text-primary mr-3 mt-1 text-xl">task_alt</span>
+<span>By accepting this quote, you agree to the <a class="text-primary underline hover:text-primary-fixed transition-colors" href="#">Standard Service Agreement</a>.</span>
+</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Summary & Action -->
+<div class="lg:col-span-4">
+<div class="glass-card rounded-xl p-8 sticky top-32 ambient-shadow border border-primary/40">
+<h3 class="font-headline-md text-primary mb-6">Quote Summary</h3>
+<div class="space-y-4 mb-8">
+<div class="flex justify-between font-body-md text-on-surface-variant">
+<span>Subtotal</span>
+<span>$14,800</span>
+</div>
+<div class="flex justify-between font-body-md text-on-surface-variant">
+<span>Estimated Taxes (Calculated at checkout)</span>
+<span>--</span>
+</div>
+<div class="h-px w-full bg-outline-variant my-4"></div>
+<div class="flex justify-between font-headline-md text-on-surface">
+<span>Total</span>
+<span>$14,800</span>
+</div>
+<div class="flex justify-between font-body-lg text-primary mt-4">
+<span>Deposit Required (50%)</span>
+<span>$7,400</span>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary font-bold font-body-lg py-4 rounded-lg hover:bg-primary-fixed transition-colors duration-300 flex items-center justify-center space-x-2">
+<span>Accept Quote &amp; Pay Deposit</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<p class="text-center font-label-caps text-on-surface-variant mt-6 uppercase">
+                        Secure checkout powered by Stripe
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-surface-container-lowest border-t border-primary/10">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-4 mb-8 md:mb-0">
+<span class="font-display-lg text-headline-md text-primary">SL Creative</span>
+<p class="text-on-tertiary-container font-body-md mt-4">© 2024 SL Creative. All rights reserved.</p>
+</div>
+<div class="col-span-12 md:col-span-8 flex flex-wrap gap-6 md:justify-end items-center">
+<a class="text-on-tertiary-container font-body-md hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Cookie Policy</a>
+<a class="text-on-tertiary-container font-body-md hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Refund Policy</a>
+<a class="text-on-tertiary-container font-body-md hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Licensing</a>
+<a class="text-on-tertiary-container font-body-md hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">NDA</a>
+<a class="text-on-tertiary-container font-body-md hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Awards</a>
+<a class="text-on-tertiary-container font-body-md hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Partners</a>
+</div>
+</div>
+</footer>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

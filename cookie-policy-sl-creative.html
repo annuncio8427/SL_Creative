@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SL Creative - Cookie Policy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#f2ca50",
+                        "inverse-surface": "#e5e2e1",
+                        "background": "#131313",
+                        "on-primary-fixed": "#241a00",
+                        "surface": "#131313",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "on-tertiary-container": "#434546",
+                        "primary-container": "#d4af37",
+                        "inverse-primary": "#735c00",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-container": "#b2b3b3",
+                        "secondary": "#c9c6c5",
+                        "on-primary": "#3c2f00",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#554300",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-fixed": "#ffe088",
+                        "on-tertiary": "#2f3131",
+                        "surface-container": "#20201f",
+                        "on-surface": "#e5e2e1",
+                        "on-error": "#690005",
+                        "outline-variant": "#4d4635",
+                        "on-background": "#e5e2e1",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-secondary": "#313030",
+                        "on-surface-variant": "#d0c5af",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "secondary-container": "#4a4949",
+                        "on-secondary-container": "#bab8b7",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary-fixed-variant": "#474646",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-variant": "#353535",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-lowest": "#0e0e0e",
+                        "outline": "#99907c",
+                        "surface-bright": "#393939",
+                        "tertiary": "#cecece",
+                        "on-primary-fixed-variant": "#574500",
+                        "surface-container-highest": "#353535",
+                        "error": "#ffb4ab",
+                        "surface-dim": "#131313",
+                        "surface-tint": "#e9c349",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-fixed": "#e2e2e2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "margin-mobile": "24px",
+                        "container-max": "1440px",
+                        "section-gap": "160px",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "display-lg": ["Outfit"],
+                        "headline-lg-mobile": ["Outfit"],
+                        "headline-lg": ["Outfit"],
+                        "headline-md": ["Outfit"],
+                        "label-caps": ["Outfit"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        
+        .glass-card {
+            background-color: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid theme('colors.outline-variant');
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(212,175,55,0.4) 0%, transparent 100%);
+            z-index: 10;
+        }
+        
+        .gold-border-gradient {
+            border: 1px solid transparent;
+            background: linear-gradient(theme('colors.surface-container-high'), theme('colors.surface-container-high')) padding-box,
+                        linear-gradient(135deg, rgba(212,175,55,0.5), transparent) border-box;
+        }
+        
+        /* Ambient Shadow */
+        .ambient-glow {
+            box-shadow: 0 0 60px 15px rgba(242, 202, 80, 0.05);
+        }
+
+        /* Custom Scrollbar for sidebar */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: theme('colors.surface-container-low');
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: theme('colors.primary');
+            border-radius: 4px;
+        }
+        
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md antialiased selection:bg-primary selection:text-on-primary-fixed">
+<!-- TopNavBar: Suppressed due to task focus context (Legal/Policy page) but maintaining minimal header for brand identity -->
+<header class="w-full fixed top-0 z-50 bg-surface/60 backdrop-blur-xl border-b border-primary/20 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 shadow-[0_20px_40px_rgba(212,175,55,0.05)]">
+<a class="font-display-lg text-headline-md text-primary tracking-tight" href="#">SL Creative</a>
+<a class="text-on-surface hover:text-primary transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined">arrow_back</span>
+<span class="hidden md:inline font-label-caps">RETURN TO PORTAL</span>
+</a>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-32 pb-section-gap grid grid-cols-1 lg:grid-cols-12 gap-gutter relative">
+<!-- Page Header -->
+<div class="col-span-1 lg:col-span-12 mb-16">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-4">Cookie Policy</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Last updated: October 24, 2024. This policy outlines how SL Creative utilizes cookies to elevate your digital experience.</p>
+</div>
+<!-- Sticky Sidebar Navigation -->
+<aside class="col-span-1 lg:col-span-3 hidden lg:block">
+<div class="sticky top-32 glass-card rounded-xl p-6 gold-border-gradient ambient-glow">
+<h3 class="font-headline-md text-body-lg text-primary mb-6">Contents</h3>
+<nav class="flex flex-col gap-4">
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transform duration-300" href="#what-are-cookies">1. What are Cookies?</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transform duration-300" href="#types-of-cookies">2. Types of Cookies</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transform duration-300" href="#managing-preferences">3. Managing Preferences</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transform duration-300" href="#third-party">4. Third-Party Cookies</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transform duration-300" href="#contact">5. Contact Information</a>
+</nav>
+</div>
+</aside>
+<!-- Main Content Area -->
+<article class="col-span-1 lg:col-span-8 lg:col-start-5 space-y-16">
+<section class="scroll-mt-32" id="what-are-cookies">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="cookie">cookie</span>
+                    What are Cookies?
+                </h2>
+<div class="glass-card rounded-xl p-8 space-y-4">
+<p class="text-on-surface-variant">Cookies are small text files placed on your device to store data that can be recalled by a web server in the domain that placed the cookie. We use cookies and similar technologies for storing and honoring your preferences and settings, enabling you to sign in, providing interest-based advertising, combating fraud, analyzing how our products perform, and fulfilling other legitimate purposes.</p>
+</div>
+</section>
+<section class="scroll-mt-32" id="types-of-cookies">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="category">category</span>
+                    Types of Cookies We Use
+                </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Essential -->
+<div class="glass-card rounded-xl p-6 gold-border-gradient">
+<h4 class="font-headline-md text-body-lg text-primary mb-3">Essential Cookies</h4>
+<p class="text-on-surface-variant text-sm">Crucial for basic site functionality. Without these, the core cinematic experience cannot be delivered.</p>
+</div>
+<!-- Performance -->
+<div class="glass-card rounded-xl p-6 gold-border-gradient">
+<h4 class="font-headline-md text-body-lg text-primary mb-3">Performance Cookies</h4>
+<p class="text-on-surface-variant text-sm">Allow us to analyze site usage and improve performance, ensuring smooth navigation through high-res galleries.</p>
+</div>
+<!-- Functional -->
+<div class="glass-card rounded-xl p-6 gold-border-gradient">
+<h4 class="font-headline-md text-body-lg text-primary mb-3">Functional Cookies</h4>
+<p class="text-on-surface-variant text-sm">Enable advanced features and personalization, remembering your viewing preferences.</p>
+</div>
+<!-- Targeting -->
+<div class="glass-card rounded-xl p-6 gold-border-gradient">
+<h4 class="font-headline-md text-body-lg text-primary mb-3">Targeting Cookies</h4>
+<p class="text-on-surface-variant text-sm">Used to deliver relevant content and advertising tailored to your creative interests.</p>
+</div>
+</div>
+</section>
+<section class="scroll-mt-32" id="managing-preferences">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="tune">tune</span>
+                    Managing Preferences
+                </h2>
+<div class="glass-card rounded-xl p-8 space-y-6">
+<p class="text-on-surface-variant">You hold complete control over your digital footprint on our platform. You can manage your cookie preferences at any time through our dedicated preference center.</p>
+<button class="bg-primary text-on-primary font-label-caps py-4 px-8 rounded-full hover:bg-primary-fixed-dim transition-colors duration-300 flex items-center gap-2 w-full md:w-auto justify-center">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                        OPEN PREFERENCE CENTER
+                    </button>
+<p class="text-on-surface-variant text-sm mt-4">Please note: Disabling certain functional or performance cookies may impact the fluidity of our high-end visual interfaces.</p>
+</div>
+</section>
+</article>
+</main>
+<!-- Footer Component from JSON -->
+<footer class="w-full py-section-gap border-t border-primary/10 bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-4 mb-8 md:mb-0">
+<span class="font-display-lg text-headline-md text-primary">SL Creative</span>
+<p class="font-body-md text-body-md text-on-tertiary-container mt-4">© 2024 SL Creative. All rights reserved.</p>
+</div>
+<div class="col-span-12 md:col-span-8 flex flex-wrap gap-6 md:justify-end items-center">
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Cookie Policy</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Refund Policy</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Licensing</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">NDA</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Awards</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Partners</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple script to highlight active sidebar link based on scroll position
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('aside nav a');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-20% 0px -80% 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            link.classList.remove('text-primary');
+                            link.classList.add('text-on-surface-variant');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('text-primary');
+                                link.classList.remove('text-on-surface-variant');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

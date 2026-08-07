@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Storytelling | SL Creative</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&amp;family=Outfit:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#131313",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-secondary-container": "#bab8b7",
+                        "surface-container-low": "#1c1b1b",
+                        "secondary-container": "#4a4949",
+                        "on-primary-container": "#554300",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "background": "#131313",
+                        "inverse-on-surface": "#313030",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-fixed": "#ffe088",
+                        "surface-tint": "#e9c349",
+                        "primary-fixed-dim": "#e9c349",
+                        "tertiary": "#cecece",
+                        "outline": "#99907c",
+                        "primary-container": "#d4af37",
+                        "on-error": "#690005",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "inverse-surface": "#e5e2e1",
+                        "surface": "#131313",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-primary": "#3c2f00",
+                        "surface-container-highest": "#353535",
+                        "outline-variant": "#4d4635",
+                        "primary": "#f2ca50",
+                        "secondary": "#c9c6c5",
+                        "surface-bright": "#393939",
+                        "on-tertiary": "#2f3131",
+                        "surface-container": "#20201f",
+                        "on-surface": "#e5e2e1",
+                        "on-tertiary-container": "#434546",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-secondary-fixed-variant": "#474646",
+                        "surface-container-lowest": "#0e0e0e",
+                        "inverse-primary": "#735c00",
+                        "surface-variant": "#353535",
+                        "secondary-fixed": "#e5e2e1",
+                        "tertiary-fixed": "#e2e2e2",
+                        "error-container": "#93000a",
+                        "on-primary-fixed": "#241a00",
+                        "tertiary-container": "#b2b3b3",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-background": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary": "#313030",
+                        "error": "#ffb4ab",
+                        "on-surface-variant": "#d0c5af"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "section-gap": "160px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-mobile": "24px",
+                        "margin-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Outfit"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-lg": ["Outfit"],
+                        "label-caps": ["Outfit"],
+                        "headline-md": ["Outfit"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "display-lg": ["Outfit"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            overflow-x: hidden;
+        }
+        
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid theme('colors.outline-variant');
+            box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.05);
+        }
+
+        .gold-glow {
+            box-shadow: 0 0 60px 15px rgba(212, 175, 55, 0.15);
+        }
+
+        /* Parallax Container */
+        .parallax-wrapper {
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            perspective: 1px;
+        }
+
+        .parallax-group {
+            position: relative;
+            height: 100vh;
+            transform-style: preserve-3d;
+        }
+
+        .parallax-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transform-origin: center center;
+        }
+
+        .parallax-back {
+            transform: translateZ(-1px) scale(2);
+            z-index: -1;
+        }
+
+        .parallax-base {
+            transform: translateZ(0);
+            z-index: 1;
+        }
+
+        /* Timeline specific */
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, theme('colors.primary'), transparent);
+            transform: translateX(-50%);
+            opacity: 0.3;
+        }
+
+        .timeline-node {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: theme('colors.primary');
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 20px theme('colors.primary');
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: theme('colors.surface'); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: theme('colors.outline-variant'); 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: theme('colors.primary'); 
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary selection:text-on-primary">
+<!-- Navigation (from JSON) -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30 flex justify-between items-center px-margin-desktop py-4 mx-auto transition-all duration-300">
+<div class="text-headline-md font-headline-md tracking-tighter text-on-surface dark:text-on-surface cursor-pointer">
+            SL Creative
+        </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-3 py-2 rounded-lg text-label-caps font-label-caps" href="portfolio.html">Work</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-3 py-2 rounded-lg text-label-caps font-label-caps" href="services.html">Services</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-3 py-2 rounded-lg text-label-caps font-label-caps" href="#">Pricing</a>
+<a class="text-primary dark:text-primary border-b-2 border-primary pb-1 text-label-caps font-label-caps hover:bg-surface-variant/20 px-3 py-2 rounded-lg" href="about.html">About</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-3 py-2 rounded-lg text-label-caps font-label-caps" href="contact.html">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-full text-label-caps font-label-caps hover:bg-surface-tint transition-colors hidden md:block">
+            Book a Consultation
+        </button>
+<!-- Mobile menu icon -->
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<!-- Main Content wrapper for parallax -->
+<main class="parallax-wrapper">
+<!-- Hero Section -->
+<section class="parallax-group">
+<div class="parallax-layer parallax-back">
+<div class="w-full h-full bg-cover bg-center opacity-40" data-alt="A cinematic, high-contrast black and white photograph of a sleek, modern camera lens resting on a dark reflective surface. Subtle gold reflections hint at premium quality. The mood is mysterious and authoritative, establishing a dark minimalism aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtS5q2QhLz-JTdlZhjrAIIFLrjQhTzFas4khMLWkQxx_R6mKNqEFcn1Nthxs9Tivt2QgO39W4_q8JupeNRlPUP0jaGgMRiztWLIblRIA0XWlM5ysgQGknLVnd1_hS1FJ7AVO2WHqPiJKOEe4rXLzc9tZCl30dxVmh5EyNhlCaJVs2Ln8CtF8ChvyHRDJ6E-snSZeNjdQut6MBFUI7cZgQCqMSIlzWnE77mxi9G2XsmJwYBMNfZuknMuA')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background"></div>
+</div>
+<div class="parallax-layer parallax-base flex items-center justify-center px-margin-mobile md:px-margin-desktop">
+<div class="max-w-4xl text-center mt-20">
+<span class="text-label-caps font-label-caps text-primary tracking-widest uppercase mb-6 block">Our Story</span>
+<h1 class="text-display-lg font-display-lg text-on-surface mb-8">Vision Forged in Shadows</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                        We don't just capture moments; we orchestrate narratives. SL Creative was born from a desire to elevate visual storytelling to an art form, blending cinematic precision with uncompromising aesthetics.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Timeline Section -->
+<section class="relative py-section-gap px-margin-mobile md:px-margin-desktop bg-background z-10">
+<div class="max-w-container-max mx-auto relative">
+<div class="timeline-line hidden md:block"></div>
+<!-- Timeline Item 1: The Beginning -->
+<div class="relative grid md:grid-cols-2 gap-12 items-center mb-32">
+<div class="timeline-node hidden md:block" style="top: 50%;"></div>
+<div class="md:text-right pr-0 md:pr-12">
+<span class="text-primary text-headline-md font-headline-md mb-2 block">2018</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface mb-4">The Genesis</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                            It began in a makeshift studio in downtown. Armed with a single prime lens and an obsessive attention to light and shadow, SL Creative took its first breaths. We rejected the conventional bright, airy aesthetics for something with more depth and gravitas.
+                        </p>
+</div>
+<div class="pl-0 md:pl-12">
+<div class="glass-panel p-2 rounded-xl gold-glow">
+<div class="w-full h-64 md:h-80 bg-cover bg-center rounded-lg grayscale hover:grayscale-0 transition-all duration-700" data-alt="A moody, low-light shot of an old, meticulously organized photography studio setup. Vintage light stands, a classic camera, and rolls of dark seamless paper are visible. A single shaft of light illuminates a workspace. The aesthetic is gritty yet highly professional and artistic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVz1r1kjBUPlZPnhdM41KvUQ4i7CfXBkdrcZxmfzvZCMyUmcUDEl3PegcbhWgkIhslLXwF1gYEUJbVfi8N_AnBnD2DESfbMIX-YbX0_1ERlw1rh3FWubKH9bM_EGqy2ymoOZz7rYkwQVxr0UBMcPV_Yi16Ca57nP8EhNapfpHDn2VM_lVrwfcjve22_iPAuiyXDutlBgI6xN_KKvJjpTGG0TiLNSwnplnJjPit1Rer6KemBKfIemKf2Q')"></div>
+</div>
+</div>
+</div>
+<!-- Timeline Item 2: Mission & Vision -->
+<div class="relative grid md:grid-cols-2 gap-12 items-center mb-32">
+<div class="timeline-node hidden md:block" style="top: 50%;"></div>
+<div class="order-2 md:order-1 pr-0 md:pr-12">
+<div class="glass-panel p-8 rounded-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
+<h3 class="text-headline-md font-headline-md text-primary mb-4">Mission</h3>
+<p class="text-body-md font-body-md text-on-surface mb-8">To translate brand identities into compelling visual epics. We strive for uncompromising quality, where every frame serves the narrative.</p>
+<h3 class="text-headline-md font-headline-md text-primary mb-4">Vision</h3>
+<p class="text-body-md font-body-md text-on-surface">To be the definitive creative partner for luxury and high-end sectors, setting the global standard for cinematic brand storytelling.</p>
+</div>
+</div>
+<div class="order-1 md:order-2 pl-0 md:pl-12">
+<span class="text-primary text-headline-md font-headline-md mb-2 block">2020</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface mb-4">Defining the Standard</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                            As our portfolio grew, so did our ambition. We formalized our dark minimalist approach, attracting clients who wanted their brands to exude authority and exclusivity. This era marked our shift from mere photographers to brand architects.
+                        </p>
+</div>
+</div>
+<!-- Timeline Item 3: Growth -->
+<div class="relative grid md:grid-cols-2 gap-12 items-center">
+<div class="timeline-node hidden md:block" style="top: 50%;"></div>
+<div class="md:text-right pr-0 md:pr-12">
+<span class="text-primary text-headline-md font-headline-md mb-2 block">2023</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface mb-4">Expanding the Horizons</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">
+                            With a growing team of visionary directors, editors, and strategists, SL Creative expanded into full-scale production. We integrated motion, sound design, and interactive media, offering a holistic creative suite.
+                        </p>
+<div class="flex flex-wrap gap-2 md:justify-end">
+<span class="px-4 py-1 rounded-full border border-outline-variant text-label-caps font-label-caps text-on-surface-variant">Cinematography</span>
+<span class="px-4 py-1 rounded-full border border-outline-variant text-label-caps font-label-caps text-on-surface-variant">VFX</span>
+<span class="px-4 py-1 rounded-full border border-outline-variant text-label-caps font-label-caps text-on-surface-variant">Brand Strategy</span>
+</div>
+</div>
+<div class="pl-0 md:pl-12">
+<div class="grid grid-cols-2 gap-4">
+<div class="h-48 bg-cover bg-center rounded-lg" data-alt="A close up of a high-end cinema camera rig in action on a dark set. LED panels provide sharp, dramatic lighting. The focus is on the intricate details of the lens and matte box. Cinematic, dark minimalist aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-n0M5DLqlX-D6S_FTFkp-zqX_gNY6nDG6kP9CdcNCtkpL8QYjlkhOO_p7BjWMmbrzjvN-36BPKdGMq9Xd7Kejz683eHKHpRZZXjBkFk0SEXWOk-SfksG4PO4fYVb6idCJfCni6XjNX5idS95IY4kcL4WnGtUDI30isTUedlH-i1deOqwQRddXJH_zXoeX0_9AcQP__0Y8bCo7m6ypyjlzV3pOHy-iGmxaqWwRFBNXMgh10iwKqzO3Mg')"></div>
+<div class="h-48 bg-cover bg-center rounded-lg mt-8" data-alt="A sleek editing suite in low light, featuring multiple large monitors displaying color grading software. A specialized grading panel is in the foreground. The room feels intensely focused and premium. Cinematic noir vibe." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCUZ3G9gZbbM50rU4756pJ2x4Li5-VaiuTdBkRQlRwzNXU8U6g_WbqfBtcvRVZtfsXbsXGr74OIEmcemOWRKmTkbUwTI3P1iLBFW1fy9L65ZXPcSQIHwxTjBrk5c3m8qDP00-ZBwXa-yA7--MJh1FkNLyfLMZBWQZmEoe-GNBhdiDQIsMmFd6-3jNqnw9Sh8CRl5LAudArEh_3ur5U4G-S3cT9c7bCrIbnHLPvWSVFB81PY9QkJz-0vdw')"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Future Goals Section (Bento Grid) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-dim z-10 relative">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<span class="text-label-caps font-label-caps text-primary tracking-widest uppercase mb-4 block">Looking Ahead</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface">The Next Chapter</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="glass-panel p-8 rounded-2xl flex flex-col justify-end h-80 relative overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center opacity-20 group-hover:opacity-40 transition-opacity duration-500" data-alt="Abstract visualization of global connectivity. Glowing golden lines intersecting over a dark, minimalist rendering of a globe. High contrast, conveying international reach and digital presence." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDAHl_-Bxx_Gjp6PO2yk4hfTU9XgPPVE8kkB5o17DAC4L02_kzUT2VYj5q8tB2xtlMFMvRf64XRUeoVEvhmY_mz8iQl4sAxiK9b9qZGjKjmc38CAMbc0X76xaYo-5KxyDOUr3hVUp4b0wgms8EJbJ9o6L0z4QotrVhaL56uLl-eebid4S8nb38BjvoqIbqozb6N2aOXIX3PKrFKH3TfrYTtyJL17g7vQQiP7es4r4GC242cm0dh0eHcJw')"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-4xl text-primary mb-4 block">language</span>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2">Global Reach</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Establishing presence in key creative hubs worldwide.</p>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-2xl md:col-span-2 flex flex-col justify-center relative overflow-hidden gold-glow">
+<div class="absolute right-0 top-0 w-1/2 h-full opacity-10">
+<!-- Animation placeholder would go here if provided -->
+</div>
+<div class="relative z-10 max-w-lg">
+<h3 class="text-headline-lg font-headline-lg text-on-surface mb-4">Pioneering Tech</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">Integrating emerging technologies like AI-assisted rendering and virtual production stages to push the boundaries of what's visually possible.</p>
+<button class="border border-primary text-primary px-6 py-2 rounded-full text-label-caps font-label-caps hover:bg-primary hover:text-on-primary transition-all">Explore Innovation</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer (from JSON) -->
+<footer class="bg-surface dark:bg-surface border-t border-outline-variant/20 w-full py-section-gap z-10 relative">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto gap-8">
+<div class="text-headline-lg font-headline-lg text-primary dark:text-primary">
+                    SL Creative
+                </div>
+<div class="flex gap-6">
+<a class="text-body-md font-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80" href="#">Instagram</a>
+<a class="text-body-md font-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80" href="#">Vimeo</a>
+<a class="text-body-md font-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80" href="#">LinkedIn</a>
+<a class="text-body-md font-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80" href="privacy-policy.html">Privacy Policy</a>
+</div>
+<div class="text-body-md font-body-md text-on-surface-variant">
+                    © 2024 SL Creative. All Rights Reserved.
+                </div>
+</div>
+</footer>
+</main>
+<script>
+        // Simple parallax effect for timeline nodes
+        document.querySelector('.parallax-wrapper').addEventListener('scroll', (e) => {
+            const scrollPos = e.target.scrollTop;
+            const nodes = document.querySelectorAll('.timeline-node');
+            
+            nodes.forEach((node, index) => {
+                const speed = 0.1 * (index + 1);
+                node.style.transform = `translate(-50%, calc(-50% + ${scrollPos * speed}px))`;
+            });
+        });
+    </script>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

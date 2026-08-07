@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SL Creative - Project Files</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        body {
+            background-color: #090909; /* Enforce specific dark background from prompt */
+        }
+        
+        .glass-card {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.5) 0%, rgba(212, 175, 55, 0) 100%);
+        }
+        
+        .gold-glow {
+            box-shadow: 0 0 40px 0 rgba(212, 175, 55, 0.15);
+        }
+        
+        .progress-bar-glow {
+            box-shadow: 0 0 15px 0 rgba(212, 175, 55, 0.4);
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #353535;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4d4635;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#e5e2e1",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "surface-variant": "#353535",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "surface-container": "#20201f",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-tertiary-container": "#434546",
+                    "inverse-primary": "#735c00",
+                    "on-tertiary": "#2f3131",
+                    "secondary": "#c9c6c5",
+                    "on-secondary-fixed-variant": "#474646",
+                    "surface-bright": "#393939",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "on-secondary": "#313030",
+                    "surface-container-lowest": "#0e0e0e",
+                    "primary-container": "#d4af37",
+                    "on-secondary-container": "#bab8b7",
+                    "tertiary-container": "#b2b3b3",
+                    "on-background": "#e5e2e1",
+                    "error-container": "#93000a",
+                    "surface-tint": "#e9c349",
+                    "on-error": "#690005",
+                    "secondary-fixed-dim": "#c9c6c5",
+                    "tertiary-fixed": "#e2e2e2",
+                    "on-primary": "#3c2f00",
+                    "error": "#ffb4ab",
+                    "surface-container-highest": "#353535",
+                    "surface-dim": "#131313",
+                    "inverse-surface": "#e5e2e1",
+                    "inverse-on-surface": "#313030",
+                    "background": "#131313",
+                    "on-primary-fixed-variant": "#574500",
+                    "surface": "#131313",
+                    "secondary-container": "#4a4949",
+                    "on-surface": "#e5e2e1",
+                    "on-primary-fixed": "#241a00",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "surface-container-high": "#2a2a2a",
+                    "outline-variant": "#4d4635",
+                    "outline": "#99907c",
+                    "on-surface-variant": "#d0c5af",
+                    "tertiary": "#cecece",
+                    "surface-container-low": "#1c1b1b",
+                    "primary": "#f2ca50",
+                    "primary-fixed": "#ffe088",
+                    "on-primary-container": "#554300"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "24px",
+                    "container-max": "1440px",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "section-gap": "160px",
+                    "margin-desktop": "80px"
+            },
+            "fontFamily": {
+                    "label-caps": [
+                            "Outfit"
+                    ],
+                    "headline-lg-mobile": [
+                            "Outfit"
+                    ],
+                    "headline-lg": [
+                            "Outfit"
+                    ],
+                    "body-lg": [
+                            "Be Vietnam Pro"
+                    ],
+                    "headline-md": [
+                            "Outfit"
+                    ],
+                    "display-lg": [
+                            "Outfit"
+                    ],
+                    "body-md": [
+                            "Be Vietnam Pro"
+                    ]
+            },
+            "fontSize": {
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.15em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-lg": [
+                            "72px",
+                            {
+                                    "lineHeight": "80px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+</head>
+<body class="text-on-surface font-body-md bg-background min-h-screen flex flex-col antialiased relative">
+<!-- Background Image -->
+<div class="fixed inset-0 z-[-1] opacity-20 pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLud7OFNRtUb70cGN1_TpEJkF3YAmLKUA0dQ1Y9g5c1xe7T_UUmmaEZzhmCZx5vFdnExXZv0moyBL0m5F6zQTfe5BHBoNp8XQ4ELqyI6e424Su3Du-Mz7Ql5aJsPQXqhHfFnYo5TghWrT-82csFtrpztJMYqmY8QcWF4l-c8nftw1G27ZEQk-s6gYCJWITiESIDF7XrM2QfON3FO4XX4XZFnG7LSFGNW200rCmQwYmMDUxrgazMa2F3WfznR'); background-size: cover; background-position: center;"></div>
+<div class="fixed inset-0 z-[-1] pointer-events-none bg-gradient-to-b from-background/50 to-background/95"></div>
+<!-- SideNavBar -->
+<nav class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 border-r border-outline-variant/30 bg-surface-container-low/70 dark:bg-surface-container-low/70 backdrop-blur-xl shadow-2xl shadow-primary/5 py-8 px-4 z-50">
+<!-- Brand -->
+<div class="mb-12 px-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30">
+<span class="material-symbols-outlined text-primary text-xl">temp_preferences_custom</span>
+</div>
+<div>
+<h1 class="font-display-lg text-headline-md text-primary tracking-tighter" style="font-size: 24px; line-height: 28px;">SL Creative</h1>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-1">Client Portal</p>
+</div>
+</div>
+<!-- Primary Tabs -->
+<div class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant font-medium hover:text-on-surface transition-colors hover:bg-surface-bright/20 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="dashboard">dashboard</span>
+<span class="font-label-caps text-label-caps">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-primary font-bold border-r-2 border-primary bg-surface-bright/10 hover:bg-surface-bright/20 hover:text-primary transition-all duration-300 scale-95 opacity-80" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="work">work</span>
+<span class="font-label-caps text-label-caps">Projects</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant font-medium hover:text-on-surface transition-colors hover:bg-surface-bright/20 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="receipt_long">receipt_long</span>
+<span class="font-label-caps text-label-caps">Invoices</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant font-medium hover:text-on-surface transition-colors hover:bg-surface-bright/20 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="schedule">schedule</span>
+<span class="font-label-caps text-label-caps">Timeline</span>
+</a>
+</div>
+<!-- CTA -->
+<div class="mt-8 mb-6 px-4">
+<button class="w-full py-3 px-4 rounded-lg bg-transparent border border-primary/50 text-primary font-label-caps text-label-caps hover:bg-primary/10 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                New Request
+            </button>
+</div>
+<!-- Footer Tabs -->
+<div class="space-y-2 border-t border-outline-variant/30 pt-6">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-on-surface-variant font-medium hover:text-on-surface transition-colors hover:bg-surface-bright/20 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="settings">settings</span>
+<span class="font-label-caps text-label-caps">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-on-surface-variant font-medium hover:text-on-surface transition-colors hover:bg-surface-bright/20 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="help_outline">help_outline</span>
+<span class="font-label-caps text-label-caps">Support</span>
+</a>
+</div>
+</nav>
+<!-- TopNavBar -->
+<header class="hidden md:flex justify-between items-center h-20 px-margin-desktop ml-64 bg-background/80 dark:bg-background/80 backdrop-blur-md fixed top-0 right-0 w-[calc(100%-16rem)] z-50 border-b border-outline-variant/20">
+<!-- Navigation Links -->
+<nav class="flex gap-8 h-full items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface h-full flex items-center hover:text-primary transition-all duration-300" href="#">Overview</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface h-full flex items-center hover:text-primary transition-all duration-300" href="#">Messages</a>
+<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary h-full flex items-center hover:text-primary transition-all duration-300" href="#">Assets</a>
+</nav>
+<!-- Right Actions -->
+<div class="flex items-center gap-6">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2">
+<img alt="User Profile" class="w-8 h-8 rounded-full border border-outline-variant/50 object-cover" data-alt="A close-up portrait of a stylish creative director in a dimly lit studio setting with warm accent lights. High quality, professional photography, modern luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuXgluiGYR-LlyZTAP97XQjBUqh1m5UTBkFqJjigYoex0YTmyIaVtYmcpZ1K8R9TeVxL2wOsPYRItqxfOlgxH1m80KfIGGMsAhTYNy25oWzujuDwyYNWN1WvWMYhapt-O7vVQOu0Nw-E1DwR9T8SW_7o_45-bnQIND6uXuL_tcI9S5LFI2XmCV7zUPE2u-GWyr5tdADLAM0KnF48u3_fW2fc9wRELLWTC3xiaW-lg3aeG49FpN8srF9HqFfENyv4dmAtcH5XC4vn2-"/>
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 mt-20 px-margin-mobile md:px-margin-desktop py-12">
+<div class="max-w-container-max mx-auto">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div>
+<!-- Breadcrumbs -->
+<div class="flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant mb-4">
+<a class="hover:text-primary transition-colors" href="#">Projects</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Autumn Campaign</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary">Files</span>
+</div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Project Files</h2>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-3 rounded-lg border border-primary text-primary font-label-caps text-label-caps hover:bg-primary/10 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">folder_open</span>
+                        New Folder
+                    </button>
+<button class="px-6 py-3 rounded-lg bg-primary text-on-primary font-label-caps text-label-caps hover:bg-primary-fixed transition-colors flex items-center gap-2 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-[18px]">cloud_upload</span>
+                        Upload New
+                    </button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-12">
+<!-- Storage Overview Card -->
+<div class="lg:col-span-4 glass-card rounded-xl p-6 flex flex-col justify-between min-h-[160px]">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">hard_drive</span>
+<span class="font-label-caps text-label-caps">Storage Overview</span>
+</div>
+<span class="material-symbols-outlined text-primary">cloud_done</span>
+</div>
+<div>
+<div class="flex justify-between items-end mb-2">
+<span class="font-headline-md text-headline-md text-on-surface">42.5 <span class="text-on-surface-variant text-[16px]">GB</span></span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">/ 100 GB Used</span>
+</div>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary progress-bar-glow rounded-full" style="width: 42.5%;"></div>
+</div>
+</div>
+</div>
+<!-- Tools & Filters -->
+<div class="lg:col-span-8 flex flex-col justify-end gap-4">
+<div class="glass-card rounded-xl p-4 flex flex-col sm:flex-row gap-4 items-center w-full">
+<!-- Search -->
+<div class="relative w-full sm:flex-1">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container/50 border border-outline-variant/50 text-on-surface rounded-lg pl-12 pr-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-on-surface-variant/50 font-body-md" placeholder="Search files, folders..." type="text"/>
+</div>
+<!-- Filters -->
+<div class="flex items-center gap-3 w-full sm:w-auto">
+<div class="relative w-full sm:w-auto">
+<select class="appearance-none w-full sm:w-auto bg-surface-container/50 border border-outline-variant/50 text-on-surface rounded-lg pl-4 pr-10 py-3 focus:outline-none focus:border-primary transition-all font-body-md text-sm">
+<option value="all">Filter by Type</option>
+<option value="video">Video</option>
+<option value="image">Image</option>
+<option value="audio">Audio</option>
+<option value="doc">Document</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+</div>
+<!-- View Toggles -->
+<div class="flex items-center bg-surface-container/50 border border-outline-variant/50 rounded-lg p-1 shrink-0">
+<button class="p-2 rounded bg-surface-variant text-primary shadow-sm transition-colors" title="Grid View">
+<span class="material-symbols-outlined text-[20px]">grid_view</span>
+</button>
+<button class="p-2 rounded text-on-surface-variant hover:text-on-surface transition-colors" title="List View">
+<span class="material-symbols-outlined text-[20px]">view_list</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- File Sections -->
+<div class="space-y-12">
+<!-- Final Masters -->
+<section>
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">star</span>
+<h3 class="font-headline-md text-headline-md text-on-surface text-[24px]">Final Masters</h3>
+<div class="flex-1 h-px bg-gradient-to-r from-primary/30 to-transparent ml-4"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- File Card 1 -->
+<div class="glass-card rounded-xl p-5 hover:border-primary/50 transition-colors group cursor-pointer">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">videocam</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<div>
+<h4 class="font-body-lg text-body-lg text-on-surface font-medium truncate mb-1" title="Autumn_Campaign_Hero_vFinal.mp4">Autumn_Hero_vFinal.mp4</h4>
+<div class="flex justify-between items-center mt-4">
+<span class="font-body-md text-[12px] text-on-surface-variant">1.2 GB</span>
+<span class="px-2 py-1 rounded bg-primary/10 text-primary font-label-caps text-[10px]">Ready</span>
+</div>
+</div>
+</div>
+<!-- File Card 2 -->
+<div class="glass-card rounded-xl p-5 hover:border-primary/50 transition-colors group cursor-pointer">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">image</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<div>
+<h4 class="font-body-lg text-body-lg text-on-surface font-medium truncate mb-1" title="KV_Poster_Print_Ready.tif">KV_Poster_Print_Ready.tif</h4>
+<div class="flex justify-between items-center mt-4">
+<span class="font-body-md text-[12px] text-on-surface-variant">450 MB</span>
+<span class="px-2 py-1 rounded bg-primary/10 text-primary font-label-caps text-[10px]">Ready</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Drafts & Revisions -->
+<section>
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-on-surface-variant">edit_document</span>
+<h3 class="font-headline-md text-headline-md text-on-surface text-[24px]">Drafts &amp; Revisions</h3>
+<div class="flex-1 h-px bg-outline-variant/30 ml-4"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- File Card 3 -->
+<div class="glass-card rounded-xl p-5 hover:border-primary/30 transition-colors group cursor-pointer border-outline-variant/20">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">videocam</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<div>
+<h4 class="font-body-lg text-body-lg text-on-surface font-medium truncate mb-1">Social_Cut_v2.mp4</h4>
+<div class="flex justify-between items-center mt-4">
+<span class="font-body-md text-[12px] text-on-surface-variant">320 MB</span>
+<span class="px-2 py-1 rounded bg-secondary/10 text-secondary font-label-caps text-[10px]">Processing</span>
+</div>
+</div>
+</div>
+<!-- File Card 4 -->
+<div class="glass-card rounded-xl p-5 hover:border-primary/30 transition-colors group cursor-pointer border-outline-variant/20">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">audio_file</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<div>
+<h4 class="font-body-lg text-body-lg text-on-surface font-medium truncate mb-1">VO_Takes_Raw.wav</h4>
+<div class="flex justify-between items-center mt-4">
+<span class="font-body-md text-[12px] text-on-surface-variant">85 MB</span>
+<span class="px-2 py-1 rounded bg-surface-variant text-on-surface-variant font-label-caps text-[10px]">Archived</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="md:ml-64 w-full md:w-[calc(100%-16rem)] py-8 px-margin-desktop bg-background dark:bg-background border-t border-outline-variant/10 opacity-60 mt-auto flex justify-between items-center">
+<p class="font-label-caps text-label-caps text-on-surface-variant">© 2024 SL Creative. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="privacy-policy.html">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="#">Terms of Service</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="#">Contact Support</a>
+</div>
+</footer>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

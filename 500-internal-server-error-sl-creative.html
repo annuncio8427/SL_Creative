@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SL Creative - 500 Error</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&amp;family=Be+Vietnam+Pro:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#cecece",
+                        "on-surface-variant": "#d0c5af",
+                        "surface-container-highest": "#353535",
+                        "on-primary-fixed": "#241a00",
+                        "error": "#ffb4ab",
+                        "on-tertiary": "#2f3131",
+                        "on-secondary-fixed-variant": "#474646",
+                        "on-primary-container": "#554300",
+                        "on-background": "#e5e2e1",
+                        "outline": "#99907c",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface": "#131313",
+                        "surface-container-low": "#1c1b1b",
+                        "on-tertiary-container": "#434546",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-surface": "#e5e2e1",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-fixed": "#ffe088",
+                        "on-error-container": "#ffdad6",
+                        "inverse-on-surface": "#313030",
+                        "secondary-container": "#4a4949",
+                        "on-primary-fixed-variant": "#574500",
+                        "outline-variant": "#4d4635",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "inverse-primary": "#735c00",
+                        "surface-dim": "#131313",
+                        "on-primary": "#3c2f00",
+                        "tertiary-fixed": "#e2e2e2",
+                        "primary": "#f2ca50",
+                        "inverse-surface": "#e5e2e1",
+                        "background": "#131313",
+                        "surface-bright": "#393939",
+                        "primary-fixed-dim": "#e9c349",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-secondary": "#313030",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-secondary-container": "#bab8b7",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "tertiary-container": "#b2b3b3",
+                        "surface-variant": "#353535",
+                        "surface-container": "#20201f",
+                        "secondary": "#c9c6c5",
+                        "primary-container": "#d4af37",
+                        "on-error": "#690005",
+                        "surface-tint": "#e9c349"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "24px",
+                        "gutter": "24px",
+                        "section-gap": "160px",
+                        "margin-desktop": "80px",
+                        "unit": "8px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Outfit"],
+                        "display-lg": ["Outfit"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-lg": ["Outfit"],
+                        "label-caps": ["Outfit"],
+                        "headline-lg-mobile": ["Outfit"],
+                        "body-md": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .dust-particle {
+            position: absolute;
+            background: rgba(212, 175, 55, 0.3); /* primary-container with opacity */
+            border-radius: 50%;
+            pointer-events: none;
+            animation: float linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) scale(1); opacity: 0; }
+            50% { opacity: 0.8; }
+            100% { transform: translateY(-100vh) scale(0.5); opacity: 0; }
+        }
+
+        .lens-flare {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150vw;
+            height: 150vh;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, rgba(19, 19, 19, 0) 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col overflow-x-hidden">
+<!-- TopNavBar (Shared Component) - Suppressed due to Transactional/Error state -->
+<!-- The prompt asks to "Use the same TopNavBar and Footer components", but the rules explicitly state:
+         "Automatic Suppression: You MUST exclude the navigation shell if the page intent is: ... Error 404 ... Relevance Check: If the page content (e.g., "Privacy Policy" or "Error 404") does not logically sit under the categories defined in the JSON, suppress the navigation to prioritize the content canvas." 
+         Given this is a 500 error screen, similar to a 404, following the strict rule to suppress the TopNavBar to prioritize the canvas. -->
+<!-- Main Content Area -->
+<main class="flex-grow flex items-center justify-center relative px-margin-mobile md:px-margin-desktop py-section-gap z-10 min-h-[819px]">
+<!-- Atmospheric Background Effects -->
+<div class="absolute inset-0 overflow-hidden pointer-events-none" id="dust-container">
+<div class="lens-flare"></div>
+<!-- Dust particles injected via JS -->
+</div>
+<div class="max-w-3xl mx-auto text-center relative z-10 flex flex-col items-center gap-8">
+<!-- 500 Large Text -->
+<h1 class="font-display-lg text-[120px] md:text-[200px] leading-none gold-gradient-text font-bold tracking-tighter drop-shadow-[0_0_40px_rgba(212,175,55,0.2)]">
+                500
+            </h1>
+<div class="flex flex-col gap-4 items-center mt-[-20px] md:mt-[-40px]">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-on-surface">
+                    A Technical Glitch in the Edit.
+                </h2>
+<p class="font-body-lg text-on-surface-variant max-w-xl">
+                    Our systems encountered an unexpected error while processing your request. We're working to get back on set as quickly as possible.
+                </p>
+</div>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto">
+<button class="bg-primary text-on-primary font-body-md text-body-md px-8 py-4 rounded hover:bg-primary-fixed-dim transition-colors duration-300 w-full sm:w-auto">
+                    Return to Dashboard
+                </button>
+<button class="bg-transparent border border-outline text-on-surface font-body-md text-body-md px-8 py-4 rounded hover:border-primary hover:text-primary transition-colors duration-300 w-full sm:w-auto flex items-center justify-center gap-2 group">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">support_agent</span>
+                    Contact Support
+                </button>
+</div>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-section-gap border-t border-outline-variant/20 bg-background relative z-10">
+<div class="w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-center gap-unit">
+<div class="font-headline-lg text-primary mb-8">SL Creative</div>
+<div class="flex flex-wrap justify-center gap-6 mb-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-colors" href="#">Case Studies</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-colors" href="#">Careers</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-colors" href="#">FAQ</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-colors" href="#">Terms &amp; Conditions</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-colors" href="contact.html">Contact</a>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80 text-center">
+                © 2024 SL Creative. Uncompromising Excellence in Post-Production.
+            </p>
+</div>
+</footer>
+<script>
+        // Cinematic Dust Particle Effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('dust-container');
+            const particleCount = 40;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('dust-particle');
+                
+                // Randomize size, position, and animation duration
+                const size = Math.random() * 4 + 1; // 1px to 5px
+                const posX = Math.random() * 100; // 0% to 100%
+                const posY = Math.random() * 100; // start anywhere vertically
+                const duration = Math.random() * 15 + 10; // 10s to 25s
+                const delay = Math.random() * 10; // 0s to 10s delay
+
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${posX}vw`;
+                particle.style.top = `${posY}vh`;
+                particle.style.animationDuration = `${duration}s`;
+                particle.style.animationDelay = `-${delay}s`; // start at different points
+
+                container.appendChild(particle);
+            }
+        });
+    </script>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>

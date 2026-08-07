@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SL Creative - Blog &amp; Insights</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&amp;family=Be+Vietnam+Pro:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-container": "#b2b3b3",
+                      "surface-bright": "#393939",
+                      "tertiary-fixed": "#e2e2e2",
+                      "secondary-fixed": "#e5e2e1",
+                      "on-error-container": "#ffdad6",
+                      "inverse-on-surface": "#313030",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "on-primary-fixed-variant": "#574500",
+                      "outline": "#99907c",
+                      "on-error": "#690005",
+                      "secondary": "#c9c6c5",
+                      "surface-container": "#20201f",
+                      "on-secondary-container": "#bab8b7",
+                      "primary-fixed": "#ffe088",
+                      "on-surface": "#e5e2e1",
+                      "on-secondary": "#313030",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "secondary-container": "#4a4949",
+                      "primary": "#f2ca50",
+                      "surface-dim": "#131313",
+                      "background": "#131313",
+                      "primary-fixed-dim": "#e9c349",
+                      "on-surface-variant": "#d0c5af",
+                      "inverse-surface": "#e5e2e1",
+                      "error": "#ffb4ab",
+                      "surface-container-low": "#1c1b1b",
+                      "surface-container-high": "#2a2a2a",
+                      "surface": "#131313",
+                      "on-background": "#e5e2e1",
+                      "on-primary-container": "#554300",
+                      "on-primary": "#3c2f00",
+                      "surface-container-highest": "#353535",
+                      "on-primary-fixed": "#241a00",
+                      "surface-variant": "#353535",
+                      "surface-tint": "#e9c349",
+                      "on-tertiary": "#2f3131",
+                      "outline-variant": "#4d4635",
+                      "on-secondary-fixed-variant": "#474646",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "surface-container-lowest": "#0e0e0e",
+                      "primary-container": "#d4af37",
+                      "tertiary": "#cecece",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "error-container": "#93000a",
+                      "on-tertiary-container": "#434546",
+                      "inverse-primary": "#735c00",
+                      "on-secondary-fixed": "#1c1b1b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "24px",
+                      "unit": "8px",
+                      "margin-desktop": "80px",
+                      "container-max": "1440px",
+                      "gutter": "24px",
+                      "section-gap": "160px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "body-md": [
+                              "Be Vietnam Pro"
+                      ],
+                      "headline-md": [
+                              "Outfit"
+                      ],
+                      "headline-lg": [
+                              "Outfit"
+                      ],
+                      "headline-lg-mobile": [
+                              "Outfit"
+                      ],
+                      "label-caps": [
+                              "Outfit"
+                      ],
+                      "display-lg": [
+                              "Outfit"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.15em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "72px",
+                              {
+                                      "lineHeight": "80px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6, .font-outfit {
+            font-family: 'Outfit', sans-serif;
+        }
+        
+        /* Glassmorphism utilities */
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(242, 202, 80, 0.2);
+            box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.05);
+        }
+        
+        .glass-card {
+            background: rgba(26, 26, 26, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(153, 144, 124, 0.2);
+            transition: all 0.4s ease;
+        }
+        
+        .glass-card:hover {
+            border-color: rgba(242, 202, 80, 0.6);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -10px rgba(242, 202, 80, 0.05);
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Ambient Glow */
+        .ambient-glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(242,202,80,0.08) 0%, rgba(19,19,19,0) 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: theme('colors.background');
+        }
+        ::-webkit-scrollbar-thumb {
+            background: theme('colors.surface-variant');
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: theme('colors.outline');
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-primary/30 selection:text-primary">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto bg-background/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-2xl shadow-primary/5">
+<div class="font-headline-md text-headline-md text-primary tracking-tighter">
+            SL Creative
+        </div>
+<div class="hidden md:flex gap-8 items-center font-body-md text-body-md uppercase tracking-widest">
+<a class="text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 transition-all duration-300 px-3 py-2 rounded" href="#">Case Studies</a>
+<a class="text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 transition-all duration-300 px-3 py-2 rounded" href="#">Process</a>
+<a class="text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 transition-all duration-300 px-3 py-2 rounded" href="#">Careers</a>
+<a class="text-primary border-b-2 border-primary pb-1 px-3 py-2" href="#">Blog</a>
+<a class="text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 transition-all duration-300 px-3 py-2 rounded" href="#">Booking</a>
+</div>
+<button class="hidden md:flex bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded scale-95 active:scale-90 transition-transform hover:bg-primary-container">
+            Inquire Now
+        </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</nav>
+<!-- Main Content -->
+<main class="pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10">
+<!-- Ambient Background Elements -->
+<div class="ambient-glow top-40 left-0"></div>
+<div class="ambient-glow top-1/2 right-0" style="background: radial-gradient(circle, rgba(212,175,55,0.05) 0%, rgba(19,19,19,0) 70%);"></div>
+<!-- Hero Section -->
+<header class="mb-24 text-center md:text-left flex flex-col md:flex-row justify-between items-end gap-8 border-b border-outline-variant/20 pb-12">
+<div class="max-w-2xl">
+<p class="font-label-caps text-label-caps text-primary mb-4 tracking-widest">SL Creative Journal</p>
+<h1 class="font-display-lg text-display-lg text-on-background mb-6">Creative <span class="gold-gradient-text">Insights</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Learn elite post-production techniques, modern branding principles, and content strategies from industry leading professionals.
+                </p>
+</div>
+<!-- Featured Article Highlight -->
+<div class="hidden lg:block w-96 glass-panel p-6 rounded-xl relative overflow-hidden group cursor-pointer">
+<div class="absolute inset-0 bg-surface-container/50 group-hover:bg-transparent transition-colors duration-500"></div>
+<div class="relative z-10">
+<span class="inline-block px-3 py-1 border border-primary/40 rounded-full font-label-caps text-label-caps text-primary mb-4">Featured</span>
+<h3 class="font-headline-md text-headline-md-mobile text-on-background mb-2 group-hover:text-primary transition-colors">The Psychology of Color in Cinema</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Discover how subtle color grading shifts can drastically alter the emotional resonance of your narrative.</p>
+</div>
+</div>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Blog Grid (Main Content) -->
+<div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Article Card 1 -->
+<article class="glass-card rounded-xl overflow-hidden flex flex-col group cursor-pointer">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A high-end modern editing suite with dual monitors displaying color grading software. The room is dark with ambient warm gold bias lighting behind the monitors, creating a premium cinematic atmosphere. A professional cinema camera sits on a desk in the foreground." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcy_xil-r71Os2zVxIchOw84RpRp8975y4WAeq0Xp3djA4HzlrE1LuidGxOejJb6YGmePkHLraiP0OOR71uB2lMbrSevvM-OQ7m6cfXMiBGPzbXPShOaiXf0xUZRHjywRdKXhq22mysPml447TAl27RCyUYHIxd6vvv9OLDg-Lt0cmWq2dngcsHHXbFju-q8_fPlzVQT_dh5ZQnH-zV2warvh-pVaSIM_sP3_p6jJAC39nXlDC6KcIuQ"/>
+<div class="absolute top-4 left-4">
+<span class="bg-surface/80 backdrop-blur border border-primary/30 px-3 py-1 rounded-full font-label-caps text-label-caps text-primary">Editing</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-center text-on-surface-variant font-label-caps text-label-caps mb-4 opacity-70">
+<span>Oct 24, 2023</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined" style="font-size: 16px;">schedule</span> 8 min read</span>
+</div>
+<h2 class="font-headline-md text-headline-md-mobile text-on-background mb-3 group-hover:text-primary transition-colors">Mastering the DaVinci Resolve Color Page</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">A comprehensive guide to utilizing nodes effectively for non-destructive, cinematic color grading workflows.</p>
+<div class="mt-auto flex items-center text-primary font-label-caps text-label-caps group-hover:gap-3 transition-all">
+                            Read More <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Article Card 2 -->
+<article class="glass-card rounded-xl overflow-hidden flex flex-col group cursor-pointer">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A sleek, minimalist brand identity presentation. A metallic silver and gold interlocking monogram logo displayed on a textured matte black background. High contrast, sharp lighting emphasizing the premium luxury aesthetic of the design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVBaJl2yas44SL6ptMZS9adSoxl1vSMfT2GWyWBcyZxbviDLEgUkj7-LjAAtkJd2Ps7naxafPb8PQ2uOK4LlCq-w9Y0ErqoTttq6yF4fvagoQT6E6OdDpui8UTYM55hqqqYwwN126OjCaGoSVhSbgGd7QS8EVjFOuyKJOktuyfTOA2cuoepLezYpelF34nDDXVO-w8YC7pU5InnxWSl8FbrgatG_giB6NzDL0p2ZNk2E_Z-iPa68Yiqw"/>
+<div class="absolute top-4 left-4">
+<span class="bg-surface/80 backdrop-blur border border-primary/30 px-3 py-1 rounded-full font-label-caps text-label-caps text-primary">Branding</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-center text-on-surface-variant font-label-caps text-label-caps mb-4 opacity-70">
+<span>Oct 18, 2023</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined" style="font-size: 16px;">schedule</span> 5 min read</span>
+</div>
+<h2 class="font-headline-md text-headline-md-mobile text-on-background mb-3 group-hover:text-primary transition-colors">Designing for Luxury: The Minimalist Approach</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">Why less is often more when communicating value, prestige, and exclusivity to high-end clientele.</p>
+<div class="mt-auto flex items-center text-primary font-label-caps text-label-caps group-hover:gap-3 transition-all">
+                            Read More <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Article Card 3 -->
+<article class="glass-card rounded-xl overflow-hidden flex flex-col group cursor-pointer md:col-span-2 md:flex-row">
+<div class="h-64 md:h-auto md:w-1/2 overflow-hidden relative">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A dynamic, abstract 3D motion graphics still. Glowing geometric shapes and light trails suspended in a dark void. The lighting is cinematic, utilizing a color palette of deep charcoal, vibrant gold, and stark white to create depth and movement." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALIyLlh-Rc62SDbZ9ErBDbeb2PAbXOFYk2Wuy-1SPkLvRGtrPFNTN6pLppfD2AZOWyaYgM6kcDoT4Mvb29ecsODubbmDgyJ9U2LMcvrlD5eflCmyeDrjJXXtd0eKEoprldeAwN8iOHoXsHIgTzTd15-3jjm568kQotIXZz8PpvmUjto9_2pG8ivi13Zqvr5ztB0Ia59sXEHyoVOKWt2G0J3RsPZCRABW3bIKPXDNEcTYO-EBvgYeSOVA"/>
+</div>
+<div class="p-8 flex flex-col flex-grow md:w-1/2 justify-center">
+<div class="flex items-center gap-4 mb-4">
+<span class="border border-primary px-3 py-1 rounded-full font-label-caps text-label-caps text-primary">Motion Graphics</span>
+<span class="text-on-surface-variant font-label-caps text-label-caps opacity-70">Oct 12, 2023</span>
+</div>
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md text-on-background mb-4 group-hover:text-primary transition-colors">Integrating 3D Elements into Live Action</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Techniques for seamless compositing and lighting matching to ensure your CGI enhancements feel grounded in reality.</p>
+<div class="mt-auto flex items-center text-primary font-label-caps text-label-caps">
+<span class="border-b border-primary pb-1 group-hover:pr-4 transition-all flex items-center gap-2">Read Full Case Study <span class="material-symbols-outlined text-sm">arrow_outward</span></span>
+</div>
+</div>
+</article>
+<!-- Article Card 4 -->
+<article class="glass-card rounded-xl overflow-hidden flex flex-col group cursor-pointer">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A smartphone screen displaying a highly curated, visually stunning Instagram feed. The surrounding environment is dark and out of focus, highlighting the bright, crisp images on the device screen. The aesthetic is modern, clean, and aspirational." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO_NEPXSYXlYPfY76a4W7zbg-NLSwZdgW_rsyDdAtsFX6sywR3LLOZAhUsJxj0_MblmTk0UgvBCv3Y8vxEbKS2NAWG-LFxv1RVEXBMpb8dz8NQVkYqLqfL44FB5xVXuysQmlcjPowYPNOGu69Aj60iHx5hQfTafWDNWwPZRcUTDAS4iidc6yDZ8RdVTMYObgX0tlRCmOv-WnqkDFhbgOifKGzNKxTm304IMx5t4oBqG2tzGcIv0F9j1Q"/>
+<div class="absolute top-4 left-4">
+<span class="bg-surface/80 backdrop-blur border border-primary/30 px-3 py-1 rounded-full font-label-caps text-label-caps text-primary">Instagram</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-center text-on-surface-variant font-label-caps text-label-caps mb-4 opacity-70">
+<span>Oct 05, 2023</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined" style="font-size: 16px;">schedule</span> 6 min read</span>
+</div>
+<h2 class="font-headline-md text-headline-md-mobile text-on-background mb-3 group-hover:text-primary transition-colors">Curating a Premium Grid</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">Strategies for maintaining a cohesive visual identity across your social channels to attract high-tier clients.</p>
+<div class="mt-auto flex items-center text-primary font-label-caps text-label-caps group-hover:gap-3 transition-all">
+                            Read More <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Article Card 5 -->
+<article class="glass-card rounded-xl overflow-hidden flex flex-col group cursor-pointer">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A professional photographer setting up a shot in a dark, atmospheric studio. A sleek strobe light casts a sharp, dramatic beam across the scene. The aesthetic emphasizes technical precision and high-end commercial photography setups." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSWW9fVAgIp0ORBv299ec37-X2sjkmMQ9TbdQBNwTyMCcYtpQJbHUofpS14_rJ6R3oaiCjUvwm48oPxEc67Hlb4kP32KjcD5JeqktHHnSa9YGu_WkXCUx-WGxTJGBguaOYPmqM7d-OfAZHQ7eNQnToGaV7dSw2x3jn9KDqDR1meGc18eyGPEEq1P4xzyhjknVOEMgEsj6S4JGbfC_nhHPBi-53lUfO4VddGq2jRgK_qAr8zsXdyoKjvg"/>
+<div class="absolute top-4 left-4">
+<span class="bg-surface/80 backdrop-blur border border-primary/30 px-3 py-1 rounded-full font-label-caps text-label-caps text-primary">Photography</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-center text-on-surface-variant font-label-caps text-label-caps mb-4 opacity-70">
+<span>Sep 28, 2023</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined" style="font-size: 16px;">schedule</span> 7 min read</span>
+</div>
+<h2 class="font-headline-md text-headline-md-mobile text-on-background mb-3 group-hover:text-primary transition-colors">Lighting for Cinematic Portraits</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">Breaking down the classic three-point lighting setup and how to modify it for dramatic, moody results.</p>
+<div class="mt-auto flex items-center text-primary font-label-caps text-label-caps group-hover:gap-3 transition-all">
+                            Read More <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Sidebar -->
+<aside class="lg:col-span-4 flex flex-col gap-12">
+<!-- Search -->
+<div class="glass-panel p-6 rounded-xl">
+<h3 class="font-headline-sm text-on-background mb-4">Search Insights</h3>
+<div class="relative">
+<input class="w-full bg-surface-container border-b border-outline-variant py-3 pl-4 pr-10 text-on-surface focus:outline-none focus:border-primary transition-colors font-body-md" placeholder="Search articles..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-3 text-on-surface-variant">search</span>
+</div>
+</div>
+<!-- Categories -->
+<div class="glass-panel p-6 rounded-xl">
+<h3 class="font-headline-sm text-on-background mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">category</span>
+                        Categories
+                    </h3>
+<ul class="flex flex-col gap-3">
+<li>
+<a class="flex justify-between items-center text-on-surface-variant hover:text-primary transition-colors group" href="#">
+<span class="font-body-md">Editing</span>
+<span class="font-label-caps text-xs opacity-50 group-hover:opacity-100 border border-outline-variant px-2 py-0.5 rounded-full">14</span>
+</a>
+</li>
+<li class="h-px bg-outline-variant/30 w-full"></li>
+<li>
+<a class="flex justify-between items-center text-on-surface-variant hover:text-primary transition-colors group" href="#">
+<span class="font-body-md">Branding</span>
+<span class="font-label-caps text-xs opacity-50 group-hover:opacity-100 border border-outline-variant px-2 py-0.5 rounded-full">8</span>
+</a>
+</li>
+<li class="h-px bg-outline-variant/30 w-full"></li>
+<li>
+<a class="flex justify-between items-center text-on-surface-variant hover:text-primary transition-colors group" href="#">
+<span class="font-body-md">Motion Graphics</span>
+<span class="font-label-caps text-xs opacity-50 group-hover:opacity-100 border border-outline-variant px-2 py-0.5 rounded-full">11</span>
+</a>
+</li>
+<li class="h-px bg-outline-variant/30 w-full"></li>
+<li>
+<a class="flex justify-between items-center text-on-surface-variant hover:text-primary transition-colors group" href="#">
+<span class="font-body-md">Photography</span>
+<span class="font-label-caps text-xs opacity-50 group-hover:opacity-100 border border-outline-variant px-2 py-0.5 rounded-full">23</span>
+</a>
+</li>
+<li class="h-px bg-outline-variant/30 w-full"></li>
+<li>
+<a class="flex justify-between items-center text-on-surface-variant hover:text-primary transition-colors group" href="#">
+<span class="font-body-md">Instagram</span>
+<span class="font-label-caps text-xs opacity-50 group-hover:opacity-100 border border-outline-variant px-2 py-0.5 rounded-full">6</span>
+</a>
+</li>
+<li class="h-px bg-outline-variant/30 w-full"></li>
+<li>
+<a class="flex justify-between items-center text-on-surface-variant hover:text-primary transition-colors group" href="#">
+<span class="font-body-md">YouTube</span>
+<span class="font-label-caps text-xs opacity-50 group-hover:opacity-100 border border-outline-variant px-2 py-0.5 rounded-full">9</span>
+</a>
+</li>
+</ul>
+</div>
+<!-- Popular Posts -->
+<div class="glass-panel p-6 rounded-xl">
+<h3 class="font-headline-sm text-on-background mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+                        Popular Posts
+                    </h3>
+<div class="flex flex-col gap-6">
+<a class="flex gap-4 group" href="#">
+<div class="w-20 h-20 rounded bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="A close-up of a high-end camera lens catching a subtle reflection of a ring light. The metallic textures and intricate glass elements are highlighted against a pure black background, emphasizing professional gear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqVWFqHjuinUVqNuEZndYqt32Chsrw_TUlHHD2aOpsRkbNXLB-u54Y1ls6Paps1Elsk8zwJR_g53ulcmOC5YtFjEYry6WmravHm8yftoYj3SsxLwHJbv8x3QbxoqiRygl8n2chHejryj3PZG9__DeFJyRtEBHzzhbm-XGUHcae_AkA2vW3pd2ZgkAYa2_EhXefcrijSN7RWcryyfhU1OKgzKI-Q4feGfyICDcK3jTiGHeggCkyhvRE9A"/>
+</div>
+<div class="flex flex-col justify-center">
+<h4 class="font-body-md text-on-background group-hover:text-primary transition-colors line-clamp-2 mb-1">Essential Gear for Commercial Shoots</h4>
+<span class="font-label-caps text-[10px] text-on-surface-variant opacity-70">Aug 14, 2023</span>
+</div>
+</a>
+<a class="flex gap-4 group" href="#">
+<div class="w-20 h-20 rounded bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="A clean, minimalist workspace featuring a modern laptop open to a timeline editing sequence. A cup of black coffee sits nearby. The lighting is moody and focused, suggesting late-night creative work." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgHhwkN-77KUVQ5wCdWzfykNZQUgiICa3CtILO7zy31L2xN9kL5TweE9uBszIEOVD2R0BEFax_o2gzC2FsTKAgTNJBdbRjaiTy_W2VcyVnbQxFfp3xyV0EQ8xzk7Qjv8-oEOVKlBDIL-QaKo5Xq-eb_Jlf3LV29sQrPzMzwA2EFXK9Mv_gO30qTezdVTVKCWAEuuSoDWMZbM2vIsE_ZvhCRixt1HeUtZkZCnq7IDPZz7dXZOLzE7oKmw"/>
+</div>
+<div class="flex flex-col justify-center">
+<h4 class="font-body-md text-on-background group-hover:text-primary transition-colors line-clamp-2 mb-1">Optimizing Your Editing Workflow</h4>
+<span class="font-label-caps text-[10px] text-on-surface-variant opacity-70">Jul 22, 2023</span>
+</div>
+</a>
+</div>
+</div>
+<!-- Newsletter -->
+<div class="glass-panel p-8 rounded-xl text-center border-primary/30 relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/5"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-4xl text-primary mb-4 block">mail</span>
+<h3 class="font-headline-md text-headline-md-mobile text-on-background mb-2">Join the Inner Circle</h3>
+<p class="font-body-md text-on-surface-variant mb-6 text-sm">Subscribe for exclusive creative tips, industry insights, and early access to our resources.</p>
+<form class="flex flex-col gap-4">
+<input class="w-full bg-surface/50 border border-outline-variant p-3 text-on-surface rounded focus:outline-none focus:border-primary transition-colors text-center font-body-md" placeholder="Email Address" type="email"/>
+<button class="w-full bg-primary text-on-primary font-label-caps py-3 rounded hover:bg-primary-container transition-colors" type="submit">
+                                Subscribe
+                            </button>
+</form>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap px-margin-desktop max-w-container-max mx-auto flex flex-col items-center gap-unit bg-background border-t border-outline-variant/20 z-10 relative">
+<div class="font-headline-lg text-primary mb-4">
+            SL Creative
+        </div>
+<div class="flex gap-6 mb-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">Case Studies</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">Careers</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">FAQ</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">Terms &amp; Conditions</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="contact.html">Contact</a>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant text-sm opacity-50">
+            © 2024 SL Creative. Uncompromising Excellence in Post-Production.
+        </div>
+</footer>
+
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body></html>
