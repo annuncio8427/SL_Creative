@@ -1,138 +1,242 @@
-/* SL Creative Portfolio Agency - Master Application Engine */
+/* ============================================
+   SL Creative Portfolio Agency
+   Master Application Engine
+============================================ */
 
-document.addEventListener('DOMContentLoaded', () => {
-  initTabs();
-  initModals();
-  initCountdown();
-  initFormHandlers();
+document.addEventListener("DOMContentLoaded", () => {
+
+    initTabs();
+    initModals();
+    initCountdown();
+    initFormHandlers();
+    initMobileMenu();
+
 });
 
-/* Tab Switching Logic */
+/* ============================================
+   TAB SWITCHING
+============================================ */
+
 function initTabs() {
-  const tabContainers = document.querySelectorAll('.tabs-container');
 
-  tabContainers.forEach(container => {
-    const tabButtons = container.querySelectorAll('.tab-btn');
-    const tabContents = container.querySelectorAll('.tab-content');
+    const tabContainers = document.querySelectorAll(".tabs-container");
 
-    tabButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const targetTab = button.getAttribute('data-tab');
+    tabContainers.forEach(container => {
 
-        tabButtons.forEach(btn => btn.classList.remove('active'));
-        tabContents.forEach(content => content.classList.remove('active'));
+        const tabButtons = container.querySelectorAll(".tab-btn");
+        const tabContents = container.querySelectorAll(".tab-content");
 
-        button.classList.add('active');
-        const activeContent = container.querySelector(`#${targetTab}`);
-        if (activeContent) {
-          activeContent.classList.add('active');
-        }
-      });
+        tabButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                const target = button.dataset.tab;
+
+                tabButtons.forEach(btn =>
+                    btn.classList.remove("active")
+                );
+
+                tabContents.forEach(content =>
+                    content.classList.remove("active")
+                );
+
+                button.classList.add("active");
+
+                const activeTab = container.querySelector(`#${target}`);
+
+                if (activeTab) {
+                    activeTab.classList.add("active");
+                }
+
+            });
+
+        });
+
     });
-  });
+
 }
 
-/* Modal Management */
+/* ============================================
+   MODALS
+============================================ */
+
 function initModals() {
-  const modalTriggers = document.querySelectorAll('[data-modal-target]');
-  const modalCloses = document.querySelectorAll('.modal-close, [data-modal-close]');
 
-  modalTriggers.forEach(trigger => {
-    trigger.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetId = trigger.getAttribute('data-modal-target');
-      const targetModal = document.getElementById(targetId);
-      if (targetModal) {
-        targetModal.classList.add('active');
-      }
-    });
-  });
+    const triggers = document.querySelectorAll("[data-modal-target]");
+    const closes = document.querySelectorAll(".modal-close,[data-modal-close]");
 
-  modalCloses.forEach(close => {
-    close.addEventListener('click', () => {
-      const activeModal = close.closest('.modal-overlay');
-      if (activeModal) {
-        activeModal.classList.remove('active');
-      }
-    });
-  });
+    triggers.forEach(trigger => {
 
-  document.querySelectorAll('.modal-overlay').forEach(modal => {
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.classList.remove('active');
-      }
+        trigger.addEventListener("click", e => {
+
+            e.preventDefault();
+
+            const modal = document.getElementById(
+                trigger.dataset.modalTarget
+            );
+
+            if (modal) {
+
+                modal.classList.add("active");
+
+                document.body.style.overflow = "hidden";
+
+            }
+
+        });
+
     });
-  });
+
+    closes.forEach(close => {
+
+        close.addEventListener("click", () => {
+
+            const modal = close.closest(".modal-overlay");
+
+            if (modal) {
+
+                modal.classList.remove("active");
+
+                document.body.style.overflow = "";
+
+            }
+
+        });
+
+    });
+
+    document.querySelectorAll(".modal-overlay").forEach(modal => {
+
+        modal.addEventListener("click", e => {
+
+            if (e.target === modal) {
+
+                modal.classList.remove("active");
+
+                document.body.style.overflow = "";
+
+            }
+
+        });
+
+    });
+
 }
 
-/* Live Countdown Timer (For Coming Soon Screen) */
+/* ============================================
+   COUNTDOWN
+============================================ */
+
 function initCountdown() {
-  const daysEl = document.getElementById('timer-days');
-  const hoursEl = document.getElementById('timer-hours');
-  const minsEl = document.getElementById('timer-mins');
-  const secsEl = document.getElementById('timer-secs');
 
-  if (!daysEl) return;
+    const days = document.getElementById("timer-days");
+    const hours = document.getElementById("timer-hours");
+    const mins = document.getElementById("timer-mins");
+    const secs = document.getElementById("timer-secs");
 
-  const targetDate = new Date(Date.now() + 14 * 24 * 60 * 60 * 1000);
+    if (!days) return;
 
-  function updateTimer() {
-    const now = new Date();
-    const diff = targetDate - now;
+    const targetDate = new Date(
+        Date.now() + 14 * 24 * 60 * 60 * 1000
+    );
 
-    if (diff <= 0) return;
+    function update() {
 
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const mins = Math.floor((diff / 1000 / 60) % 60);
-    const secs = Math.floor((diff / 1000) % 60);
+        const now = new Date();
 
-    daysEl.textContent = String(days).padStart(2, '0');
-    hoursEl.textContent = String(hours).padStart(2, '0');
-    minsEl.textContent = String(mins).padStart(2, '0');
-    secsEl.textContent = String(secs).padStart(2, '0');
-  }
+        const diff = targetDate - now;
 
-  updateTimer();
-  setInterval(updateTimer, 1000);
+        if (diff <= 0) return;
+
+        days.textContent = String(
+            Math.floor(diff / (1000 * 60 * 60 * 24))
+        ).padStart(2, "0");
+
+        hours.textContent = String(
+            Math.floor(diff / (1000 * 60 * 60) % 24)
+        ).padStart(2, "0");
+
+        mins.textContent = String(
+            Math.floor(diff / (1000 * 60) % 60)
+        ).padStart(2, "0");
+
+        secs.textContent = String(
+            Math.floor(diff / 1000 % 60)
+        ).padStart(2, "0");
+
+    }
+
+    update();
+
+    setInterval(update, 1000);
+
 }
 
-/* Global Toast Notification System */
-function showToast(message, type = 'info') {
-  let container = document.querySelector('.toast-container');
-  if (!container) {
-    container = document.createElement('div');
-    container.className = 'toast-container';
-    document.body.appendChild(container);
-  }
+/* ============================================
+   TOAST NOTIFICATION
+============================================ */
 
-  const toast = document.createElement('div');
-  toast.className = `toast toast-${type}`;
-  toast.innerHTML = `<span>✨ ${message}</span>`;
-  container.appendChild(toast);
+function showToast(message, type = "info") {
 
-  setTimeout(() => {
-    toast.style.opacity = '0';
-    toast.style.transform = 'translateX(50px)';
-    setTimeout(() => toast.remove(), 300);
-  }, 3500);
+    let container = document.querySelector(".toast-container");
+
+    if (!container) {
+
+        container = document.createElement("div");
+
+        container.className = "toast-container";
+
+        document.body.appendChild(container);
+
+    }
+
+    const toast = document.createElement("div");
+
+    toast.className = `toast toast-${type}`;
+
+    toast.innerHTML = `<span>✨ ${message}</span>`;
+
+    container.appendChild(toast);
+
+    setTimeout(() => {
+
+        toast.style.opacity = "0";
+
+        toast.style.transform = "translateX(40px)";
+
+        setTimeout(() => {
+
+            toast.remove();
+
+        }, 300);
+
+    }, 3500);
+
 }
 
-/* Form Handlers Simulation */
+/* ============================================
+   FORM HANDLERS
+============================================ */
+
 function initFormHandlers() {
-  document.querySelectorAll('form').forEach(form => {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      showToast('Action completed successfully!', 'success');
-    });
-  });
-}
-/* ================================
-   MOBILE MENU
-================================ */
 
-initMobileMenu();
+    document.querySelectorAll("form").forEach(form => {
+
+        form.addEventListener("submit", e => {
+
+            e.preventDefault();
+
+            showToast("Action completed successfully!", "success");
+
+        });
+
+    });
+
+}
+
+/* ============================================
+   MOBILE MENU
+============================================ */
 
 function initMobileMenu() {
 
@@ -145,57 +249,113 @@ function initMobileMenu() {
     if (!menuBtn || !mobileMenu) return;
 
     function openMenu() {
+
         mobileMenu.classList.remove("translate-x-full");
+
         mobileMenu.classList.add("translate-x-0");
 
-        overlay.classList.remove("hidden");
+        if (overlay) {
+
+            overlay.classList.remove("hidden");
+
+        }
 
         document.body.style.overflow = "hidden";
 
         if (menuIcon) {
+
             menuIcon.textContent = "close";
+
         }
+
     }
 
     function closeMenu() {
+
         mobileMenu.classList.remove("translate-x-0");
+
         mobileMenu.classList.add("translate-x-full");
 
-        overlay.classList.add("hidden");
+        if (overlay) {
+
+            overlay.classList.add("hidden");
+
+        }
 
         document.body.style.overflow = "";
 
         if (menuIcon) {
+
             menuIcon.textContent = "menu";
+
         }
+
     }
 
     menuBtn.addEventListener("click", () => {
 
         if (mobileMenu.classList.contains("translate-x-full")) {
+
             openMenu();
+
         } else {
+
             closeMenu();
+
         }
 
     });
 
     if (closeBtn) {
+
         closeBtn.addEventListener("click", closeMenu);
+
     }
 
     if (overlay) {
+
         overlay.addEventListener("click", closeMenu);
+
     }
 
     document.querySelectorAll(".mobile-link").forEach(link => {
+
         link.addEventListener("click", closeMenu);
+
     });
 
-    document.addEventListener("keydown", (e) => {
+    document.addEventListener("keydown", e => {
+
         if (e.key === "Escape") {
+
             closeMenu();
+
         }
+
+    });
+
+}
+
+/* ============================================
+   NAVBAR SHADOW
+============================================ */
+
+const navbar = document.getElementById("main-nav");
+
+if (navbar) {
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 50) {
+
+            navbar.classList.add("shadow-lg");
+
+        } else {
+
+            navbar.classList.remove("shadow-lg");
+
+        }
+
     });
 
 }
