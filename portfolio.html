@@ -65,11 +65,11 @@
 
     <section class="filters flex gap-3 pb-3 mb-8" id="filters">
       <button data-category="All" class="filter active px-5 py-2.5 rounded-full border border-[#f2ca50] text-xs font-bold uppercase tracking-[.15em]">All</button>
-      <button data-category="Wedding" class="filter px-5 py-2.5 rounded-full border border-[#99907c] text-[#d0c5af] text-xs font-bold uppercase tracking-[.15em]">Wedding</button>
-      <button data-category="Cinematic" class="filter px-5 py-2.5 rounded-full border border-[#99907c] text-[#d0c5af] text-xs font-bold uppercase tracking-[.15em]">Cinematic</button>
-      <button data-category="Commercial" class="filter px-5 py-2.5 rounded-full border border-[#99907c] text-[#d0c5af] text-xs font-bold uppercase tracking-[.15em]">Commercial</button>
-      <button data-category="Social Media" class="filter px-5 py-2.5 rounded-full border border-[#99907c] text-[#d0c5af] text-xs font-bold uppercase tracking-[.15em]">Social Media</button>
-      <button data-category="Travel" class="filter px-5 py-2.5 rounded-full border border-[#99907c] text-[#d0c5af] text-xs font-bold uppercase tracking-[.15em]">Travel</button>
+      <button data-category="Wedding" class="filter px-5 py-2.5 rounded-full border border-[#99907c] text-[#d0c5af] text-xs font-bold uppercase tracking-[.15em]">Social Media</button>
+      <button data-category="Cinematic" class="filter px-5 py-2.5 rounded-full border border-[#99907c] text-[#d0c5af] text-xs font-bold uppercase tracking-[.15em]">Commercial</button>
+      <button data-category="Commercial" class="filter px-5 py-2.5 rounded-full border border-[#99907c] text-[#d0c5af] text-xs font-bold uppercase tracking-[.15em]">Candid</button>
+      <button data-category="Social Media" class="filter px-5 py-2.5 rounded-full border border-[#99907c] text-[#d0c5af] text-xs font-bold uppercase tracking-[.15em]">Wedding</button>
+      <button data-category="Travel" class="filter px-5 py-2.5 rounded-full border border-[#99907c] text-[#d0c5af] text-xs font-bold uppercase tracking-[.15em]">Birthday</button>
     </section>
 
     <section class="reel-grid" id="reelGrid"></section>
@@ -112,16 +112,16 @@
       { file: "videos/cinematic-02.mp4", category: "Cinematic", title: "Midnight Story" },
 
       // Commercial
-      { file: "videos/commercial-01.mp4", category: "Commercial", title: "Precision Timing" },
-      { file: "videos/commercial-02.mp4", category: "Commercial", title: "Urban Sanctuary" },
+      { file: "ad1.mp4", category: "Commercial", title: "Precision Timing" },
+      { file: "ad2.mp4", category: "Commercial", title: "Urban Sanctuary" },
 
       // Social Media
-      { file: "videos/social-01.mp4", category: "Social Media", title: "The Alchemist" },
+      { file: "ad3.mp4", category: "Social Media", title: "The Alchemist" },
       { file: "videos/social-02.mp4", category: "Social Media", title: "Social Story" },
 
       // Travel
-      { file: "videos/travel-01.mp4", category: "Travel", title: "Alpine Pursuit" },
-      { file: "videos/travel-02.mp4", category: "Travel", title: "Beyond the Horizon" }
+      { file: "videos/travel-01.mp4", category: "Birthday", title: "Alpine Pursuit" },
+      { file: "videos/travel-02.mp4", category: "Birthday", title: "Beyond the Horizon" }
     ];
 
     const filters = document.querySelectorAll(".filter");
