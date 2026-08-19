@@ -65,11 +65,11 @@
 
     <section class="filters flex gap-3 pb-3 mb-8" id="filters">
       <button data-category="All" class="filter active px-5 py-2.5 rounded-full border border-[#f2ca50] text-xs font-bold uppercase tracking-[.15em]">All</button>
-      <button data-category="Wedding" class="filter px-5 py-2.5 rounded-full border border-[#99907c] text-[#d0c5af] text-xs font-bold uppercase tracking-[.15em]">Social Media</button>
-      <button data-category="Cinematic" class="filter px-5 py-2.5 rounded-full border border-[#99907c] text-[#d0c5af] text-xs font-bold uppercase tracking-[.15em]">Commercial</button>
-      <button data-category="Commercial" class="filter px-5 py-2.5 rounded-full border border-[#99907c] text-[#d0c5af] text-xs font-bold uppercase tracking-[.15em]">Candid</button>
-      <button data-category="Social Media" class="filter px-5 py-2.5 rounded-full border border-[#99907c] text-[#d0c5af] text-xs font-bold uppercase tracking-[.15em]">Wedding</button>
-      <button data-category="Travel" class="filter px-5 py-2.5 rounded-full border border-[#99907c] text-[#d0c5af] text-xs font-bold uppercase tracking-[.15em]">Birthday</button>
+      <button data-category="Social Media" class="filter px-5 py-2.5 rounded-full border border-[#99907c] text-[#d0c5af] text-xs font-bold uppercase tracking-[.15em]">Social Media</button>
+      <button data-category="Brand Marketing" class="filter px-5 py-2.5 rounded-full border border-[#99907c] text-[#d0c5af] text-xs font-bold uppercase tracking-[.15em]">Brand Marketing</button>
+      <button data-category="Candid" class="filter px-5 py-2.5 rounded-full border border-[#99907c] text-[#d0c5af] text-xs font-bold uppercase tracking-[.15em]">Candid</button>
+      <button data-category="Wedding" class="filter px-5 py-2.5 rounded-full border border-[#99907c] text-[#d0c5af] text-xs font-bold uppercase tracking-[.15em]">Wedding</button>
+      <button data-category="Birthday" class="filter px-5 py-2.5 rounded-full border border-[#99907c] text-[#d0c5af] text-xs font-bold uppercase tracking-[.15em]">Birthday</button>
     </section>
 
     <section class="reel-grid" id="reelGrid"></section>
@@ -102,22 +102,28 @@
     */
     const reels = [
       // Wedding
+      
+
+      // Cinematic
+      { file: "videos/cinematic-01.mp4", category: "Candid", title: "Echoes in Gold" },
+      { file: "videos/cinematic-02.mp4", category: "Candid", title: "Midnight Story" },
+
+      // Brand Marketing
+      { file: "ad1.mp4", category: "Brand Marketing", title: "Precision Timing" },
+      { file: "ad2.mp4", category: "Brand Marketing", title: "Urban Sanctuary" },
+      { file: "ad4.mp4", category: "Brand Marketing", title: "Urban Sanctuary" },
+      { file: "ad5.mp4", category: "Brand Marketing", title: "Urban Sanctuary" },
+
+      // Social Media
+      { file: "ad3.mp4", category: "Social Media", title: "The Alchemist" },
+      { file: "reel1.mp4", category: "Social Media", title: "Social Story" },
+      { file: "reel2.mp4", category: "Social Media", title: "Social Story" },
+      { file: "reel3.mp4", category: "Social Media", title: "Social Story" },
+
       { file: "wed1.mp4", category: "Wedding", title: "Golden Vows" },
       { file: "wed2.mp4", category: "Wedding", title: "Eternal Horizons" },
       { file: "wed3.mp4", category: "Wedding", title: "Golden Vows" },
       { file: "wed4.mp4", category: "Wedding", title: "Eternal Horizons" },
-
-      // Cinematic
-      { file: "videos/cinematic-01.mp4", category: "Cinematic", title: "Echoes in Gold" },
-      { file: "videos/cinematic-02.mp4", category: "Cinematic", title: "Midnight Story" },
-
-      // Commercial
-      { file: "ad1.mp4", category: "Commercial", title: "Precision Timing" },
-      { file: "ad2.mp4", category: "Commercial", title: "Urban Sanctuary" },
-
-      // Social Media
-      { file: "ad3.mp4", category: "Social Media", title: "The Alchemist" },
-      { file: "videos/social-02.mp4", category: "Social Media", title: "Social Story" },
 
       // Travel
       { file: "videos/travel-01.mp4", category: "Birthday", title: "Alpine Pursuit" },
