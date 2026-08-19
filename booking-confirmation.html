@@ -174,7 +174,7 @@
             pointer-events: none;
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="antialiased min-h-screen flex flex-col relative overflow-x-hidden">
 <!-- Custom Cursor -->
 <div class="custom-cursor" id="custom-cursor"></div>
@@ -269,7 +269,6 @@
             el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
         });
     </script>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -324,5 +323,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

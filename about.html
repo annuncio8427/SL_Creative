@@ -190,28 +190,10 @@
             background: theme('colors.primary'); 
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="antialiased selection:bg-primary selection:text-on-primary">
 <!-- Navigation (from JSON) -->
-<nav class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30 flex justify-between items-center px-margin-desktop py-4 mx-auto transition-all duration-300">
-<div class="text-headline-md font-headline-md tracking-tighter text-on-surface dark:text-on-surface cursor-pointer">
-            SL Creative
-        </div>
-<div class="hidden md:flex gap-8 items-center">
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-3 py-2 rounded-lg text-label-caps font-label-caps" href="portfolio.html">Work</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-3 py-2 rounded-lg text-label-caps font-label-caps" href="services.html">Services</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-3 py-2 rounded-lg text-label-caps font-label-caps" href="#">Pricing</a>
-<a class="text-primary dark:text-primary border-b-2 border-primary pb-1 text-label-caps font-label-caps hover:bg-surface-variant/20 px-3 py-2 rounded-lg" href="about.html">About</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-3 py-2 rounded-lg text-label-caps font-label-caps" href="contact.html">Contact</a>
-</div>
-<button class="bg-primary text-on-primary px-6 py-3 rounded-full text-label-caps font-label-caps hover:bg-surface-tint transition-colors hidden md:block">
-            Book a Consultation
-        </button>
-<!-- Mobile menu icon -->
-<button class="md:hidden text-on-surface">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</nav>
+
 <!-- Main Content wrapper for parallax -->
 <main class="parallax-wrapper">
 <!-- Hero Section -->
@@ -353,7 +335,6 @@
             });
         });
     </script>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -408,5 +389,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

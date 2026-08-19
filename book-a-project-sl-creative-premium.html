@@ -120,23 +120,10 @@
             border-color: #4a4949;
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col relative overflow-x-hidden antialiased">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto bg-background/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-2xl shadow-primary/5">
-<div class="font-headline-md text-headline-md text-primary tracking-tighter">SL Creative</div>
-<div class="hidden md:flex gap-8">
-<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 transition-all duration-300 py-2 px-4 rounded scale-95 active:scale-90 transition-transform" href="#">Case Studies</a>
-<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 transition-all duration-300 py-2 px-4 rounded scale-95 active:scale-90 transition-transform" href="#">Process</a>
-<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 transition-all duration-300 py-2 px-4 rounded scale-95 active:scale-90 transition-transform" href="#">Careers</a>
-<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 transition-all duration-300 py-2 px-4 rounded scale-95 active:scale-90 transition-transform" href="#">Blog</a>
-<a class="font-body-md text-body-md uppercase tracking-widest text-primary border-b-2 border-primary pb-1 hover:bg-surface-bright/20 transition-all duration-300 py-2 px-4 rounded scale-95 active:scale-90 transition-transform" href="#">Booking</a>
-</div>
-<button class="hidden md:block bg-primary text-on-primary font-label-caps text-label-caps py-3 px-6 rounded-DEFAULT hover:bg-primary-fixed transition-colors">Inquire Now</button>
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined text-3xl">menu</span>
-</button>
-</nav>
+
 <!-- Main Content Canvas -->
 <main class="flex-grow pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full flex flex-col lg:flex-row gap-gutter">
 <!-- Left Column: Form Area -->
@@ -244,7 +231,6 @@
 </div>
 <p class="font-body-md text-body-md text-on-surface-variant text-center opacity-60">© 2024 SL Creative. Uncompromising Excellence in Post-Production.</p>
 </footer>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -299,5 +285,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

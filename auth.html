@@ -1,120 +1,106 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Authentication Suite | SL Creative Agency</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Authentication Suite | SL Creative Agency</title>
+<link href="css/styles.css" rel="stylesheet"/>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body style="display: flex; flex-direction: column; min-height: 100vh; background: radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.08) 0%, #090909 70%);">
-  <!-- Navbar -->
-  <nav class="navbar">
-    <a href="index.html" class="brand-logo">
-      <div class="brand-symbol">SL</div>
-      <div class="brand-text">SL <span>CREATIVE</span></div>
-    </a>
-    <a href="index.html" class="btn btn-secondary btn-sm">← Back to Hub</a>
-  </nav>
+<!-- Navbar -->
 
-  <!-- Auth Container -->
-  <main style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 120px 20px 60px 20px;">
-    <div class="glass-card tabs-container" style="max-width: 480px; width: 100%;">
-      
-      <!-- Tab Header -->
-      <div class="tabs-header">
-        <button class="tab-btn active" data-tab="tab-login">Login</button>
-        <button class="tab-btn" data-tab="tab-signup">Register</button>
-        <button class="tab-btn" data-tab="tab-forgot">Recovery</button>
-        <button class="tab-btn" data-tab="tab-verify">Verify</button>
-      </div>
-
-      <!-- Login Tab -->
-      <div id="tab-login" class="tab-content active">
-        <div style="text-align: center; margin-bottom: 24px;">
-          <h2 style="font-size: 24px; margin-bottom: 8px;">Client Portal Sign In</h2>
-          <p class="text-dim" style="font-size: 13px;">Enter your credentials to access project assets and timelines.</p>
-        </div>
-        <form>
-          <div class="form-group">
-            <label class="form-label">Email Address</label>
-            <input type="email" class="form-input" placeholder="client@agency.com" required value="alex.morgan@brandco.com">
-          </div>
-          <div class="form-group">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-              <label class="form-label" style="margin-bottom: 0;">Password</label>
-              <a href="#" onclick="document.querySelector('[data-tab=\'tab-forgot\']').click()" class="text-gold" style="font-size: 12px; text-decoration: none;">Forgot?</a>
-            </div>
-            <input type="password" class="form-input" placeholder="••••••••••••" required value="secretpass123">
-          </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 12px;">Sign In to Portal</button>
-        </form>
-      </div>
-
-      <!-- Register Tab -->
-      <div id="tab-signup" class="tab-content">
-        <div style="text-align: center; margin-bottom: 24px;">
-          <h2 style="font-size: 24px; margin-bottom: 8px;">Create Client Account</h2>
-          <p class="text-dim" style="font-size: 13px;">Onboard your organization with SL Creative Agency.</p>
-        </div>
-        <form>
-          <div class="form-group">
-            <label class="form-label">Full Name</label>
-            <input type="text" class="form-input" placeholder="Alex Morgan" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Company Email</label>
-            <input type="email" class="form-input" placeholder="alex@company.com" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Create Password</label>
-            <input type="password" class="form-input" placeholder="Min. 8 characters" required>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 12px;">Create Account</button>
-        </form>
-      </div>
-
-      <!-- Recovery Tab -->
-      <div id="tab-forgot" class="tab-content">
-        <div style="text-align: center; margin-bottom: 24px;">
-          <h2 style="font-size: 24px; margin-bottom: 8px;">Password Recovery</h2>
-          <p class="text-dim" style="font-size: 13px;">We'll send a secure reset link to your registered email.</p>
-        </div>
-        <form>
-          <div class="form-group">
-            <label class="form-label">Account Email</label>
-            <input type="email" class="form-input" placeholder="client@agency.com" required>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 12px;">Send Recovery Link</button>
-        </form>
-      </div>
-
-      <!-- Verify Tab -->
-      <div id="tab-verify" class="tab-content">
-        <div style="text-align: center; margin-bottom: 24px;">
-          <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--gold-glow); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto; border: 1px solid var(--primary-gold);">
-            <span style="font-size: 24px; color: var(--primary-gold-bright);">✉</span>
-          </div>
-          <h2 style="font-size: 24px; margin-bottom: 8px;">Verify Email</h2>
-          <p class="text-dim" style="font-size: 13px;">A 6-digit confirmation code has been sent to your inbox.</p>
-        </div>
-        <form>
-          <div class="form-group" style="display: flex; gap: 8px; justify-content: center;">
-            <input type="text" maxlength="1" class="form-input" style="width: 44px; text-align: center; font-size: 20px; font-weight: 700;" value="7">
-            <input type="text" maxlength="1" class="form-input" style="width: 44px; text-align: center; font-size: 20px; font-weight: 700;" value="4">
-            <input type="text" maxlength="1" class="form-input" style="width: 44px; text-align: center; font-size: 20px; font-weight: 700;" value="1">
-            <input type="text" maxlength="1" class="form-input" style="width: 44px; text-align: center; font-size: 20px; font-weight: 700;" value="9">
-            <input type="text" maxlength="1" class="form-input" style="width: 44px; text-align: center; font-size: 20px; font-weight: 700;" value="0">
-            <input type="text" maxlength="1" class="form-input" style="width: 44px; text-align: center; font-size: 20px; font-weight: 700;" value="2">
-          </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 16px;">Verify & Access Portal</button>
-        </form>
-      </div>
-
-    </div>
-  </main>
-
-  <script src="js/app.js"></script>
-
+<!-- Auth Container -->
+<main style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 120px 20px 60px 20px;">
+<div class="glass-card tabs-container" style="max-width: 480px; width: 100%;">
+<!-- Tab Header -->
+<div class="tabs-header">
+<button class="tab-btn active" data-tab="tab-login">Login</button>
+<button class="tab-btn" data-tab="tab-signup">Register</button>
+<button class="tab-btn" data-tab="tab-forgot">Recovery</button>
+<button class="tab-btn" data-tab="tab-verify">Verify</button>
+</div>
+<!-- Login Tab -->
+<div class="tab-content active" id="tab-login">
+<div style="text-align: center; margin-bottom: 24px;">
+<h2 style="font-size: 24px; margin-bottom: 8px;">Client Portal Sign In</h2>
+<p class="text-dim" style="font-size: 13px;">Enter your credentials to access project assets and timelines.</p>
+</div>
+<form>
+<div class="form-group">
+<label class="form-label">Email Address</label>
+<input class="form-input" placeholder="client@agency.com" required="" type="email" value="alex.morgan@brandco.com"/>
+</div>
+<div class="form-group">
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+<label class="form-label" style="margin-bottom: 0;">Password</label>
+<a class="text-gold" href="#" onclick="document.querySelector('[data-tab=\'tab-forgot\']').click()" style="font-size: 12px; text-decoration: none;">Forgot?</a>
+</div>
+<input class="form-input" placeholder="••••••••••••" required="" type="password" value="secretpass123"/>
+</div>
+<button class="btn btn-primary" style="width: 100%; margin-top: 12px;" type="submit">Sign In to Portal</button>
+</form>
+</div>
+<!-- Register Tab -->
+<div class="tab-content" id="tab-signup">
+<div style="text-align: center; margin-bottom: 24px;">
+<h2 style="font-size: 24px; margin-bottom: 8px;">Create Client Account</h2>
+<p class="text-dim" style="font-size: 13px;">Onboard your organization with SL Creative Agency.</p>
+</div>
+<form>
+<div class="form-group">
+<label class="form-label">Full Name</label>
+<input class="form-input" placeholder="Alex Morgan" required="" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-label">Company Email</label>
+<input class="form-input" placeholder="alex@company.com" required="" type="email"/>
+</div>
+<div class="form-group">
+<label class="form-label">Create Password</label>
+<input class="form-input" placeholder="Min. 8 characters" required="" type="password"/>
+</div>
+<button class="btn btn-primary" style="width: 100%; margin-top: 12px;" type="submit">Create Account</button>
+</form>
+</div>
+<!-- Recovery Tab -->
+<div class="tab-content" id="tab-forgot">
+<div style="text-align: center; margin-bottom: 24px;">
+<h2 style="font-size: 24px; margin-bottom: 8px;">Password Recovery</h2>
+<p class="text-dim" style="font-size: 13px;">We'll send a secure reset link to your registered email.</p>
+</div>
+<form>
+<div class="form-group">
+<label class="form-label">Account Email</label>
+<input class="form-input" placeholder="client@agency.com" required="" type="email"/>
+</div>
+<button class="btn btn-primary" style="width: 100%; margin-top: 12px;" type="submit">Send Recovery Link</button>
+</form>
+</div>
+<!-- Verify Tab -->
+<div class="tab-content" id="tab-verify">
+<div style="text-align: center; margin-bottom: 24px;">
+<div style="width: 56px; height: 56px; border-radius: 50%; background: var(--gold-glow); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto; border: 1px solid var(--primary-gold);">
+<span style="font-size: 24px; color: var(--primary-gold-bright);">✉</span>
+</div>
+<h2 style="font-size: 24px; margin-bottom: 8px;">Verify Email</h2>
+<p class="text-dim" style="font-size: 13px;">A 6-digit confirmation code has been sent to your inbox.</p>
+</div>
+<form>
+<div class="form-group" style="display: flex; gap: 8px; justify-content: center;">
+<input class="form-input" maxlength="1" style="width: 44px; text-align: center; font-size: 20px; font-weight: 700;" type="text" value="7"/>
+<input class="form-input" maxlength="1" style="width: 44px; text-align: center; font-size: 20px; font-weight: 700;" type="text" value="4"/>
+<input class="form-input" maxlength="1" style="width: 44px; text-align: center; font-size: 20px; font-weight: 700;" type="text" value="1"/>
+<input class="form-input" maxlength="1" style="width: 44px; text-align: center; font-size: 20px; font-weight: 700;" type="text" value="9"/>
+<input class="form-input" maxlength="1" style="width: 44px; text-align: center; font-size: 20px; font-weight: 700;" type="text" value="0"/>
+<input class="form-input" maxlength="1" style="width: 44px; text-align: center; font-size: 20px; font-weight: 700;" type="text" value="2"/>
+</div>
+<button class="btn btn-primary" style="width: 100%; margin-top: 16px;" type="submit">Verify &amp; Access Portal</button>
+</form>
+</div>
+</div>
+</main>
+<script src="js/app.js"></script>
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -169,6 +155,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body>
+<script src="js/site-shell.js"></script></body>
 </html>

@@ -178,28 +178,10 @@
             background: radial-gradient(circle at 50% 50%, rgba(242, 202, 80, 0.05) 0%, transparent 60%);
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="bg-background text-on-background min-h-screen flex flex-col font-body-md overflow-hidden relative">
 <!-- Top Navigation Bar -->
-<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto bg-background/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-2xl shadow-primary/5">
-<a class="font-headline-md text-headline-md text-primary tracking-tighter" href="/">SL Creative</a>
-<div class="hidden md:flex items-center gap-8">
-<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 px-4 py-2 rounded-DEFAULT duration-300 scale-95 active:scale-90" href="#">Case Studies</a>
-<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 px-4 py-2 rounded-DEFAULT duration-300 scale-95 active:scale-90" href="#">Process</a>
-<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 px-4 py-2 rounded-DEFAULT duration-300 scale-95 active:scale-90" href="#">Careers</a>
-<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 px-4 py-2 rounded-DEFAULT duration-300 scale-95 active:scale-90" href="#">Blog</a>
-<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 px-4 py-2 rounded-DEFAULT duration-300 scale-95 active:scale-90" href="#">Booking</a>
-</div>
-<div class="flex items-center gap-4">
-<button class="text-on-surface hover:text-primary transition-colors">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
-</button>
-<a class="hidden md:flex bg-primary text-on-primary px-6 py-2 rounded-DEFAULT font-label-caps text-label-caps hover:bg-primary-container transition-colors" href="#">Inquire Now</a>
-<button class="md:hidden text-on-surface">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</nav>
+
 <!-- Main Content Canvas -->
 <main class="flex-grow flex items-center justify-center relative z-10 w-full px-margin-mobile md:px-margin-desktop pt-20">
 <!-- Ambient Background -->
@@ -280,7 +262,6 @@
             }
         });
     </script>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -335,5 +316,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

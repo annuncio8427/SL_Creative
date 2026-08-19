@@ -132,7 +132,7 @@
             background-clip: text;
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="bg-background text-on-background min-h-screen flex flex-col overflow-x-hidden">
 <!-- TopNavBar (Shared Component) - Suppressed due to Transactional/Error state -->
 <!-- The prompt asks to "Use the same TopNavBar and Footer components", but the rules explicitly state:
@@ -214,7 +214,6 @@
             }
         });
     </script>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -269,5 +268,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>
