@@ -188,7 +188,7 @@
             transition: background-color 5000s ease-in-out 0s;
         }
       </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="min-h-screen flex flex-col antialiased selection:bg-primary/30 selection:text-primary">
 <!-- Global TopNavBar Suppressed for Transactional Intent -->
 <!-- The prompt mentions Login page, which is transactional. Navigation is suppressed as per instructions. -->
@@ -257,7 +257,6 @@
 </main>
 <!-- Global Footer Suppressed for Transactional Intent -->
 <!-- The prompt asks for Footer, but conflict resolution protocol overrides: "Automatic Suppression: You MUST exclude the navigation shell if the page intent is: Linear/Transactional: Login..." -->
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -312,5 +311,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

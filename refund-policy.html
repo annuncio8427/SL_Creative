@@ -122,18 +122,13 @@
             -webkit-text-fill-color: transparent;
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="antialiased font-body-md selection:bg-primary/30 selection:text-primary">
 <!-- TopNavBar: Intent - Support / Legal, so 'Support' is active -->
 <header class="bg-surface/60 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-primary/20 shadow-[0_20px_40px_rgba(212,175,55,0.05)]">
 <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 w-full max-w-container-max mx-auto">
 <a class="font-display-lg text-headline-md text-primary tracking-tight" href="#">SL Creative</a>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300 scale-95 duration-200" href="#">Dashboard</a>
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300 scale-95 duration-200" href="#">Projects</a>
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300 scale-95 duration-200" href="#">Media Kit</a>
-<a class="text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary transition-colors duration-300 scale-95 duration-200" href="#">Support</a>
-</nav>
+
 <div class="flex items-center gap-4">
 <button class="hidden md:flex items-center gap-2 bg-primary text-on-primary font-body-md px-6 py-2 rounded-DEFAULT hover:bg-primary-fixed-dim transition-colors scale-95 duration-200">
                     Portal
@@ -289,7 +284,6 @@
             });
         });
     </script>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -344,5 +338,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

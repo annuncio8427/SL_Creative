@@ -145,31 +145,11 @@
             background-size: 24px 24px;
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="font-body-md text-on-background min-h-screen flex flex-col antialiased selection:bg-primary selection:text-on-primary">
 <div class="custom-cursor hidden md:block"></div>
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30 transition-all duration-300">
-<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 mx-auto max-w-container-max">
-<a class="text-headline-md font-headline-md tracking-tighter text-on-surface dark:text-on-surface cursor-interactive flex items-center gap-2" href="#">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">camera</span>
-                SL Creative
-            </a>
-<div class="hidden md:flex gap-8 items-center">
-<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors cursor-interactive py-2" href="portfolio.html">Work</a>
-<a class="text-label-caps font-label-caps text-primary dark:text-primary border-b-2 border-primary pb-1 cursor-interactive py-2" href="services.html">Services</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors cursor-interactive py-2" href="#">Pricing</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors cursor-interactive py-2" href="about.html">About</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors cursor-interactive py-2" href="contact.html">Contact</a>
-</div>
-<button class="hidden md:block bg-primary text-on-primary text-label-caps font-label-caps px-6 py-3 rounded hover:bg-primary-fixed-dim transition-colors cursor-interactive">
-                Book a Consultation
-            </button>
-<button class="md:hidden text-on-surface cursor-interactive">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</nav>
+
 <main class="flex-grow pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full relative">
 <!-- Ambient Background -->
 <div class="absolute inset-0 bg-pattern opacity-10 pointer-events-none -z-10"></div>
@@ -360,7 +340,6 @@
             });
         }
     </script>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -415,5 +394,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

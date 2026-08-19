@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Verify Email - SL Creative</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary": "#3c2f00",
+                      "primary": "#f2ca50",
+                      "on-primary-fixed": "#241a00",
+                      "background": "#131313",
+                      "primary-container": "#d4af37",
+                      "surface-bright": "#393939",
+                      "on-surface-variant": "#d0c5af",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "on-surface": "#e5e2e1",
+                      "surface-container-lowest": "#0e0e0e",
+                      "inverse-primary": "#735c00",
+                      "secondary-fixed": "#e5e2e1",
+                      "primary-fixed-dim": "#e9c349",
+                      "tertiary": "#cecece",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "secondary": "#c9c6c5",
+                      "outline-variant": "#4d4635",
+                      "outline": "#99907c",
+                      "on-tertiary-container": "#434546",
+                      "inverse-on-surface": "#313030",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "surface-container": "#20201f",
+                      "on-primary-fixed-variant": "#574500",
+                      "surface-variant": "#353535",
+                      "secondary-container": "#4a4949",
+                      "on-error-container": "#ffdad6",
+                      "surface-dim": "#131313",
+                      "on-secondary-container": "#bab8b7",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "on-secondary-fixed-variant": "#474646",
+                      "surface-container-highest": "#353535",
+                      "on-secondary": "#313030",
+                      "tertiary-fixed": "#e2e2e2",
+                      "error": "#ffb4ab",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "on-primary-container": "#554300",
+                      "surface-container-low": "#1c1b1b",
+                      "on-error": "#690005",
+                      "primary-fixed": "#ffe088",
+                      "surface": "#131313",
+                      "on-background": "#e5e2e1",
+                      "error-container": "#93000a",
+                      "surface-tint": "#e9c349",
+                      "on-tertiary": "#2f3131",
+                      "tertiary-container": "#b2b3b3",
+                      "surface-container-high": "#2a2a2a",
+                      "inverse-surface": "#e5e2e1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "margin-mobile": "24px",
+                      "section-gap": "160px",
+                      "container-max": "1440px",
+                      "margin-desktop": "80px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": [
+                              "Outfit"
+                      ],
+                      "headline-md": [
+                              "Outfit"
+                      ],
+                      "headline-lg": [
+                              "Outfit"
+                      ],
+                      "body-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "body-md": [
+                              "Be Vietnam Pro"
+                      ],
+                      "label-caps": [
+                              "Outfit"
+                      ],
+                      "display-lg": [
+                              "Outfit"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.15em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "72px",
+                              {
+                                      "lineHeight": "80px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .glass-card {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(24px);
+            border: 1px solid transparent;
+            background-image: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), linear-gradient(135deg, rgba(212,175,55,0.4) 0%, rgba(212,175,55,0) 50%, rgba(212,175,55,0.1) 100%);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+            box-shadow: inset 1px 1px 0px rgba(255,255,255,0.05), 0 40px 60px -20px rgba(212,175,55,0.05);
+        }
+        .btn-ghost-gold {
+            background: transparent;
+            border: 1px solid theme('colors.primary-container');
+            color: theme('colors.on-background');
+            transition: all 0.3s ease;
+        }
+        .btn-ghost-gold:hover {
+            background: rgba(212, 175, 55, 0.1);
+        }
+    </style>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
+<body class="min-h-screen flex flex-col antialiased">
+<!-- TopNavBar component suppressed as per logic for Transactional/Verify pages -->
+<!-- Main Content -->
+<main class="flex-grow flex items-center justify-center relative w-full overflow-hidden min-h-screen">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A cinematic, high-contrast workspace typical of a premium creative studio. A dark, moody room with professional film editing equipment, glowing monitors, and a sleek desk setup. Warm gold accent lighting cuts through the deep shadows, creating a sophisticated, luxurious atmosphere perfect for a top-tier creative agency." style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLud7OFNRtUb70cGN1_TpEJkF3YAmLKUA0dQ1Y9g5c1xe7T_UUmmaEZzhmCZx5vFdnExXZv0moyBL0m5F6zQTfe5BHBoNp8XQ4ELqyI6e424Su3Du-Mz7Ql5aJsPQXqhHfFnYo5TghWrT-82csFtrpztJMYqmY8QcWF4l-c8nftw1G27ZEQk-s6gYCJWITiESIDF7XrM2QfON3FO4XX4XZFnG7LSFGNW200rCmQwYmMDUxrgazMa2F3WfznR')"></div>
+<div class="absolute inset-0 bg-background/85"></div>
+</div>
+<!-- Glassmorphic Card -->
+<div class="z-10 w-full max-w-lg px-margin-mobile md:px-0">
+<div class="glass-card rounded-xl p-8 md:p-12 flex flex-col items-center text-center">
+<!-- Icon -->
+<div class="mb-6 flex items-center justify-center w-16 h-16 rounded-full bg-primary-container/10 border border-primary-container/30">
+<span class="material-symbols-outlined text-primary-container text-4xl" style="font-variation-settings: 'FILL' 0;">mail</span>
+</div>
+<!-- Title -->
+<h1 class="font-headline-lg text-headline-lg text-on-background mb-4">Verify Your Email</h1>
+<!-- Body Text -->
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-md mx-auto">
+                    We've sent a verification link to your email address. Please check your inbox and click the link to activate your account.
+                </p>
+<!-- Primary Action -->
+<button class="btn-ghost-gold font-label-caps text-label-caps px-8 py-4 rounded w-full md:w-auto uppercase tracking-wider mb-6">
+                    Resend Verification Email
+                </button>
+<!-- Support Text -->
+<p class="font-body-md text-body-md text-secondary">
+                    Didn't receive the email? <br class="md:hidden"/> Check your spam folder or try again.
+                </p>
+</div>
+</div>
+</main>
+<!-- Footer component suppressed as per logic for focused Transactional/Verify pages -->
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+<script src="js/site-shell.js"></script></body></html>

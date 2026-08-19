@@ -232,21 +232,10 @@
             overflow: hidden;
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="antialiased min-h-screen flex flex-col relative overflow-x-hidden selection:bg-primary/30 selection:text-primary">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30 flex justify-between items-center px-margin-desktop py-4 mx-auto hidden md:flex">
-<a class="text-headline-md font-headline-md tracking-tighter text-on-surface dark:text-on-surface" href="#">SL Creative</a>
-<div class="flex gap-8 items-center text-label-caps font-label-caps">
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-4 py-2 rounded" href="portfolio.html">Work</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-4 py-2 rounded" href="services.html">Services</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-4 py-2 rounded" href="#">Pricing</a>
-<a class="text-primary dark:text-primary border-b-2 border-primary pb-1" href="#">Reviews</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-4 py-2 rounded" href="about.html">About</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-variant/20 px-4 py-2 rounded" href="contact.html">Contact</a>
-</div>
-<button class="bg-primary text-on-primary text-label-caps font-label-caps px-6 py-3 rounded hover:bg-primary/90 transition-colors">Book a Consultation</button>
-</nav>
+
 <!-- Mobile Nav (Simplified) -->
 <nav class="md:hidden fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 px-margin-mobile py-4 flex justify-between items-center">
 <a class="text-headline-lg-mobile font-headline-lg-mobile tracking-tighter text-on-surface" href="#">SL</a>
@@ -411,7 +400,6 @@
 <div class="text-body-md font-body-md text-on-surface-variant">© 2024 SL Creative. All Rights Reserved.</div>
 </div>
 </footer>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -466,5 +454,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

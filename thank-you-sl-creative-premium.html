@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thank You - SL Creative</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#b2b3b3",
+                        "surface-bright": "#393939",
+                        "tertiary-fixed": "#e2e2e2",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "inverse-on-surface": "#313030",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-primary-fixed-variant": "#574500",
+                        "outline": "#99907c",
+                        "on-error": "#690005",
+                        "secondary": "#c9c6c5",
+                        "surface-container": "#20201f",
+                        "on-secondary-container": "#bab8b7",
+                        "primary-fixed": "#ffe088",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary": "#313030",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "secondary-container": "#4a4949",
+                        "primary": "#f2ca50",
+                        "surface-dim": "#131313",
+                        "background": "#131313",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-surface-variant": "#d0c5af",
+                        "inverse-surface": "#e5e2e1",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container-high": "#2a2a2a",
+                        "surface": "#131313",
+                        "on-background": "#e5e2e1",
+                        "on-primary-container": "#554300",
+                        "on-primary": "#3c2f00",
+                        "surface-container-highest": "#353535",
+                        "on-primary-fixed": "#241a00",
+                        "surface-variant": "#353535",
+                        "surface-tint": "#e9c349",
+                        "on-tertiary": "#2f3131",
+                        "outline-variant": "#4d4635",
+                        "on-secondary-fixed-variant": "#474646",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary-container": "#d4af37",
+                        "tertiary": "#cecece",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#434546",
+                        "inverse-primary": "#735c00",
+                        "on-secondary-fixed": "#1c1b1b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "24px",
+                        "unit": "8px",
+                        "margin-desktop": "80px",
+                        "container-max": "1440px",
+                        "gutter": "24px",
+                        "section-gap": "160px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-md": ["Outfit"],
+                        "headline-lg": ["Outfit"],
+                        "headline-lg-mobile": ["Outfit"],
+                        "label-caps": ["Outfit"],
+                        "display-lg": ["Outfit"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(242, 202, 80, 0.2);
+            box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.05), 0 20px 40px rgba(0,0,0,0.4);
+        }
+        
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 50%, #e9c349 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .ambient-glow {
+            box-shadow: 0 0 60px 15px rgba(242, 202, 80, 0.15);
+        }
+
+        @keyframes checkmark {
+            0% { stroke-dashoffset: 100; opacity: 0; }
+            100% { stroke-dashoffset: 0; opacity: 1; }
+        }
+
+        .animate-check {
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100;
+            animation: checkmark 1s ease-in-out forwards 0.5s;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
+<body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col relative overflow-x-hidden selection:bg-primary selection:text-on-primary">
+<!-- Decorative Background Elements -->
+<div class="fixed inset-0 pointer-events-none z-0">
+<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/5 blur-[120px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-primary-container/5 blur-[150px]"></div>
+</div>
+<!-- Top Navigation (Hidden on this transactional page to focus on content) -->
+<!-- Nav is intentionally suppressed per the Semantic Shell Mandate for transactional/success pages -->
+<!-- Main Content Canvas -->
+<main class="flex-grow flex items-center justify-center relative z-10 px-margin-mobile md:px-margin-desktop py-section-gap min-h-screen">
+<div class="w-full max-w-4xl mx-auto flex flex-col items-center text-center">
+<!-- Success Animation Container -->
+<div class="relative w-32 h-32 mb-12 floating">
+<div class="absolute inset-0 rounded-full border border-primary/20 ambient-glow bg-surface-container-low/50 backdrop-blur-md flex items-center justify-center">
+<svg class="w-16 h-16 text-primary" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" fill="none" r="10" stroke="rgba(242, 202, 80, 0.2)"></circle>
+<path class="animate-check" d="M8 12.5l3 3 5-6" stroke="#f2ca50"></path>
+</svg>
+</div>
+</div>
+<!-- Hero Typography -->
+<h1 class="font-display-lg text-display-lg mb-6 gold-gradient-text tracking-tighter">
+                Thank You!
+            </h1>
+<p class="font-headline-md text-headline-md text-on-surface mb-section-gap max-w-2xl text-balance">
+                Your project request has been successfully received by the SL Creative team.
+            </p>
+<!-- Timeline / Process Flow (Bento/Glassmorphism style) -->
+<div class="w-full max-w-3xl glass-card rounded-2xl p-8 md:p-12 mb-section-gap relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50"></div>
+<h3 class="font-label-caps text-label-caps text-primary mb-8 uppercase tracking-widest text-center">Next Steps</h3>
+<div class="relative flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-4 z-10">
+<!-- Progress Line (Desktop) -->
+<div class="hidden md:block absolute top-1/2 left-8 right-8 h-[1px] bg-outline-variant/30 -z-10 -translate-y-1/2">
+<div class="h-full bg-primary w-1/4 shadow-[0_0_10px_rgba(242,202,80,0.5)]"></div>
+</div>
+<!-- Progress Line (Mobile) -->
+<div class="block md:hidden absolute left-4 top-8 bottom-8 w-[1px] bg-outline-variant/30 -z-10">
+<div class="w-full bg-primary h-1/4 shadow-[0_0_10px_rgba(242,202,80,0.5)]"></div>
+</div>
+<!-- Step 1 (Active) -->
+<div class="flex flex-row md:flex-col items-center gap-4 group">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold ambient-glow relative z-10 shadow-lg">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="text-left md:text-center">
+<h4 class="font-body-md font-bold text-on-surface">Request Received</h4>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-row md:flex-col items-center gap-4 opacity-70">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest border border-outline text-on-surface-variant flex items-center justify-center relative z-10">
+<span class="material-symbols-outlined text-sm">visibility</span>
+</div>
+<div class="text-left md:text-center">
+<h4 class="font-body-md text-on-surface-variant">Under Review</h4>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-row md:flex-col items-center gap-4 opacity-50">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest border border-outline-variant/50 text-on-surface-variant/50 flex items-center justify-center relative z-10">
+<span class="material-symbols-outlined text-sm">forum</span>
+</div>
+<div class="text-left md:text-center">
+<h4 class="font-body-md text-on-surface-variant/50">Project Discussion</h4>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-row md:flex-col items-center gap-4 opacity-30">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest border border-outline-variant/50 text-on-surface-variant/50 flex items-center justify-center relative z-10">
+<span class="material-symbols-outlined text-sm">movie</span>
+</div>
+<div class="text-left md:text-center">
+<h4 class="font-body-md text-on-surface-variant/50">Production</h4>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="flex flex-row md:flex-col items-center gap-4 opacity-30">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest border border-outline-variant/50 text-on-surface-variant/50 flex items-center justify-center relative z-10">
+<span class="material-symbols-outlined text-sm">rocket_launch</span>
+</div>
+<div class="text-left md:text-center">
+<h4 class="font-body-md text-on-surface-variant/50">Delivery</h4>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row items-center gap-6 w-full justify-center">
+<a class="w-full sm:w-auto px-8 py-4 bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest rounded-none hover:bg-primary-fixed-dim transition-colors duration-300 flex items-center justify-center gap-2" href="#">
+<span class="material-symbols-outlined">home</span>
+                    Return Home
+                </a>
+<a class="w-full sm:w-auto px-8 py-4 bg-transparent border border-primary/50 text-on-surface font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary/10 transition-all duration-300 flex items-center justify-center gap-2 backdrop-blur-sm" href="#">
+<span class="material-symbols-outlined">design_services</span>
+                    View Services
+                </a>
+<a class="w-full sm:w-auto px-8 py-4 bg-transparent text-on-surface-variant font-label-caps text-label-caps uppercase tracking-widest hover:text-primary transition-colors duration-300 flex items-center justify-center gap-2 underline underline-offset-8 decoration-outline-variant hover:decoration-primary" href="#">
+                    Contact Team
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</main>
+<!-- Footer (Simplified for transaction page) -->
+<footer class="w-full py-12 px-margin-desktop border-t border-outline-variant/20 flex flex-col items-center justify-center mt-auto">
+<div class="font-headline-md text-headline-md text-primary/50 tracking-tighter mb-4">SL Creative</div>
+<p class="font-body-md text-body-md text-on-surface-variant/60 text-center text-sm">
+            © 2024 SL Creative. Uncompromising Excellence in Post-Production.
+        </p>
+</footer>
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+<script src="js/site-shell.js"></script></body></html>

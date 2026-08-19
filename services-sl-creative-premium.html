@@ -147,36 +147,11 @@
             background: rgba(212, 175, 55, 0.1);
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
 <div class="custom-cursor hidden md:block" id="cursor"></div>
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm transition-all duration-300" id="navbar">
-<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 w-full max-w-container-max mx-auto">
-<!-- Brand -->
-<a class="flex items-center gap-3" href="#">
-<img alt="SL Creative Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBki3ROi5khftySlGUl_JChGgV3Q1ZubpCg0QFTHW7I5DeOfXzICCzvQOcUuB5xCIYXbrEWlRe_5iUh4sE-ZZWGRatxcaOsW7yKuoQYJU_zC3Zah0SIaNhTcXPd_W8LO3CsTohmLMJYuPiujAWXxW3NR0caNk4gdbo_ts-5crFZ99XH-QGSKroEBiLSfm1Pe5-LMKfDlqyBVxypcsHquCC4tA-ysWc4moAkWvWN6TxD9T7pEdaGdE7-AvMCNWHAJAJ2Uv4"/>
-<span class="font-display-lg text-headline-md tracking-tighter text-primary">SL Creative</span>
-</a>
-<!-- Desktop Nav -->
-<div class="hidden md:flex items-center gap-8">
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300 cursor-pointer active:scale-95" href="#">Portfolio</a>
-<a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 hover:text-primary transition-colors duration-300 cursor-pointer active:scale-95" href="services.html">Services</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300 cursor-pointer active:scale-95" href="#">Philosophy</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300 cursor-pointer active:scale-95" href="#">Studio</a>
-</div>
-<!-- CTA -->
-<div class="hidden md:block">
-<button class="font-label-caps text-label-caps bg-gold-gradient text-on-primary-container px-6 py-3 rounded-full hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all duration-300">
-                    Book a Consultation
-                </button>
-</div>
-<!-- Mobile Menu Toggle -->
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined text-3xl">menu</span>
-</button>
-</div>
-</nav>
+
 <!-- Hero Section -->
 <section class="relative min-h-[90vh] flex items-center justify-center pt-32 pb-20 overflow-hidden">
 <!-- Background Image with Overlay -->
@@ -355,7 +330,6 @@
             });
         }
     </script>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -410,5 +384,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

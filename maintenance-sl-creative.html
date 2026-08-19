@@ -128,14 +128,10 @@
             background-color: #0B0B0B; /* Override for Cinematic Noir */
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="bg-background text-on-surface min-h-screen flex flex-col font-body-md selection:bg-primary selection:text-on-primary">
 <!-- TopNavBar (Simplified for Maintenance) -->
-<nav class="fixed top-0 w-full bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm z-50">
-<div class="flex justify-between items-center px-margin-desktop max-md:px-margin-mobile py-6 w-full max-w-container-max mx-auto">
-<div class="font-display-lg text-headline-md max-md:text-headline-lg-mobile tracking-tighter text-primary">SL Creative</div>
-</div>
-</nav>
+
 <!-- Main Content -->
 <main class="flex-grow flex flex-col items-center justify-center px-margin-desktop max-md:px-margin-mobile pt-32 pb-section-gap relative overflow-hidden">
 <!-- Background Atmospheric Element -->
@@ -199,7 +195,6 @@
 </div>
 </div>
 </footer>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -254,5 +249,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

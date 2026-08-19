@@ -144,7 +144,7 @@
             border-radius: 20px;
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col overflow-x-hidden selection:bg-primary/30 selection:text-primary">
 <!-- Ambient Background Effects -->
 <div class="fixed inset-0 pointer-events-none z-[-1] overflow-hidden">
@@ -152,21 +152,7 @@
 <div class="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] rounded-full bg-surface-container-highest/20 blur-[100px]"></div>
 </div>
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30">
-<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 mx-auto max-w-container-max">
-<a class="text-headline-md font-headline-md tracking-tighter text-on-surface dark:text-on-surface" href="#">SL Creative</a>
-<div class="hidden md:flex items-center gap-8">
-<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="portfolio.html">Work</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="services.html">Services</a>
-<a class="text-label-caps font-label-caps text-primary border-b-2 border-primary pb-1" href="#">Pricing</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="about.html">About</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="contact.html">Contact</a>
-</div>
-<button class="bg-primary text-on-primary px-6 py-2 rounded-full text-label-caps font-label-caps hover:bg-primary-fixed transition-colors hover:scale-105 duration-300">
-                Book a Consultation
-            </button>
-</div>
-</nav>
+
 <!-- Main Content -->
 <main class="flex-grow pt-[120px] pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
 <div class="mb-16 md:mb-24 text-center md:text-left max-w-3xl">
@@ -511,7 +497,6 @@
             updateCalculator();
         });
     </script>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -566,5 +551,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

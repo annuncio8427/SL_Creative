@@ -192,18 +192,13 @@
             box-shadow: 0 20px 60px rgba(212,175,55,0.05);
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="antialiased min-h-screen flex flex-col">
 <!-- TopNavBar -->
 <header class="bg-surface/60 backdrop-blur-xl border-b border-primary/20 shadow-[0_20px_40px_rgba(212,175,55,0.05)] fixed top-0 w-full z-50">
 <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 w-full max-w-container-max mx-auto">
 <div class="font-display-lg text-headline-md text-primary tracking-tight">SL Creative</div>
-<nav class="hidden md:flex space-x-8">
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#">Dashboard</a>
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#">Projects</a>
-<a class="text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary transition-colors duration-300" href="#">Media Kit</a>
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#">Support</a>
-</nav>
+
 <div class="flex items-center space-x-4">
 <button class="text-primary hover:scale-95 duration-200">
 <span class="material-symbols-outlined">search</span>
@@ -314,7 +309,6 @@
 </div>
 </div>
 </footer>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -369,5 +363,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

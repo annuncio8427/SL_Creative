@@ -144,32 +144,20 @@
             background-image: radial-gradient(theme('colors.surface-variant') 1px, transparent 1px);
             background-size: 24px 24px;
         }
+        /* Slider scrollbar hiding */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="font-body-md text-on-background min-h-screen flex flex-col antialiased selection:bg-primary selection:text-on-primary">
 <div class="custom-cursor hidden md:block"></div>
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30 transition-all duration-300">
-<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 mx-auto max-w-container-max">
-<a class="text-headline-md font-headline-md tracking-tighter text-on-surface dark:text-on-surface cursor-interactive flex items-center gap-2" href="#">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">camera</span>
-                SL Creative
-            </a>
-<div class="hidden md:flex gap-8 items-center">
-<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors cursor-interactive py-2" href="portfolio.html">Work</a>
-<a class="text-label-caps font-label-caps text-primary dark:text-primary border-b-2 border-primary pb-1 cursor-interactive py-2" href="services.html">Services</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors cursor-interactive py-2" href="pricing-calculator.html">Pricing</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors cursor-interactive py-2" href="about.html">About</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors cursor-interactive py-2" href="contact.html">Contact</a>
-</div>
-<button class="hidden md:block bg-primary text-on-primary text-label-caps font-label-caps px-6 py-3 rounded hover:bg-primary-fixed-dim transition-colors cursor-interactive">
-                Book a Consultation
-            </button>
-<button class="md:hidden text-on-surface cursor-interactive">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</nav>
+
 <main class="flex-grow pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full relative">
 <!-- Ambient Background -->
 <div class="absolute inset-0 bg-pattern opacity-10 pointer-events-none -z-10"></div>
@@ -227,98 +215,157 @@
 </div>
 </div>
 </section>
-<!-- Pricing Section -->
+<!-- Investment / Pricing Section -->
 <section>
 <div class="flex items-center gap-4 mb-16">
 <div class="h-[1px] flex-grow bg-gradient-to-r from-transparent to-outline-variant/50"></div>
 <h2 class="text-label-caps font-label-caps text-primary tracking-widest">INVESTMENT</h2>
 <div class="h-[1px] flex-grow bg-gradient-to-l from-transparent to-outline-variant/50"></div>
 </div>
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-<!-- Starter Tier -->
-<div class="glass-panel p-8 rounded-xl border-outline-variant/50 flex flex-col h-full cursor-interactive">
-<div class="mb-8">
-<h3 class="text-headline-md font-headline-md mb-2">Essential</h3>
-<p class="text-body-md font-body-md text-on-surface-variant">Perfect for growing creators.</p>
-<div class="mt-6 flex items-baseline gap-1">
-<span class="text-headline-lg font-headline-lg">$499</span>
-<span class="text-body-md font-body-md text-on-surface-variant">/project</span>
-</div>
-</div>
-<ul class="flex-grow space-y-4 mb-8">
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-sm mt-1">check</span>
-<span class="text-body-md font-body-md">Up to 5 minutes final runtime</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-sm mt-1">check</span>
-<span class="text-body-md font-body-md">Basic Color Correction</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-sm mt-1">check</span>
-<span class="text-body-md font-body-md">2 Revisions</span>
-</li>
-</ul>
-<button class="w-full py-4 border border-outline-variant hover:border-primary text-label-caps font-label-caps uppercase tracking-wider transition-colors">Select Essential</button>
-</div>
-<!-- Professional Tier (Highlighted) -->
-<div class="glass-panel p-10 rounded-xl border-primary/50 relative transform lg:scale-105 shadow-[0_0_60px_rgba(242,202,80,0.1)] flex flex-col h-full cursor-interactive z-10">
-<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-surface border border-primary px-4 py-1 text-[10px] font-bold uppercase tracking-widest text-primary">
-                        Most Popular
+<!-- Slider Container -->
+<div class="relative w-full px-0 md:px-8" id="pricingSlider">
+    <!-- Slider Track -->
+    <div class="flex transition-transform duration-500 ease-out" id="sliderTrack">
+        <!-- Card 1: Candid Reel Editing -->
+        <div class="min-w-full md:min-w-[50%] lg:min-w-[33.333%] p-2">
+            <div class="glass-panel p-8 rounded-xl border-outline-variant/50 flex flex-col h-full cursor-interactive">
+                <div class="mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-surface-variant border border-outline-variant flex items-center justify-center mb-4">
+                        <span class="material-symbols-outlined text-primary">photo_camera</span>
                     </div>
-<div class="mb-8 text-center">
-<h3 class="text-headline-lg-mobile font-headline-lg-mobile mb-2 text-primary">Professional</h3>
-<p class="text-body-md font-body-md text-on-surface-variant">For serious brands and campaigns.</p>
-<div class="mt-6 flex items-baseline justify-center gap-1">
-<span class="text-display-lg font-display-lg text-white">$999</span>
-<span class="text-body-md font-body-md text-on-surface-variant">/project</span>
-</div>
-</div>
-<ul class="flex-grow space-y-4 mb-8">
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-sm mt-1">check</span>
-<span class="text-body-md font-body-md">Up to 15 minutes final runtime</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-sm mt-1">check</span>
-<span class="text-body-md font-body-md">Advanced Cinematic Color Grading</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-sm mt-1">check</span>
-<span class="text-body-md font-body-md">Custom Motion Graphics</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-sm mt-1">check</span>
-<span class="text-body-md font-body-md">Unlimited Revisions</span>
-</li>
-</ul>
-<button class="w-full py-4 bg-primary text-on-primary text-label-caps font-label-caps uppercase tracking-wider hover:bg-primary-fixed-dim transition-colors">Select Professional</button>
-</div>
-<!-- Premium Tier -->
-<div class="glass-panel p-8 rounded-xl border-outline-variant/50 flex flex-col h-full cursor-interactive">
-<div class="mb-8">
-<h3 class="text-headline-md font-headline-md mb-2">Cinematic</h3>
-<p class="text-body-md font-body-md text-on-surface-variant">Full-scale production value.</p>
-<div class="mt-6 flex items-baseline gap-1">
-<span class="text-headline-lg font-headline-lg">Custom</span>
-</div>
-</div>
-<ul class="flex-grow space-y-4 mb-8">
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-sm mt-1">check</span>
-<span class="text-body-md font-body-md">Feature-length or series editing</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-sm mt-1">check</span>
-<span class="text-body-md font-body-md">Full Sound Design &amp; Mixing</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-sm mt-1">check</span>
-<span class="text-body-md font-body-md">Dedicated Project Manager</span>
-</li>
-</ul>
-<button class="w-full py-4 border border-outline-variant hover:border-primary text-label-caps font-label-caps uppercase tracking-wider transition-colors">Inquire Now</button>
-</div>
+                    <h3 class="text-headline-md-mobile font-headline-md-mobile mb-2">Candid Reel Editing</h3>
+                    <p class="text-body-md font-body-md text-on-surface-variant mb-4">Natural and storytelling-based reel editing that captures authentic moments with smooth cuts and subtle transitions.</p>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-headline-lg font-headline-lg text-primary">₹400 - ₹700</span>
+                        <span class="text-body-md font-body-md text-on-surface-variant ml-1">/project</span>
+                    </div>
+                    <p class="text-xs font-label-caps text-on-surface-variant tracking-widest mt-1">STARTING AT</p>
+                </div>
+                <ul class="flex-grow space-y-3 mb-8">
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Duration: 40 to 50 seconds</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Natural storytelling edit</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Smooth transitions</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Background music sync</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Optional text overlays</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">HD export (1080p)</span></li>
+                </ul>
+                <button class="w-full py-4 border border-primary/50 text-primary text-label-caps font-label-caps uppercase tracking-wider hover:bg-primary/10 transition-colors rounded-full">Know More</button>
+            </div>
+        </div>
+        <!-- Card 2: Professional Reel Editing -->
+        <div class="min-w-full md:min-w-[50%] lg:min-w-[33.333%] p-2">
+            <div class="glass-panel p-8 rounded-xl border-outline-variant/50 flex flex-col h-full cursor-interactive">
+                <div class="mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-surface-variant border border-outline-variant flex items-center justify-center mb-4">
+                        <span class="material-symbols-outlined text-primary">movie</span>
+                    </div>
+                    <h3 class="text-headline-md-mobile font-headline-md-mobile mb-2">Professional Reel Editing</h3>
+                    <p class="text-body-md font-body-md text-on-surface-variant mb-4">High-quality Instagram reel editing with speed cuts, cinematic transitions, color grading, and trending audio sync.</p>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-headline-lg font-headline-lg text-primary">₹500 - ₹700</span>
+                        <span class="text-body-md font-body-md text-on-surface-variant ml-1">/project</span>
+                    </div>
+                    <p class="text-xs font-label-caps text-on-surface-variant tracking-widest mt-1">STARTING AT</p>
+                </div>
+                <ul class="flex-grow space-y-3 mb-8">
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Duration: 40 to 50 seconds</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Speed cut editing style</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Cinematic colour grading</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Trending audio sync</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Text & title overlays</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">HD export (1080p)</span></li>
+                </ul>
+                <button class="w-full py-4 border border-primary/50 text-primary text-label-caps font-label-caps uppercase tracking-wider hover:bg-primary/10 transition-colors rounded-full">Know More</button>
+            </div>
+        </div>
+        <!-- Card 3: Teaser Cut -->
+        <div class="min-w-full md:min-w-[50%] lg:min-w-[33.333%] p-2">
+            <div class="glass-panel p-8 rounded-xl border-outline-variant/50 flex flex-col h-full cursor-interactive">
+                <div class="mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-surface-variant border border-outline-variant flex items-center justify-center mb-4">
+                        <span class="material-symbols-outlined text-primary">auto_awesome</span>
+                    </div>
+                    <h3 class="text-headline-md-mobile font-headline-md-mobile mb-2">Teaser Cut</h3>
+                    <p class="text-body-md font-body-md text-on-surface-variant mb-4">Premium teaser-style edit with custom logo animation, text motion graphics, and advanced cinematic transitions.</p>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-headline-lg font-headline-lg text-primary">₹1,200 - ₹1,800</span>
+                        <span class="text-body-md font-body-md text-on-surface-variant ml-1">/project</span>
+                    </div>
+                    <p class="text-xs font-label-caps text-on-surface-variant tracking-widest mt-1">STARTING AT</p>
+                </div>
+                <ul class="flex-grow space-y-3 mb-8">
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Duration: 40 seconds to 1 minute</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Custom logo animation</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Professional text animations</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Advanced transitions</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Cinematic colour grading</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">HD export (1080p)</span></li>
+                </ul>
+                <button class="w-full py-4 border border-primary/50 text-primary text-label-caps font-label-caps uppercase tracking-wider hover:bg-primary/10 transition-colors rounded-full">Know More</button>
+            </div>
+        </div>
+        <!-- Card 4: Traditional Full Video -->
+        <div class="min-w-full md:min-w-[50%] lg:min-w-[33.333%] p-2">
+            <div class="glass-panel p-8 rounded-xl border-outline-variant/50 flex flex-col h-full cursor-interactive">
+                <div class="mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-surface-variant border border-outline-variant flex items-center justify-center mb-4">
+                        <span class="material-symbols-outlined text-primary">video_library</span>
+                    </div>
+                    <h3 class="text-headline-md-mobile font-headline-md-mobile mb-2">Traditional Full Video</h3>
+                    <p class="text-body-md font-body-md text-on-surface-variant mb-4">Complete wedding or birthday video editing with structured storytelling, music, titles, and polished audio.</p>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-headline-lg font-headline-lg text-primary">₹3,750 - ₹8,000</span>
+                        <span class="text-body-md font-body-md text-on-surface-variant ml-1">/project</span>
+                    </div>
+                    <p class="text-xs font-label-caps text-on-surface-variant tracking-widest mt-1">STARTING AT</p>
+                </div>
+                <ul class="flex-grow space-y-3 mb-8">
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Duration: 30 to 40 minutes</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Complete event storytelling</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Color correction</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Audio balancing</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Titles and background music</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">HD export (1080p)</span></li>
+                </ul>
+                <button class="w-full py-4 border border-primary/50 text-primary text-label-caps font-label-caps uppercase tracking-wider hover:bg-primary/10 transition-colors rounded-full">Know More</button>
+            </div>
+        </div>
+        <!-- Card 5: Traditional Reel -->
+        <div class="min-w-full md:min-w-[50%] lg:min-w-[33.333%] p-2">
+            <div class="glass-panel p-8 rounded-xl border-outline-variant/50 flex flex-col h-full cursor-interactive">
+                <div class="mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-surface-variant border border-outline-variant flex items-center justify-center mb-4">
+                        <span class="material-symbols-outlined text-primary">celebration</span>
+                    </div>
+                    <h3 class="text-headline-md-mobile font-headline-md-mobile mb-2">Traditional Reel</h3>
+                    <p class="text-body-md font-body-md text-on-surface-variant mb-4">Cinematic wedding and birthday highlight reel with smooth transitions, music sync, and elegant color enhancement.</p>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-headline-lg font-headline-lg text-primary">₹1,000 - ₹1,400</span>
+                        <span class="text-body-md font-body-md text-on-surface-variant ml-1">/project</span>
+                    </div>
+                    <p class="text-xs font-label-caps text-on-surface-variant tracking-widest mt-1">STARTING AT</p>
+                </div>
+                <ul class="flex-grow space-y-3 mb-8">
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Duration: 30 seconds to 1 minute</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Wedding & birthday highlights</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Cinematic colour grading</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Music synchronization</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">Text overlays if required</span></li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-1">check</span><span class="text-body-md font-body-md">HD export (1080p)</span></li>
+                </ul>
+                <button class="w-full py-4 border border-primary/50 text-primary text-label-caps font-label-caps uppercase tracking-wider hover:bg-primary/10 transition-colors rounded-full">Know More</button>
+            </div>
+        </div>
+    </div>
+    <!-- Navigation Arrows -->
+    <button class="absolute top-1/2 -left-2 md:left-2 transform -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-surface/80 backdrop-blur border border-outline-variant hover:border-primary transition-colors flex items-center justify-center text-on-surface disabled:opacity-50 disabled:cursor-not-allowed" id="prevBtn">
+        <span class="material-symbols-outlined">chevron_left</span>
+    </button>
+    <button class="absolute top-1/2 -right-2 md:right-2 transform -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-surface/80 backdrop-blur border border-outline-variant hover:border-primary transition-colors flex items-center justify-center text-on-surface disabled:opacity-50 disabled:cursor-not-allowed" id="nextBtn">
+        <span class="material-symbols-outlined">chevron_right</span>
+    </button>
+    <!-- Indicator Dots -->
+    <div class="flex justify-center gap-2 mt-8" id="dotContainer"></div>
 </div>
 </section>
 </main>
@@ -329,16 +376,81 @@
                 SL Creative
             </div>
 <div class="flex flex-wrap justify-center gap-6">
-<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80 cursor-interactive" href="#">Instagram</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80 cursor-interactive" href="https://www.instagram.com/sl_creative__">Instagram</a>
 <a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80 cursor-interactive" href="#">Vimeo</a>
 <a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80 cursor-interactive" href="#">LinkedIn</a>
 <a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 hover:opacity-80 cursor-interactive" href="privacy-policy.html">Privacy Policy</a>
 </div>
 <div class="text-body-md font-body-md text-on-surface-variant">
-                © 2024 SL Creative. All Rights Reserved.
+                © 2026 SL Creative. All Rights Reserved.
             </div>
 </div>
 </footer>
+<!-- Slider Script -->
+<script>
+    (function() {
+        const track = document.getElementById('sliderTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dotContainer = document.getElementById('dotContainer');
+        const items = track.children;
+        const totalItems = items.length;
+        let currentIndex = 0;
+
+        function getVisibleItems() {
+            if (window.innerWidth >= 1024) return 3;
+            if (window.innerWidth >= 768) return 2;
+            return 1;
+        }
+
+        function updateSlider() {
+            const visible = getVisibleItems();
+            const maxIndex = Math.max(0, totalItems - visible);
+            if (currentIndex > maxIndex) currentIndex = maxIndex;
+            const offset = -currentIndex * (100 / visible);
+            track.style.transform = `translateX(${offset}%)`;
+            
+            // Update buttons
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex >= maxIndex;
+            
+            updateDots(visible, maxIndex);
+        }
+
+        function updateDots(visible, maxIndex) {
+            const totalPages = Math.ceil(totalItems / visible);
+            dotContainer.innerHTML = '';
+            for (let i = 0; i < totalPages; i++) {
+                const dot = document.createElement('button');
+                const isActive = i === Math.floor(currentIndex / visible);
+                dot.className = `w-2 h-2 rounded-full transition-all duration-300 ${isActive ? 'bg-primary w-4' : 'bg-surface-variant hover:bg-primary/50'}`;
+                dot.onclick = () => { 
+                    currentIndex = i * visible; 
+                    updateSlider(); 
+                };
+                dotContainer.appendChild(dot);
+            }
+        }
+
+        prevBtn.addEventListener('click', () => {
+            const visible = getVisibleItems();
+            currentIndex = Math.max(0, currentIndex - visible);
+            updateSlider();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            const visible = getVisibleItems();
+            const maxIndex = Math.max(0, totalItems - visible);
+            currentIndex = Math.min(maxIndex, currentIndex + visible);
+            updateSlider();
+        });
+
+        window.addEventListener('resize', updateSlider);
+
+        // Initialize
+        updateSlider();
+    })();
+</script>
 <script>
         // Custom Cursor Logic
         const cursor = document.querySelector('.custom-cursor');
@@ -360,7 +472,6 @@
             });
         }
     </script>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -415,5 +526,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

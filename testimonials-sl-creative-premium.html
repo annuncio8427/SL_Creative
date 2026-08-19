@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Testimonials - SL Creative</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#b2b3b3",
+                        "surface-bright": "#393939",
+                        "tertiary-fixed": "#e2e2e2",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "inverse-on-surface": "#313030",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-primary-fixed-variant": "#574500",
+                        "outline": "#99907c",
+                        "on-error": "#690005",
+                        "secondary": "#c9c6c5",
+                        "surface-container": "#20201f",
+                        "on-secondary-container": "#bab8b7",
+                        "primary-fixed": "#ffe088",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary": "#313030",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "secondary-container": "#4a4949",
+                        "primary": "#f2ca50",
+                        "surface-dim": "#131313",
+                        "background": "#131313",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-surface-variant": "#d0c5af",
+                        "inverse-surface": "#e5e2e1",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container-high": "#2a2a2a",
+                        "surface": "#131313",
+                        "on-background": "#e5e2e1",
+                        "on-primary-container": "#554300",
+                        "on-primary": "#3c2f00",
+                        "surface-container-highest": "#353535",
+                        "on-primary-fixed": "#241a00",
+                        "surface-variant": "#353535",
+                        "surface-tint": "#e9c349",
+                        "on-tertiary": "#2f3131",
+                        "outline-variant": "#4d4635",
+                        "on-secondary-fixed-variant": "#474646",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary-container": "#d4af37",
+                        "tertiary": "#cecece",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#434546",
+                        "inverse-primary": "#735c00",
+                        "on-secondary-fixed": "#1c1b1b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "24px",
+                        "unit": "8px",
+                        "margin-desktop": "80px",
+                        "container-max": "1440px",
+                        "gutter": "24px",
+                        "section-gap": "160px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-md": ["Outfit"],
+                        "headline-lg": ["Outfit"],
+                        "headline-lg-mobile": ["Outfit"],
+                        "label-caps": ["Outfit"],
+                        "display-lg": ["Outfit"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(242, 202, 80, 0.2);
+            box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.05);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .custom-cursor {
+            width: 32px;
+            height: 32px;
+            border: 1px solid #f2ca50;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s;
+        }
+        body:hover .custom-cursor { opacity: 1; }
+        .interactive:hover ~ .custom-cursor {
+            width: 48px;
+            height: 48px;
+            background: rgba(242, 202, 80, 0.1);
+        }
+    </style>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<div class="custom-cursor hidden md:block"></div>
+<!-- TopNavBar -->
+
+<!-- Hero Section -->
+<header class="relative pt-40 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-center text-center">
+<h1 class="font-display-lg text-display-lg md:text-[88px] leading-tight mb-6">
+            Trusted By <br/> <span class="gold-gradient-text">Brands &amp; Creators</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">
+            Discover how our uncompromising approach to cinematic post-production has elevated visual storytelling for industry leaders worldwide.
+        </p>
+<div class="glass-panel rounded-full px-8 py-4 flex items-center gap-6">
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="w-px h-6 bg-outline-variant"></div>
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-widest">100+ Happy Clients</span>
+</div>
+</header>
+<!-- Client Reviews Bento Grid -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Featured Large Card -->
+<div class="glass-panel p-8 rounded-xl md:col-span-2 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-4">
+<img class="w-16 h-16 rounded-full object-cover border border-primary/30" data-alt="Portrait of a creative director in a dimly lit, high-end studio with glowing monitors, cinematic lighting, sharp focus, professional corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6fc1Dx7eZLKBoc95BpE8imhzjsm_M3vfktLo1c7o31HrZqMIFyJLZVoakmRjWHxn94M2w4PJuR6RN1cBKIGhYuOf9TirKBr4NjYWOtTdwoujF9phCv0REkxzbAQlLlNkeVdoHfwaTViJuXPJ6YXdKtgtFsjbHOaPIq5ovXXzr9F2V8HnJnq6qW6wHa9jKo25tcFARhvdP266RM16HS-e5E3aW1Znq2yIaDhkvZWI-va2z1m4DSwu1Zw"/>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Elena Rostova</h3>
+<p class="font-body-md text-body-md text-primary">Creative Director, Apex Films</p>
+</div>
+</div>
+<div class="flex text-primary">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant italic mb-8">"SL Creative didn't just edit our film; they sculpted it. Their understanding of color theory and pacing is unparalleled. The final deliverable exceeded our highest expectations and truly brought our vision to life."</p>
+</div>
+<div class="inline-flex items-center gap-2 border border-outline-variant/50 rounded-full px-4 py-2 w-fit">
+<span class="material-symbols-outlined text-primary text-sm">movie</span>
+<span class="font-label-caps text-label-caps text-on-surface">Project: "Neon Nights" Feature</span>
+</div>
+</div>
+<!-- Standard Card -->
+<div class="glass-panel p-8 rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-4 mb-6">
+<img class="w-12 h-12 rounded-full object-cover border border-primary/30" data-alt="Portrait of a young male content creator, modern urban setting, neon lights in background, sharp focus, stylish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZVBPbjdD6ov83249jk-zKFUdYRUiiLCUWJahatUDjeMvvZrCG48MlFJy3HmHVO3Czi-AoDaBAr34xx1Wp7SJfJp7_1wu1IITzlccarj7sO-U2zi62uuwoR4FpqQ2t-X0fSwb9L6_W1-VWQyZqzAtXMSNWXvYpeWdkv5QXKNlh-fbnIrCDa9bZlQRYg0NmkJpEST7Z7Qam60S78vX3RrPCpYIEimeBD1qCHGcUsNZZf0W4C_oxUYuDmQ"/>
+<div>
+<h4 class="font-body-lg text-on-surface font-semibold">Marcus Vance</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Vance Media</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">"The attention to detail in their sound design and grading transformed my documentary into a cinematic experience. Absolute professionals."</p>
+</div>
+<div class="inline-flex items-center gap-2 border border-outline-variant/50 rounded-full px-3 py-1 w-fit mt-auto">
+<span class="font-label-caps text-label-caps text-primary text-[10px]">Docu-Series</span>
+</div>
+</div>
+<!-- Standard Card -->
+<div class="glass-panel p-8 rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-4 mb-6">
+<img class="w-12 h-12 rounded-full object-cover border border-primary/30" data-alt="Portrait of an elegant woman, luxury brand manager, sophisticated studio lighting, dark background, premium feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBimoWMIgsr-M1O_E7hqG-xQuclOLSfqwQkrnwjXSk4giKcolygd1bd3f4EZEsLgr4ZafxNdmiR2AYNwbS7rPIVhhcIOMC6NHS8zamSlojdcRVAwoRcaqqodGfCMyOR7HHDDUc3jtZtO1XUJ8FC0IUgMgD8k8vzym6nhjGRpymM6pSibUKR9-Aou6ankRlmAJQOCkp4G3yCPLfndBn9YZy2r_PQmfApok_2gW-lctbvd_wxmIkaJ8pIpw"/>
+<div>
+<h4 class="font-body-lg text-on-surface font-semibold">Sarah Jenkins</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Lumiere Luxury</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">"Our brand demands perfection, and SL Creative delivers precisely that. Their aesthetic aligns perfectly with luxury standards."</p>
+</div>
+<div class="inline-flex items-center gap-2 border border-outline-variant/50 rounded-full px-3 py-1 w-fit mt-auto">
+<span class="font-label-caps text-label-caps text-primary text-[10px]">Commercial Campaign</span>
+</div>
+</div>
+<!-- Wide Secondary Card -->
+<div class="glass-panel p-8 rounded-xl md:col-span-2 flex flex-col sm:flex-row items-center gap-8">
+<img class="w-full sm:w-1/3 h-48 object-cover rounded-lg" data-alt="A high-end recording studio control room, massive mixing console, glowing screens showing timelines, dark acoustic panels, moody professional lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3yQxvbrwEvf6csdecJ_WO3UVoRoWN9zYaw4K6YAOtgJGYYxhYQaskeYcmZj5vMRdRA3PCKPA4w6TD70bt8-pU4ahzzz58lFq2cS6tdUmstgCi_zYCKn7wGmH6txIKWfMO_bHQtZtMtQ27bbWpcpbkHdK3EeQJKH-x_Hk-P64cFIvTaYK6N_NdXiua2vCSBkkbn0byOvRJI4ATYKuT1KEi_cMF3ZX6Bg3ePbsBRbaiDnFDZBNnJbT7KA"/>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Sonic Perfection</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">"The Foley and mix work on our latest action sequence was visceral. They don't just understand picture; their audio engineering team is world-class."</p>
+<p class="font-label-caps text-label-caps text-primary">- David Chen, Lead Producer</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Video Testimonials -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-section-gap">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12 text-center">Hear From Our Partners</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="relative group cursor-pointer interactive">
+<img class="w-full h-80 object-cover rounded-xl border border-outline-variant/20 transition-transform duration-500 group-hover:scale-[1.02]" data-alt="A video thumbnail showing a director on set, cinematic lighting, dark mood, professional camera equipment visible." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYV8qIlzMblYnOdNB7MxCQgPvUkt-dz0Jgd4GhjolQVqPspOSgvHjyY14j1rygJffzA-pI-nzplXTZrVY6WCMY_M2526dPiL_Gv4sJbFJT57qdQp-DrsXr0FmtYmSaHCJr38k821GTskWV9J8C4j-Z6uYCafl78_YUMlrfZc5Ar4tdzRBOYx4xSF55DvbhJLFRzIG7-EJAki4rY743TjDrA6oT4-MWtfGKjIRYnRBe7QD3tzefP3WBJw"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors rounded-xl flex items-center justify-center">
+<div class="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center shadow-[0_0_30px_rgba(242,202,80,0.5)] backdrop-blur-md">
+<span class="material-symbols-outlined text-on-primary text-3xl ml-1" data-weight="fill" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-6 left-6 right-6">
+<h4 class="font-headline-md text-on-surface text-xl">The Art of Grading</h4>
+<p class="font-body-md text-on-surface-variant">Director's Cut Walkthrough</p>
+</div>
+</div>
+<div class="relative group cursor-pointer interactive">
+<img class="w-full h-80 object-cover rounded-xl border border-outline-variant/20 transition-transform duration-500 group-hover:scale-[1.02]" data-alt="A video thumbnail showing a visual effects artist working in a dark studio, glowing monitors reflecting on their face, high-tech environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxuyLIWmvtBdFQz8DdYxx-hs95wh_PgpQaqV5mxd14-F-Ej1X8hFm7cL0_ve_yw2VoB__HXmE3bsK6-JtMYGPUCuASuYlb138JfSMRbJd1p3SicpbGFgucKKQZQLuBwHGhU6Bl72u2vqcpwDjNxgd6fWCt3W9i6kM_j7ZoMtcoDMDdmUK6RV1jMxlt7Y-kuL9e9YLMMhczc1mceiNJdV9_QWF_vm3aWrO53XXtAWKbOn1tBvD9n_qPiA"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors rounded-xl flex items-center justify-center">
+<div class="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center shadow-[0_0_30px_rgba(242,202,80,0.5)] backdrop-blur-md">
+<span class="material-symbols-outlined text-on-primary text-3xl ml-1" data-weight="fill" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-6 left-6 right-6">
+<h4 class="font-headline-md text-on-surface text-xl">Seamless VFX Integration</h4>
+<p class="font-body-md text-on-surface-variant">Behind the Scenes</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="relative py-32 px-margin-mobile md:px-margin-desktop flex flex-col items-center justify-center text-center border-t border-outline-variant/20">
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#f2ca50 1px, transparent 1px); background-size: 32px 32px;"></div>
+<h2 class="font-display-lg text-display-lg text-on-surface mb-6 relative z-10">Let's Create Something <span class="gold-gradient-text">Amazing</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-12 relative z-10">Ready to elevate your next project to cinematic standards? Our team is ready to collaborate.</p>
+<div class="flex flex-col sm:flex-row gap-6 relative z-10">
+<button class="bg-primary text-on-primary font-body-md font-semibold px-8 py-4 rounded hover:bg-primary-fixed-dim transition-colors">
+                Book Now
+            </button>
+<button class="border border-primary text-primary font-body-md font-semibold px-8 py-4 rounded hover:bg-primary/10 transition-colors">
+                Contact Us
+            </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-section-gap px-margin-desktop max-w-container-max mx-auto flex flex-col items-center gap-unit bg-background border-t border-outline-variant/20">
+<div class="font-headline-lg text-primary mb-8">SL Creative</div>
+<div class="flex flex-wrap justify-center gap-8 mb-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">Case Studies</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">Careers</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">FAQ</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">Terms &amp; Conditions</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="contact.html">Contact</a>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant/60 text-center">
+            © 2024 SL Creative. Uncompromising Excellence in Post-Production.
+        </p>
+</footer>
+<script>
+        // Custom Cursor Logic
+        const cursor = document.querySelector('.custom-cursor');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        const interactives = document.querySelectorAll('a, button, .interactive');
+        interactives.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                cursor.style.backgroundColor = 'rgba(242, 202, 80, 0.1)';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursor.style.backgroundColor = 'transparent';
+            });
+        });
+    </script>
+<script id="global-nav-router">
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = [
+        { keywords: ['home', 'sl creative', 'logo'], target: 'index.html' },
+        { keywords: ['work', 'portfolio', 'selected works', 'explore our work'], target: 'portfolio.html' },
+        { keywords: ['services', 'disciplines', 'services & pricing'], target: 'services.html' },
+        { keywords: ['about', 'our story', 'who we are'], target: 'about.html' },
+        { keywords: ['team', 'our team'], target: 'team.html' },
+        { keywords: ['careers'], target: 'careers.html' },
+        { keywords: ['contact', 'get in touch'], target: 'contact.html' },
+        { keywords: ['book', 'consultation', 'book a consultation', 'book a project'], target: 'book.html' },
+        { keywords: ['login', 'sign in', 'client portal login'], target: 'login.html' },
+        { keywords: ['create account', 'register', 'sign up', 'join'], target: 'create-account.html' },
+        { keywords: ['forgot password', 'reset link'], target: 'forgot-password.html' },
+        { keywords: ['dashboard', 'client portal', 'overview'], target: 'dashboard.html' },
+        { keywords: ['timeline', 'milestones'], target: 'timeline.html' },
+        { keywords: ['project details'], target: 'project-details.html' },
+        { keywords: ['files', 'assets library'], target: 'files.html' },
+        { keywords: ['upload'], target: 'file-upload.html' },
+        { keywords: ['invoice', 'invoices'], target: 'invoice.html' },
+        { keywords: ['pricing calculator', 'estimate'], target: 'pricing-calculator.html' },
+        { keywords: ['quote'], target: 'quote.html' },
+        { keywords: ['resources', 'downloads'], target: 'resources.html' },
+        { keywords: ['support', 'help desk'], target: 'support.html' },
+        { keywords: ['privacy policy'], target: 'privacy-policy.html' },
+        { keywords: ['terms & conditions', 'terms of service', 'terms'], target: 'terms-conditions.html' },
+        { keywords: ['cookie policy'], target: 'cookie-policy.html' },
+        { keywords: ['cancellation policy'], target: 'cancellation-policy.html' },
+        { keywords: ['refund policy'], target: 'refund-policy.html' },
+        { keywords: ['licensing', 'nda'], target: 'licensing-nda.html' }
+    ];
+
+    document.querySelectorAll('a, button').forEach(elem => {
+        const text = (elem.innerText || elem.getAttribute('aria-label') || '').trim().toLowerCase();
+        const currentHref = elem.getAttribute('href');
+
+        if (!currentHref || currentHref === '#' || currentHref === '' || currentHref.startsWith('javascript:')) {
+            for (const route of routeMap) {
+                if (route.keywords.some(kw => text === kw || text.includes(kw))) {
+                    if (elem.tagName.toLowerCase() === 'a') {
+                        elem.setAttribute('href', route.target);
+                    } else {
+                        elem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.location.href = route.target;
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+    });
+});
+</script>
+<script src="js/site-shell.js"></script></body></html>

@@ -203,37 +203,12 @@
             box-shadow: 0 0 60px 15px rgba(242, 202, 80, 0.15);
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="bg-background text-on-surface antialiased overflow-x-hidden min-h-screen flex flex-col">
 <!-- Custom Cursor -->
 <div class="custom-cursor hidden md:block" id="cursor"></div>
 <!-- Top Navigation (JSON) -->
-<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-primary/20 shadow-[0_20px_40px_rgba(212,175,55,0.05)] transition-all duration-300">
-<div class="max-w-container-max mx-auto px-margin-desktop h-20 w-full flex justify-between items-center">
-<!-- Brand -->
-<a class="font-display-lg text-headline-md text-primary tracking-tight interactive" href="#">SL Creative</a>
-<!-- Links (Desktop) -->
-<div class="hidden md:flex gap-8 items-center">
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300 interactive" href="#">Dashboard</a>
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300 interactive" href="#">Projects</a>
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300 interactive" href="#">Media Kit</a>
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300 interactive" href="#">Support</a>
-</div>
-<!-- Actions -->
-<div class="flex items-center gap-4">
-<!-- Search (on_right) -->
-<button aria-label="Search" class="text-primary interactive p-2 rounded-full hover:bg-surface-variant transition-colors">
-<span class="material-symbols-outlined" data-icon="search">search</span>
-</button>
-<button class="hidden md:flex bg-primary text-on-primary-fixed px-6 py-2 rounded font-body-md hover:bg-primary-fixed transition-colors interactive scale-95 duration-200">
-                    Portal
-                </button>
-<div class="w-10 h-10 rounded-full bg-surface-variant overflow-hidden interactive border border-primary/20">
-<img alt="User Profile" class="w-full h-full object-cover" data-alt="A detailed headshot portrait of a professional in a cinematic studio setting, dramatically lit from one side, looking directly at the camera, conveying expertise and focus. The background is a dark, out-of-focus studio environment. Color palette is dark minimal with warm gold highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuueE1J8jTJhAO4ce6TMthjc74D4j1dYrbOjt4_jj_f80RS5OGTacJ2HS7_Vg-f-OvK68d44zOLXF3I2Fysf5g-yyUOXAoLEaI5ypSS6I-svboYNgSsd3vy7W97La7joCl9v-pQLzgzR9_-d5HPqxw4qvEwTwNpOTx6VsgqsWn9R7dvCyPm5CCD8WTkpwUewE5LHhgXctELoqiXGtvSDuotCTbrfHNDSLCI32pK8-wJ0O86Yw5r4VdOA"/>
-</div>
-</div>
-</div>
-</nav>
+
 <!-- Main Canvas -->
 <main class="flex-grow pt-24 pb-section-gap">
 <!-- Hero Section -->
@@ -335,7 +310,6 @@
             });
         });
     </script>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -390,5 +364,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

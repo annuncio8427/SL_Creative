@@ -149,19 +149,13 @@
             background-color: rgba(242, 202, 80, 0.1);
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="bg-background text-on-surface antialiased font-body-md min-h-screen flex flex-col">
 <div class="cursor-custom hidden md:block" id="custom-cursor"></div>
 <!-- TopNavBar -->
 <header class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30 flat no shadows flex justify-between items-center px-margin-desktop py-4 mx-auto max-w-container-max">
 <a class="text-headline-md font-headline-md tracking-tighter text-on-surface dark:text-on-surface" href="#">SL Creative</a>
-<nav class="hidden md:flex gap-8 items-center">
-<a class="text-primary dark:text-primary border-b-2 border-primary pb-1 text-label-caps font-label-caps hover:bg-surface-variant/20 scale 0.98x transition-all duration-300" href="portfolio.html">Work</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors text-label-caps font-label-caps hover:bg-surface-variant/20" href="services.html">Services</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors text-label-caps font-label-caps hover:bg-surface-variant/20" href="#">Pricing</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors text-label-caps font-label-caps hover:bg-surface-variant/20" href="about.html">About</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors text-label-caps font-label-caps hover:bg-surface-variant/20" href="contact.html">Contact</a>
-</nav>
+
 <button class="hidden md:inline-flex items-center justify-center bg-primary text-on-primary px-6 py-3 text-label-caps font-label-caps hover:bg-primary-fixed-dim transition-colors rounded-sm">
             Book a Consultation
         </button>
@@ -308,7 +302,6 @@
             });
         }
     </script>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -363,5 +356,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

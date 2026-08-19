@@ -149,24 +149,10 @@
             animation: fadeIn 0.8s ease-out forwards;
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="font-body-md">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30 flex justify-between items-center px-margin-desktop py-4 mx-auto">
-<div class="text-headline-md font-headline-md tracking-tighter text-on-surface">
-            SL Creative
-        </div>
-<div class="hidden md:flex items-center gap-8">
-<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-caps text-label-caps" href="portfolio.html">Work</a>
-<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-caps text-label-caps" href="services.html">Services</a>
-<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-caps text-label-caps" href="#">Pricing</a>
-<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-caps text-label-caps" href="about.html">About</a>
-<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-caps text-label-caps" href="contact.html">Contact</a>
-</div>
-<button class="bg-primary text-on-primary px-6 py-2 font-label-caps text-label-caps hover:scale-[0.98] transition-all duration-300">
-            Book a Consultation
-        </button>
-</nav>
+
 <!-- Hero Section -->
 <header class="pt-40 pb-20 px-margin-desktop max-w-container-max mx-auto text-center animate-fade-in">
 <div class="mb-4">
@@ -435,7 +421,6 @@
             observer.observe(card);
         });
     </script>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -490,5 +475,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

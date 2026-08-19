@@ -1,276 +1,257 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Client Portal | SL Creative Agency</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Client Portal | SL Creative Agency</title>
+<link href="css/styles.css" rel="stylesheet"/>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body style="background: #090909; overflow-x: hidden;">
-
-  <!-- Portal Header -->
-  <header style="height: 70px; background: var(--bg-surface); border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; padding: 0 28px; position: fixed; top: 0; left: 0; width: 100%; z-index: 100;">
-    <a href="index.html" class="brand-logo">
-      <div class="brand-symbol">SL</div>
-      <div class="brand-text">SL <span>PORTAL</span></div>
-    </a>
-    <div style="display: flex; align-items: center; gap: 20px;">
-      <button class="btn btn-secondary btn-sm" onclick="showToast('You have 3 unread messages', 'info')">🔔 Notifications (3)</button>
-      <div style="display: flex; align-items: center; gap: 10px;">
-        <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--gold-gradient); color: #000; font-weight: 700; display: flex; align-items: center; justify-content: center;">AM</div>
-        <span style="font-weight: 600; font-size: 14px;">Alex Morgan</span>
-      </div>
-    </div>
-  </header>
-
-  <!-- Portal Body Grid -->
-  <div style="display: flex; margin-top: 70px; min-height: calc(100vh - 70px);" class="tabs-container">
-    
-    <!-- Sidebar Navigation -->
-    <aside style="width: 260px; background: var(--bg-surface-elevated); border-right: 1px solid var(--border-color); padding: 24px 16px; flex-shrink: 0;">
-      <div style="font-size: 11px; text-transform: uppercase; font-weight: 700; color: var(--text-dim); margin-bottom: 12px; padding-left: 12px;">Client Workspace</div>
-      <ul style="list-style: none; display: flex; flex-direction: column; gap: 4px;">
-        <li><button class="tab-btn active" data-tab="tab-dashboard" style="width: 100%; text-align: left; border-radius: 4px;">📊 Dashboard</button></li>
-        <li><button class="tab-btn" data-tab="tab-details" style="width: 100%; text-align: left; border-radius: 4px;">📁 Project Details</button></li>
-        <li><button class="tab-btn" data-tab="tab-timeline" style="width: 100%; text-align: left; border-radius: 4px;">⏳ Project Timeline</button></li>
-        <li><button class="tab-btn" data-tab="tab-files" style="width: 100%; text-align: left; border-radius: 4px;">📂 Project Files</button></li>
-        <li><button class="tab-btn" data-tab="tab-upload" style="width: 100%; text-align: left; border-radius: 4px;">📤 Upload Files</button></li>
-        <li><button class="tab-btn" data-tab="tab-downloads" style="width: 100%; text-align: left; border-radius: 4px;">📥 Downloads</button></li>
-        <li><button class="tab-btn" data-tab="tab-invoices" style="width: 100%; text-align: left; border-radius: 4px;">📄 Invoices</button></li>
-        <li><button class="tab-btn" data-tab="tab-payments" style="width: 100%; text-align: left; border-radius: 4px;">💳 Payments</button></li>
-        <li><button class="tab-btn" data-tab="tab-notifications" style="width: 100%; text-align: left; border-radius: 4px;">🔔 Notifications</button></li>
-        <li><button class="tab-btn" data-tab="tab-messages" style="width: 100%; text-align: left; border-radius: 4px;">💬 Messages</button></li>
-        <li><button class="tab-btn" data-tab="tab-profile" style="width: 100%; text-align: left; border-radius: 4px;">👤 Profile</button></li>
-        <li><button class="tab-btn" data-tab="tab-settings" style="width: 100%; text-align: left; border-radius: 4px;">⚙️ Settings</button></li>
-      </ul>
-    </aside>
-
-    <!-- Main Content Area -->
-    <main style="flex: 1; padding: 40px; background: radial-gradient(circle at 70% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);">
-      
-      <!-- 1. Dashboard View -->
-      <div id="tab-dashboard" class="tab-content active">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px;">
-          <div>
-            <h1 style="font-size: 28px;">Welcome back, Alex</h1>
-            <p class="text-dim" style="font-size: 14px;">Active Campaign: <strong class="text-gold">AURA Luxury Brand Film (2026)</strong></p>
-          </div>
-          <button class="btn btn-primary" data-modal-target="modal-upload">Upload Asset</button>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 32px;">
-          <div class="glass-card" style="padding: 20px;">
-            <div class="text-dim" style="font-size: 12px; font-weight: 700; text-transform: uppercase;">Overall Progress</div>
-            <div style="font-size: 32px; font-weight: 800; color: var(--primary-gold-bright); margin: 8px 0;">78%</div>
-            <div class="badge badge-success">On Schedule</div>
-          </div>
-          <div class="glass-card" style="padding: 20px;">
-            <div class="text-dim" style="font-size: 12px; font-weight: 700; text-transform: uppercase;">Next Milestone</div>
-            <div style="font-size: 20px; font-weight: 700; color: #fff; margin: 8px 0;">Color Grading Cut</div>
-            <div class="text-muted" style="font-size: 12px;">Due: Aug 15, 2026</div>
-          </div>
-          <div class="glass-card" style="padding: 20px;">
-            <div class="text-dim" style="font-size: 12px; font-weight: 700; text-transform: uppercase;">Outstanding Balance</div>
-            <div style="font-size: 32px; font-weight: 800; color: #fff; margin: 8px 0;">$14,500</div>
-            <a href="#" onclick="document.querySelector('[data-tab=\'tab-invoices\']').click()" class="text-gold" style="font-size: 12px; text-decoration: none;">View Invoice #INV-8842 →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2. Project Details View -->
-      <div id="tab-details" class="tab-content">
-        <h2 style="font-size: 24px; margin-bottom: 16px;">Project Details</h2>
-        <div class="glass-card">
-          <h3 style="font-size: 20px; margin-bottom: 12px;">AURA Luxury Brand Film</h3>
-          <p class="text-muted" style="margin-bottom: 20px;">High-end 8K cinematic commercial, 3D product rendering, and global digital distribution campaign.</p>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-            <div>
-              <div class="text-dim" style="font-size: 12px; font-weight: 700; text-transform: uppercase;">Creative Director</div>
-              <div style="font-weight: 600;">Marcus Vance (SL Studio)</div>
-            </div>
-            <div>
-              <div class="text-dim" style="font-size: 12px; font-weight: 700; text-transform: uppercase;">Deliverables Format</div>
-              <div style="font-weight: 600;">ProRes 4444 XQ, 8K DCI, Spatial Audio</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3. Project Timeline View -->
-      <div id="tab-timeline" class="tab-content">
-        <h2 style="font-size: 24px; margin-bottom: 16px;">Project Timeline</h2>
-        <div class="glass-card">
-          <div style="display: flex; flex-direction: column; gap: 20px;">
-            <div style="display: flex; gap: 16px; align-items: flex-start;">
-              <div class="badge badge-success">Completed</div>
-              <div>
-                <h4 style="color: #fff;">Phase 1: Storyboarding & Pre-Production</h4>
-                <p class="text-dim" style="font-size: 13px;">Finalized July 10, 2026</p>
-              </div>
-            </div>
-            <div style="display: flex; gap: 16px; align-items: flex-start;">
-              <div class="badge badge-warning">In Progress</div>
-              <div>
-                <h4 style="color: #fff;">Phase 2: Principal Photography & 3D Render Passes</h4>
-                <p class="text-dim" style="font-size: 13px;">Target Completion: Aug 18, 2026</p>
-              </div>
-            </div>
-            <div style="display: flex; gap: 16px; align-items: flex-start;">
-              <div class="badge">Upcoming</div>
-              <div>
-                <h4 style="color: #fff;">Phase 3: Sound Design & Final Mastering</h4>
-                <p class="text-dim" style="font-size: 13px;">Target Completion: Aug 30, 2026</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4. Project Files View -->
-      <div id="tab-files" class="tab-content">
-        <h2 style="font-size: 24px; margin-bottom: 16px;">Project Files Library</h2>
-        <div class="glass-card">
-          <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px;">
-            <thead>
-              <tr style="border-bottom: 1px solid var(--border-color); color: var(--text-dim);">
-                <th style="padding: 12px;">File Name</th>
-                <th style="padding: 12px;">Type</th>
-                <th style="padding: 12px;">Size</th>
-                <th style="padding: 12px;">Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-                <td style="padding: 12px; color: #fff;">AURA_Storyboards_v3.pdf</td>
-                <td style="padding: 12px;" class="text-muted">PDF Document</td>
-                <td style="padding: 12px;" class="text-muted">45.2 MB</td>
-                <td style="padding: 12px;"><a href="#" class="text-gold" onclick="showToast('Downloading file...', 'info')">Download</a></td>
-              </tr>
-              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-                <td style="padding: 12px; color: #fff;">Rough_Cut_ProRes_1080p.mov</td>
-                <td style="padding: 12px;" class="text-muted">Video File</td>
-                <td style="padding: 12px;" class="text-muted">1.8 GB</td>
-                <td style="padding: 12px;"><a href="#" class="text-gold" onclick="showToast('Downloading file...', 'info')">Download</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- 5. Upload Files View -->
-      <div id="tab-upload" class="tab-content">
-        <h2 style="font-size: 24px; margin-bottom: 16px;">Upload Files</h2>
-        <div class="glass-card" style="text-align: center; border: 2px dashed var(--primary-gold); padding: 60px;">
-          <div style="font-size: 48px; margin-bottom: 12px;">📤</div>
-          <h3 style="margin-bottom: 8px;">Drag and drop raw footage or assets here</h3>
-          <p class="text-dim" style="margin-bottom: 20px;">Supports RAW, ProRes, EXR, PNG, ZIP up to 50GB</p>
-          <button class="btn btn-primary" onclick="showToast('File dialog opened', 'info')">Browse Computer</button>
-        </div>
-      </div>
-
-      <!-- 6. Downloads View -->
-      <div id="tab-downloads" class="tab-content">
-        <h2 style="font-size: 24px; margin-bottom: 16px;">Client Downloads</h2>
-        <div class="glass-card">
-          <p class="text-muted">Ready for master export downloads.</p>
-          <button class="btn btn-secondary" style="margin-top: 12px;" onclick="showToast('Preparing zip download package...', 'info')">Download All Approved Master Files (.ZIP)</button>
-        </div>
-      </div>
-
-      <!-- 7. Invoices View -->
-      <div id="tab-invoices" class="tab-content">
-        <h2 style="font-size: 24px; margin-bottom: 16px;">Invoices</h2>
-        <div class="glass-card">
-          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 16px; margin-bottom: 16px;">
-            <div>
-              <h4 style="color: #fff;">Invoice #INV-8842</h4>
-              <p class="text-dim" style="font-size: 13px;">Issued: Aug 1, 2026 | Due: Aug 15, 2026</p>
-            </div>
-            <div style="text-align: right;">
-              <div style="font-size: 20px; font-weight: 700;" class="text-gold">$14,500.00</div>
-              <a href="payments.html" class="btn btn-primary btn-sm" style="margin-top: 6px;">Pay Invoice Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 8. Payments View -->
-      <div id="tab-payments" class="tab-content">
-        <h2 style="font-size: 24px; margin-bottom: 16px;">Payment History</h2>
-        <div class="glass-card">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <div>
-              <div style="color: #fff; font-weight: 600;">Initial Retainer Deposit</div>
-              <p class="text-dim" style="font-size: 12px;">Paid via Wire Transfer on July 01, 2026</p>
-            </div>
-            <div class="badge badge-success">$25,000.00 PAID</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 9. Notifications View -->
-      <div id="tab-notifications" class="tab-content">
-        <h2 style="font-size: 24px; margin-bottom: 16px;">Notifications</h2>
-        <div class="glass-card">
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
-            <li style="border-bottom: 1px solid var(--border-glass); padding-bottom: 8px;">
-              <strong style="color: var(--primary-gold-bright);">New Comment:</strong> Marcus Vance commented on Color Grading Cut v2.
+<!-- Portal Header -->
+<header style="height: 70px; background: var(--bg-surface); border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; padding: 0 28px; position: fixed; top: 0; left: 0; width: 100%; z-index: 100;">
+<a class="brand-logo" href="index.html">
+<div class="brand-symbol">SL</div>
+<div class="brand-text">SL <span>PORTAL</span></div>
+</a>
+<div style="display: flex; align-items: center; gap: 20px;">
+<button class="btn btn-secondary btn-sm" onclick="showToast('You have 3 unread messages', 'info')">🔔 Notifications (3)</button>
+<div style="display: flex; align-items: center; gap: 10px;">
+<div style="width: 36px; height: 36px; border-radius: 50%; background: var(--gold-gradient); color: #000; font-weight: 700; display: flex; align-items: center; justify-content: center;">AM</div>
+<span style="font-weight: 600; font-size: 14px;">Alex Morgan</span>
+</div>
+</div>
+</header>
+<!-- Portal Body Grid -->
+<div class="tabs-container" style="display: flex; margin-top: 70px; min-height: calc(100vh - 70px);">
+<!-- Sidebar Navigation -->
+<aside style="width: 260px; background: var(--bg-surface-elevated); border-right: 1px solid var(--border-color); padding: 24px 16px; flex-shrink: 0;">
+<div style="font-size: 11px; text-transform: uppercase; font-weight: 700; color: var(--text-dim); margin-bottom: 12px; padding-left: 12px;">Client Workspace</div>
+<ul style="list-style: none; display: flex; flex-direction: column; gap: 4px;">
+<li><button class="tab-btn active" data-tab="tab-dashboard" style="width: 100%; text-align: left; border-radius: 4px;">📊 Dashboard</button></li>
+<li><button class="tab-btn" data-tab="tab-details" style="width: 100%; text-align: left; border-radius: 4px;">📁 Project Details</button></li>
+<li><button class="tab-btn" data-tab="tab-timeline" style="width: 100%; text-align: left; border-radius: 4px;">⏳ Project Timeline</button></li>
+<li><button class="tab-btn" data-tab="tab-files" style="width: 100%; text-align: left; border-radius: 4px;">📂 Project Files</button></li>
+<li><button class="tab-btn" data-tab="tab-upload" style="width: 100%; text-align: left; border-radius: 4px;">📤 Upload Files</button></li>
+<li><button class="tab-btn" data-tab="tab-downloads" style="width: 100%; text-align: left; border-radius: 4px;">📥 Downloads</button></li>
+<li><button class="tab-btn" data-tab="tab-invoices" style="width: 100%; text-align: left; border-radius: 4px;">📄 Invoices</button></li>
+<li><button class="tab-btn" data-tab="tab-payments" style="width: 100%; text-align: left; border-radius: 4px;">💳 Payments</button></li>
+<li><button class="tab-btn" data-tab="tab-notifications" style="width: 100%; text-align: left; border-radius: 4px;">🔔 Notifications</button></li>
+<li><button class="tab-btn" data-tab="tab-messages" style="width: 100%; text-align: left; border-radius: 4px;">💬 Messages</button></li>
+<li><button class="tab-btn" data-tab="tab-profile" style="width: 100%; text-align: left; border-radius: 4px;">👤 Profile</button></li>
+<li><button class="tab-btn" data-tab="tab-settings" style="width: 100%; text-align: left; border-radius: 4px;">⚙️ Settings</button></li>
+</ul>
+</aside>
+<!-- Main Content Area -->
+<main style="flex: 1; padding: 40px; background: radial-gradient(circle at 70% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);">
+<!-- 1. Dashboard View -->
+<div class="tab-content active" id="tab-dashboard">
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px;">
+<div>
+<h1 style="font-size: 28px;">Welcome back, Alex</h1>
+<p class="text-dim" style="font-size: 14px;">Active Campaign: <strong class="text-gold">AURA Luxury Brand Film (2026)</strong></p>
+</div>
+<button class="btn btn-primary" data-modal-target="modal-upload">Upload Asset</button>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 32px;">
+<div class="glass-card" style="padding: 20px;">
+<div class="text-dim" style="font-size: 12px; font-weight: 700; text-transform: uppercase;">Overall Progress</div>
+<div style="font-size: 32px; font-weight: 800; color: var(--primary-gold-bright); margin: 8px 0;">78%</div>
+<div class="badge badge-success">On Schedule</div>
+</div>
+<div class="glass-card" style="padding: 20px;">
+<div class="text-dim" style="font-size: 12px; font-weight: 700; text-transform: uppercase;">Next Milestone</div>
+<div style="font-size: 20px; font-weight: 700; color: #fff; margin: 8px 0;">Color Grading Cut</div>
+<div class="text-muted" style="font-size: 12px;">Due: Aug 15, 2026</div>
+</div>
+<div class="glass-card" style="padding: 20px;">
+<div class="text-dim" style="font-size: 12px; font-weight: 700; text-transform: uppercase;">Outstanding Balance</div>
+<div style="font-size: 32px; font-weight: 800; color: #fff; margin: 8px 0;">$14,500</div>
+<a class="text-gold" href="#" onclick="document.querySelector('[data-tab=\'tab-invoices\']').click()" style="font-size: 12px; text-decoration: none;">View Invoice #INV-8842 →</a>
+</div>
+</div>
+</div>
+<!-- 2. Project Details View -->
+<div class="tab-content" id="tab-details">
+<h2 style="font-size: 24px; margin-bottom: 16px;">Project Details</h2>
+<div class="glass-card">
+<h3 style="font-size: 20px; margin-bottom: 12px;">AURA Luxury Brand Film</h3>
+<p class="text-muted" style="margin-bottom: 20px;">High-end 8K cinematic commercial, 3D product rendering, and global digital distribution campaign.</p>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+<div>
+<div class="text-dim" style="font-size: 12px; font-weight: 700; text-transform: uppercase;">Creative Director</div>
+<div style="font-weight: 600;">Marcus Vance (SL Studio)</div>
+</div>
+<div>
+<div class="text-dim" style="font-size: 12px; font-weight: 700; text-transform: uppercase;">Deliverables Format</div>
+<div style="font-weight: 600;">ProRes 4444 XQ, 8K DCI, Spatial Audio</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. Project Timeline View -->
+<div class="tab-content" id="tab-timeline">
+<h2 style="font-size: 24px; margin-bottom: 16px;">Project Timeline</h2>
+<div class="glass-card">
+<div style="display: flex; flex-direction: column; gap: 20px;">
+<div style="display: flex; gap: 16px; align-items: flex-start;">
+<div class="badge badge-success">Completed</div>
+<div>
+<h4 style="color: #fff;">Phase 1: Storyboarding &amp; Pre-Production</h4>
+<p class="text-dim" style="font-size: 13px;">Finalized July 10, 2026</p>
+</div>
+</div>
+<div style="display: flex; gap: 16px; align-items: flex-start;">
+<div class="badge badge-warning">In Progress</div>
+<div>
+<h4 style="color: #fff;">Phase 2: Principal Photography &amp; 3D Render Passes</h4>
+<p class="text-dim" style="font-size: 13px;">Target Completion: Aug 18, 2026</p>
+</div>
+</div>
+<div style="display: flex; gap: 16px; align-items: flex-start;">
+<div class="badge">Upcoming</div>
+<div>
+<h4 style="color: #fff;">Phase 3: Sound Design &amp; Final Mastering</h4>
+<p class="text-dim" style="font-size: 13px;">Target Completion: Aug 30, 2026</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. Project Files View -->
+<div class="tab-content" id="tab-files">
+<h2 style="font-size: 24px; margin-bottom: 16px;">Project Files Library</h2>
+<div class="glass-card">
+<table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px;">
+<thead>
+<tr style="border-bottom: 1px solid var(--border-color); color: var(--text-dim);">
+<th style="padding: 12px;">File Name</th>
+<th style="padding: 12px;">Type</th>
+<th style="padding: 12px;">Size</th>
+<th style="padding: 12px;">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+<td style="padding: 12px; color: #fff;">AURA_Storyboards_v3.pdf</td>
+<td class="text-muted" style="padding: 12px;">PDF Document</td>
+<td class="text-muted" style="padding: 12px;">45.2 MB</td>
+<td style="padding: 12px;"><a class="text-gold" href="#" onclick="showToast('Downloading file...', 'info')">Download</a></td>
+</tr>
+<tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+<td style="padding: 12px; color: #fff;">Rough_Cut_ProRes_1080p.mov</td>
+<td class="text-muted" style="padding: 12px;">Video File</td>
+<td class="text-muted" style="padding: 12px;">1.8 GB</td>
+<td style="padding: 12px;"><a class="text-gold" href="#" onclick="showToast('Downloading file...', 'info')">Download</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- 5. Upload Files View -->
+<div class="tab-content" id="tab-upload">
+<h2 style="font-size: 24px; margin-bottom: 16px;">Upload Files</h2>
+<div class="glass-card" style="text-align: center; border: 2px dashed var(--primary-gold); padding: 60px;">
+<div style="font-size: 48px; margin-bottom: 12px;">📤</div>
+<h3 style="margin-bottom: 8px;">Drag and drop raw footage or assets here</h3>
+<p class="text-dim" style="margin-bottom: 20px;">Supports RAW, ProRes, EXR, PNG, ZIP up to 50GB</p>
+<button class="btn btn-primary" onclick="showToast('File dialog opened', 'info')">Browse Computer</button>
+</div>
+</div>
+<!-- 6. Downloads View -->
+<div class="tab-content" id="tab-downloads">
+<h2 style="font-size: 24px; margin-bottom: 16px;">Client Downloads</h2>
+<div class="glass-card">
+<p class="text-muted">Ready for master export downloads.</p>
+<button class="btn btn-secondary" onclick="showToast('Preparing zip download package...', 'info')" style="margin-top: 12px;">Download All Approved Master Files (.ZIP)</button>
+</div>
+</div>
+<!-- 7. Invoices View -->
+<div class="tab-content" id="tab-invoices">
+<h2 style="font-size: 24px; margin-bottom: 16px;">Invoices</h2>
+<div class="glass-card">
+<div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 16px; margin-bottom: 16px;">
+<div>
+<h4 style="color: #fff;">Invoice #INV-8842</h4>
+<p class="text-dim" style="font-size: 13px;">Issued: Aug 1, 2026 | Due: Aug 15, 2026</p>
+</div>
+<div style="text-align: right;">
+<div class="text-gold" style="font-size: 20px; font-weight: 700;">$14,500.00</div>
+<a class="btn btn-primary btn-sm" href="payments.html" style="margin-top: 6px;">Pay Invoice Now</a>
+</div>
+</div>
+</div>
+</div>
+<!-- 8. Payments View -->
+<div class="tab-content" id="tab-payments">
+<h2 style="font-size: 24px; margin-bottom: 16px;">Payment History</h2>
+<div class="glass-card">
+<div style="display: flex; justify-content: space-between; align-items: center;">
+<div>
+<div style="color: #fff; font-weight: 600;">Initial Retainer Deposit</div>
+<p class="text-dim" style="font-size: 12px;">Paid via Wire Transfer on July 01, 2026</p>
+</div>
+<div class="badge badge-success">$25,000.00 PAID</div>
+</div>
+</div>
+</div>
+<!-- 9. Notifications View -->
+<div class="tab-content" id="tab-notifications">
+<h2 style="font-size: 24px; margin-bottom: 16px;">Notifications</h2>
+<div class="glass-card">
+<ul style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
+<li style="border-bottom: 1px solid var(--border-glass); padding-bottom: 8px;">
+<strong style="color: var(--primary-gold-bright);">New Comment:</strong> Marcus Vance commented on Color Grading Cut v2.
             </li>
-            <li>
-              <strong style="color: #fff;">Milestone Achieved:</strong> Phase 1 Storyboards signed off.
+<li>
+<strong style="color: #fff;">Milestone Achieved:</strong> Phase 1 Storyboards signed off.
             </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- 10. Messages View -->
-      <div id="tab-messages" class="tab-content">
-        <h2 style="font-size: 24px; margin-bottom: 16px;">Direct Studio Messaging</h2>
-        <div class="glass-card" style="display: flex; flex-direction: column; height: 400px;">
-          <div style="flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px;">
-            <div style="align-self: flex-start; background: rgba(255,255,255,0.05); padding: 12px 16px; border-radius: 8px; max-width: 70%;">
-              <div class="text-gold" style="font-size: 12px; font-weight: 700;">Marcus Vance (Creative Lead)</div>
-              <div>We have updated the lighting render passes for scene 04. Let us know your thoughts!</div>
-            </div>
-          </div>
-          <form style="display: flex; gap: 12px;">
-            <input type="text" class="form-input" placeholder="Type message to studio directors..." required>
-            <button type="submit" class="btn btn-primary">Send</button>
-          </form>
-        </div>
-      </div>
-
-      <!-- 11. Profile View -->
-      <div id="tab-profile" class="tab-content">
-        <h2 style="font-size: 24px; margin-bottom: 16px;">Client Profile</h2>
-        <div class="glass-card" style="max-width: 600px;">
-          <div class="form-group">
-            <label class="form-label">Full Name</label>
-            <input type="text" class="form-input" value="Alex Morgan">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Organization Name</label>
-            <input type="text" class="form-input" value="BrandCo International">
-          </div>
-          <button class="btn btn-primary" onclick="showToast('Profile updated!', 'success')">Save Changes</button>
-        </div>
-      </div>
-
-      <!-- 12. Settings View -->
-      <div id="tab-settings" class="tab-content">
-        <h2 style="font-size: 24px; margin-bottom: 16px;">Account Settings</h2>
-        <div class="glass-card" style="max-width: 600px;">
-          <h3 style="font-size: 18px; margin-bottom: 12px;">Security & MFA</h3>
-          <p class="text-dim" style="font-size: 14px; margin-bottom: 16px;">Two-factor authentication is currently ENABLED for this client account.</p>
-          <button class="btn btn-secondary" onclick="showToast('Security settings configured.', 'info')">Manage 2FA Keys</button>
-        </div>
-      </div>
-
-    </main>
-  </div>
-
-  <script src="js/app.js"></script>
-
+</ul>
+</div>
+</div>
+<!-- 10. Messages View -->
+<div class="tab-content" id="tab-messages">
+<h2 style="font-size: 24px; margin-bottom: 16px;">Direct Studio Messaging</h2>
+<div class="glass-card" style="display: flex; flex-direction: column; height: 400px;">
+<div style="flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px;">
+<div style="align-self: flex-start; background: rgba(255,255,255,0.05); padding: 12px 16px; border-radius: 8px; max-width: 70%;">
+<div class="text-gold" style="font-size: 12px; font-weight: 700;">Marcus Vance (Creative Lead)</div>
+<div>We have updated the lighting render passes for scene 04. Let us know your thoughts!</div>
+</div>
+</div>
+<form style="display: flex; gap: 12px;">
+<input class="form-input" placeholder="Type message to studio directors..." required="" type="text"/>
+<button class="btn btn-primary" type="submit">Send</button>
+</form>
+</div>
+</div>
+<!-- 11. Profile View -->
+<div class="tab-content" id="tab-profile">
+<h2 style="font-size: 24px; margin-bottom: 16px;">Client Profile</h2>
+<div class="glass-card" style="max-width: 600px;">
+<div class="form-group">
+<label class="form-label">Full Name</label>
+<input class="form-input" type="text" value="Alex Morgan"/>
+</div>
+<div class="form-group">
+<label class="form-label">Organization Name</label>
+<input class="form-input" type="text" value="BrandCo International"/>
+</div>
+<button class="btn btn-primary" onclick="showToast('Profile updated!', 'success')">Save Changes</button>
+</div>
+</div>
+<!-- 12. Settings View -->
+<div class="tab-content" id="tab-settings">
+<h2 style="font-size: 24px; margin-bottom: 16px;">Account Settings</h2>
+<div class="glass-card" style="max-width: 600px;">
+<h3 style="font-size: 18px; margin-bottom: 12px;">Security &amp; MFA</h3>
+<p class="text-dim" style="font-size: 14px; margin-bottom: 16px;">Two-factor authentication is currently ENABLED for this client account.</p>
+<button class="btn btn-secondary" onclick="showToast('Security settings configured.', 'info')">Manage 2FA Keys</button>
+</div>
+</div>
+</main>
+</div>
+<script src="js/app.js"></script>
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -325,6 +306,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body>
+<script src="js/site-shell.js"></script></body>
 </html>

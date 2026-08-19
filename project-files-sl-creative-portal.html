@@ -214,61 +214,13 @@
         },
       }
     </script>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="text-on-surface font-body-md bg-background min-h-screen flex flex-col antialiased relative">
 <!-- Background Image -->
 <div class="fixed inset-0 z-[-1] opacity-20 pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLud7OFNRtUb70cGN1_TpEJkF3YAmLKUA0dQ1Y9g5c1xe7T_UUmmaEZzhmCZx5vFdnExXZv0moyBL0m5F6zQTfe5BHBoNp8XQ4ELqyI6e424Su3Du-Mz7Ql5aJsPQXqhHfFnYo5TghWrT-82csFtrpztJMYqmY8QcWF4l-c8nftw1G27ZEQk-s6gYCJWITiESIDF7XrM2QfON3FO4XX4XZFnG7LSFGNW200rCmQwYmMDUxrgazMa2F3WfznR'); background-size: cover; background-position: center;"></div>
 <div class="fixed inset-0 z-[-1] pointer-events-none bg-gradient-to-b from-background/50 to-background/95"></div>
 <!-- SideNavBar -->
-<nav class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 border-r border-outline-variant/30 bg-surface-container-low/70 dark:bg-surface-container-low/70 backdrop-blur-xl shadow-2xl shadow-primary/5 py-8 px-4 z-50">
-<!-- Brand -->
-<div class="mb-12 px-4 flex items-center gap-3">
-<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30">
-<span class="material-symbols-outlined text-primary text-xl">temp_preferences_custom</span>
-</div>
-<div>
-<h1 class="font-display-lg text-headline-md text-primary tracking-tighter" style="font-size: 24px; line-height: 28px;">SL Creative</h1>
-<p class="font-label-caps text-label-caps text-on-surface-variant mt-1">Client Portal</p>
-</div>
-</div>
-<!-- Primary Tabs -->
-<div class="flex-1 space-y-2">
-<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant font-medium hover:text-on-surface transition-colors hover:bg-surface-bright/20 transition-all duration-300" href="#">
-<span class="material-symbols-outlined text-[20px]" data-icon="dashboard">dashboard</span>
-<span class="font-label-caps text-label-caps">Dashboard</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-primary font-bold border-r-2 border-primary bg-surface-bright/10 hover:bg-surface-bright/20 hover:text-primary transition-all duration-300 scale-95 opacity-80" href="#">
-<span class="material-symbols-outlined text-[20px]" data-icon="work">work</span>
-<span class="font-label-caps text-label-caps">Projects</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant font-medium hover:text-on-surface transition-colors hover:bg-surface-bright/20 transition-all duration-300" href="#">
-<span class="material-symbols-outlined text-[20px]" data-icon="receipt_long">receipt_long</span>
-<span class="font-label-caps text-label-caps">Invoices</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant font-medium hover:text-on-surface transition-colors hover:bg-surface-bright/20 transition-all duration-300" href="#">
-<span class="material-symbols-outlined text-[20px]" data-icon="schedule">schedule</span>
-<span class="font-label-caps text-label-caps">Timeline</span>
-</a>
-</div>
-<!-- CTA -->
-<div class="mt-8 mb-6 px-4">
-<button class="w-full py-3 px-4 rounded-lg bg-transparent border border-primary/50 text-primary font-label-caps text-label-caps hover:bg-primary/10 transition-colors flex items-center justify-center gap-2">
-<span class="material-symbols-outlined text-[18px]">add</span>
-                New Request
-            </button>
-</div>
-<!-- Footer Tabs -->
-<div class="space-y-2 border-t border-outline-variant/30 pt-6">
-<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-on-surface-variant font-medium hover:text-on-surface transition-colors hover:bg-surface-bright/20 transition-all duration-300" href="#">
-<span class="material-symbols-outlined text-[20px]" data-icon="settings">settings</span>
-<span class="font-label-caps text-label-caps">Settings</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-on-surface-variant font-medium hover:text-on-surface transition-colors hover:bg-surface-bright/20 transition-all duration-300" href="#">
-<span class="material-symbols-outlined text-[20px]" data-icon="help_outline">help_outline</span>
-<span class="font-label-caps text-label-caps">Support</span>
-</a>
-</div>
-</nav>
+
 <!-- TopNavBar -->
 <header class="hidden md:flex justify-between items-center h-20 px-margin-desktop ml-64 bg-background/80 dark:bg-background/80 backdrop-blur-md fixed top-0 right-0 w-[calc(100%-16rem)] z-50 border-b border-outline-variant/20">
 <!-- Navigation Links -->
@@ -474,7 +426,6 @@
 <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="#">Contact Support</a>
 </div>
 </footer>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -529,5 +480,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>
