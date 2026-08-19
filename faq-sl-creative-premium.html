@@ -196,20 +196,14 @@
             background: #f2ca50; 
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="antialiased min-h-screen flex flex-col font-body-md">
 <!-- TopNavBar -->
 <header class="bg-background/80 backdrop-blur-xl font-body-md text-body-md uppercase tracking-widest fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto shadow-2xl shadow-primary/5 transition-all duration-300">
 <a class="font-headline-md text-headline-md text-primary tracking-tighter flex items-center gap-2" href="#">
             SL Creative
         </a>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 transition-all duration-300 px-4 py-2 rounded-lg" href="#">Case Studies</a>
-<a class="text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 transition-all duration-300 px-4 py-2 rounded-lg" href="#">Process</a>
-<a class="text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 transition-all duration-300 px-4 py-2 rounded-lg" href="#">Careers</a>
-<a class="text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 transition-all duration-300 px-4 py-2 rounded-lg" href="#">Blog</a>
-<a class="text-on-surface hover:text-primary transition-colors hover:bg-surface-bright/20 transition-all duration-300 px-4 py-2 rounded-lg" href="#">Booking</a>
-</nav>
+
 <button class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-DEFAULT font-label-caps text-label-caps hover:bg-primary-fixed transition-colors scale-95 active:scale-90 transition-transform">
             Inquire Now
         </button>
@@ -329,7 +323,6 @@
 </nav>
 <p class="text-sm opacity-60">© 2024 SL Creative. Uncompromising Excellence in Post-Production.</p>
 </footer>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -384,5 +377,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

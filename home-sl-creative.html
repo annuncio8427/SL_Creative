@@ -191,37 +191,12 @@
             background-color: rgba(242, 202, 80, 0.1);
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="font-body-md antialiased selection:bg-primary selection:text-on-primary">
 <!-- Custom Cursor Element -->
 <div class="custom-cursor hidden md:block" id="cursor"></div>
 <!-- Navigation (TopNavBar) -->
-<nav class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30 transition-all duration-300" id="main-nav">
-<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
-<!-- Brand -->
-<a class="text-headline-md font-headline-md tracking-tighter text-on-surface dark:text-on-surface flex items-center gap-3 interactive" href="#">
-<img alt="SL Creative Logo" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1jHuN8uO2KjrFuM5dBVHiY4f5gVrNQkwso27gR_dd5D8rinzepZRBXQ2BjsFMvD6S5AYiLwtTIFcpcoVCbQ_eNRv4m_CAfxHCaw3T5pvzZnUdO443iqA2jAZviNAMuak_Qnf-vu2hyQm5ZRPiar2m6FvYbnHL1dYvwhfrL2JdvdX5bqaEf9PTRhl1JnaN4ZPbzHpGird2DygSZSUF0lOyoLiRFreHZdFyslBr8y5G13yTDlvqT8CIcTNNLgqJqz-4rUI"/>
-<span>SL Creative</span>
-</a>
-<!-- Desktop Links -->
-<div class="hidden md:flex items-center gap-8">
-<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors interactive" href="#work">Work</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors interactive" href="#services">Services</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors interactive" href="#about">About</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors interactive" href="#contact">Contact</a>
-</div>
-<!-- CTA -->
-<div class="hidden md:block">
-<a class="inline-flex items-center justify-center px-6 py-3 bg-primary text-on-primary text-label-caps font-label-caps rounded-full hover:bg-primary-fixed transition-colors interactive" href="#book">
-                    Book a Consultation
-                </a>
-</div>
-<!-- Mobile Menu Toggle -->
-<button aria-label="Menu" class="md:hidden text-on-surface p-2 interactive">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
-</button>
-</div>
-</nav>
+
 <!-- Hero Section -->
 <header class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
 <!-- Background Video/Image Placeholder -->
@@ -398,7 +373,6 @@
             });
         });
     </script>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -453,5 +427,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

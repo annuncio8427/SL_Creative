@@ -137,15 +137,10 @@
             background: theme('colors.outline');
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="flex h-screen overflow-hidden">
 <!-- TopNavBar (Mobile Only) -->
-<nav class="md:hidden flex justify-between items-center px-margin-mobile h-20 w-full fixed top-0 z-50 bg-surface/60 backdrop-blur-xl border-b border-primary/20 shadow-[0_20px_40px_rgba(212,175,55,0.05)]">
-<div class="font-display-lg text-headline-md text-primary tracking-tight">SL Creative</div>
-<button class="text-primary p-2">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu</span>
-</button>
-</nav>
+
 <!-- Side Navigation (Desktop) -->
 <aside class="hidden md:flex flex-col w-64 h-full glass-panel flex-shrink-0 z-40 relative">
 <div class="p-8 border-b border-primary/10">
@@ -323,7 +318,6 @@
 </div>
 </div>
 </main>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -378,5 +372,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

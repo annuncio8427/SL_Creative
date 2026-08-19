@@ -151,7 +151,7 @@
             scroll-behavior: smooth;
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="font-body-md text-body-md antialiased selection:bg-primary selection:text-on-primary-fixed">
 <!-- TopNavBar: Suppressed due to task focus context (Legal/Policy page) but maintaining minimal header for brand identity -->
 <header class="w-full fixed top-0 z-50 bg-surface/60 backdrop-blur-xl border-b border-primary/20 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 shadow-[0_20px_40px_rgba(212,175,55,0.05)]">
@@ -171,13 +171,7 @@
 <aside class="col-span-1 lg:col-span-3 hidden lg:block">
 <div class="sticky top-32 glass-card rounded-xl p-6 gold-border-gradient ambient-glow">
 <h3 class="font-headline-md text-body-lg text-primary mb-6">Contents</h3>
-<nav class="flex flex-col gap-4">
-<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transform duration-300" href="#what-are-cookies">1. What are Cookies?</a>
-<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transform duration-300" href="#types-of-cookies">2. Types of Cookies</a>
-<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transform duration-300" href="#managing-preferences">3. Managing Preferences</a>
-<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transform duration-300" href="#third-party">4. Third-Party Cookies</a>
-<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transform duration-300" href="#contact">5. Contact Information</a>
-</nav>
+
 </div>
 </aside>
 <!-- Main Content Area -->
@@ -285,7 +279,6 @@
             });
         });
     </script>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -340,5 +333,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

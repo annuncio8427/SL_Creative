@@ -1,181 +1,154 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Company & Editorial | SL Creative Agency</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Company &amp; Editorial | SL Creative Agency</title>
+<link href="css/styles.css" rel="stylesheet"/>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <a href="index.html" class="brand-logo">
-      <div class="brand-symbol">SL</div>
-      <div class="brand-text">SL <span>CREATIVE</span></div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="portal.html" class="nav-link">Client Portal</a></li>
-      <li><a href="booking.html" class="nav-link">Booking</a></li>
-      <li><a href="payments.html" class="nav-link">Payments</a></li>
-      <li><a href="company.html" class="nav-link active">Company</a></li>
-    </ul>
-    <a href="index.html" class="btn btn-secondary btn-sm">← Back to Hub</a>
-  </nav>
+<!-- Navbar -->
 
-  <main style="padding: 120px 24px 80px 24px;" class="container tabs-container">
-    
-    <div style="text-align: center; margin-bottom: 40px;">
-      <div class="badge" style="margin-bottom: 12px;">Studio Profile & Legacy</div>
-      <h1 style="font-size: 40px; margin-bottom: 12px;">Company, Press & Editorial</h1>
-      <p class="text-muted" style="max-width: 600px; margin: 0 auto;">Discover our studio partners, accolades, media kits, press releases, events, affiliate network, and elite editorial roster.</p>
-    </div>
-
-    <!-- Tabs Header -->
-    <div class="tabs-header" style="justify-content: center;">
-      <button class="tab-btn active" data-tab="tab-partners">Partners</button>
-      <button class="tab-btn" data-tab="tab-awards">Awards</button>
-      <button class="tab-btn" data-tab="tab-mediakit">Media Kit</button>
-      <button class="tab-btn" data-tab="tab-press">Press</button>
-      <button class="tab-btn" data-tab="tab-events">Events</button>
-      <button class="tab-btn" data-tab="tab-community">Community</button>
-      <button class="tab-btn" data-tab="tab-newsletter">Newsletter</button>
-      <button class="tab-btn" data-tab="tab-affiliate">Affiliate & Referral</button>
-      <button class="tab-btn" data-tab="tab-editors">Meet the Editors</button>
-    </div>
-
-    <!-- 1. Partners -->
-    <div id="tab-partners" class="tab-content active">
-      <div class="glass-card">
-        <h2 style="font-size: 24px; margin-bottom: 16px;">Global Technology & Luxury Brand Partners</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-          <div style="background: rgba(255,255,255,0.03); padding: 24px; text-align: center; border-radius: 8px; border: 1px solid var(--border-glass);">
-            <div style="font-size: 20px; font-weight: 700; color: #fff;">RED Digital Cinema</div>
-            <p class="text-dim" style="font-size: 12px; margin-top: 4px;">Official 8K Sensor Partner</p>
-          </div>
-          <div style="background: rgba(255,255,255,0.03); padding: 24px; text-align: center; border-radius: 8px; border: 1px solid var(--border-glass);">
-            <div style="font-size: 20px; font-weight: 700; color: #fff;">Dolby Atmos</div>
-            <p class="text-dim" style="font-size: 12px; margin-top: 4px;">Spatial Sound Certification</p>
-          </div>
-          <div style="background: rgba(255,255,255,0.03); padding: 24px; text-align: center; border-radius: 8px; border: 1px solid var(--border-glass);">
-            <div style="font-size: 20px; font-weight: 700; color: #fff;">Leica Camera AG</div>
-            <p class="text-dim" style="font-size: 12px; margin-top: 4px;">Optics & Prime Lens Systems</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2. Awards -->
-    <div id="tab-awards" class="tab-content">
-      <div class="glass-card">
-        <h2 style="font-size: 24px; margin-bottom: 16px;">Accolades & Industry Recognition</h2>
-        <div style="display: flex; flex-direction: column; gap: 16px;">
-          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-glass); padding-bottom: 12px;">
-            <div>
-              <strong style="color: #fff; font-size: 18px;">Cannes Corporate Media Gold Dolphin (2025)</strong>
-              <p class="text-dim" style="font-size: 13px;">Best Cinematography - AURA Brand Launch</p>
-            </div>
-            <div class="badge">WINNER</div>
-          </div>
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <div>
-              <strong style="color: #fff; font-size: 18px;">Red Dot Design Award Best of the Best (2025)</strong>
-              <p class="text-dim" style="font-size: 13px;">Spatial Brand Experience Interface</p>
-            </div>
-            <div class="badge">WINNER</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 3. Media Kit -->
-    <div id="tab-mediakit" class="tab-content">
-      <div class="glass-card" style="max-width: 640px; margin: 0 auto;">
-        <h2 style="font-size: 24px; margin-bottom: 12px;">Official Brand & Media Kit (2026)</h2>
-        <p class="text-muted" style="margin-bottom: 24px;">Download high-resolution logos, brand guidelines, executive headshots, and media press kits.</p>
-        <button class="btn btn-primary" onclick="showToast('Downloading Media Kit .ZIP (120MB)...', 'info')">Download Complete Media Kit (.ZIP)</button>
-      </div>
-    </div>
-
-    <!-- 4. Press -->
-    <div id="tab-press" class="tab-content">
-      <div class="glass-card">
-        <h2 style="font-size: 24px; margin-bottom: 16px;">Press Releases & Coverage</h2>
-        <div style="margin-bottom: 20px;">
-          <div class="text-gold" style="font-size: 12px; font-weight: 700;">VOGUE DIGITAL - AUG 2026</div>
-          <h3 style="font-size: 18px; margin: 4px 0 8px 0;">"How SL Creative is Redefining Luxury Motion Design in the AI Era"</h3>
-          <p class="text-dim" style="font-size: 14px;">An in-depth profile on SL Creative's fusion of high-precision cinematography and neural rendering pipelines.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- 5. Events -->
-    <div id="tab-events" class="tab-content">
-      <div class="glass-card">
-        <h2 style="font-size: 24px; margin-bottom: 16px;">Upcoming Studio Events & Keynotes</h2>
-        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-glass); padding-bottom: 12px;">
-          <div>
-            <strong style="color: #fff; font-size: 16px;">SL Creative Keynote '26: The Future of Spatial Aesthetics</strong>
-            <p class="text-dim" style="font-size: 13px;">Sep 20, 2026 | New York City & Live Stream</p>
-          </div>
-          <button class="btn btn-secondary btn-sm" onclick="showToast('RSVP Confirmed!', 'success')">RSVP Pass</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- 6. Community -->
-    <div id="tab-community" class="tab-content">
-      <div class="glass-card" style="text-align: center;">
-        <h2 style="font-size: 24px; margin-bottom: 12px;">Creative Directors Network</h2>
-        <p class="text-muted" style="margin-bottom: 20px;">Join 15,000+ luxury creators, VFX artists, and brand strategists in our private Discord circle.</p>
-        <button class="btn btn-primary" onclick="showToast('Redirecting to Discord Community...', 'info')">Join Official Community</button>
-      </div>
-    </div>
-
-    <!-- 7. Newsletter -->
-    <div id="tab-newsletter" class="tab-content">
-      <div class="glass-card" style="max-width: 500px; margin: 0 auto; text-align: center;">
-        <h2 style="font-size: 24px; margin-bottom: 8px;">The Noir Editorial Dispatch</h2>
-        <p class="text-dim" style="font-size: 13px; margin-bottom: 20px;">Curated monthly digest on luxury aesthetics, motion technology, and design philosophy.</p>
-        <form style="display: flex; gap: 8px;">
-          <input type="email" class="form-input" placeholder="executive@company.com" required>
-          <button type="submit" class="btn btn-primary">Subscribe</button>
-        </form>
-      </div>
-    </div>
-
-    <!-- 8. Affiliate & Referral -->
-    <div id="tab-affiliate" class="tab-content">
-      <div class="glass-card" style="max-width: 600px; margin: 0 auto;">
-        <h2 style="font-size: 24px; margin-bottom: 12px;">Partner & Referral Program</h2>
-        <p class="text-muted" style="margin-bottom: 20px;">Earn a 10% commission on qualifying agency client referrals and brand retainer introductions.</p>
-        <button class="btn btn-primary" onclick="showToast('Partner referral portal requested', 'info')">Apply for Referral ID</button>
-      </div>
-    </div>
-
-    <!-- 9. Meet the Editors -->
-    <div id="tab-editors" class="tab-content">
-      <div class="glass-card">
-        <h2 style="font-size: 24px; margin-bottom: 20px;">Meet the Senior Editors & Creative Leads</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
-          <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 8px; text-align: center;">
-            <div style="width: 72px; height: 72px; border-radius: 50%; background: var(--gold-gradient); color: #000; font-weight: 800; font-size: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px auto;">MV</div>
-            <h3 style="font-size: 18px; color: #fff;">Marcus Vance</h3>
-            <p class="text-gold" style="font-size: 12px; font-weight: 700;">Executive Creative Director</p>
-          </div>
-          <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 8px; text-align: center;">
-            <div style="width: 72px; height: 72px; border-radius: 50%; background: var(--gold-gradient); color: #000; font-weight: 800; font-size: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px auto;">ER</div>
-            <h3 style="font-size: 18px; color: #fff;">Elena Rostova</h3>
-            <p class="text-gold" style="font-size: 12px; font-weight: 700;">Lead VFX & 3D Supervisor</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </main>
-
-  <script src="js/app.js"></script>
-
+<main class="container tabs-container" style="padding: 120px 24px 80px 24px;">
+<div style="text-align: center; margin-bottom: 40px;">
+<div class="badge" style="margin-bottom: 12px;">Studio Profile &amp; Legacy</div>
+<h1 style="font-size: 40px; margin-bottom: 12px;">Company, Press &amp; Editorial</h1>
+<p class="text-muted" style="max-width: 600px; margin: 0 auto;">Discover our studio partners, accolades, media kits, press releases, events, affiliate network, and elite editorial roster.</p>
+</div>
+<!-- Tabs Header -->
+<div class="tabs-header" style="justify-content: center;">
+<button class="tab-btn active" data-tab="tab-partners">Partners</button>
+<button class="tab-btn" data-tab="tab-awards">Awards</button>
+<button class="tab-btn" data-tab="tab-mediakit">Media Kit</button>
+<button class="tab-btn" data-tab="tab-press">Press</button>
+<button class="tab-btn" data-tab="tab-events">Events</button>
+<button class="tab-btn" data-tab="tab-community">Community</button>
+<button class="tab-btn" data-tab="tab-newsletter">Newsletter</button>
+<button class="tab-btn" data-tab="tab-affiliate">Affiliate &amp; Referral</button>
+<button class="tab-btn" data-tab="tab-editors">Meet the Editors</button>
+</div>
+<!-- 1. Partners -->
+<div class="tab-content active" id="tab-partners">
+<div class="glass-card">
+<h2 style="font-size: 24px; margin-bottom: 16px;">Global Technology &amp; Luxury Brand Partners</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+<div style="background: rgba(255,255,255,0.03); padding: 24px; text-align: center; border-radius: 8px; border: 1px solid var(--border-glass);">
+<div style="font-size: 20px; font-weight: 700; color: #fff;">RED Digital Cinema</div>
+<p class="text-dim" style="font-size: 12px; margin-top: 4px;">Official 8K Sensor Partner</p>
+</div>
+<div style="background: rgba(255,255,255,0.03); padding: 24px; text-align: center; border-radius: 8px; border: 1px solid var(--border-glass);">
+<div style="font-size: 20px; font-weight: 700; color: #fff;">Dolby Atmos</div>
+<p class="text-dim" style="font-size: 12px; margin-top: 4px;">Spatial Sound Certification</p>
+</div>
+<div style="background: rgba(255,255,255,0.03); padding: 24px; text-align: center; border-radius: 8px; border: 1px solid var(--border-glass);">
+<div style="font-size: 20px; font-weight: 700; color: #fff;">Leica Camera AG</div>
+<p class="text-dim" style="font-size: 12px; margin-top: 4px;">Optics &amp; Prime Lens Systems</p>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. Awards -->
+<div class="tab-content" id="tab-awards">
+<div class="glass-card">
+<h2 style="font-size: 24px; margin-bottom: 16px;">Accolades &amp; Industry Recognition</h2>
+<div style="display: flex; flex-direction: column; gap: 16px;">
+<div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-glass); padding-bottom: 12px;">
+<div>
+<strong style="color: #fff; font-size: 18px;">Cannes Corporate Media Gold Dolphin (2025)</strong>
+<p class="text-dim" style="font-size: 13px;">Best Cinematography - AURA Brand Launch</p>
+</div>
+<div class="badge">WINNER</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+<div>
+<strong style="color: #fff; font-size: 18px;">Red Dot Design Award Best of the Best (2025)</strong>
+<p class="text-dim" style="font-size: 13px;">Spatial Brand Experience Interface</p>
+</div>
+<div class="badge">WINNER</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. Media Kit -->
+<div class="tab-content" id="tab-mediakit">
+<div class="glass-card" style="max-width: 640px; margin: 0 auto;">
+<h2 style="font-size: 24px; margin-bottom: 12px;">Official Brand &amp; Media Kit (2026)</h2>
+<p class="text-muted" style="margin-bottom: 24px;">Download high-resolution logos, brand guidelines, executive headshots, and media press kits.</p>
+<button class="btn btn-primary" onclick="showToast('Downloading Media Kit .ZIP (120MB)...', 'info')">Download Complete Media Kit (.ZIP)</button>
+</div>
+</div>
+<!-- 4. Press -->
+<div class="tab-content" id="tab-press">
+<div class="glass-card">
+<h2 style="font-size: 24px; margin-bottom: 16px;">Press Releases &amp; Coverage</h2>
+<div style="margin-bottom: 20px;">
+<div class="text-gold" style="font-size: 12px; font-weight: 700;">VOGUE DIGITAL - AUG 2026</div>
+<h3 style="font-size: 18px; margin: 4px 0 8px 0;">"How SL Creative is Redefining Luxury Motion Design in the AI Era"</h3>
+<p class="text-dim" style="font-size: 14px;">An in-depth profile on SL Creative's fusion of high-precision cinematography and neural rendering pipelines.</p>
+</div>
+</div>
+</div>
+<!-- 5. Events -->
+<div class="tab-content" id="tab-events">
+<div class="glass-card">
+<h2 style="font-size: 24px; margin-bottom: 16px;">Upcoming Studio Events &amp; Keynotes</h2>
+<div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-glass); padding-bottom: 12px;">
+<div>
+<strong style="color: #fff; font-size: 16px;">SL Creative Keynote '26: The Future of Spatial Aesthetics</strong>
+<p class="text-dim" style="font-size: 13px;">Sep 20, 2026 | New York City &amp; Live Stream</p>
+</div>
+<button class="btn btn-secondary btn-sm" onclick="showToast('RSVP Confirmed!', 'success')">RSVP Pass</button>
+</div>
+</div>
+</div>
+<!-- 6. Community -->
+<div class="tab-content" id="tab-community">
+<div class="glass-card" style="text-align: center;">
+<h2 style="font-size: 24px; margin-bottom: 12px;">Creative Directors Network</h2>
+<p class="text-muted" style="margin-bottom: 20px;">Join 15,000+ luxury creators, VFX artists, and brand strategists in our private Discord circle.</p>
+<button class="btn btn-primary" onclick="showToast('Redirecting to Discord Community...', 'info')">Join Official Community</button>
+</div>
+</div>
+<!-- 7. Newsletter -->
+<div class="tab-content" id="tab-newsletter">
+<div class="glass-card" style="max-width: 500px; margin: 0 auto; text-align: center;">
+<h2 style="font-size: 24px; margin-bottom: 8px;">The Noir Editorial Dispatch</h2>
+<p class="text-dim" style="font-size: 13px; margin-bottom: 20px;">Curated monthly digest on luxury aesthetics, motion technology, and design philosophy.</p>
+<form style="display: flex; gap: 8px;">
+<input class="form-input" placeholder="executive@company.com" required="" type="email"/>
+<button class="btn btn-primary" type="submit">Subscribe</button>
+</form>
+</div>
+</div>
+<!-- 8. Affiliate & Referral -->
+<div class="tab-content" id="tab-affiliate">
+<div class="glass-card" style="max-width: 600px; margin: 0 auto;">
+<h2 style="font-size: 24px; margin-bottom: 12px;">Partner &amp; Referral Program</h2>
+<p class="text-muted" style="margin-bottom: 20px;">Earn a 10% commission on qualifying agency client referrals and brand retainer introductions.</p>
+<button class="btn btn-primary" onclick="showToast('Partner referral portal requested', 'info')">Apply for Referral ID</button>
+</div>
+</div>
+<!-- 9. Meet the Editors -->
+<div class="tab-content" id="tab-editors">
+<div class="glass-card">
+<h2 style="font-size: 24px; margin-bottom: 20px;">Meet the Senior Editors &amp; Creative Leads</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+<div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 8px; text-align: center;">
+<div style="width: 72px; height: 72px; border-radius: 50%; background: var(--gold-gradient); color: #000; font-weight: 800; font-size: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px auto;">MV</div>
+<h3 style="font-size: 18px; color: #fff;">Marcus Vance</h3>
+<p class="text-gold" style="font-size: 12px; font-weight: 700;">Executive Creative Director</p>
+</div>
+<div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 8px; text-align: center;">
+<div style="width: 72px; height: 72px; border-radius: 50%; background: var(--gold-gradient); color: #000; font-weight: 800; font-size: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px auto;">ER</div>
+<h3 style="font-size: 18px; color: #fff;">Elena Rostova</h3>
+<p class="text-gold" style="font-size: 12px; font-weight: 700;">Lead VFX &amp; 3D Supervisor</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<script src="js/app.js"></script>
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -230,6 +203,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body>
+<script src="js/site-shell.js"></script></body>
 </html>

@@ -146,27 +146,12 @@
             border-radius: 10px;
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="font-body-md text-on-surface selection:bg-primary-container selection:text-on-primary-container">
 <div class="custom-cursor hidden md:block" id="cursor"></div>
 <!-- Navigation Shell -->
 <header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30">
-<nav class="flex justify-between items-center w-full px-margin-desktop py-4 mx-auto max-w-container-max">
-<div class="flex items-center gap-4">
-<img alt="SL Creative Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg9aqvyNUYc303aOt4MoA9kKHTZFRo9a2po-IVAaZdsdnxoDjz4nAc9zAP6m-2ZQPHQjf3vPyS_q34Cd5mqEsGl7t9AJoCawjy8QIzoraCwlFvDnchA8F8zqtYkdhTuDF5YpOQZY037zlPd8R5C97yknTKg6eHGFaM7NKU9qbIek9CqB_BWI9XjlBQqQwy4aKKhzFGUfzM9vAaMCjMHaI4Y3REso8T7wxpxz1opbR1dtr8cp5NLibHUon6Sr3ed8yBzUE"/>
-<span class="text-headline-md font-headline-md tracking-tighter text-on-surface">SL Creative</span>
-</div>
-<div class="hidden md:flex gap-8 items-center">
-<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors" href="portfolio.html">Work</a>
-<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors" href="services.html">Services</a>
-<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors" href="#">Pricing</a>
-<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors" href="about.html">About</a>
-<a class="active-link font-label-caps text-label-caps" href="contact.html">Contact</a>
-</div>
-<button class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded-none uppercase tracking-widest hover:scale-[0.98] transition-all duration-300">
-                Book a Consultation
-            </button>
-</nav>
+
 </header>
 <main class="pt-24 overflow-x-hidden">
 <!-- Section 1: Hero -->
@@ -327,7 +312,7 @@ void main() {
 <span class="material-symbols-outlined text-primary text-3xl">call</span>
 </div>
 <h3 class="text-label-caps font-label-caps text-on-surface mb-2 uppercase">Call Us</h3>
-<p class="text-body-lg font-body-lg text-on-surface mb-6">+91 8438584582</p>
+<p class="text-body-lg font-body-lg text-on-surface mb-6">+91 8438584582, +91 8514959595</p>
 <a class="text-label-caps font-label-caps text-primary border-b border-primary/30 pb-1 hover:border-primary transition-all" href="tel:+918438584582">Direct Call</a>
 </div>
 <!-- Email -->
@@ -336,8 +321,8 @@ void main() {
 <span class="material-symbols-outlined text-primary text-3xl">mail</span>
 </div>
 <h3 class="text-label-caps font-label-caps text-on-surface mb-2 uppercase">Email</h3>
-<p class="text-body-lg font-body-lg text-on-surface mb-6">contact@slcreative.com</p>
-<a class="text-label-caps font-label-caps text-primary border-b border-primary/30 pb-1 hover:border-primary transition-all" href="mailto:contact@slcreative.com">Send Email</a>
+<p class="text-body-lg font-body-lg text-on-surface mb-6">slcreative1322@gmail.com</p>
+<a class="text-label-caps font-label-caps text-primary border-b border-primary/30 pb-1 hover:border-primary transition-all" href="mailto:slcreative1322@gmail.com">Send Email</a>
 </div>
 <!-- WhatsApp -->
 <div class="glass p-8 group transition-all duration-500">
@@ -355,7 +340,7 @@ void main() {
 </div>
 <h3 class="text-label-caps font-label-caps text-on-surface mb-2 uppercase">Office</h3>
 <p class="text-body-lg font-body-lg text-on-surface mb-6">Chennai, Tamil Nadu</p>
-<a class="text-label-caps font-label-caps text-primary border-b border-primary/30 pb-1 hover:border-primary transition-all" href="https://www.google.com/maps/place/Chennai,+Tamil+Nadu/@13.0475255,80.2086732,11z/data=!3m1!4b1!4m6!3m5!1s0x3a5265ea4f7d3361:0x6e61a70b6863d433!8m2!3d13.0843007!4d80.2704622!16zL20vMGM4dGs?entry=ttu&g_ep=EgoyMDI2MDgwNC4wIKXMDSoASAFQAw%3D%3D">View Location</a>
+<a class="text-label-caps font-label-caps text-primary border-b border-primary/30 pb-1 hover:border-primary transition-all" href="https://www.google.com/maps/place/Chennai,+Tamil+Nadu/@13.0475255,80.2086732,11z/data=!3m1!4b1!4m6!3m5!1s0x3a5265ea4f7d3361:0x6e61a70b6863d433!8m2!3d13.0843007!4d80.2704622!16zL20vMGM4dGs?entry=ttu&amp;g_ep=EgoyMDI2MDgwNC4wIKXMDSoASAFQAw%3D%3D">View Location</a>
 </div>
 </div>
 </section>
@@ -587,7 +572,6 @@ void main() {
             observer.observe(div);
         });
     </script>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -642,5 +626,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

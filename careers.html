@@ -196,23 +196,10 @@
             pointer-events: none;
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="antialiased min-h-screen flex flex-col">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto bg-background/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-2xl shadow-primary/5">
-<div class="font-headline-md text-headline-md text-primary tracking-tighter">SL Creative</div>
-<div class="hidden md:flex gap-8 items-center">
-<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="#">Case Studies</a>
-<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="#">Process</a>
-<a class="font-body-md text-body-md uppercase tracking-widest text-primary border-b-2 border-primary pb-1" href="#">Careers</a>
-<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="#">Blog</a>
-<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="#">Booking</a>
-</div>
-<button class="bg-primary text-on-primary px-6 py-2 rounded font-label-caps text-label-caps hover:bg-primary-container transition-colors hidden md:block uppercase tracking-widest">Inquire Now</button>
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
-</button>
-</nav>
+
 <main class="flex-grow pt-20">
 <!-- Hero Section -->
 <section class="relative min-h-[716px] flex items-center justify-center px-margin-mobile md:px-margin-desktop py-section-gap overflow-hidden">
@@ -389,7 +376,6 @@
             © 2024 SL Creative. Uncompromising Excellence in Post-Production.
         </div>
 </footer>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -444,5 +430,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

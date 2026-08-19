@@ -134,25 +134,10 @@
             transform: translateY(0);
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="font-body-md text-on-surface antialiased overflow-x-hidden selection:bg-primary/30 selection:text-primary">
 <!-- Top Navigation (Shared Component) -->
-<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 max-w-container-max mx-auto glass-nav transition-all duration-300">
-<a class="font-headline-md text-headline-md text-primary tracking-tighter" href="#">SL Creative</a>
-<div class="hidden md:flex items-center gap-8">
-<a class="font-label-caps text-label-caps text-on-surface hover:text-primary transition-colors" href="#">Process</a>
-<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1" href="#">Case Studies</a>
-<a class="font-label-caps text-label-caps text-on-surface hover:text-primary transition-colors" href="#">Careers</a>
-<a class="font-label-caps text-label-caps text-on-surface hover:text-primary transition-colors" href="#">Blog</a>
-<a class="font-label-caps text-label-caps text-on-surface hover:text-primary transition-colors" href="#">Booking</a>
-</div>
-<button class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-full font-label-caps text-label-caps hover:bg-primary-fixed transition-colors">
-            Inquire Now
-        </button>
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined text-3xl">menu</span>
-</button>
-</nav>
+
 <!-- Hero Section -->
 <header class="relative pt-40 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-center text-center">
 <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-background to-background"></div>
@@ -311,7 +296,6 @@
             });
         });
     </script>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -366,5 +350,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

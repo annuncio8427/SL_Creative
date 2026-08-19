@@ -113,33 +113,10 @@
             100% { width: 100%; }
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col antialiased selection:bg-primary/30 selection:text-primary">
 <!-- TopNav - Active: Dashboard (closest fit) -->
-<nav class="bg-surface/60 backdrop-blur-xl border-b border-primary/20 shadow-[0_20px_40px_rgba(212,175,55,0.05)] fixed top-0 w-full z-50">
-<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 w-full max-w-container-max mx-auto">
-<div class="flex items-center gap-8">
-<a class="font-display-lg text-headline-md text-primary tracking-tight" href="#">SL Creative</a>
-<div class="hidden md:flex gap-6 items-center pt-2">
-<a class="text-primary font-bold border-b-2 border-primary pb-1" href="#">Dashboard</a>
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#">Projects</a>
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#">Media Kit</a>
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#">Support</a>
-</div>
-</div>
-<div class="flex items-center gap-4">
-<button class="hidden md:flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-variant transition-colors group">
-<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">search</span>
-</button>
-<button class="bg-primary text-on-primary-fixed px-6 py-2 rounded font-label-caps hover:bg-primary-fixed transition-colors scale-95 duration-200 hover:scale-100">
-                    Portal
-                </button>
-<button class="w-10 h-10 rounded-full overflow-hidden border border-primary/20 hover:border-primary transition-colors scale-95 duration-200">
-<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a creative professional in a cinematic studio setting, dark atmospheric lighting with subtle gold rim light, high-end commercial aesthetic, extremely detailed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHLX98USVg_V4Fhv3qNhX_UwsF3o_yO6KD3lZzGlEubJBrR1il18-U91Ne5IoidfoUf7pW4vsTFE5AGcw21fOjeUI7Ui-QMcH4iQMxoiJwJFYGyJjWNem5E_A3KZz5uWr5cqopSrSx4tPokbSBJybErEgE2vUZiBzQJhww0ydNyRF3W60CZLBe8Zv2ebgADo832U_B7jr1p5Wts-5LesAB7RFOU5ebgK1INEQcDFYvyO_K3Djvf9opsw"/>
-</button>
-</div>
-</div>
-</nav>
+
 <main class="flex-grow pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full relative z-10 flex flex-col items-center justify-center">
 <div class="w-full max-w-3xl text-center mb-12">
 <h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Secure Transfer</h1>
@@ -272,7 +249,6 @@
             dropZone.classList.remove('drag-active');
         }
     </script>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -327,5 +303,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

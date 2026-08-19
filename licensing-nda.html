@@ -212,7 +212,7 @@
             background-color: rgba(242, 202, 80, 0.1);
         }
       </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="antialiased min-h-screen flex flex-col font-body-md text-body-md cursor-custom">
 <div class="custom-cursor" id="customCursor"></div>
 <!-- TopNavBar -->
@@ -221,12 +221,7 @@
 <div class="font-display-lg text-headline-md text-primary tracking-tight">
                 SL Creative
             </div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300 interactive-el" href="#">Dashboard</a>
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300 interactive-el" href="#">Projects</a>
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300 interactive-el" href="#">Media Kit</a>
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300 interactive-el" href="#">Support</a>
-</nav>
+
 <div class="flex items-center gap-6">
 <button class="text-primary hover:text-primary-fixed transition-colors duration-300 interactive-el">
 <span class="material-symbols-outlined text-[24px]">search</span>
@@ -479,7 +474,6 @@
             cursor.style.display = 'block';
         });
     </script>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -534,5 +528,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>

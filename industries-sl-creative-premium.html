@@ -132,26 +132,11 @@
             transition: opacity 0.3s ease;
         }
     </style>
-</head>
+<link href="css/site-overrides.css" rel="stylesheet"/></head>
 <body class="antialiased font-body-md selection:bg-primary selection:text-on-primary">
 <div id="cursor-glow"></div>
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30">
-<div class="flex justify-between items-center w-full px-margin-desktop py-4 mx-auto max-w-container-max">
-<a class="text-headline-md font-headline-md tracking-tighter text-on-surface dark:text-on-surface" href="/">SL Creative</a>
-<div class="hidden md:flex gap-8 items-center">
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors text-label-caps font-label-caps hover:bg-surface-variant/20 px-3 py-2 rounded" href="portfolio.html">Work</a>
-<a class="text-primary dark:text-primary border-b-2 border-primary pb-1 text-label-caps font-label-caps hover:bg-surface-variant/20 px-3 py-2 rounded scale-98 transition-all duration-300" href="services.html">Services</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors text-label-caps font-label-caps hover:bg-surface-variant/20 px-3 py-2 rounded" href="#">Pricing</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors text-label-caps font-label-caps hover:bg-surface-variant/20 px-3 py-2 rounded" href="about.html">About</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors text-label-caps font-label-caps hover:bg-surface-variant/20 px-3 py-2 rounded" href="contact.html">Contact</a>
-</div>
-<a class="hidden md:inline-flex bg-primary text-on-primary px-6 py-3 text-label-caps font-label-caps rounded hover:bg-primary-container transition-colors" href="book.html">Book a Consultation</a>
-<button class="md:hidden text-on-surface">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</nav>
+
 <main class="pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-20">
 <!-- Hero Section -->
 <header class="mb-section-gap text-center max-w-4xl mx-auto">
@@ -260,7 +245,6 @@
             }
         });
     </script>
-
 <script id="global-nav-router">
 document.addEventListener('DOMContentLoaded', () => {
     const routeMap = [
@@ -315,5 +299,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
-</body></html>
+<script src="js/site-shell.js"></script></body></html>
