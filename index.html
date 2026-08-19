@@ -1,33 +1,31 @@
 <!DOCTYPE html>
-
 <html class="dark" lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>SL Creative - Visuals That Inspire</title>
-<!-- Google Fonts -->
- 
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&amp;family=Outfit:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
-<!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries">
-</script>
-<!-- Global Scripts -->
-<script src="js/app.js"></script>
-<script src="js/router.js"></script>
-<!-- Firebase Integration (Type="module" is REQUIRED) -->
-<script src="js/firebase-init.js" type="module"></script>
-<script src="js/auth.js" type="module"></script>
-<script src="js/forms.js" type="module"></script>
-<script id="tailwind-config">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SL Creative — Visuals That Inspire</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries">
+    </script>
+
+    <!-- site-overrides.css – master navigation styling -->
+    <link href="css/site-overrides.css" rel="stylesheet" />
+
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
-                    "colors": {
+                    colors: {
                         "surface-variant": "#353535",
                         "on-error-container": "#ffdad6",
                         "surface-bright": "#393939",
@@ -76,13 +74,13 @@
                         "error-container": "#93000a",
                         "on-secondary": "#313030"
                     },
-                    "borderRadius": {
+                    borderRadius: {
                         "DEFAULT": "0.125rem",
                         "lg": "0.25rem",
                         "xl": "0.5rem",
                         "full": "0.75rem"
                     },
-                    "spacing": {
+                    spacing: {
                         "margin-desktop": "80px",
                         "section-gap": "160px",
                         "container-max": "1440px",
@@ -90,7 +88,7 @@
                         "margin-mobile": "24px",
                         "gutter": "24px"
                     },
-                    "fontFamily": {
+                    fontFamily: {
                         "headline-md": ["Outfit"],
                         "label-caps": ["Outfit"],
                         "body-lg": ["Be Vietnam Pro"],
@@ -99,7 +97,7 @@
                         "display-lg": ["Outfit"],
                         "headline-lg": ["Outfit"]
                     },
-                    "fontSize": {
+                    fontSize: {
                         "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
                         "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700" }],
                         "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
@@ -108,15 +106,16 @@
                         "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
                         "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
                     }
-                },
-            },
+                }
+            }
         }
     </script>
-<style>
-        /* Custom Styles for Glassmorphism and Animations */
+
+    <style>
+        /* ===== GLASS & ANIMATION HELPERS ===== */
         body {
-            background-color: theme('colors.background');
-            color: theme('colors.on-background');
+            background-color: #131313;
+            color: #e5e2e1;
             overflow-x: hidden;
         }
 
@@ -140,7 +139,7 @@
         }
 
         .text-gradient-gold {
-            background: linear-gradient(to right, theme('colors.primary'), theme('colors.primary-fixed'));
+            background: linear-gradient(to right, #f2ca50, #ffe088);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -153,7 +152,7 @@
             content: '';
             position: absolute;
             inset: -2px;
-            background: theme('colors.primary-container');
+            background: #d4af37;
             filter: blur(40px);
             opacity: 0;
             transition: opacity 0.5s ease;
@@ -179,7 +178,6 @@
             opacity: 0;
             animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
-
         .delay-100 {
             animation-delay: 100ms;
         }
@@ -190,11 +188,12 @@
             animation-delay: 300ms;
         }
 
+        /* Custom cursor */
         .custom-cursor {
             position: fixed;
             width: 32px;
             height: 32px;
-            border: 1px solid theme('colors.primary');
+            border: 1px solid #f2ca50;
             border-radius: 50%;
             pointer-events: none;
             transform: translate(-50%, -50%);
@@ -208,113 +207,7 @@
             background-color: rgba(242, 202, 80, 0.1);
         }
 
-        /* ===== MOBILE MENU STYLES ===== */
-        .mobile-menu-overlay {
-            position: fixed;
-            inset: 0;
-            z-index: 100;
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.4s ease, visibility 0.4s ease;
-        }
-        .mobile-menu-overlay.open {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .mobile-menu-panel {
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 300px;
-            max-width: 85vw;
-            height: 100%;
-            z-index: 101;
-            background: #1a1a1a;
-            border-left: 1px solid rgba(212, 175, 55, 0.2);
-            box-shadow: -8px 0 40px rgba(0, 0, 0, 0.6);
-            transform: translateX(100%);
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            display: flex;
-            flex-direction: column;
-            padding: 80px 32px 40px;
-        }
-        .mobile-menu-panel.open {
-            transform: translateX(0);
-        }
-
-        .mobile-menu-panel .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: transparent;
-            border: none;
-            color: #e5e2e1;
-            font-size: 32px;
-            cursor: pointer;
-            padding: 8px;
-            border-radius: 50%;
-            transition: background 0.2s;
-        }
-        .mobile-menu-panel .close-btn:hover {
-            background: rgba(255, 255, 255, 0.08);
-        }
-
-        .mobile-menu-panel a {
-            font-family: 'Outfit', sans-serif;
-            font-size: 20px;
-            font-weight: 500;
-            letter-spacing: 0.02em;
-            color: #e5e2e1;
-            text-decoration: none;
-            padding: 16px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-            transition: color 0.2s, padding-left 0.2s;
-        }
-        .mobile-menu-panel a:hover {
-            color: #f2ca50;
-            padding-left: 8px;
-        }
-
-        .mobile-menu-panel .mobile-cta {
-            margin-top: auto;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 16px 32px;
-            background: #f2ca50;
-            color: #3c2f00;
-            font-family: 'Outfit', sans-serif;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            border-radius: 9999px;
-            text-decoration: none;
-            transition: background 0.2s, transform 0.2s;
-            border: none;
-        }
-        .mobile-menu-panel .mobile-cta:hover {
-            background: #ffe088;
-            transform: scale(1.02);
-        }
-
-        /* Prevent body scroll when menu is open */
-        body.menu-open {
-            overflow: hidden;
-        }
-
-        @media (min-width: 768px) {
-            .mobile-menu-overlay,
-            .mobile-menu-panel {
-                display: none !important;
-            }
-        }
-
-        /* Video player styling */
+        /* Reel video */
         .reel-video {
             width: 100%;
             height: 100%;
@@ -323,252 +216,282 @@
         .reel-video::-webkit-media-controls-panel {
             background: rgba(0, 0, 0, 0.6);
         }
-        .reel-video::-webkit-media-controls-play-button {
-            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6));
+
+        /* ===== SITE-OVERRIDES OVERRIDE PATCH ===== */
+        /* ensure .sl-topbar gets the correct z-index and layout */
+        .sl-topbar {
+            z-index: 9999 !important;
+        }
+        .sl-topbar .sl-brand .sl-logo-img {
+            width: 140px;
+            height: 48px;
+            object-fit: contain;
+        }
+        /* mobile panel fix – ensure it's above content */
+        .sl-mobile-panel {
+            z-index: 9998 !important;
+        }
+        /* fix for the "Start a Project" CTA on mobile – show it */
+        @media (max-width: 620px) {
+            .sl-topbar .sl-actions .sl-project-cta {
+                display: inline-flex !important;
+                min-width: 0 !important;
+                padding: 8px 12px !important;
+                font-size: 9px !important;
+                gap: 4px !important;
+            }
+            .sl-topbar .sl-project-cta-label {
+                font-size: 8px !important;
+                letter-spacing: 0.08em !important;
+            }
+            .sl-topbar .sl-project-cta-arrow {
+                width: 18px !important;
+                height: 18px !important;
+                font-size: 10px !important;
+            }
+        }
+
+        /* override site-overrides hiding the CTA on mobile – we want it visible */
+        @media (max-width: 620px) {
+            .sl-topbar .sl-actions .sl-project-cta {
+                display: inline-flex !important;
+            }
+        }
+
+        /* ensure the mobile panel scrolls */
+        .sl-mobile-panel {
+            max-height: calc(100vh - 80px);
+            overflow-y: auto;
         }
     </style>
-<link href="css/site-overrides.css" rel="stylesheet"/>
-<link rel="preload" as="image" href="logo(1).png" data-sl-logo="logo(1).png"/>
-</head>
-<body class="font-body-md antialiased selection:bg-primary selection:text-on-primary">
-<!-- Custom Cursor -->
-<div class="custom-cursor hidden md:block" id="cursor"></div>
-<!-- ===== NAVIGATION ===== -->
 
-<!-- ===== MOBILE MENU OVERLAY & PANEL ===== -->
-<div class="mobile-menu-overlay" id="mobileOverlay"></div>
-<div aria-label="Mobile navigation" aria-modal="true" class="mobile-menu-panel" id="mobilePanel" role="dialog">
-<button aria-label="Close menu" class="close-btn" id="menuClose">
-<span class="material-symbols-outlined">close</span>
-</button>
-<a href="project-details.html">Work</a>
-<a href="services.html">Services</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-<a class="mobile-cta" href="contact.html">Book a Consultation</a>
-</div>
-<!-- ===== HERO ===== -->
-<header class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
-<div class="absolute inset-0 z-0">
-<div class="w-full h-full bg-cover bg-center bg-no-repeat opacity-40 mix-blend-luminosity" data-alt="A dark, moody cinematic studio setup with high-end camera equipment, dramatic lighting, and subtle smoke in the air, deep blacks and rich gold accents, highly detailed, 8k resolution, professional photography aesthetic." style="background-image: url('back.png')"></div>
-<div class="absolute inset-0 bg-gradient-to-b from-surface/80 via-surface/40 to-surface"></div>
-</div>
-<div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
-<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-surface/50 backdrop-blur-sm mb-8 fade-in-up">
-<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-<span class="text-label-caps font-label-caps text-primary tracking-widest uppercase">Premium Visual Agency</span>
-</div>
-<h1 class="text-headline-lg-mobile md:text-display-lg font-display-lg text-on-surface mb-6 fade-in-up delay-100 max-w-4xl mx-auto leading-tight">
-                Transforming Ideas into <br class="hidden md:block"/>
-<span class="text-gradient-gold">Stunning Visuals</span>
-</h1>
-<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12 fade-in-up delay-200">
+    <!-- preload hero image -->
+    <link rel="preload" as="image" href="back.png" />
+</head>
+
+<body class="font-body-md antialiased selection:bg-primary selection:text-on-primary">
+
+    <!-- ===== CUSTOM CURSOR ===== -->
+    <div class="custom-cursor hidden md:block" id="cursor"></div>
+
+    <!-- ============================================================
+    NAVIGATION is injected by site-shell.js
+    (the script at the bottom handles this)
+    ============================================================ -->
+
+    <!-- ============================================================
+    HERO
+    ============================================================ -->
+    <header class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="w-full h-full bg-cover bg-center bg-no-repeat opacity-40 mix-blend-luminosity" style="background-image: url('back.png')"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-surface/80 via-surface/40 to-surface"></div>
+        </div>
+
+        <div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-surface/50 backdrop-blur-sm mb-8 fade-in-up">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                <span class="text-label-caps font-label-caps text-primary tracking-widest uppercase">Premium Visual Agency</span>
+            </div>
+
+            <h1 class="text-headline-lg-mobile md:text-display-lg font-display-lg text-on-surface mb-6 fade-in-up delay-100 max-w-4xl mx-auto leading-tight">
+                Transforming Ideas into <br class="hidden md:block" />
+                <span class="text-gradient-gold">Stunning Visuals</span>
+            </h1>
+
+            <p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12 fade-in-up delay-200">
                 We craft cinematic narratives and high-end visual experiences for brands that refuse to blend in. Uncompromising quality, visionary execution.
             </p>
-<div class="flex flex-col sm:flex-row items-center justify-center gap-6 fade-in-up delay-300">
-<a class="w-full sm:w-auto px-8 py-4 bg-primary text-on-primary text-label-caps font-label-caps rounded-full hover:scale-105 transition-transform duration-300 interactive flex items-center justify-center gap-2" href="portfolio.html">
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 fade-in-up delay-300">
+                <a class="w-full sm:w-auto px-8 py-4 bg-primary text-on-primary text-label-caps font-label-caps rounded-full hover:scale-105 transition-transform duration-300 interactive flex items-center justify-center gap-2" href="portfolio.html">
                     Explore Our Work
                     <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
-</a>
-<a class="w-full sm:w-auto px-8 py-4 bg-transparent text-on-surface text-label-caps font-label-caps rounded-full border border-primary/50 hover:bg-primary/10 transition-colors duration-300 interactive flex items-center justify-center gap-2" href="https://www.instagram.com/sl_creative__?igsh=MW1jNnNrdW9vdmZ1dQ==">
-<span class="material-symbols-outlined" style="font-size: 18px; font-variation-settings: 'FILL' 1;">play_circle</span>
+                </a>
+                <a class="w-full sm:w-auto px-8 py-4 bg-transparent text-on-surface text-label-caps font-label-caps rounded-full border border-primary/50 hover:bg-primary/10 transition-colors duration-300 interactive flex items-center justify-center gap-2" href="https://www.instagram.com/sl_creative__" target="_blank">
+                    <span class="material-symbols-outlined" style="font-size: 18px; font-variation-settings: 'FILL' 1;">play_circle</span>
                     Play Showreel
                 </a>
-</div>
-</div>
-<div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 fade-in-up delay-300">
-<span class="text-label-caps font-label-caps text-on-surface-variant">Scroll</span>
-<div class="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent"></div>
-</div>
-</header>
-<!-- ===== SERVICES ===== -->
-<section class="py-section-gap relative" id="services">
-<div class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
-<div class="max-w-2xl">
-<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-on-surface mb-4">Mastering the Art of <span class="text-primary italic font-light">Light &amp; Motion</span></h2>
-<p class="text-body-lg font-body-lg text-on-surface-variant">Our core disciplines are designed to elevate your brand's visual identity to cinematic standards.</p>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="glass-panel p-8 rounded-xl ambient-glow group interactive transition-transform duration-500 hover:-translate-y-2">
-<div class="w-14 h-14 rounded-full bg-surface-variant flex items-center justify-center mb-8 border border-primary/20 group-hover:border-primary/50 transition-colors">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 0;">movie</span>
-</div>
-<h3 class="text-headline-md font-headline-md text-on-surface mb-3">Video Editing</h3>
-<p class="text-body-md font-body-md text-on-surface-variant mb-6">Rhythmic, narrative-driven editing that keeps audiences captivated from the first frame to the last.</p>
-<a class="inline-flex items-center gap-2 text-label-caps font-label-caps text-primary group-hover:gap-4 transition-all" href="#">Learn More <span class="material-symbols-outlined text-sm">arrow_right_alt</span></a>
-</div>
-<div class="glass-panel p-8 rounded-xl ambient-glow group interactive transition-transform duration-500 hover:-translate-y-2 delay-100 relative overflow-hidden">
-<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0 pointer-events-none"></div>
-<div class="relative z-10">
-<div class="w-14 h-14 rounded-full bg-surface-variant flex items-center justify-center mb-8 border border-primary/20 group-hover:border-primary/50 transition-colors">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 0;">palette</span>
-</div>
-<h3 class="text-headline-md font-headline-md text-on-surface mb-3">Color Grading</h3>
-<p class="text-body-md font-body-md text-on-surface-variant mb-6">Developing bespoke color palettes that evoke emotion and establish a distinct, premium look.</p>
-<a class="inline-flex items-center gap-2 text-label-caps font-label-caps text-primary group-hover:gap-4 transition-all" href="#">Learn More <span class="material-symbols-outlined text-sm">arrow_right_alt</span></a>
-</div>
-</div>
-<div class="glass-panel p-8 rounded-xl ambient-glow group interactive transition-transform duration-500 hover:-translate-y-2 delay-200">
-<div class="w-14 h-14 rounded-full bg-surface-variant flex items-center justify-center mb-8 border border-primary/20 group-hover:border-primary/50 transition-colors">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 0;">animation</span>
-</div>
-<h3 class="text-headline-md font-headline-md text-on-surface mb-3">Motion Graphics</h3>
-<p class="text-body-md font-body-md text-on-surface-variant mb-6">Dynamic titles, complex composites, and visual effects that seamlessly integrate with live action.</p>
-<a class="inline-flex items-center gap-2 text-label-caps font-label-caps text-primary group-hover:gap-4 transition-all" href="#">Learn More <span class="material-symbols-outlined text-sm">arrow_right_alt</span></a>
-</div>
-</div>
-</div>
-</section>
-<!-- ============================================================== -->
-<!-- ===== PROJECTS REEL SECTION (Replaces "Selected Works") ===== -->
-<!-- ============================================================== -->
-<section class="py-section-gap bg-surface-container-lowest" id="work">
-<div class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<!-- Section Header -->
-<div class="flex items-center justify-between mb-16">
-<div>
-<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-on-surface">
-                        Projects <br/><span class="text-primary">Reel</span>
-</h2>
-<p class="text-body-lg font-body-md text-on-surface-variant mt-2 max-w-xl">
+            </div>
+        </div>
+
+        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 fade-in-up delay-300">
+            <span class="text-label-caps font-label-caps text-on-surface-variant">Scroll</span>
+            <div class="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent"></div>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    SERVICES
+    ============================================================ -->
+    <section class="py-section-gap relative" id="services">
+        <div class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+                <div class="max-w-2xl">
+                    <h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-on-surface mb-4">Mastering the Art of <span class="text-primary italic font-light">Light &amp; Motion</span></h2>
+                    <p class="text-body-lg font-body-lg text-on-surface-variant">Our core disciplines are designed to elevate your brand's visual identity to cinematic standards.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-panel p-8 rounded-xl ambient-glow group interactive transition-transform duration-500 hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-full bg-surface-variant flex items-center justify-center mb-8 border border-primary/20 group-hover:border-primary/50 transition-colors">
+                        <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 0;">movie</span>
+                    </div>
+                    <h3 class="text-headline-md font-headline-md text-on-surface mb-3">Video Editing</h3>
+                    <p class="text-body-md font-body-md text-on-surface-variant mb-6">Rhythmic, narrative-driven editing that keeps audiences captivated from the first frame to the last.</p>
+                    <a class="inline-flex items-center gap-2 text-label-caps font-label-caps text-primary group-hover:gap-4 transition-all" href="#">Learn More <span class="material-symbols-outlined text-sm">arrow_right_alt</span></a>
+                </div>
+
+                <div class="glass-panel p-8 rounded-xl ambient-glow group interactive transition-transform duration-500 hover:-translate-y-2 delay-100 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0 pointer-events-none"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 rounded-full bg-surface-variant flex items-center justify-center mb-8 border border-primary/20 group-hover:border-primary/50 transition-colors">
+                            <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 0;">palette</span>
+                        </div>
+                        <h3 class="text-headline-md font-headline-md text-on-surface mb-3">Color Grading</h3>
+                        <p class="text-body-md font-body-md text-on-surface-variant mb-6">Developing bespoke color palettes that evoke emotion and establish a distinct, premium look.</p>
+                        <a class="inline-flex items-center gap-2 text-label-caps font-label-caps text-primary group-hover:gap-4 transition-all" href="#">Learn More <span class="material-symbols-outlined text-sm">arrow_right_alt</span></a>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8 rounded-xl ambient-glow group interactive transition-transform duration-500 hover:-translate-y-2 delay-200">
+                    <div class="w-14 h-14 rounded-full bg-surface-variant flex items-center justify-center mb-8 border border-primary/20 group-hover:border-primary/50 transition-colors">
+                        <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 0;">animation</span>
+                    </div>
+                    <h3 class="text-headline-md font-headline-md text-on-surface mb-3">Motion Graphics</h3>
+                    <p class="text-body-md font-body-md text-on-surface-variant mb-6">Dynamic titles, complex composites, and visual effects that seamlessly integrate with live action.</p>
+                    <a class="inline-flex items-center gap-2 text-label-caps font-label-caps text-primary group-hover:gap-4 transition-all" href="#">Learn More <span class="material-symbols-outlined text-sm">arrow_right_alt</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    PROJECTS REEL
+    ============================================================ -->
+    <section class="py-section-gap bg-surface-container-lowest" id="work">
+        <div class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="flex items-center justify-between mb-16">
+                <div>
+                    <h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-on-surface">
+                        Projects <br /><span class="text-primary">Reel</span>
+                    </h2>
+                    <p class="text-body-lg font-body-md text-on-surface-variant mt-2 max-w-xl">
                         Watch our latest cinematic work in motion — from commercial spots to narrative pieces.
                     </p>
-</div>
-<a class="hidden md:inline-flex items-center gap-2 text-label-caps font-label-caps text-on-surface hover:text-primary transition-colors interactive" href="portfolio.html">
+                </div>
+                <a class="hidden md:inline-flex items-center gap-2 text-label-caps font-label-caps text-on-surface hover:text-primary transition-colors interactive" href="portfolio.html">
                     View All Reels <span class="material-symbols-outlined text-sm">arrow_outward</span>
-</a>
-</div>
-<!-- Video Grid -->
-<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-<!-- Main Reel (Large) -->
-<div class="md:col-span-8 group relative overflow-hidden rounded-xl aspect-[16/9] md:aspect-auto md:h-[600px] bg-black flex items-center justify-center">
-<video class="reel-video" controls="">
-<source src="ad3.mp4" type="video/mp4"/>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                <div class="md:col-span-8 group relative overflow-hidden rounded-xl aspect-[16/9] md:aspect-auto md:h-[600px] bg-black flex items-center justify-center">
+                    <video class="reel-video" controls>
+                        <source src="ad3.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
-</div>
-<!-- Right Column (Two smaller reels) -->
-<div class="md:col-span-4 flex flex-col gap-6">
-<!-- Reel 2 -->
-<div class="group relative overflow-hidden rounded-xl aspect-video md:aspect-auto md:h-[285px] bg-black flex items-center justify-center">
-<video class="reel-video" controls="">
-<source src="ad1.mp4" type="video/mp4"/>
-</video>
-</div>
-<!-- Reel 3 -->
-<div class="group relative overflow-hidden rounded-xl aspect-video md:aspect-auto md:h-[285px] bg-black flex items-center justify-center">
-<video class="reel-video" controls="">
-<source src="wed2.mp4" type="video/mp4"/>
-</video>
-</div>
-</div>
-</div>
-<!-- Mobile "View All" link -->
-<div class="mt-8 text-center md:hidden">
-<a class="inline-block px-6 py-3 border border-primary/50 text-label-caps font-label-caps text-primary rounded-full" href="#">View All Reels</a>
-</div>
-</div>
-</section>
-<!-- ===== FOOTER ===== -->
-<footer class="bg-surface dark:bg-surface border-t border-outline-variant/20 py-section-gap">
-<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-8">
-<div class="text-headline-lg font-headline-lg text-primary dark:text-primary tracking-tighter">
+                </div>
+
+                <div class="md:col-span-4 flex flex-col gap-6">
+                    <div class="group relative overflow-hidden rounded-xl aspect-video md:aspect-auto md:h-[285px] bg-black flex items-center justify-center">
+                        <video class="reel-video" controls>
+                            <source src="ad1.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl aspect-video md:aspect-auto md:h-[285px] bg-black flex items-center justify-center">
+                        <video class="reel-video" controls>
+                            <source src="wed2.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center md:hidden">
+                <a class="inline-block px-6 py-3 border border-primary/50 text-label-caps font-label-caps text-primary rounded-full" href="portfolio.html">View All Reels</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="bg-surface dark:bg-surface border-t border-outline-variant/20 py-section-gap">
+        <div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-8">
+            <div class="text-headline-lg font-headline-lg text-primary dark:text-primary tracking-tighter">
                 SL Creative
             </div>
-<div class="flex gap-6 flex-wrap justify-center">
-<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 interactive" href="https://www.instagram.com/sl_creative__">Instagram</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 interactive" href="#">Vimeo</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 interactive" href="#">LinkedIn</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 interactive" href="privacy-policy.html">Privacy Policy</a>
-</div>
-<div class="text-body-md font-body-md text-on-surface-variant dark:text-on-surface-variant">
-                © 2026 SL Creative. All Rights Reserved.
+            <div class="flex gap-6 flex-wrap justify-center">
+                <a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 interactive" href="https://www.instagram.com/sl_creative__" target="_blank">Instagram</a>
+                <a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 interactive" href="#">Vimeo</a>
+                <a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 interactive" href="#">LinkedIn</a>
+                <a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-all duration-300 interactive" href="privacy-policy.html">Privacy Policy</a>
             </div>
-</div>
-</footer>
-<!-- ===== SCRIPTS ===== -->
-<script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // ---- Custom Cursor ----
-            const cursor = document.getElementById('cursor');
-            const interactives = document.querySelectorAll('.interactive');
+            <div class="text-body-md font-body-md text-on-surface-variant dark:text-on-surface-variant">
+                &copy; 2026 SL Creative. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
 
-            if (window.matchMedia("(pointer: fine)").matches) {
-                document.addEventListener('mousemove', (e) => {
+    <!-- ============================================================
+    SCRIPTS
+    ============================================================ -->
+
+    <!-- app.js – global utilities (tabs, modals, countdown, toast) -->
+    <script src="js/app.js">
+    </script>
+
+    <!-- router.js – legacy navigation helper -->
+    <script src="js/router.js">
+    </script>
+
+    <!-- Firebase modules (type="module" required) -->
+    <script src="js/firebase-init.js" type="module">
+    </script>
+    <script src="js/auth.js" type="module">
+    </script>
+    <script src="js/forms.js" type="module">
+    </script>
+
+    <!-- ===== site-shell.js =====
+    This injects the unified navigation (topbar + mobile panel)
+    and handles all mobile menu toggling, scroll effects, etc.
+    ===== -->
+    <script src="js/site-shell.js">
+    </script>
+
+    <!-- ===== CUSTOM CURSOR + SCROLL HELPER ===== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // ---- Custom Cursor ----
+            var cursor = document.getElementById('cursor');
+            var interactives = document.querySelectorAll('.interactive');
+
+            if (window.matchMedia('(pointer: fine)').matches && cursor) {
+                document.addEventListener('mousemove', function(e) {
                     cursor.style.left = e.clientX + 'px';
                     cursor.style.top = e.clientY + 'px';
                 });
-                interactives.forEach(el => {
-                    el.addEventListener('mouseenter', () => cursor.classList.add('active'));
-                    el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
+                interactives.forEach(function(el) {
+                    el.addEventListener('mouseenter', function() { cursor.classList.add('active'); });
+                    el.addEventListener('mouseleave', function() { cursor.classList.remove('active'); });
                 });
-            } else {
+            } else if (cursor) {
                 cursor.style.display = 'none';
             }
 
-            // ---- Nav shadow on scroll ----
-            const nav = document.getElementById('main-nav');
-            window.addEventListener('scroll', () => {
-                nav.classList.toggle('shadow-lg', window.scrollY > 50);
-            });
-
-            // ============================================================
-            //  MOBILE MENU TOGGLE
-            // ============================================================
-            const menuToggle = document.getElementById('menuToggle');
-            const menuClose = document.getElementById('menuClose');
-            const overlay = document.getElementById('mobileOverlay');
-            const panel = document.getElementById('mobilePanel');
-            const body = document.body;
-
-            function openMenu() {
-                overlay.classList.add('open');
-                panel.classList.add('open');
-                body.classList.add('menu-open');
-                menuToggle.setAttribute('aria-expanded', 'true');
-                const icon = menuToggle.querySelector('.material-symbols-outlined');
-                if (icon) icon.textContent = 'close';
+            // ---- Nav shadow on scroll (redundant with site-shell.js, but safe) ----
+            var nav = document.querySelector('.sl-topbar');
+            if (nav) {
+                window.addEventListener('scroll', function() {
+                    nav.classList.toggle('scrolled', window.scrollY > 20);
+                }, { passive: true });
             }
 
-            function closeMenu() {
-                overlay.classList.remove('open');
-                panel.classList.remove('open');
-                body.classList.remove('menu-open');
-                menuToggle.setAttribute('aria-expanded', 'false');
-                const icon = menuToggle.querySelector('.material-symbols-outlined');
-                if (icon) icon.textContent = 'menu';
-            }
-
-            menuToggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                if (panel.classList.contains('open')) {
-                    closeMenu();
-                } else {
-                    openMenu();
-                }
-            });
-
-            menuClose.addEventListener('click', closeMenu);
-            overlay.addEventListener('click', closeMenu);
-
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && panel.classList.contains('open')) {
-                    closeMenu();
-                }
-            });
-
-            panel.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', closeMenu);
-            });
-
-            window.addEventListener('resize', () => {
-                if (window.innerWidth >= 768 && panel.classList.contains('open')) {
-                    closeMenu();
-                }
-            });
         });
     </script>
-<script src="js/site-shell.js"></script></body>
+
+</body>
 </html>
